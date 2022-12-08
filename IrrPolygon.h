@@ -10,7 +10,5 @@ class IrrPolygon :
 		IrrPolygon(Point, Point, GfxInfo shapeGfxInfo);
 		virtual ~IrrPolygon();
 		virtual void Draw(GUI* pUI) const;
-	};
-
 };
 
