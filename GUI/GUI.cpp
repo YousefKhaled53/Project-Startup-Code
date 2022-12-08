@@ -359,6 +359,28 @@ void GUI::Drawsquare(Point P1, Point P2, GfxInfo SquareGfxInfo) const
 
 }
 
+void GUI::DrawRegPolygon(Point C, Point P, GfxInfo RegPolygonGfxInfo) const
+{
+	color DrawingClr;
+	if (RegPolygonGfxInfo.isSelected)	//shape is selected
+		DrawingClr = HighlightColor; //shape should be drawn highlighted
+	else
+		DrawingClr = RegPolygonGfxInfo.DrawClr;
+
+	pWind->SetPen(DrawingClr, RegPolygonGfxInfo.BorderWdth);	//Set Drawing color & width
+
+	drawstyle style;
+	if (RegPolygonGfxInfo.isFilled)
+	{
+		style = FILLED;
+		pWind->SetBrush(RegPolygonGfxInfo.FillClr);
+	}
+	else
+		style = FRAME;
+
+	//pWind->DrawPolygon(C.x, P.y, 1, style);
+}
+
 
 //////////////////////////////////////////////////////////////////////////////////////////
 GUI::~GUI()

@@ -153,8 +153,17 @@
     <ClCompile Include="operations\opAddtriangle.cpp">
       <Filter>Operations</Filter>
     </ClCompile>
+<<<<<<< Updated upstream
     <ClCompile Include="opdeleteshape.cpp" />
+<<<<<<< HEAD
     <ClCompile Include="opswitchplaymode.cpp" />
+=======
+=======
+    <ClCompile Include="RegPolygon.cpp">
+      <Filter>Shapes&amp;Graph</Filter>
+    </ClCompile>
+>>>>>>> Stashed changes
+>>>>>>> b47b934c741e88e3b16ccfdb907fdf92ec7de9e1
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="controller.h" />
@@ -268,8 +277,17 @@
     <ClInclude Include="operations\opAddtriangle.h">
       <Filter>Operations</Filter>
     </ClInclude>
+<<<<<<< Updated upstream
     <ClInclude Include="opdeleteshape.h" />
+<<<<<<< HEAD
     <ClInclude Include="opswitchplaymode.h" />
+=======
+=======
+    <ClInclude Include="RegPolygon.h">
+      <Filter>Shapes&amp;Graph</Filter>
+    </ClInclude>
+>>>>>>> Stashed changes
+>>>>>>> b47b934c741e88e3b16ccfdb907fdf92ec7de9e1
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Operations">

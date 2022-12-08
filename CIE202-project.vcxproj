@@ -173,7 +173,11 @@
     <ClCompile Include="operations\opAddRect.cpp" />
     <ClCompile Include="operations\opAddsquare.cpp" />
     <ClCompile Include="operations\opAddtriangle.cpp" />
+<<<<<<< HEAD
     <ClCompile Include="opswitchplaymode.cpp" />
+=======
+    <ClCompile Include="RegPolygon.cpp" />
+>>>>>>> b47b934c741e88e3b16ccfdb907fdf92ec7de9e1
     <ClCompile Include="Shapes\Circle.cpp" />
     <ClCompile Include="Shapes\Graph.cpp" />
     <ClCompile Include="Shapes\line.cpp" />
@@ -215,7 +219,11 @@
     <ClInclude Include="operations\opAddsquare.h" />
     <ClInclude Include="operations\opAddtriangle.h" />
     <ClInclude Include="operations\operation.h" />
+<<<<<<< HEAD
     <ClInclude Include="opswitchplaymode.h" />
+=======
+    <ClInclude Include="RegPolygon.h" />
+>>>>>>> b47b934c741e88e3b16ccfdb907fdf92ec7de9e1
     <ClInclude Include="resource.h" />
     <ClInclude Include="Shapes\Circle.h" />
     <ClInclude Include="Shapes\Graph.h" />
