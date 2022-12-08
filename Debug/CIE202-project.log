@@ -8,9 +8,9 @@
   Graph.cpp
   Circle.cpp
   RegPolygon.cpp
-C:\Users\Administrator\Desktop\Project cpp\Project Startup Code\RegPolygon.cpp(5,8): error C2513: 'Point': no variable declared before '='
-C:\Users\Administrator\Desktop\Project cpp\Project Startup Code\RegPolygon.cpp(14,16): error C2065: 'Corner1': undeclared identifier
-C:\Users\Administrator\Desktop\Project cpp\Project Startup Code\RegPolygon.cpp(14,25): error C2065: 'Corner2': undeclared identifier
+  opswitchplaymode.cpp
+C:\Users\Administrator\Desktop\Project cpp\Project Startup Code\opswitchplaymode.h(9,1): error C2027: use of undefined type 'controller'
+C:\Users\Administrator\Desktop\Project cpp\Project Startup Code\operations\operation.h(5): message : see declaration of 'controller'
   opAddtriangle.cpp
   opAddsquare.cpp
   opAddRect.cpp
@@ -19,10 +19,27 @@ C:\Users\Administrator\Desktop\Project cpp\Project Startup Code\RegPolygon.cpp(1
   opAddCircle.cpp
   opdeleteshape.cpp
   main.cpp
+  IrrPolygon.cpp
+C:\Users\Administrator\Desktop\Project cpp\Project Startup Code\IrrPolygon.h(15,1): error C2059: syntax error: '}'
+C:\Users\Administrator\Desktop\Project cpp\Project Startup Code\IrrPolygon.h(15,1): error C2143: syntax error: missing ';' before '}'
   controller.cpp
+  Generating Code...
+  Compiling...
   GUI.cpp
 C:\Users\Administrator\Desktop\Project cpp\Project Startup Code\GUI\GUI.cpp(311,36): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\Users\Administrator\Desktop\Project cpp\Project Startup Code\GUI\GUI.cpp(381,21): error C2065: 'P1': undeclared identifier
-C:\Users\Administrator\Desktop\Project cpp\Project Startup Code\GUI\GUI.cpp(381,27): error C2065: 'P1': undeclared identifier
-C:\Users\Administrator\Desktop\Project cpp\Project Startup Code\GUI\GUI.cpp(381,33): error C2059: syntax error: ','
+  windowinput.cpp
+  mousequeue.cpp
+  keyqueue.cpp
+  image.cpp
+C:\Users\Administrator\Desktop\Project cpp\Project Startup Code\CMUgraphicsLib\image.cpp(115,29): warning C4018: '<': signed/unsigned mismatch
+  CMUgraphics.cpp
+C:\Users\Administrator\Desktop\Project cpp\Project Startup Code\CMUgraphicsLib\CMUgraphics.cpp(257,9): warning C4101: 'iX': unreferenced local variable
+C:\Users\Administrator\Desktop\Project cpp\Project Startup Code\CMUgraphicsLib\CMUgraphics.cpp(257,13): warning C4101: 'iY': unreferenced local variable
+C:\Users\Administrator\Desktop\Project cpp\Project Startup Code\CMUgraphicsLib\CMUgraphics.cpp(751,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Administrator\Desktop\Project cpp\Project Startup Code\CMUgraphicsLib\CMUgraphics.cpp(1164,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Administrator\Desktop\Project cpp\Project Startup Code\CMUgraphicsLib\CMUgraphics.cpp(1171,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Administrator\Desktop\Project cpp\Project Startup Code\CMUgraphicsLib\CMUgraphics.cpp(1202,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Administrator\Desktop\Project cpp\Project Startup Code\CMUgraphicsLib\CMUgraphics.cpp(1210,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Administrator\Desktop\Project cpp\Project Startup Code\CMUgraphicsLib\CMUgraphics.cpp(1357,23): warning C4018: '>': signed/unsigned mismatch
+  auxil.cpp
   Generating Code...
