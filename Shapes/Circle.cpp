@@ -2,7 +2,7 @@
 
 Circle::Circle(Point P1, Point P2, GfxInfo shapeGfxInfo) :shape(shapeGfxInfo)
 {
-	Center = P2;
+	Center = P1;
 	radius = P2;
 }
 
