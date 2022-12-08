@@ -153,7 +153,13 @@
     <ClCompile Include="operations\opAddtriangle.cpp">
       <Filter>Operations</Filter>
     </ClCompile>
+<<<<<<< Updated upstream
     <ClCompile Include="opdeleteshape.cpp" />
+=======
+    <ClCompile Include="RegPolygon.cpp">
+      <Filter>Shapes&amp;Graph</Filter>
+    </ClCompile>
+>>>>>>> Stashed changes
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="controller.h" />
@@ -267,7 +273,13 @@
     <ClInclude Include="operations\opAddtriangle.h">
       <Filter>Operations</Filter>
     </ClInclude>
+<<<<<<< Updated upstream
     <ClInclude Include="opdeleteshape.h" />
+=======
+    <ClInclude Include="RegPolygon.h">
+      <Filter>Shapes&amp;Graph</Filter>
+    </ClInclude>
+>>>>>>> Stashed changes
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Operations">

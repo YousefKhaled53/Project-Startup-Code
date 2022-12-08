@@ -1,1 +1,28 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(439,5): error MSB8020: The build tools for v143 (Platform Toolset = 'v143') cannot be found. To build using the v143 build tools, please install v143 build tools.  Alternatively, you may upgrade to the current Visual Studio tools by selecting the Project menu or right-click the solution, and then selecting "Retarget solution".
+﻿cl : command line  warning D9035: option 'Gm' has been deprecated and will be removed in a future release
+  triangle.cpp
+  square.cpp
+  Rect.cpp
+  Shape.cpp
+  Oval.cpp
+  line.cpp
+  Graph.cpp
+  Circle.cpp
+  RegPolygon.cpp
+C:\Users\Administrator\Desktop\Project cpp\Project Startup Code\RegPolygon.cpp(5,8): error C2513: 'Point': no variable declared before '='
+C:\Users\Administrator\Desktop\Project cpp\Project Startup Code\RegPolygon.cpp(14,16): error C2065: 'Corner1': undeclared identifier
+C:\Users\Administrator\Desktop\Project cpp\Project Startup Code\RegPolygon.cpp(14,25): error C2065: 'Corner2': undeclared identifier
+  opAddtriangle.cpp
+  opAddsquare.cpp
+  opAddRect.cpp
+  opAddOval.cpp
+  opAddline.cpp
+  opAddCircle.cpp
+  opdeleteshape.cpp
+  main.cpp
+  controller.cpp
+  GUI.cpp
+C:\Users\Administrator\Desktop\Project cpp\Project Startup Code\GUI\GUI.cpp(311,36): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Users\Administrator\Desktop\Project cpp\Project Startup Code\GUI\GUI.cpp(381,21): error C2065: 'P1': undeclared identifier
+C:\Users\Administrator\Desktop\Project cpp\Project Startup Code\GUI\GUI.cpp(381,27): error C2065: 'P1': undeclared identifier
+C:\Users\Administrator\Desktop\Project cpp\Project Startup Code\GUI\GUI.cpp(381,33): error C2059: syntax error: ','
+  Generating Code...

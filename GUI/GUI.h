@@ -107,7 +107,8 @@ public:
 	void Drawtriangle(Point P1, Point P2, Point P3, GfxInfo TriangleGfxInfo) const; //Draw a triangle
 	void Drawsquare(Point P1, Point P2, GfxInfo squareGfxInfo) const;  //Draw a square
 	void DrawCircle(Point P1, Point P2, GfxInfo RectGfxInfo) const;  //Draw a Circle
-	void DrawOval(Point P1, Point P2, GfxInfo OvalGfxInfo) const;
+	void DrawOval(Point P1, Point P2, GfxInfo OvalGfxInfo) const; // Draw an Oval
+	void DrawRegPolygon(Point C, Point P, GfxInfo RegPolygonGfxInfo) const;
 
 
 	///Make similar functions for drawing all other shapes.
