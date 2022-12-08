@@ -22,6 +22,11 @@ public:
 	
 	void ChngDrawClr(color Dclr);	//changes the shape's drawing color
 	void ChngFillClr(color Fclr);	//changes the shape's filling color
+	color getdrawclr();
+	color getfillclr();
+	int getborderwidth();
+	bool getisfilled();
+
 
 	///The following functions should be supported by the shape class
 	///It should be overridden by each inherited shape

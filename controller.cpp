@@ -7,6 +7,7 @@
 #include "operations/opAddOval.h"
 #include "opdeleteshape.h"
 #include"opswitchplaymode.h"
+#include"opsave.h"
 //#include "operations/"
 
 //Constructor
@@ -69,6 +70,10 @@ operation* controller::createOperation(operationType OpType)
 			break;
 		case TO_PLAY:
 			pOp = new opswitchlaymode(this);
+			break;
+
+		case SAVE:
+			pOp = new opsave(this);
 			break;
 	}
 

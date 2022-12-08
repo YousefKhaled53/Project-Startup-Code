@@ -19,4 +19,17 @@ void shape::ChngFillClr(color Fclr)
 	ShpGfxInfo.isFilled = true;
 	ShpGfxInfo.FillClr = Fclr; 
 }
+color shape::getdrawclr() {
+	return ShpGfxInfo.DrawClr;
+}
+color shape::getfillclr() {
+	return ShpGfxInfo.FillClr;
+}
+int shape::getborderwidth() {
+	return ShpGfxInfo.BorderWdth;
+}
+bool shape::getisfilled() {
+	return ShpGfxInfo.isFilled;
+}
+
 

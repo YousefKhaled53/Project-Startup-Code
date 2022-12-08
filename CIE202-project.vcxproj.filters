@@ -38,25 +38,16 @@
     <ClCompile Include="CMUgraphicsLib\jpeg\jutils.c" />
     <ClCompile Include="GUI\GUI.cpp" />
     <ClCompile Include="controller.cpp" />
+    <ClCompile Include="IrrPolygon.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="opdeleteshape.cpp" />
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-    <ClCompile Include="opswitchplaymode.cpp" />
-=======
-=======
-    <ClCompile Include="RegPolygon.cpp">
-      <Filter>Shapes&amp;Graph</Filter>
-    </ClCompile>
->>>>>>> Stashed changes
->>>>>>> b47b934c741e88e3b16ccfdb907fdf92ec7de9e1
-=======
     <ClCompile Include="operations\opAddCircle.cpp" />
     <ClCompile Include="operations\opAddline.cpp" />
     <ClCompile Include="operations\opAddOval.cpp" />
     <ClCompile Include="operations\opAddRect.cpp" />
     <ClCompile Include="operations\opAddsquare.cpp" />
     <ClCompile Include="operations\opAddtriangle.cpp" />
+    <ClCompile Include="opswitchplaymode.cpp" />
     <ClCompile Include="RegPolygon.cpp" />
     <ClCompile Include="Shapes\Circle.cpp" />
     <ClCompile Include="Shapes\Graph.cpp" />
@@ -66,8 +57,7 @@
     <ClCompile Include="Shapes\Rect.cpp" />
     <ClCompile Include="Shapes\square.cpp" />
     <ClCompile Include="Shapes\triangle.cpp" />
-    <ClCompile Include="IrrPolygon.cpp" />
->>>>>>> Stashed changes
+    <ClCompile Include="opsave.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CMUgraphicsLib\auxil.h" />
@@ -93,32 +83,8 @@
     <ClInclude Include="GUI\GUI.h" />
     <ClInclude Include="controller.h" />
     <ClInclude Include="DEFS.h" />
+    <ClInclude Include="IrrPolygon.h" />
     <ClInclude Include="opdeleteshape.h" />
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-    <ClInclude Include="opswitchplaymode.h" />
-=======
-=======
-    <ClInclude Include="RegPolygon.h">
-      <Filter>Shapes&amp;Graph</Filter>
-    </ClInclude>
->>>>>>> Stashed changes
->>>>>>> b47b934c741e88e3b16ccfdb907fdf92ec7de9e1
-  </ItemGroup>
-  <ItemGroup>
-    <Filter Include="Operations">
-      <UniqueIdentifier>{5b559cbb-08f2-4197-993f-7a3028ee6b52}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="GraphicsLib">
-      <UniqueIdentifier>{c076192c-7f4c-49d2-a595-55ff119d3ef7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="GUI">
-      <UniqueIdentifier>{cc4dfad3-3220-4da0-a755-b6f30c107ea1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Shapes&amp;Graph">
-      <UniqueIdentifier>{5e150dff-8a89-44f3-b58a-731df9cea925}</UniqueIdentifier>
-    </Filter>
-=======
     <ClInclude Include="operations\opAddCircle.h" />
     <ClInclude Include="operations\opAddline.h" />
     <ClInclude Include="operations\opAddOval.h" />
@@ -126,7 +92,6 @@
     <ClInclude Include="operations\opAddsquare.h" />
     <ClInclude Include="operations\opAddtriangle.h" />
     <ClInclude Include="operations\operation.h" />
-    <ClInclude Include="RegPolygon.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Shapes\Circle.h" />
     <ClInclude Include="Shapes\Graph.h" />
@@ -136,8 +101,7 @@
     <ClInclude Include="Shapes\Rect.h" />
     <ClInclude Include="Shapes\square.h" />
     <ClInclude Include="Shapes\triangle.h" />
-    <ClInclude Include="IrrPolygon.h" />
->>>>>>> Stashed changes
+    <ClInclude Include="opsave.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="CIE202-project.rc" />

@@ -43,3 +43,8 @@ shape* Graph::Getshape(int x, int y) const
 void Graph::deleteshape(shape* pShp) {
 	shapesList.erase(find(shapesList.begin(), shapesList.end(), pShp));
 }
+void Graph::Save(ofstream& outfile) {
+	for (int i = 0; i < (sizeof(shapesList) / sizeof(shapesList[0])); i++) {
+	//	shapesList[i]->Save(ofstream & OutFile); //why error 	
+	}
+}
