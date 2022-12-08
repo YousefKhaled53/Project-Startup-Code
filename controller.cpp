@@ -5,6 +5,7 @@
 #include "operations/opAddsquare.h"
 #include "operations/opAddCircle.h"
 #include "operations/opAddOval.h"
+#include "opdeleteshape.h"
 //#include "operations/"
 
 //Constructor
@@ -62,6 +63,10 @@ operation* controller::createOperation(operationType OpType)
 		
 		case STATUS:	//a click on the status bar ==> no operation
 			break;
+		case DELETE:
+			pOp = new opdeleteshape(this);
+			break;
+
 	}
 
 	return pOp;

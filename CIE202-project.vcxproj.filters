@@ -153,6 +153,7 @@
     <ClCompile Include="operations\opAddtriangle.cpp">
       <Filter>Operations</Filter>
     </ClCompile>
+    <ClCompile Include="opdeleteshape.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="controller.h" />
@@ -266,6 +267,7 @@
     <ClInclude Include="operations\opAddtriangle.h">
       <Filter>Operations</Filter>
     </ClInclude>
+    <ClInclude Include="opdeleteshape.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Operations">
