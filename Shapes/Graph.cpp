@@ -40,3 +40,6 @@ shape* Graph::Getshape(int x, int y) const
 
 	return nullptr;
 }
+void Graph::deleteshape(shape* pShp) {
+	shapesList.erase(find(shapesList.begin(), shapesList.end(), pShp));
+}

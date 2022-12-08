@@ -22,4 +22,6 @@ public:
 
 	void Save(ofstream& outfile);	//Save all shapes to a file
 	void load(ifstream& inputfile);	//Load all shapes from a file
+	void deleteshape(shape* pFig); // deletes a shape
+
 };
