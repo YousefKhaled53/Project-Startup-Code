@@ -173,6 +173,7 @@
     <ClCompile Include="operations\opAddRect.cpp" />
     <ClCompile Include="operations\opAddsquare.cpp" />
     <ClCompile Include="operations\opAddtriangle.cpp" />
+    <ClCompile Include="opswitchplaymode.cpp" />
     <ClCompile Include="Shapes\Circle.cpp" />
     <ClCompile Include="Shapes\Graph.cpp" />
     <ClCompile Include="Shapes\line.cpp" />
@@ -214,6 +215,7 @@
     <ClInclude Include="operations\opAddsquare.h" />
     <ClInclude Include="operations\opAddtriangle.h" />
     <ClInclude Include="operations\operation.h" />
+    <ClInclude Include="opswitchplaymode.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Shapes\Circle.h" />
     <ClInclude Include="Shapes\Graph.h" />

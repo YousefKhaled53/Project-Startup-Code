@@ -6,6 +6,7 @@
 #include "operations/opAddCircle.h"
 #include "operations/opAddOval.h"
 #include "opdeleteshape.h"
+#include"opswitchplaymode.h"
 //#include "operations/"
 
 //Constructor
@@ -66,7 +67,9 @@ operation* controller::createOperation(operationType OpType)
 		case DELETE:
 			pOp = new opdeleteshape(this);
 			break;
-
+		case TO_PLAY:
+			pOp = new opswitchlaymode(this);
+			break;
 	}
 
 	return pOp;
