@@ -1,5 +1,5 @@
 #pragma once
-#include "operations/operation.h"
+#include "../operations/operation.h"
 class opAddCircle :
     public operation
 {

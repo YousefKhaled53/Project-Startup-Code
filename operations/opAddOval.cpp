@@ -1,9 +1,9 @@
 #include "opAddOval.h"
-#include "Oval.h"
+#include "../shapes/Oval.h"
 
-#include "controller.h"
+#include "../controller.h"
 
-#include "GUI\GUI.h"
+#include "../GUI\GUI.h"
 
 opAddOval::opAddOval(controller* pCont) :operation(pCont)
 {}

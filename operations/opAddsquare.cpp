@@ -1,9 +1,9 @@
 #include "opAddsquare.h"
-#include "square.h"
+#include "../shapes/square.h"
 
-#include "controller.h"
+#include "../controller.h"
 
-#include "GUI\GUI.h"
+#include "../GUI\GUI.h"
 
 opAddsquare::opAddsquare(controller* pCont) :operation(pCont)
 {}

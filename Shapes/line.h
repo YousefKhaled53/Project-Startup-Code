@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Shapes/Shape.h"
+#include "Shape.h"
 class line :public shape
 {
 private:

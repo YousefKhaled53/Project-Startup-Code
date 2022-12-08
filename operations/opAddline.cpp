@@ -1,9 +1,9 @@
 #include "opAddline.h"
-#include "line.h"
+#include "../shapes/line.h"
 
-#include "controller.h"
+#include "../controller.h"
 
-#include "GUI\GUI.h"
+#include "../GUI\GUI.h"
 
 opAddline::opAddline(controller* pCont) :operation(pCont)
 {}

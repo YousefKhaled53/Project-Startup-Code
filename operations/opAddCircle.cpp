@@ -1,7 +1,7 @@
 #include "opAddCircle.h"
-#include "Circle.h"
-#include "controller.h"
-#include "GUI\GUI.h"
+#include "../shapes/Circle.h"
+#include "../controller.h"
+#include "../GUI\GUI.h"
 
 opAddCircle::opAddCircle(controller* pCont) :operation(pCont)
 {}

@@ -1,7 +1,7 @@
 #include "opAddtriangle.h"
-#include "triangle.h"
-#include "controller.h"
-#include "GUI\GUI.h"
+#include "../Shapes/triangle.h"
+#include "../controller.h"
+#include "../GUI\GUI.h"
 
 opAddtriangle::opAddtriangle(controller* pCont) :operation(pCont)
 {}

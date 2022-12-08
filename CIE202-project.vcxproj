@@ -128,7 +128,6 @@
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Circle.cpp" />
     <ClCompile Include="CMUgraphicsLib\auxil.cpp" />
     <ClCompile Include="CMUgraphicsLib\CMUgraphics.cpp" />
     <ClCompile Include="CMUgraphicsLib\image.cpp" />
@@ -166,23 +165,23 @@
     <ClCompile Include="CMUgraphicsLib\jpeg\jutils.c" />
     <ClCompile Include="GUI\GUI.cpp" />
     <ClCompile Include="controller.cpp" />
-    <ClCompile Include="line.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="opAddCircle.cpp" />
-    <ClCompile Include="opAddline.cpp" />
-    <ClCompile Include="opAddOval.cpp" />
-    <ClCompile Include="opAddsquare.cpp" />
-    <ClCompile Include="opAddtriangle.cpp" />
+    <ClCompile Include="operations\opAddCircle.cpp" />
+    <ClCompile Include="operations\opAddline.cpp" />
+    <ClCompile Include="operations\opAddOval.cpp" />
     <ClCompile Include="operations\opAddRect.cpp" />
-    <ClCompile Include="Oval.cpp" />
+    <ClCompile Include="operations\opAddsquare.cpp" />
+    <ClCompile Include="operations\opAddtriangle.cpp" />
+    <ClCompile Include="Shapes\Circle.cpp" />
     <ClCompile Include="Shapes\Graph.cpp" />
+    <ClCompile Include="Shapes\line.cpp" />
+    <ClCompile Include="Shapes\Oval.cpp" />
     <ClCompile Include="Shapes\Shape.cpp" />
     <ClCompile Include="Shapes\Rect.cpp" />
-    <ClCompile Include="square.cpp" />
-    <ClCompile Include="triangle.cpp" />
+    <ClCompile Include="Shapes\square.cpp" />
+    <ClCompile Include="Shapes\triangle.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Circle.h" />
     <ClInclude Include="CMUgraphicsLib\auxil.h" />
     <ClInclude Include="CMUgraphicsLib\CMUgraphics.h" />
     <ClInclude Include="CMUgraphicsLib\colors.h" />
@@ -206,21 +205,22 @@
     <ClInclude Include="GUI\GUI.h" />
     <ClInclude Include="controller.h" />
     <ClInclude Include="DEFS.h" />
-    <ClInclude Include="line.h" />
-    <ClInclude Include="opAddCircle.h" />
-    <ClInclude Include="opAddline.h" />
-    <ClInclude Include="opAddOval.h" />
-    <ClInclude Include="opAddsquare.h" />
-    <ClInclude Include="opAddtriangle.h" />
+    <ClInclude Include="operations\opAddCircle.h" />
+    <ClInclude Include="operations\opAddline.h" />
+    <ClInclude Include="operations\opAddOval.h" />
     <ClInclude Include="operations\opAddRect.h" />
+    <ClInclude Include="operations\opAddsquare.h" />
+    <ClInclude Include="operations\opAddtriangle.h" />
     <ClInclude Include="operations\operation.h" />
-    <ClInclude Include="Oval.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="Shapes\Circle.h" />
     <ClInclude Include="Shapes\Graph.h" />
+    <ClInclude Include="Shapes\line.h" />
+    <ClInclude Include="Shapes\Oval.h" />
     <ClInclude Include="Shapes\Shape.h" />
     <ClInclude Include="Shapes\Rect.h" />
-    <ClInclude Include="square.h" />
-    <ClInclude Include="triangle.h" />
+    <ClInclude Include="Shapes\square.h" />
+    <ClInclude Include="Shapes\triangle.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="CIE202-project.rc" />
