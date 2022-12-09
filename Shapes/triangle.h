@@ -10,5 +10,7 @@ public:
 	triangle(Point, Point, Point, GfxInfo shapeGfxInfo);
 	virtual ~triangle();
 	virtual void Draw(GUI* pUI) const;
+	virtual void Save(ofstream& OutFile);
+
 };
 

@@ -19,6 +19,7 @@ void Rect::Draw(GUI* pUI) const
 void Rect::Save(ofstream& OutFile)
 {
 	OutFile << Corner1.x << Corner1.y;
+	OutFile << getid();
 	/*OutFile << shape::getborderwidth();
 	outfile << shape::getdrawclr();  // why error 
 	if (shape::getisfilled() == true) {

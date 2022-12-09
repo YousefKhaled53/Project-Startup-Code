@@ -1,5 +1,6 @@
 #pragma once
 #include "Shape.h"
+
 class square :
     public shape
 {
@@ -10,5 +11,6 @@ public:
 	square(Point, Point, GfxInfo shapeGfxInfo);
 	virtual ~square();
 	virtual void Draw(GUI* pUI) const;
+	virtual void Save(ofstream& OutFile);
 };
 

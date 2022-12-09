@@ -26,6 +26,7 @@ public:
 	color getfillclr();
 	int getborderwidth();
 	bool getisfilled();
+	int getid();
 
 
 	///The following functions should be supported by the shape class

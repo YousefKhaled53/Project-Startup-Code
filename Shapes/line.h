@@ -10,4 +10,6 @@ public:
 	line(Point, Point, GfxInfo shapeGfxInfo);
 	virtual ~line();
 	virtual void Draw(GUI* pUI) const;
+	virtual void Save(ofstream& OutFile);
+
 };
