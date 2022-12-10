@@ -19,15 +19,19 @@ void square::Save(ofstream& Outfile) {
 	Outfile << Corner1.x << Corner1.x;
 	Outfile << Corner2.x << Corner2.x;
 	Outfile << getid();
-	/*OutFile << shape::getborderwidth();
-	outfile << shape::getdrawclr();  // why error
+	Outfile<< " draw colors rgb intensities are :" << "	";
+	Outfile << "red intensity is " << shape::getdrawclr().getucred() << "	";
+	Outfile << "blue intensity is " << shape::getdrawclr().getucblue() << "	";
+	Outfile << "green intensity is " << shape::getdrawclr().ucGreen << endl;
+	Outfile << "fill color rgb intesities are:" << "	";
 	if (shape::getisfilled() == true) {
-		outfile << shape::getfillclr();
-
+		Outfile << shape::getfillclr().getucred();
+		Outfile << shape::getfillclr().getucgreen();
+		Outfile << shape::getfillclr().getucblue();
 	}
 	else
 	{
-		OutFile << "no fill";
-	}*/
+		Outfile << "no fill";
+	}
 
 }

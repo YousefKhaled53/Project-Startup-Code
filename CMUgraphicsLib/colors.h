@@ -22,6 +22,15 @@ class color {
     unsigned char ucRed;
     unsigned char ucGreen;
     unsigned char ucBlue;
+    int getucred() {
+        return ucRed;
+    }
+    int getucblue() {
+        return ucBlue;
+    }
+    int getucgreen() {
+        return ucGreen;
+    }
 
 };
 
