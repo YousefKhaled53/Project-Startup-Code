@@ -57,8 +57,50 @@ void Graph::Save(ofstream& outfile) {
 color Graph::changestringtoints(string colorstring) {
 	if (colorstring == "Black") {
 		color c(0, 0, 0);
+		return c;
 	}
-	// and do more colors ( about 10 ) 	
+	if (colorstring == "white") {
+		color c(255,255,255);
+		return c;
+	}
+	if (colorstring == "gray") {
+		color c(128, 128, 128);
+		return c;
+	}
+
+	if (colorstring == "yellow") {
+		color c(255,255, 0);
+		return c;
+	}
+
+	if (colorstring == "green") {
+		color c(0, 255, 0);
+		return c;
+	}
+	if (colorstring == "purple") {
+		color c(160, 32, 255);
+		return c;
+	}
+	if (colorstring == "blue") {
+		color c(0,0, 255);
+		return c;
+	}
+	if (colorstring == "orange") {
+		color c(255, 165, 0);
+		return c;
+	}
+	if (colorstring == "red") {
+		color c(255, 0, 0);
+		return c;
+	}
+	if (colorstring == "brown") {
+		color c(160, 128, 96);
+		return c;
+	}
+
+
+
+	// and do more colors 
 }
 void Graph::load(ifstream& inputfile) { // how to initialize the ID of each shape and is my code enough or there are somthings i need to implement more
 	string arr[4]; // an array that has 0 : current draw color , 1 : fill color , 2 : current pen width , 3: number of shapes 
