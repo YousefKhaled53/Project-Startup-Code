@@ -58,6 +58,7 @@
     <ClCompile Include="Shapes\square.cpp" />
     <ClCompile Include="Shapes\triangle.cpp" />
     <ClCompile Include="opsave.cpp" />
+    <ClCompile Include="opload.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CMUgraphicsLib\auxil.h" />
@@ -102,6 +103,7 @@
     <ClInclude Include="Shapes\square.h" />
     <ClInclude Include="Shapes\triangle.h" />
     <ClInclude Include="opsave.h" />
+    <ClInclude Include="opload.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="CIE202-project.rc" />

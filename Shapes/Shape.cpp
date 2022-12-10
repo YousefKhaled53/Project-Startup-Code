@@ -34,4 +34,8 @@ bool shape::getisfilled() {
 int shape::getid() {
 	return ID;
 }
+void shape::setid(int i) {
+	ID = i;
+}
+
 
