@@ -22,7 +22,7 @@ void square::Save(ofstream& Outfile) {
 	Outfile<< " draw colors rgb intensities are :" << "	";
 	Outfile << "red intensity is " << shape::getdrawclr().getucred() << "	";
 	Outfile << "blue intensity is " << shape::getdrawclr().getucblue() << "	";
-	Outfile << "green intensity is " << shape::getdrawclr().ucGreen << endl;
+	Outfile << "green intensity is " << shape::getdrawclr().getucgreen() << endl;
 	Outfile << "fill color rgb intesities are:" << "	";
 	if (shape::getisfilled() == true) {
 		Outfile << shape::getfillclr().getucred();
