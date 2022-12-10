@@ -6,6 +6,10 @@
 #include"controller.h"
 class opload : public operation
 {
+public:
+	opload(controller* pCont) {
+
+	}
 	void Execute() {
 		GUI* pUI = pControl->GetUI();
 		pUI->PrintMessage("write file name");
