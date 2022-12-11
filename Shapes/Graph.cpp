@@ -51,7 +51,7 @@ void Graph::deleteshape(shape* pShp) {
 }
 void Graph::Save(ofstream& outfile) {
 	for (int i = 0; i < (sizeof(shapesList) / sizeof(shapesList[0])); i++) {
-	//	shapesList[i]->Save(ofstream & OutFile); //why error 	
+		//shapesList[i]->Save(outfile); //why error 	
 	}
 }
 color Graph::changestringtoints(string colorstring) {
@@ -112,8 +112,14 @@ void Graph::load(ifstream& inputfile) { // how to initialize the ID of each shap
 	int size = stoi(arr[3]); // to get no of files as an int 
 	string arr2[11];
 
+	string arr2[55];
+
 	for (int i = 0; i < (size * 11); i++) {
 		getline(inputfile, arr2[i], ' ');
+
+	}
+	// her the array is initialized with each word / number 
+	for (int i = 0; i < (size * 11); i++) {
 		if (arr2[i] == "RECT") {
 			Point p1, p2;
 			GfxInfo info;
