@@ -122,19 +122,19 @@ void Graph::load(ifstream& inputfile) { // how to initialize the ID of each shap
 	for (int i = 0; i < (size * 11); i++) {
 		if (arr2[i] == "RECT") {
 			Point p1, p2;
-			GfxInfo info;
+			GfxInfo shapeGfxinfo;
 			p1.x = stoi(arr2[i + 2]);
 			p1.y = stoi(arr2[i + 3]);
 			p2.x = stoi(arr2[i + 4]);
 			p2.y = stoi(arr2[i + 5]);
-			info.DrawClr = changestringtoints(arr2[i + 6]); // to initialize the draw color
+			shapeGfxinfo.DrawClr = changestringtoints(arr2[i + 6]); // to initialize the draw color
 			if (arr2[i + 7] == "NO_FILL") {
-				info.FillClr = changestringtoints("white"); // to make the fillcolor white
+				shapeGfxinfo.FillClr = changestringtoints("white"); // to make the fillcolor white
 			}
 			else
-				info.FillClr = changestringtoints(arr2[i + 7]); //to initialize the fill color
-			info.BorderWdth = stoi(arr2[i + 8]);
-			Rect* R = new Rect(p1, p2, info);
+				shapeGfxinfo.FillClr = changestringtoints(arr2[i + 7]); //to initialize the fill color
+			shapeGfxinfo.BorderWdth = stoi(arr2[i + 8]);
+			Rect* R = new Rect(p1, p2, shapeGfxinfo);
 			R->setid(stoi(arr2[i + 1])); // setting the id of the rectagle
 			Addshape(R);
 

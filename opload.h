@@ -7,9 +7,7 @@
 class opload : public operation
 {
 public:
-	opload(controller* pCont) {
-
-	}
+	opload(controller* pCont) : operation(pCont) {};
 	void Execute() {
 		GUI* pUI = pControl->GetUI();
 		pUI->PrintMessage("write file name");
