@@ -103,7 +103,7 @@ color Graph::changestringtoints(string colorstring) {
 	// and do more colors 
 }
 void Graph::load(ifstream& inputfile) { // how to initialize the ID of each shape and is my code enough or there are somthings i need to implement more
-	string arr[4]; // an array that has 0 : current draw color , 1 : fill color , 2 : current pen width , 3: number of shapes 
+	/*string arr[4]; // an array that has 0 : current draw color , 1 : fill color , 2 : current pen width , 3: number of shapes 
 	getline(inputfile, arr[0], ' ');
 	getline(inputfile, arr[1], ' ');
 	getline(inputfile, arr[2]);
@@ -140,5 +140,5 @@ void Graph::load(ifstream& inputfile) { // how to initialize the ID of each shap
 
 		}
 	}
-	inputfile.close();
+	inputfile.close();*/
 }

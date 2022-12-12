@@ -3,7 +3,7 @@
 #include"operations/operation.h"
 class opswitchlaymode : public operation {
 public:
-	opswitchlaymode(controller* pcont) :operation(pcont) {};
+	opswitchlaymode(controller *pcont) :operation(pcont) {};
 	~opswitchlaymode() {};
 	virtual void Execute() {
 		GUI* pUI = pControl->GetUI();

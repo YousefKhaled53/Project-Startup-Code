@@ -4,7 +4,7 @@ class opAddtriangle :
     public operation
 {
 public:
-	opAddtriangle(controller* pCont) : operation(pCont) {};
+	opAddtriangle(controller* pCont) ;
 	virtual ~opAddtriangle();
 
 	//Add line to the controller

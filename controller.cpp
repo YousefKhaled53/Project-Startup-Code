@@ -66,7 +66,7 @@ operation* controller::createOperation(operationType OpType)
 		
 		case STATUS:	//a click on the status bar ==> no operation
 			break;
-		case DELETE:
+		case DELTE:
 			pOp = new opdeleteshape(this);
 			break;
 		case TO_PLAY:
