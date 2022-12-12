@@ -4,10 +4,12 @@ class IrrPolygon :
     public shape
 {
 	private:
-		Point Corner1;
-		Point Corner2;
+		Point Point1;
+		int Vertices_num;
+		int* ArrX;
+		int* Arry;
 	public:
-		IrrPolygon(Point, Point, GfxInfo shapeGfxInfo);
+		IrrPolygon(Point*, int, GfxInfo shapeGfxInfo);
 		virtual ~IrrPolygon();
 		virtual void Draw(GUI* pUI) const;
 };

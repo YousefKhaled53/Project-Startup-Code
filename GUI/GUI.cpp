@@ -355,7 +355,7 @@ void GUI::Drawsquare(Point P1, Point P2, GfxInfo SquareGfxInfo) const
 	else
 		style = FRAME;
 
-	pWind->DrawRectangle(P1.x, P1.y, P2.x, P1.y+(P2.x-P1.x) , style);
+	pWind->DrawRectangle(P1.x, P1.y, P2.x, P2.y, style);
 
 }
 
@@ -382,6 +382,27 @@ void GUI::DrawRegPolygon(Point C, Point P, GfxInfo RegPolygonGfxInfo) const
 }
 
 
+void GUI::DrawIrrPolygon(int* Arrx, int* Arry, int x, GfxInfo IrrPolygonGfxInfo) const
+{
+	color DrawingClr;
+	if (IrrPolygonGfxInfo.isSelected)	//shape is selected
+		DrawingClr = HighlightColor; //shape should be drawn highlighted
+	else
+		DrawingClr = IrrPolygonGfxInfo.DrawClr;
+
+	pWind->SetPen(DrawingClr, IrrPolygonGfxInfo.BorderWdth);	//Set Drawing color & width
+
+	drawstyle style;
+	if (IrrPolygonGfxInfo.isFilled)
+	{
+		style = FILLED;
+		pWind->SetBrush(IrrPolygonGfxInfo.FillClr);
+	}
+	else
+		style = FRAME;
+
+	pWind->DrawPolygon(Arrx, Arry, x, style);
+}
 //////////////////////////////////////////////////////////////////////////////////////////
 GUI::~GUI()
 {

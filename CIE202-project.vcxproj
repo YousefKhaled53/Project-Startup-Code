@@ -167,6 +167,8 @@
     <ClCompile Include="controller.cpp" />
     <ClCompile Include="IrrPolygon.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="opAddIrrPolygon.cpp" />
+    <ClCompile Include="opAddRegPolygon.cpp" />
     <ClCompile Include="opdeleteshape.cpp" />
     <ClCompile Include="operations\opAddCircle.cpp" />
     <ClCompile Include="operations\opAddline.cpp" />
@@ -212,6 +214,8 @@
     <ClInclude Include="controller.h" />
     <ClInclude Include="DEFS.h" />
     <ClInclude Include="IrrPolygon.h" />
+    <ClInclude Include="opAddIrrPolygon.h" />
+    <ClInclude Include="opAddRegPolygon.h" />
     <ClInclude Include="opdeleteshape.h" />
     <ClInclude Include="operations\opAddCircle.h" />
     <ClInclude Include="operations\opAddline.h" />

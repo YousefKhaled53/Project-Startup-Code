@@ -59,6 +59,8 @@
     <ClCompile Include="Shapes\triangle.cpp" />
     <ClCompile Include="opsave.cpp" />
     <ClCompile Include="opload.cpp" />
+    <ClCompile Include="opAddIrrPolygon.cpp" />
+    <ClCompile Include="opAddRegPolygon.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CMUgraphicsLib\auxil.h" />
@@ -104,6 +106,8 @@
     <ClInclude Include="Shapes\triangle.h" />
     <ClInclude Include="opsave.h" />
     <ClInclude Include="opload.h" />
+    <ClInclude Include="opAddIrrPolygon.h" />
+    <ClInclude Include="opAddRegPolygon.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="CIE202-project.rc" />

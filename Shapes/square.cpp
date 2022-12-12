@@ -12,7 +12,7 @@ square::~square()
 
 void square::Draw(GUI* pUI) const
 {
-	//Call Output::DrawRect to draw a square on the screen	
+	//Call Output::Drawsquare to draw a square on the screen	
 	pUI->Drawsquare(Corner1, Corner2, ShpGfxInfo);
 }
 void square::Save(ofstream& Outfile) {

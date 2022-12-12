@@ -1,14 +1,20 @@
 #pragma once
-
-#include "shape.h"
-
-class RegPolygon : public shape
+#include "shapes/Shape.h"
+class RegPolygon :
+    public shape
 {
 private:
-	Point Corner1;
-	Point Corner2;
+	Point Center;
+	Point Point1;
+	int distance;
+	int Vertices_num;
+	int* ArrX;
+	int* Arry;
+	int vertixx;
+	int vertixy;
 public:
-	Rect(Point, Point, GfxInfo shapeGfxInfo);
-	virtual ~Rect();
+	RegPolygon(Point, Point*,int GfxInfo shapeGfxInfo);
+	virtual ~RegPolygon();
 	virtual void Draw(GUI* pUI) const;
 };
+

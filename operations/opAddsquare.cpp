@@ -28,6 +28,7 @@ void opAddsquare::Execute()
 	//Read 2nd corner and store in point P2
 	pUI->GetPointClicked(P2.x, P2.y);
 	pUI->ClearStatusBar();
+	P2.y = P1.y + (P2.x - P1.x);
 
 	//Preapre all square parameters
 	GfxInfo squareGfxInfo;
@@ -44,7 +45,6 @@ void opAddsquare::Execute()
 
 	//Create a square with the above parameters
 	square* S = new square(P1, P2, squareGfxInfo);
-
 	//Get a pointer to the graph
 	Graph* pGr = pControl->getGraph();
 

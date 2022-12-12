@@ -109,6 +109,7 @@ public:
 	void DrawCircle(Point P1, Point P2, GfxInfo RectGfxInfo) const;  //Draw a Circle
 	void DrawOval(Point P1, Point P2, GfxInfo OvalGfxInfo) const; // Draw an Oval
 	void DrawRegPolygon(Point C, Point P, GfxInfo RegPolygonGfxInfo) const;
+	void DrawIrrPolygon(int *Arrx, int *Arry, int x, GfxInfo IrrPolygonGfxInfo) const;
 
 
 	///Make similar functions for drawing all other shapes.
