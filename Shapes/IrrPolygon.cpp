@@ -1,4 +1,4 @@
-#include "../Shapes/IrrPolygon.h"
+#include "IrrPolygon.h"
 #include<iostream>
 #include<fstream>
 IrrPolygon::IrrPolygon(Point *P1, int x, GfxInfo shapeGfxInfo) :shape(shapeGfxInfo)

@@ -7,11 +7,7 @@
 class opload : public operation
 {
 public:
-<<<<<<< Updated upstream
 	opload(controller* pCont) : operation(pCont) {};
-=======
-	opload(controller* pCont) : operation(pCont) {}
->>>>>>> Stashed changes
 	void Execute() {
 		GUI* pUI = pControl->GetUI();
 		pUI->PrintMessage("write file name");

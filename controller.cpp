@@ -78,6 +78,7 @@ operation* controller::createOperation(operationType OpType)
 			break;
 		case LOAD:
 			pOp = new opload(this);
+			break;
 	}
 
 	return pOp;
