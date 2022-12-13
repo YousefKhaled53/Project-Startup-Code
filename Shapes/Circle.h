@@ -10,7 +10,6 @@ public:
 	Circle(Point, Point, GfxInfo shapeGfxInfo);
 	virtual ~Circle();
 	virtual void Draw(GUI* pUI) const;
-	virtual void Save(ofstream& OutFile);
 
 };
 
