@@ -64,7 +64,10 @@ operation* controller::createOperation(operationType OpType)
 			///create Exitoperation here
 			pOp = new opsave(this);
 			break;
-		
+		case SAVE:
+			pOp = new opsave(this);
+			break;
+
 		case STATUS:	//a click on the status bar ==> no operation
 			break;
 		case DELTE:
@@ -72,10 +75,6 @@ operation* controller::createOperation(operationType OpType)
 			break;
 		case TO_PLAY:
 			pOp = new opswitchlaymode(this);
-			break;
-
-		case SAVE:
-			pOp = new opsave(this);
 			break;
 		case LOAD:
 			//pOp = new opload(this);

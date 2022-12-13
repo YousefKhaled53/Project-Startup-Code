@@ -43,6 +43,7 @@ class GUI
 		ICON_SQUARE,
 		ICON_LINE,
 		ICON_TRIANGLE,
+		ICON_SAVE,
 		//TODO: Add more icons names here
 
 		ICON_EXIT,		//Exit icon
