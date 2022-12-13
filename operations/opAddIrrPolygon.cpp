@@ -1,4 +1,4 @@
-#include "opAddIrrPolygon.h"
+/*#include "opAddIrrPolygon.h"
 #include "../shapes/IrrPolygon.h"
 #include "../controller.h"
 #include "../GUI/GUI.h"
@@ -50,4 +50,7 @@ void opAddIrrPolygon::Execute()
 	//Add the Circle to the list of shapes
 	pGr->Addshape(I);
 
+
+
 }
+*/

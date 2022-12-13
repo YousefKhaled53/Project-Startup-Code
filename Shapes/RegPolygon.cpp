@@ -1,4 +1,4 @@
-#include "../Shapes/RegPolygon.h"
+/*#include "../Shapes/RegPolygon.h"
 RegPolygon::RegPolygon(Point C, Point* P, int x, GfxInfo shapeGfxInfo) :shape(shapeGfxInfo)
 {
 	Center = C;
@@ -20,4 +20,4 @@ void RegPolygon::Draw(GUI* pUI) const
 {
 	//Call Output::DrawRegPolygon to draw a regular Polygon on the screen	
 	pUI->DrawRegPolygon(Center, Point1, ShpGfxInfo);
-}
+}*/
