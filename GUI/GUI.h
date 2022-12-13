@@ -39,12 +39,6 @@ class GUI
 		//If you want to change the menu icons order, change the order here
 		ICON_RECT,		//Recangle icon in menu
 		ICON_CIRC,		//Circle icon in menu
-		ICON_lINE,
-		ICON_OVAL,
-		ICON_SQUARE,
-		ICON_IRRPOLYGON,
-		ICON_REGPOLYGON,
-		ICON_TRIANGLE,
 
 		//TODO: Add more icons names here
 
