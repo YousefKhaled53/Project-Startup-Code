@@ -5,10 +5,10 @@
 #include "operations/opAddsquare.h"
 #include "operations/opAddCircle.h"
 #include "operations/opAddOval.h"
-#include "opdeleteshape.h"
-#include"opswitchplaymode.h"
-#include"opsave.h"
-#include"opload.h"
+#include "operations/opdeleteshape.h"
+#include "operations/opswitchplaymode.h"
+#include "operations/opsave.h"
+#include "operations/opload.h"
 //#include "operations/"
 
 //Constructor

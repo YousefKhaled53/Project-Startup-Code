@@ -13,6 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectName>CIE202-project</ProjectName>
     <ProjectGuid>{1AC3DDD7-FDDE-487E-A2A4-52A8FCF7BDB9}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -108,6 +109,7 @@
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <LanguageStandard>stdcpp14</LanguageStandard>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -163,28 +165,29 @@
     <ClCompile Include="CMUgraphicsLib\jpeg\jquant1.c" />
     <ClCompile Include="CMUgraphicsLib\jpeg\jquant2.c" />
     <ClCompile Include="CMUgraphicsLib\jpeg\jutils.c" />
-    <ClCompile Include="GUI\GUI.cpp" />
     <ClCompile Include="controller.cpp" />
-    <ClCompile Include="IrrPolygon.cpp" />
+    <ClCompile Include="GUI\GUI.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="opAddIrrPolygon.cpp" />
-    <ClCompile Include="opdeleteshape.cpp" />
     <ClCompile Include="operations\opAddCircle.cpp" />
+    <ClCompile Include="operations\opAddIrrPolygon.cpp" />
     <ClCompile Include="operations\opAddline.cpp" />
     <ClCompile Include="operations\opAddOval.cpp" />
     <ClCompile Include="operations\opAddRect.cpp" />
+    <ClCompile Include="operations\opAddRegPolygon.cpp" />
     <ClCompile Include="operations\opAddsquare.cpp" />
     <ClCompile Include="operations\opAddtriangle.cpp" />
-    <ClCompile Include="opload.cpp" />
-    <ClCompile Include="opsave.cpp" />
-    <ClCompile Include="opswitchplaymode.cpp" />
-    <ClCompile Include="RegPolygon.cpp" />
+    <ClCompile Include="operations\opdeleteshape.cpp" />
+    <ClCompile Include="operations\opload.cpp" />
+    <ClCompile Include="operations\opsave.cpp" />
+    <ClCompile Include="operations\opswitchplaymode.cpp" />
     <ClCompile Include="Shapes\Circle.cpp" />
     <ClCompile Include="Shapes\Graph.cpp" />
+    <ClCompile Include="Shapes\IrrPolygon.cpp" />
     <ClCompile Include="Shapes\line.cpp" />
     <ClCompile Include="Shapes\Oval.cpp" />
-    <ClCompile Include="Shapes\Shape.cpp" />
     <ClCompile Include="Shapes\Rect.cpp" />
+    <ClCompile Include="Shapes\RegPolygon.cpp" />
+    <ClCompile Include="Shapes\Shape.cpp" />
     <ClCompile Include="Shapes\square.cpp" />
     <ClCompile Include="Shapes\triangle.cpp" />
   </ItemGroup>
@@ -209,37 +212,32 @@
     <ClInclude Include="CMUgraphicsLib\jpeg\jpegint.h" />
     <ClInclude Include="CMUgraphicsLib\jpeg\jpeglib.h" />
     <ClInclude Include="CMUgraphicsLib\jpeg\jversion.h" />
-    <ClInclude Include="GUI\GUI.h" />
     <ClInclude Include="controller.h" />
     <ClInclude Include="DEFS.h" />
-    <ClInclude Include="IrrPolygon.h" />
-    <ClInclude Include="opAddIrrPolygon.h" />
-    <ClInclude Include="opAddRegPolygon.h" />
-    <ClInclude Include="opdeleteshape.h" />
+    <ClInclude Include="GUI\GUI.h" />
     <ClInclude Include="operations\opAddCircle.h" />
+    <ClInclude Include="operations\opAddIrrPolygon.h" />
     <ClInclude Include="operations\opAddline.h" />
     <ClInclude Include="operations\opAddOval.h" />
     <ClInclude Include="operations\opAddRect.h" />
+    <ClInclude Include="operations\opAddRegPolygon.h" />
     <ClInclude Include="operations\opAddsquare.h" />
     <ClInclude Include="operations\opAddtriangle.h" />
+    <ClInclude Include="operations\opdeleteshape.h" />
     <ClInclude Include="operations\operation.h" />
-    <ClInclude Include="opload.h" />
-    <ClInclude Include="opsave.h" />
-    <ClInclude Include="resource.h" />
+    <ClInclude Include="operations\opload.h" />
+    <ClInclude Include="operations\opsave.h" />
+    <ClInclude Include="operations\opswitchplaymode.h" />
     <ClInclude Include="Shapes\Circle.h" />
     <ClInclude Include="Shapes\Graph.h" />
+    <ClInclude Include="Shapes\IrrPolygon.h" />
     <ClInclude Include="Shapes\line.h" />
     <ClInclude Include="Shapes\Oval.h" />
-    <ClInclude Include="Shapes\Shape.h" />
     <ClInclude Include="Shapes\Rect.h" />
+    <ClInclude Include="Shapes\RegPolygon.h" />
+    <ClInclude Include="Shapes\Shape.h" />
     <ClInclude Include="Shapes\square.h" />
     <ClInclude Include="Shapes\triangle.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="CIE202-project.rc" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

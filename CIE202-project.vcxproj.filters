@@ -1,117 +1,331 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="CMUgraphicsLib\auxil.cpp" />
-    <ClCompile Include="CMUgraphicsLib\CMUgraphics.cpp" />
-    <ClCompile Include="CMUgraphicsLib\image.cpp" />
-    <ClCompile Include="CMUgraphicsLib\jpegload.c" />
-    <ClCompile Include="CMUgraphicsLib\keyqueue.cpp" />
-    <ClCompile Include="CMUgraphicsLib\mousequeue.cpp" />
-    <ClCompile Include="CMUgraphicsLib\windowinput.cpp" />
-    <ClCompile Include="CMUgraphicsLib\jpeg\jcomapi.c" />
-    <ClCompile Include="CMUgraphicsLib\jpeg\jcparam.c" />
-    <ClCompile Include="CMUgraphicsLib\jpeg\jdapimin.c" />
-    <ClCompile Include="CMUgraphicsLib\jpeg\jdapistd.c" />
-    <ClCompile Include="CMUgraphicsLib\jpeg\jdatasrc.c" />
-    <ClCompile Include="CMUgraphicsLib\jpeg\jdcoefct.c" />
-    <ClCompile Include="CMUgraphicsLib\jpeg\jdcolor.c" />
-    <ClCompile Include="CMUgraphicsLib\jpeg\jddctmgr.c" />
-    <ClCompile Include="CMUgraphicsLib\jpeg\jdhuff.c" />
-    <ClCompile Include="CMUgraphicsLib\jpeg\jdinput.c" />
-    <ClCompile Include="CMUgraphicsLib\jpeg\jdmainct.c" />
-    <ClCompile Include="CMUgraphicsLib\jpeg\jdmarker.c" />
-    <ClCompile Include="CMUgraphicsLib\jpeg\jdmaster.c" />
-    <ClCompile Include="CMUgraphicsLib\jpeg\jdmerge.c" />
-    <ClCompile Include="CMUgraphicsLib\jpeg\jdphuff.c" />
-    <ClCompile Include="CMUgraphicsLib\jpeg\jdpostct.c" />
-    <ClCompile Include="CMUgraphicsLib\jpeg\jdsample.c" />
-    <ClCompile Include="CMUgraphicsLib\jpeg\jdtrans.c" />
-    <ClCompile Include="CMUgraphicsLib\jpeg\jerror.c" />
-    <ClCompile Include="CMUgraphicsLib\jpeg\jidctflt.c" />
-    <ClCompile Include="CMUgraphicsLib\jpeg\jidctfst.c" />
-    <ClCompile Include="CMUgraphicsLib\jpeg\jidctint.c" />
-    <ClCompile Include="CMUgraphicsLib\jpeg\jidctred.c" />
-    <ClCompile Include="CMUgraphicsLib\jpeg\jmemmgr.c" />
-    <ClCompile Include="CMUgraphicsLib\jpeg\jmemnobs.c" />
-    <ClCompile Include="CMUgraphicsLib\jpeg\jquant1.c" />
-    <ClCompile Include="CMUgraphicsLib\jpeg\jquant2.c" />
-    <ClCompile Include="CMUgraphicsLib\jpeg\jutils.c" />
-    <ClCompile Include="GUI\GUI.cpp" />
     <ClCompile Include="controller.cpp" />
-    <ClCompile Include="IrrPolygon.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="opdeleteshape.cpp" />
-    <ClCompile Include="operations\opAddCircle.cpp" />
-    <ClCompile Include="operations\opAddline.cpp" />
-    <ClCompile Include="operations\opAddOval.cpp" />
-    <ClCompile Include="operations\opAddRect.cpp" />
-    <ClCompile Include="operations\opAddsquare.cpp" />
-    <ClCompile Include="operations\opAddtriangle.cpp" />
-    <ClCompile Include="opswitchplaymode.cpp" />
-    <ClCompile Include="RegPolygon.cpp" />
-    <ClCompile Include="Shapes\Circle.cpp" />
-    <ClCompile Include="Shapes\Graph.cpp" />
-    <ClCompile Include="Shapes\line.cpp" />
-    <ClCompile Include="Shapes\Oval.cpp" />
-    <ClCompile Include="Shapes\Shape.cpp" />
-    <ClCompile Include="Shapes\Rect.cpp" />
-    <ClCompile Include="Shapes\square.cpp" />
-    <ClCompile Include="Shapes\triangle.cpp" />
-    <ClCompile Include="opsave.cpp" />
-    <ClCompile Include="opload.cpp" />
-    <ClCompile Include="opAddIrrPolygon.cpp" />
+    <ClCompile Include="CMUgraphicsLib\auxil.cpp">
+      <Filter>Graphics library</Filter>
+    </ClCompile>
+    <ClCompile Include="CMUgraphicsLib\CMUgraphics.cpp">
+      <Filter>Graphics library</Filter>
+    </ClCompile>
+    <ClCompile Include="CMUgraphicsLib\jpeg\jcomapi.c">
+      <Filter>Graphics library</Filter>
+    </ClCompile>
+    <ClCompile Include="CMUgraphicsLib\jpeg\jcparam.c">
+      <Filter>Graphics library</Filter>
+    </ClCompile>
+    <ClCompile Include="CMUgraphicsLib\jpeg\jdapimin.c">
+      <Filter>Graphics library</Filter>
+    </ClCompile>
+    <ClCompile Include="CMUgraphicsLib\jpeg\jdapistd.c">
+      <Filter>Graphics library</Filter>
+    </ClCompile>
+    <ClCompile Include="CMUgraphicsLib\jpeg\jdatasrc.c">
+      <Filter>Graphics library</Filter>
+    </ClCompile>
+    <ClCompile Include="CMUgraphicsLib\jpeg\jdcoefct.c">
+      <Filter>Graphics library</Filter>
+    </ClCompile>
+    <ClCompile Include="CMUgraphicsLib\jpeg\jdcolor.c">
+      <Filter>Graphics library</Filter>
+    </ClCompile>
+    <ClCompile Include="CMUgraphicsLib\jpeg\jddctmgr.c">
+      <Filter>Graphics library</Filter>
+    </ClCompile>
+    <ClCompile Include="CMUgraphicsLib\jpeg\jdhuff.c">
+      <Filter>Graphics library</Filter>
+    </ClCompile>
+    <ClCompile Include="CMUgraphicsLib\jpeg\jdinput.c">
+      <Filter>Graphics library</Filter>
+    </ClCompile>
+    <ClCompile Include="CMUgraphicsLib\jpeg\jdmainct.c">
+      <Filter>Graphics library</Filter>
+    </ClCompile>
+    <ClCompile Include="CMUgraphicsLib\jpeg\jdmarker.c">
+      <Filter>Graphics library</Filter>
+    </ClCompile>
+    <ClCompile Include="CMUgraphicsLib\jpeg\jdmaster.c">
+      <Filter>Graphics library</Filter>
+    </ClCompile>
+    <ClCompile Include="CMUgraphicsLib\jpeg\jdmerge.c">
+      <Filter>Graphics library</Filter>
+    </ClCompile>
+    <ClCompile Include="CMUgraphicsLib\jpeg\jdphuff.c">
+      <Filter>Graphics library</Filter>
+    </ClCompile>
+    <ClCompile Include="CMUgraphicsLib\jpeg\jdpostct.c">
+      <Filter>Graphics library</Filter>
+    </ClCompile>
+    <ClCompile Include="CMUgraphicsLib\jpeg\jdsample.c">
+      <Filter>Graphics library</Filter>
+    </ClCompile>
+    <ClCompile Include="CMUgraphicsLib\jpeg\jdtrans.c">
+      <Filter>Graphics library</Filter>
+    </ClCompile>
+    <ClCompile Include="CMUgraphicsLib\jpeg\jerror.c">
+      <Filter>Graphics library</Filter>
+    </ClCompile>
+    <ClCompile Include="CMUgraphicsLib\jpeg\jidctflt.c">
+      <Filter>Graphics library</Filter>
+    </ClCompile>
+    <ClCompile Include="CMUgraphicsLib\jpeg\jidctfst.c">
+      <Filter>Graphics library</Filter>
+    </ClCompile>
+    <ClCompile Include="CMUgraphicsLib\jpeg\jidctint.c">
+      <Filter>Graphics library</Filter>
+    </ClCompile>
+    <ClCompile Include="CMUgraphicsLib\jpeg\jidctred.c">
+      <Filter>Graphics library</Filter>
+    </ClCompile>
+    <ClCompile Include="CMUgraphicsLib\jpeg\jmemmgr.c">
+      <Filter>Graphics library</Filter>
+    </ClCompile>
+    <ClCompile Include="CMUgraphicsLib\jpeg\jmemnobs.c">
+      <Filter>Graphics library</Filter>
+    </ClCompile>
+    <ClCompile Include="CMUgraphicsLib\jpegload.c">
+      <Filter>Graphics library</Filter>
+    </ClCompile>
+    <ClCompile Include="CMUgraphicsLib\jpeg\jquant1.c">
+      <Filter>Graphics library</Filter>
+    </ClCompile>
+    <ClCompile Include="CMUgraphicsLib\jpeg\jquant2.c">
+      <Filter>Graphics library</Filter>
+    </ClCompile>
+    <ClCompile Include="CMUgraphicsLib\jpeg\jutils.c">
+      <Filter>Graphics library</Filter>
+    </ClCompile>
+    <ClCompile Include="CMUgraphicsLib\keyqueue.cpp">
+      <Filter>Graphics library</Filter>
+    </ClCompile>
+    <ClCompile Include="CMUgraphicsLib\windowinput.cpp">
+      <Filter>Graphics library</Filter>
+    </ClCompile>
+    <ClCompile Include="CMUgraphicsLib\mousequeue.cpp">
+      <Filter>Graphics library</Filter>
+    </ClCompile>
+    <ClCompile Include="CMUgraphicsLib\image.cpp">
+      <Filter>Graphics library</Filter>
+    </ClCompile>
+    <ClCompile Include="operations\opAddCircle.cpp">
+      <Filter>Operations</Filter>
+    </ClCompile>
+    <ClCompile Include="operations\opAddIrrPolygon.cpp">
+      <Filter>Operations</Filter>
+    </ClCompile>
+    <ClCompile Include="operations\opAddline.cpp">
+      <Filter>Operations</Filter>
+    </ClCompile>
+    <ClCompile Include="operations\opAddOval.cpp">
+      <Filter>Operations</Filter>
+    </ClCompile>
+    <ClCompile Include="operations\opAddRect.cpp">
+      <Filter>Operations</Filter>
+    </ClCompile>
+    <ClCompile Include="operations\opAddRegPolygon.cpp">
+      <Filter>Operations</Filter>
+    </ClCompile>
+    <ClCompile Include="operations\opAddsquare.cpp">
+      <Filter>Operations</Filter>
+    </ClCompile>
+    <ClCompile Include="operations\opAddtriangle.cpp">
+      <Filter>Operations</Filter>
+    </ClCompile>
+    <ClCompile Include="operations\opdeleteshape.cpp">
+      <Filter>Operations</Filter>
+    </ClCompile>
+    <ClCompile Include="operations\opload.cpp">
+      <Filter>Operations</Filter>
+    </ClCompile>
+    <ClCompile Include="operations\opsave.cpp">
+      <Filter>Operations</Filter>
+    </ClCompile>
+    <ClCompile Include="operations\opswitchplaymode.cpp">
+      <Filter>Operations</Filter>
+    </ClCompile>
+    <ClCompile Include="GUI\GUI.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Shapes\Circle.cpp">
+      <Filter>Shapes&amp;Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="Shapes\Graph.cpp">
+      <Filter>Shapes&amp;Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="Shapes\IrrPolygon.cpp">
+      <Filter>Shapes&amp;Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="Shapes\line.cpp">
+      <Filter>Shapes&amp;Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="Shapes\Oval.cpp">
+      <Filter>Shapes&amp;Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="Shapes\Rect.cpp">
+      <Filter>Shapes&amp;Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="Shapes\RegPolygon.cpp">
+      <Filter>Shapes&amp;Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="Shapes\Shape.cpp">
+      <Filter>Shapes&amp;Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="Shapes\square.cpp">
+      <Filter>Shapes&amp;Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="Shapes\triangle.cpp">
+      <Filter>Shapes&amp;Graph</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CMUgraphicsLib\auxil.h" />
-    <ClInclude Include="CMUgraphicsLib\CMUgraphics.h" />
-    <ClInclude Include="CMUgraphicsLib\colors.h" />
-    <ClInclude Include="CMUgraphicsLib\error.h" />
-    <ClInclude Include="CMUgraphicsLib\image.h" />
-    <ClInclude Include="CMUgraphicsLib\jpegload.h" />
-    <ClInclude Include="CMUgraphicsLib\keyqueue.h" />
-    <ClInclude Include="CMUgraphicsLib\mousequeue.h" />
-    <ClInclude Include="CMUgraphicsLib\version.h" />
-    <ClInclude Include="CMUgraphicsLib\windowinput.h" />
-    <ClInclude Include="CMUgraphicsLib\jpeg\jconfig.h" />
-    <ClInclude Include="CMUgraphicsLib\jpeg\jdct.h" />
-    <ClInclude Include="CMUgraphicsLib\jpeg\jdhuff.h" />
-    <ClInclude Include="CMUgraphicsLib\jpeg\jerror.h" />
-    <ClInclude Include="CMUgraphicsLib\jpeg\jinclude.h" />
-    <ClInclude Include="CMUgraphicsLib\jpeg\jmemsys.h" />
-    <ClInclude Include="CMUgraphicsLib\jpeg\jmorecfg.h" />
-    <ClInclude Include="CMUgraphicsLib\jpeg\jpegint.h" />
-    <ClInclude Include="CMUgraphicsLib\jpeg\jpeglib.h" />
-    <ClInclude Include="CMUgraphicsLib\jpeg\jversion.h" />
-    <ClInclude Include="GUI\GUI.h" />
     <ClInclude Include="controller.h" />
     <ClInclude Include="DEFS.h" />
-    <ClInclude Include="IrrPolygon.h" />
-    <ClInclude Include="opdeleteshape.h" />
-    <ClInclude Include="operations\opAddCircle.h" />
-    <ClInclude Include="operations\opAddline.h" />
-    <ClInclude Include="operations\opAddOval.h" />
-    <ClInclude Include="operations\opAddRect.h" />
-    <ClInclude Include="operations\opAddsquare.h" />
-    <ClInclude Include="operations\opAddtriangle.h" />
-    <ClInclude Include="operations\operation.h" />
-    <ClInclude Include="resource.h" />
-    <ClInclude Include="Shapes\Circle.h" />
-    <ClInclude Include="Shapes\Graph.h" />
-    <ClInclude Include="Shapes\line.h" />
-    <ClInclude Include="Shapes\Oval.h" />
-    <ClInclude Include="Shapes\Shape.h" />
-    <ClInclude Include="Shapes\Rect.h" />
-    <ClInclude Include="Shapes\square.h" />
-    <ClInclude Include="Shapes\triangle.h" />
-    <ClInclude Include="opsave.h" />
-    <ClInclude Include="opload.h" />
-    <ClInclude Include="opAddIrrPolygon.h" />
-    <ClInclude Include="opAddRegPolygon.h" />
+    <ClInclude Include="CMUgraphicsLib\auxil.h">
+      <Filter>Graphics library</Filter>
+    </ClInclude>
+    <ClInclude Include="CMUgraphicsLib\CMUgraphics.h">
+      <Filter>Graphics library</Filter>
+    </ClInclude>
+    <ClInclude Include="CMUgraphicsLib\colors.h">
+      <Filter>Graphics library</Filter>
+    </ClInclude>
+    <ClInclude Include="CMUgraphicsLib\error.h">
+      <Filter>Graphics library</Filter>
+    </ClInclude>
+    <ClInclude Include="CMUgraphicsLib\jpeg\jconfig.h">
+      <Filter>Graphics library</Filter>
+    </ClInclude>
+    <ClInclude Include="CMUgraphicsLib\jpeg\jdct.h">
+      <Filter>Graphics library</Filter>
+    </ClInclude>
+    <ClInclude Include="CMUgraphicsLib\jpeg\jdhuff.h">
+      <Filter>Graphics library</Filter>
+    </ClInclude>
+    <ClInclude Include="CMUgraphicsLib\jpeg\jerror.h">
+      <Filter>Graphics library</Filter>
+    </ClInclude>
+    <ClInclude Include="CMUgraphicsLib\jpeg\jinclude.h">
+      <Filter>Graphics library</Filter>
+    </ClInclude>
+    <ClInclude Include="CMUgraphicsLib\jpeg\jmemsys.h">
+      <Filter>Graphics library</Filter>
+    </ClInclude>
+    <ClInclude Include="CMUgraphicsLib\jpeg\jmorecfg.h">
+      <Filter>Graphics library</Filter>
+    </ClInclude>
+    <ClInclude Include="CMUgraphicsLib\jpeg\jpegint.h">
+      <Filter>Graphics library</Filter>
+    </ClInclude>
+    <ClInclude Include="CMUgraphicsLib\jpeg\jpeglib.h">
+      <Filter>Graphics library</Filter>
+    </ClInclude>
+    <ClInclude Include="CMUgraphicsLib\jpegload.h">
+      <Filter>Graphics library</Filter>
+    </ClInclude>
+    <ClInclude Include="CMUgraphicsLib\jpeg\jversion.h">
+      <Filter>Graphics library</Filter>
+    </ClInclude>
+    <ClInclude Include="CMUgraphicsLib\keyqueue.h">
+      <Filter>Graphics library</Filter>
+    </ClInclude>
+    <ClInclude Include="CMUgraphicsLib\windowinput.h">
+      <Filter>Graphics library</Filter>
+    </ClInclude>
+    <ClInclude Include="CMUgraphicsLib\version.h">
+      <Filter>Graphics library</Filter>
+    </ClInclude>
+    <ClInclude Include="CMUgraphicsLib\mousequeue.h">
+      <Filter>Graphics library</Filter>
+    </ClInclude>
+    <ClInclude Include="CMUgraphicsLib\image.h">
+      <Filter>Graphics library</Filter>
+    </ClInclude>
+    <ClInclude Include="operations\opAddCircle.h">
+      <Filter>Operations</Filter>
+    </ClInclude>
+    <ClInclude Include="operations\opAddIrrPolygon.h">
+      <Filter>Operations</Filter>
+    </ClInclude>
+    <ClInclude Include="operations\opAddline.h">
+      <Filter>Operations</Filter>
+    </ClInclude>
+    <ClInclude Include="operations\opAddOval.h">
+      <Filter>Operations</Filter>
+    </ClInclude>
+    <ClInclude Include="operations\opAddRect.h">
+      <Filter>Operations</Filter>
+    </ClInclude>
+    <ClInclude Include="operations\opAddRegPolygon.h">
+      <Filter>Operations</Filter>
+    </ClInclude>
+    <ClInclude Include="operations\opAddsquare.h">
+      <Filter>Operations</Filter>
+    </ClInclude>
+    <ClInclude Include="operations\opAddtriangle.h">
+      <Filter>Operations</Filter>
+    </ClInclude>
+    <ClInclude Include="operations\opdeleteshape.h">
+      <Filter>Operations</Filter>
+    </ClInclude>
+    <ClInclude Include="operations\operation.h">
+      <Filter>Operations</Filter>
+    </ClInclude>
+    <ClInclude Include="operations\opload.h">
+      <Filter>Operations</Filter>
+    </ClInclude>
+    <ClInclude Include="operations\opsave.h">
+      <Filter>Operations</Filter>
+    </ClInclude>
+    <ClInclude Include="operations\opswitchplaymode.h">
+      <Filter>Operations</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\GUI.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Shapes\Circle.h">
+      <Filter>Shapes&amp;Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="Shapes\Graph.h">
+      <Filter>Shapes&amp;Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="Shapes\IrrPolygon.h">
+      <Filter>Shapes&amp;Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="Shapes\line.h">
+      <Filter>Shapes&amp;Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="Shapes\Oval.h">
+      <Filter>Shapes&amp;Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="Shapes\Rect.h">
+      <Filter>Shapes&amp;Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="Shapes\RegPolygon.h">
+      <Filter>Shapes&amp;Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="Shapes\Shape.h">
+      <Filter>Shapes&amp;Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="Shapes\square.h">
+      <Filter>Shapes&amp;Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="Shapes\triangle.h">
+      <Filter>Shapes&amp;Graph</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="CIE202-project.rc" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram.cd" />
+    <Filter Include="Graphics library">
+      <UniqueIdentifier>{cbe14061-80d9-4c89-9ae9-f57083bd75cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shapes&amp;Graph">
+      <UniqueIdentifier>{3775c23d-c677-4b6e-915a-67e357cf5595}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Operations">
+      <UniqueIdentifier>{1f876957-011b-4121-9bda-2fa8696ab3f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI">
+      <UniqueIdentifier>{2e8be69b-f591-47bf-a739-87ea400e813e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>

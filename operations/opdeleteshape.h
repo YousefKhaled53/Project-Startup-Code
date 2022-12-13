@@ -1,5 +1,5 @@
 #pragma once
-#include"operations/operation.h"
+#include"operation.h"
 class opdeleteshape : public operation
 {
 public:

@@ -1,8 +1,8 @@
 #include "opdeleteshape.h"
 #include "opdeleteshape.h"
-#include "controller.h"
-#include"GUI/GUI.h"
-#include"Shapes/Graph.h"
+#include "../controller.h"
+#include"../GUI/GUI.h"
+#include"../Shapes/Graph.h"
 opdeleteshape::opdeleteshape(controller* pcont) :operation(pcont) {};
 void opdeleteshape::Execute() {
 	GUI* pUI = pControl->GetUI(); // getting a pointer from gui so that i can call print message and call selectshape

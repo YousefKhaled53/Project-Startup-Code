@@ -1,7 +1,7 @@
 #include "opAddIrrPolygon.h"
-#include "shapes/IrrPolygon.h"
-#include "controller.h"
-#include "GUI\GUI.h"
+#include "../shapes/IrrPolygon.h"
+#include "../controller.h"
+#include "../GUI/GUI.h"
 
 opAddIrrPolygon::opAddIrrPolygon(controller* pCont) :operation(pCont)
 {}

@@ -1,9 +1,9 @@
 #pragma once
-#include"operations/operation.h"
+#include"operation.h"
 #include<iostream>
 #include<fstream>
-#include"Shapes/Shape.h"
-#include"controller.h"
+#include"../Shapes/Shape.h"
+#include"../controller.h"
 class opload : public operation
 {
 public:
