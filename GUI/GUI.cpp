@@ -31,6 +31,34 @@ GUI::GUI()
 
 	CreateDrawToolBar();
 	CreateStatusBar();
+	InterfaceMode = MODE_PLAY;
+
+	width = 1300;
+	height = 700;
+	wx = 5;
+	wy = 5;
+
+
+	StatusBarHeight = 50;
+	ToolBarHeight = 50;
+	MenuIconWidth = 80;
+
+	DrawColor = BLUE;	//default Drawing color
+	FillColor = GREEN;	//default Filling color
+	MsgColor = BLACK;		//Messages color
+	BkGrndColor = WHITE;	//Background color
+	HighlightColor = MAGENTA;	//This color should NOT be used to draw shapes. use if for highlight only
+	StatusBarColor = LIGHTSEAGREEN;
+	PenWidth = 3;	//default width of the shapes frames
+
+
+	//Create the output window
+	pWind = CreateWind(width, height, wx, wy);
+	//Change the title
+	pWind->ChangeTitle("- - - - - - - - - - PAINT ^ ^ PLAY - - - - - - - - - -");
+
+	CreateDrawToolBar();
+	CreateStatusBar();
 }
 
 
@@ -95,6 +123,7 @@ operationType GUI::GetUseroperation() const
 			case ICON_SQUARE: return DRAW_SQUARE;
 			case ICON_TRIANGLE: return DRAW_TRI;
 			case ICON_SAVE: return SAVE;
+			case ICON_SWITCH:return TO_PLAY;
 
 			default: return EMPTY;	//A click on empty place in desgin toolbar
 			}
@@ -169,7 +198,7 @@ void GUI::CreateDrawToolBar()
 	MenuIconImages[ICON_OVAL] = "images\\MenuIcons\\oval.jpg";
 	MenuIconImages[ICON_TRIANGLE] = "images\\MenuIcons\\tri.jpg";
 	MenuIconImages[ICON_SAVE] = "images\\MenuIcons\\Menu_Save.jpg";
-
+	MenuIconImages[ICON_SWITCH] = "images\\MenuIcons\\switch.jpg";
 
 
 
@@ -191,7 +220,24 @@ void GUI::CreateDrawToolBar()
 void GUI::CreatePlayToolBar() 
 {
 	InterfaceMode = MODE_PLAY;
-	///TODO: write code to create Play mode menu
+	string MenuIconImages[PLAY_ICON_COUNT];
+	MenuIconImages[ICON_hide] = "images\\MenuIcons\\hide.jpg";
+
+	MenuIconImages[ICON_SWITCH] = "images\\MenuIcons\\switch.jpg";
+
+
+
+	//TODO: Prepare images for each menu icon and add it to the list
+
+	//Draw menu icon one image at a time
+	for (int i = 0; i < PLAY_ICON_COUNT; i++)
+		pWind->DrawImage(MenuIconImages[i], i * MenuIconWidth, 0, MenuIconWidth, ToolBarHeight);
+
+
+
+	//Draw a line under the toolbar
+	pWind->SetPen(RED, 3);
+	pWind->DrawLine(0, ToolBarHeight, width, ToolBarHeight);
 }
 //////////////////////////////////////////////////////////////////////////////////////////
 

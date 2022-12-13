@@ -44,6 +44,7 @@ class GUI
 		ICON_LINE,
 		ICON_TRIANGLE,
 		ICON_SAVE,
+		ICON_SWITCH,
 		//TODO: Add more icons names here
 
 		ICON_EXIT,		//Exit icon
@@ -58,7 +59,7 @@ class GUI
 		//If you want to change the menu icons order, change the order here
 
 		//TODO: Add more icons names here
-
+		ICON_hide,
 		PLAY_ICON_COUNT		//no. of menu icons ==> This should be the last line in this enum
 
 	};
