@@ -52,6 +52,7 @@ void Graph::deleteshape(shape* pShp) {
 void Graph::Save(ofstream& outfile) {
 	for (int i = 0; i < (sizeof(shapesList) / sizeof(shapesList[0])); i++) {
 		shapesList[i]->Save(outfile); 
+
 	}
 }
 color Graph::changestringtoints(string colorstring) {

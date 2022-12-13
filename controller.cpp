@@ -9,6 +9,7 @@
 #include "operations/opswitchplaymode.h"
 #include "operations/opsave.h"
 #include "operations/opsave.h"
+#include "operations/opAddIrrPolygon.h"
 
 //#include "operations/"
 
@@ -38,10 +39,12 @@ operation* controller::createOperation(operationType OpType)
 	{
 		case DRAW_LINE:
 			pOp = new opAddline(this);
+			
 			break;
 
 		case DRAW_RECT:
-			pOp = new opAddRect(this);
+			//pOp = new opAddRect(this);
+			pOp = new opAddIrrPolygon(this);
 			break;
 
 		case DRAW_TRI:
@@ -62,7 +65,6 @@ operation* controller::createOperation(operationType OpType)
 
 		case EXIT:
 			///create Exitoperation here
-			pOp = new opsave(this);
 			break;
 		case SAVE:
 			pOp = new opsave(this);
