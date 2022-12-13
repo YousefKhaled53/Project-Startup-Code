@@ -90,6 +90,11 @@ operationType GUI::GetUseroperation() const
 			case ICON_RECT: return DRAW_RECT;
 			case ICON_CIRC: return DRAW_CIRC;
 			case ICON_EXIT: return EXIT;
+			case ICON_lINE: return DRAW_LINE;
+			case ICON_OVAL: return DRAW_OVAL;
+			case ICON_IRRPOLYGON: return DRAW_IRRPOLYGON;
+			case ICON_REGPOLYGON: return DRAW_REGPOLYGON;
+			case ICON_SQUARE: return DRAW_SQUARE;
 
 			default: return EMPTY;	//A click on empty place in desgin toolbar
 			}
