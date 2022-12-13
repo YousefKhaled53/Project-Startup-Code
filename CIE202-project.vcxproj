@@ -168,7 +168,6 @@
     <ClCompile Include="IrrPolygon.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="opAddIrrPolygon.cpp" />
-    <ClCompile Include="opAddRegPolygon.cpp" />
     <ClCompile Include="opdeleteshape.cpp" />
     <ClCompile Include="operations\opAddCircle.cpp" />
     <ClCompile Include="operations\opAddline.cpp" />

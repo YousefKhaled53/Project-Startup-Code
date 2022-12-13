@@ -60,7 +60,6 @@
     <ClCompile Include="opsave.cpp" />
     <ClCompile Include="opload.cpp" />
     <ClCompile Include="opAddIrrPolygon.cpp" />
-    <ClCompile Include="opAddRegPolygon.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CMUgraphicsLib\auxil.h" />

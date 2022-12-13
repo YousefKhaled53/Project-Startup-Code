@@ -18,7 +18,7 @@ public:
 	void SetSelected(bool s);	//select/unselect the shape
 	bool IsSelected() const;	//check whether fig is selected
 
-	virtual void Draw(GUI* pUI) const  = 0 ;		//Draw the shape
+	virtual void Draw(GUI* pUI) const  =0  ;		//Draw the shape
 	
 	void ChngDrawClr(color Dclr);	//changes the shape's drawing color
 	void ChngFillClr(color Fclr);	//changes the shape's filling color

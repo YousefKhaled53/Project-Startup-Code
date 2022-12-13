@@ -4,7 +4,7 @@
 
 #include "..\CMUgraphicsLib\CMUgraphics.h"
 #include "..\Defs.h"
-
+#include "../controller.h"
 #include <string>
 using namespace std;
 
