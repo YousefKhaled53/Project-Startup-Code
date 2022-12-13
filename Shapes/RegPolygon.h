@@ -1,7 +1,7 @@
 #pragma once
 #include "../shapes/Shape.h"
 class RegPolygon :
-    public shape
+	public shape 
 {
 private:
 	Point Center;
@@ -13,7 +13,7 @@ private:
 	int vertixx;
 	int vertixy;
 public:
-	RegPolygon(Point, Point*,int GfxInfo shapeGfxInfo);
+	RegPolygon(Point, Point*, GfxInfo shapeGfxInfo);
 	virtual ~RegPolygon();
 	virtual void Draw(GUI* pUI) const;
 };
