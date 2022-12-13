@@ -8,7 +8,8 @@
 #include "operations/opdeleteshape.h"
 #include "operations/opswitchplaymode.h"
 #include "operations/opsave.h"
-#include "operations/opload.h"
+#include "operations/opsave.h"
+
 //#include "operations/"
 
 //Constructor
@@ -61,7 +62,7 @@ operation* controller::createOperation(operationType OpType)
 
 		case EXIT:
 			///create Exitoperation here
-			
+			pOp = new opsave(this);
 			break;
 		
 		case STATUS:	//a click on the status bar ==> no operation
@@ -77,7 +78,7 @@ operation* controller::createOperation(operationType OpType)
 			pOp = new opsave(this);
 			break;
 		case LOAD:
-			pOp = new opload(this);
+			//pOp = new opload(this);
 			break;
 	}
 
