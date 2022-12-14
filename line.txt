@@ -1,24 +1,18 @@
-RECT ID: -842150451
-corner186 98
-corner2239 280
+LINE ID: -842150451
+corner1350 102
+corner2544 289
 border width is 3
  draw colors rgb intensities are :
 red intensity is 0	blue intensity is 255	green intensity is 0
-fill color rgb intesities are:
-no fill
-RECT ID: -842150451
-corner1484 203
-corner2712 374
+LINE ID: -842150451
+corner1256 212
+corner2174 469
 border width is 3
  draw colors rgb intensities are :
 red intensity is 0	blue intensity is 255	green intensity is 0
-fill color rgb intesities are:
-no fill
-RECT ID: -842150451
-corner1114 231
-corner2151 351
+LINE ID: -842150451
+corner1309 184
+corner2412 364
 border width is 3
  draw colors rgb intensities are :
 red intensity is 0	blue intensity is 255	green intensity is 0
-fill color rgb intesities are:
-no fill
