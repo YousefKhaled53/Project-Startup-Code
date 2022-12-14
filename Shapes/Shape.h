@@ -7,8 +7,7 @@
 class shape
 {
 protected:
-
-	static int ID; //Each shape has an ID
+	int ID;		//Each shape has an ID
 	GfxInfo ShpGfxInfo;	//shape graphis info
 	
 	/// Add more parameters if needed.
