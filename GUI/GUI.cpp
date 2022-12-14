@@ -31,37 +31,7 @@ GUI::GUI()
 
 	CreateDrawToolBar();
 	CreateStatusBar();
-/*	InterfaceMode = MODE_PLAY;
-
-	width = 1300;
-	height = 700;
-	wx = 5;
-	wy = 5;
-
-
-	StatusBarHeight = 50;
-	ToolBarHeight = 50;
-	MenuIconWidth = 80;
-
-	DrawColor = BLUE;	//default Drawing color
-	FillColor = GREEN;	//default Filling color
-	MsgColor = BLACK;		//Messages color
-	BkGrndColor = WHITE;	//Background color
-	HighlightColor = MAGENTA;	//This color should NOT be used to draw shapes. use if for highlight only
-	StatusBarColor = LIGHTSEAGREEN;
-	PenWidth = 3;	//default width of the shapes frames
-
-
-	//Create the output window
-	pWind = CreateWind(width, height, wx, wy);
-	//Change the title
-	pWind->ChangeTitle("- - - - - - - - - - PAINT ^ ^ PLAY - - - - - - - - - -");
-
-	CreateDrawToolBar();
-	CreateStatusBar();*/
 }
-
-
 
 
 //======================================================================================//
@@ -125,6 +95,7 @@ operationType GUI::GetUseroperation() const
 			case ICON_SAVE: return SAVE;
 			case ICON_SWITCH: return TO_PLAY;
 			case ICON_IRRPOLYGON: return DRAW_IRRPOLYGON;
+			case ICON_REG_POLYGON: return DRAW_REGPOLYGON;
 
 			default: return EMPTY;	//A click on empty place in desgin toolbar
 			}
@@ -201,6 +172,7 @@ void GUI::CreateDrawToolBar()
 	MenuIconImages[ICON_SAVE] = "images\\MenuIcons\\Menu_Save.jpg";
 	MenuIconImages[ICON_SWITCH] = "images\\MenuIcons\\switch.jpg";
 	MenuIconImages[ICON_IRRPOLYGON] = "images\\MenuIcons\\Menu_IrrPolygon.jpg";
+	MenuIconImages[ICON_REG_POLYGON] = "images\\MenuIcons\\Menu_Reg.jpg";
 
 
 
@@ -221,7 +193,6 @@ void GUI::CreateDrawToolBar()
 
 void GUI::CreatePlayToolBar() 
 {
-	InterfaceMode = MODE_PLAY;
 	string MenuIconImages[PLAY_ICON_COUNT];
 	MenuIconImages[ICON_hide] = "images\\MenuIcons\\hide.jpg";
 
@@ -240,6 +211,8 @@ void GUI::CreatePlayToolBar()
 	//Draw a line under the toolbar
 	pWind->SetPen(RED, 3);
 	pWind->DrawLine(0, ToolBarHeight, width, ToolBarHeight);
+	InterfaceMode = MODE_PLAY;
+		;
 }
 //////////////////////////////////////////////////////////////////////////////////////////
 
@@ -420,7 +393,7 @@ void GUI::Drawsquare(Point P1, Point P2, GfxInfo SquareGfxInfo) const
 
 }
 
-void GUI::DrawRegPolygon(Point C, Point P, GfxInfo RegPolygonGfxInfo) const
+void GUI::DrawRegPolygon(int* Arrx, int* ArrY, int x, GfxInfo RegPolygonGfxInfo) const
 {
 	color DrawingClr;
 	if (RegPolygonGfxInfo.isSelected)	//shape is selected
@@ -439,7 +412,7 @@ void GUI::DrawRegPolygon(Point C, Point P, GfxInfo RegPolygonGfxInfo) const
 	else
 		style = FRAME;
 
-	//pWind->DrawPolygon(C.x, P.y, 1, style);
+	pWind->DrawPolygon(Arrx, ArrY, x, style);
 }
 
 

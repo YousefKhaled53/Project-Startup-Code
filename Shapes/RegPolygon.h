@@ -5,16 +5,18 @@ class RegPolygon :
 {
 private:
 	Point Center;
-	Point Point1;
+	Point* Point1;
 	int distance;
 	int Vertices_num;
-	int* ArrX;
-	int* Arry;
+	int* ArrX=new int;
+	int* ArrY=new int;
 	int vertixx;
 	int vertixy;
 public:
-	RegPolygon(Point, Point*, GfxInfo shapeGfxInfo);
+	RegPolygon(Point, Point*, int, GfxInfo shapeGfxInfo);
 	virtual ~RegPolygon();
 	virtual void Draw(GUI* pUI) const;
+	virtual void Save(ofstream& OutFile);
+
 };
 

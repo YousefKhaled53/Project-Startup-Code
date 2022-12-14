@@ -46,6 +46,7 @@ class GUI
 		ICON_SAVE,
 		ICON_SWITCH,
 		ICON_IRRPOLYGON,
+		ICON_REG_POLYGON,
 		//TODO: Add more icons names here
 
 		ICON_EXIT,		//Exit icon
@@ -114,7 +115,7 @@ public:
 	void Drawsquare(Point P1, Point P2, GfxInfo squareGfxInfo) const;  //Draw a square
 	void DrawCircle(Point P1, Point P2, GfxInfo RectGfxInfo) const;  //Draw a Circle
 	void DrawOval(Point P1, Point P2, GfxInfo OvalGfxInfo) const; // Draw an Oval
-	void DrawRegPolygon(Point C, Point P, GfxInfo RegPolygonGfxInfo) const;
+	void DrawRegPolygon(int* Arrx, int* ArrY, int x, GfxInfo RegPolygonGfxInfo) const;
 	void DrawIrrPolygon(int *Arrx, int *Arry, int x, GfxInfo IrrPolygonGfxInfo) const;
 
 
