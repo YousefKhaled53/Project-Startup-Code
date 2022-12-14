@@ -18,6 +18,8 @@ void Rect::Draw(GUI* pUI) const
 }
 void Rect::Save(ofstream& OutFile)
 {
+	OutFile << endl;
+
 	OutFile << "RECT ID: " << getid() <<endl ;
 	OutFile << "corner1" << Corner1.x << " " << Corner1.y << endl;
 	OutFile << "corner2" << Corner2.x << " " << Corner2.y << endl;
@@ -38,5 +40,7 @@ void Rect::Save(ofstream& OutFile)
 	{
 		OutFile << "no fill"<<endl;
 	}
+	OutFile<< endl;
+	OutFile<< "-------------------------------------------------------------------------------------------------------------" << endl;
 
 }
