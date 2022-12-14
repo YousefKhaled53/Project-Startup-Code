@@ -43,8 +43,15 @@ operation* controller::createOperation(operationType OpType)
 			break;
 
 		case DRAW_RECT:
+<<<<<<< Updated upstream
 			//pOp = new opAddRect(this);
 			pOp = new opAddRect(this);
+=======
+			pOp = new opAddRect(this);
+			//pOp = new opAddIrrPolygon(this);
+			//pOp = new opswitchlaymode(this);
+
+>>>>>>> Stashed changes
 			break;
 
 		case DRAW_TRI:
@@ -81,9 +88,14 @@ operation* controller::createOperation(operationType OpType)
 		case LOAD:
 			//pOp = new opload(this);
 			break;
+<<<<<<< Updated upstream
 		case DRAW_IRRPOLYGON:
 			pOp = new opAddIrrPolygon(this);
 			break;
+=======
+		
+
+>>>>>>> Stashed changes
 	}
 
 	return pOp;

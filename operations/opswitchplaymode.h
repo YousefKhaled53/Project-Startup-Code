@@ -10,7 +10,6 @@ public:
 	virtual void Execute() {
 		GUI* pUI = pControl->GetUI();
 		pUI->CreatePlayToolBar();
-		//what should be written here ??
-	} // the function which will be responsible for changing to play mode
+	} 
 };
 

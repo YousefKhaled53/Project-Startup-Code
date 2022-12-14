@@ -6,9 +6,9 @@ GUI::GUI()
 	InterfaceMode = MODE_DRAW;
 
 	width = 1300;
-	height = 650;
+	height = 640;
 	wx = 5;
-	wy = 5;
+	wy = 5; 
 
 
 	StatusBarHeight = 50;
@@ -31,7 +31,11 @@ GUI::GUI()
 
 	CreateDrawToolBar();
 	CreateStatusBar();
+<<<<<<< Updated upstream
 /*	InterfaceMode = MODE_PLAY;
+=======
+	/*InterfaceMode = MODE_PLAY;
+>>>>>>> Stashed changes
 
 	width = 1300;
 	height = 700;
@@ -50,7 +54,7 @@ GUI::GUI()
 	HighlightColor = MAGENTA;	//This color should NOT be used to draw shapes. use if for highlight only
 	StatusBarColor = LIGHTSEAGREEN;
 	PenWidth = 3;	//default width of the shapes frames
-
+	
 
 	//Create the output window
 	pWind = CreateWind(width, height, wx, wy);
