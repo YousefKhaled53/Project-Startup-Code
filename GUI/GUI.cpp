@@ -31,37 +31,7 @@ GUI::GUI()
 
 	CreateDrawToolBar();
 	CreateStatusBar();
-/*	InterfaceMode = MODE_PLAY;
-
-	width = 1300;
-	height = 700;
-	wx = 5;
-	wy = 5;
-
-
-	StatusBarHeight = 50;
-	ToolBarHeight = 50;
-	MenuIconWidth = 80;
-
-	DrawColor = BLUE;	//default Drawing color
-	FillColor = GREEN;	//default Filling color
-	MsgColor = BLACK;		//Messages color
-	BkGrndColor = WHITE;	//Background color
-	HighlightColor = MAGENTA;	//This color should NOT be used to draw shapes. use if for highlight only
-	StatusBarColor = LIGHTSEAGREEN;
-	PenWidth = 3;	//default width of the shapes frames
-
-
-	//Create the output window
-	pWind = CreateWind(width, height, wx, wy);
-	//Change the title
-	pWind->ChangeTitle("- - - - - - - - - - PAINT ^ ^ PLAY - - - - - - - - - -");
-
-	CreateDrawToolBar();
-	CreateStatusBar();*/
 }
-
-
 
 
 //======================================================================================//
@@ -221,7 +191,6 @@ void GUI::CreateDrawToolBar()
 
 void GUI::CreatePlayToolBar() 
 {
-	InterfaceMode = MODE_PLAY;
 	string MenuIconImages[PLAY_ICON_COUNT];
 	MenuIconImages[ICON_hide] = "images\\MenuIcons\\hide.jpg";
 
@@ -240,6 +209,8 @@ void GUI::CreatePlayToolBar()
 	//Draw a line under the toolbar
 	pWind->SetPen(RED, 3);
 	pWind->DrawLine(0, ToolBarHeight, width, ToolBarHeight);
+	InterfaceMode = MODE_PLAY;
+		;
 }
 //////////////////////////////////////////////////////////////////////////////////////////
 
