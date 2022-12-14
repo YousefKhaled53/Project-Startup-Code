@@ -136,6 +136,7 @@ void Graph::load(ifstream& inputfile) { // how to initialize the ID of each shap
 			Rect* R = new Rect(p1, p2, shapeGfxinfo);
 			R->setid(stoi(arr2[i + 1])); // setting the id of the rectagle
 			Addshape(R);
+			
 
 		}
 	}
