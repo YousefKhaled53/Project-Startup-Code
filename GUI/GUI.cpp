@@ -31,7 +31,7 @@ GUI::GUI()
 
 	CreateDrawToolBar();
 	CreateStatusBar();
-	InterfaceMode = MODE_PLAY;
+/*	InterfaceMode = MODE_PLAY;
 
 	width = 1300;
 	height = 700;
@@ -58,7 +58,7 @@ GUI::GUI()
 	pWind->ChangeTitle("- - - - - - - - - - PAINT ^ ^ PLAY - - - - - - - - - -");
 
 	CreateDrawToolBar();
-	CreateStatusBar();
+	CreateStatusBar();*/
 }
 
 
@@ -123,7 +123,8 @@ operationType GUI::GetUseroperation() const
 			case ICON_SQUARE: return DRAW_SQUARE;
 			case ICON_TRIANGLE: return DRAW_TRI;
 			case ICON_SAVE: return SAVE;
-			case ICON_SWITCH:return TO_PLAY;
+			case ICON_SWITCH: return TO_PLAY;
+			case ICON_IRRPOLYGON: return DRAW_IRRPOLYGON;
 
 			default: return EMPTY;	//A click on empty place in desgin toolbar
 			}
@@ -199,6 +200,7 @@ void GUI::CreateDrawToolBar()
 	MenuIconImages[ICON_TRIANGLE] = "images\\MenuIcons\\tri.jpg";
 	MenuIconImages[ICON_SAVE] = "images\\MenuIcons\\Menu_Save.jpg";
 	MenuIconImages[ICON_SWITCH] = "images\\MenuIcons\\switch.jpg";
+	MenuIconImages[ICON_IRRPOLYGON] = "images\\MenuIcons\\Menu_IrrPolygon.jpg";
 
 
 

@@ -44,7 +44,7 @@ operation* controller::createOperation(operationType OpType)
 
 		case DRAW_RECT:
 			//pOp = new opAddRect(this);
-			pOp = new opAddIrrPolygon(this);
+			pOp = new opAddRect(this);
 			break;
 
 		case DRAW_TRI:
@@ -80,6 +80,9 @@ operation* controller::createOperation(operationType OpType)
 			break;
 		case LOAD:
 			//pOp = new opload(this);
+			break;
+		case DRAW_IRRPOLYGON:
+			pOp = new opAddIrrPolygon(this);
 			break;
 	}
 

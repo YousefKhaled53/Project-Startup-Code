@@ -45,6 +45,7 @@ class GUI
 		ICON_TRIANGLE,
 		ICON_SAVE,
 		ICON_SWITCH,
+		ICON_IRRPOLYGON,
 		//TODO: Add more icons names here
 
 		ICON_EXIT,		//Exit icon
