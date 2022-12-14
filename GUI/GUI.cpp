@@ -125,6 +125,7 @@ operationType GUI::GetUseroperation() const
 			case ICON_SAVE: return SAVE;
 			case ICON_SWITCH: return TO_PLAY;
 			case ICON_IRRPOLYGON: return DRAW_IRRPOLYGON;
+			case ICON_REG_POLYGON: return DRAW_REGPOLYGON;
 
 			default: return EMPTY;	//A click on empty place in desgin toolbar
 			}
@@ -201,6 +202,7 @@ void GUI::CreateDrawToolBar()
 	MenuIconImages[ICON_SAVE] = "images\\MenuIcons\\Menu_Save.jpg";
 	MenuIconImages[ICON_SWITCH] = "images\\MenuIcons\\switch.jpg";
 	MenuIconImages[ICON_IRRPOLYGON] = "images\\MenuIcons\\Menu_IrrPolygon.jpg";
+	MenuIconImages[ICON_REG_POLYGON] = "images\\MenuIcons\\Menu_Reg.jpg";
 
 
 
@@ -420,7 +422,7 @@ void GUI::Drawsquare(Point P1, Point P2, GfxInfo SquareGfxInfo) const
 
 }
 
-void GUI::DrawRegPolygon(Point C, Point P, GfxInfo RegPolygonGfxInfo) const
+void GUI::DrawRegPolygon(int* Arrx, int* ArrY, int x, GfxInfo RegPolygonGfxInfo) const
 {
 	color DrawingClr;
 	if (RegPolygonGfxInfo.isSelected)	//shape is selected
@@ -439,7 +441,7 @@ void GUI::DrawRegPolygon(Point C, Point P, GfxInfo RegPolygonGfxInfo) const
 	else
 		style = FRAME;
 
-	//pWind->DrawPolygon(C.x, P.y, 1, style);
+	pWind->DrawPolygon(Arrx, ArrY, x, style);
 }
 
 

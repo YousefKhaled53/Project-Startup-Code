@@ -10,6 +10,7 @@
 #include "operations/opsave.h"
 #include "operations/opsave.h"
 #include "operations/opAddIrrPolygon.h"
+#include "../Project Startup Code/operations/opAddRegPolygon.h"
 
 //#include "operations/"
 
@@ -83,6 +84,9 @@ operation* controller::createOperation(operationType OpType)
 			break;
 		case DRAW_IRRPOLYGON:
 			pOp = new opAddIrrPolygon(this);
+			break;
+		case DRAW_REGPOLYGON:
+			pOp = new opAddRegPolygon(this);
 			break;
 	}
 
