@@ -46,8 +46,7 @@ operation* controller::createOperation(operationType OpType)
 
 		case DRAW_RECT:
 			pOp = new opAddRect(this);
-			//pOp = new opAddRect(this);
-			pOp = new opload(this);
+			//pOp = new opload(this);
 			break;
 
 		case DRAW_TRI:

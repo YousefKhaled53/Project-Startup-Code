@@ -6,7 +6,11 @@
 #include <iostream>
 #include <string>
 #include"Shape.h"
-
+#include"../Shapes/line.h"
+#include"../Shapes/triangle.h"
+#include"../Shapes/Circle.h"
+#include "../Shapes/Oval.h"
+#include"../Shapes/square.h"
 Graph::Graph()
 {
 	selectedShape = nullptr;
@@ -111,13 +115,12 @@ void Graph::load(ifstream& inputfile) { // how to initialize the ID of each shap
 	//setborderwidth(stoi(arr[2])); // to set border width
 	int size = stoi(arr[3]); // to get no of files as an int 
 	
-	string arr2[55];
+	string arr2[100];
 
 	for (int i = 0; i < (size * 11); i++) {
 		getline(inputfile, arr2[i], ' ');
 
 	}
-	// her the array is initialized with each word / number 
 	for (int i = 0; i < (size * 11); i++) {
 		if (arr2[i] == "RECT") {
 			Point p1, p2;
@@ -128,16 +131,110 @@ void Graph::load(ifstream& inputfile) { // how to initialize the ID of each shap
 			p2.y = stoi(arr2[i + 5]);
 			shapeGfxinfo.DrawClr = changestringtoints(arr2[i + 6]); // to initialize the draw color
 			if (arr2[i + 7] == "NO_FILL") {
-				shapeGfxinfo.FillClr = changestringtoints("white"); // to make the fillcolor white
+				shapeGfxinfo.isFilled = FALSE; // to make the fillcolor white
 			}
 			else
 				shapeGfxinfo.FillClr = changestringtoints(arr2[i + 7]); //to initialize the fill color
 			shapeGfxinfo.BorderWdth = stoi(arr2[i + 8]);
+			//shapeGfxinfo.isFilled = FALSE;
+			shapeGfxinfo.isSelected = FALSE;
 			Rect* R = new Rect(p1, p2, shapeGfxinfo);
 			R->setid(stoi(arr2[i + 1])); // setting the id of the rectagle
 			Addshape(R);
-			
-
+		}
+		if (arr2[i] == "TRIANGLE") {
+			Point p1, p2, p3;
+			GfxInfo shapeGfxinfo;
+			p1.x = stoi(arr2[i + 2]);
+			p1.y = stoi(arr2[i + 3]);
+			p2.x = stoi(arr2[i + 4]);
+			p2.y = stoi(arr2[i + 5]);
+			p3.x = stoi(arr2[i + 6]);
+			p3.y = stoi(arr2[i + 7]);
+			shapeGfxinfo.DrawClr = changestringtoints(arr2[i + 8]); // to initialize the draw color
+			if (arr2[i + 9] == "NO_FILL") {
+				shapeGfxinfo.isFilled = FALSE; // to make the fillcolor white
+			}
+			else
+				shapeGfxinfo.FillClr = changestringtoints(arr2[i + 9]); //to initialize the fill color
+			shapeGfxinfo.BorderWdth = stoi(arr2[i + 10]);
+			shapeGfxinfo.isSelected = FALSE;
+			triangle* t = new triangle(p1, p2, p3, shapeGfxinfo);
+			t->setid(stoi(arr2[i + 1])); // setting the id of the rectagle
+			Addshape(t);
+		}
+		if (arr2[i] == "LINE") {
+			Point p1, p2;
+			GfxInfo shapeGfxinfo;
+			p1.x = stoi(arr2[i + 2]);
+			p1.y = stoi(arr2[i + 3]);
+			p2.x = stoi(arr2[i + 4]);
+			p2.y = stoi(arr2[i + 5]);
+			shapeGfxinfo.DrawClr = changestringtoints(arr2[i + 6]); // to initialize the draw color
+			shapeGfxinfo.BorderWdth = stoi(arr2[i + 7]);
+			shapeGfxinfo.isFilled = FALSE;
+			shapeGfxinfo.isSelected = FALSE;
+			line* l = new line(p1, p2, shapeGfxinfo);
+			l->setid(stoi(arr2[i + 1])); // setting the id of the rectagle
+			Addshape(l);
+		}
+		if (arr2[i] == "CIRCLE") {
+			Point p1, p2;
+			GfxInfo shapeGfxinfo;
+			p1.x = stoi(arr2[i + 2]);
+			p1.y = stoi(arr2[i + 3]);
+			p2.x = stoi(arr2[i + 4]);
+			p2.y = stoi(arr2[i + 5]);
+			shapeGfxinfo.DrawClr = changestringtoints(arr2[i + 6]); // to initialize the draw color
+			if (arr2[i + 7] == "NO_FILL") {
+				shapeGfxinfo.isFilled = FALSE; // to make the fillcolor white
+			}
+			else
+				shapeGfxinfo.FillClr = changestringtoints(arr2[i + 7]); //to initialize the fill color
+			shapeGfxinfo.BorderWdth = stoi(arr2[i + 8]);
+			shapeGfxinfo.isSelected = FALSE;
+			Circle* c=new Circle(p1,p2,shapeGfxinfo);
+			c->setid(stoi(arr2[i + 1])); // setting the id of the rectagle
+			Addshape(c);
+		}
+		if (arr2[i] == "OVAL") {
+			Point p1, p2;
+			GfxInfo shapeGfxinfo;
+			p1.x = stoi(arr2[i + 2]);
+			p1.y = stoi(arr2[i + 3]);
+			p2.x = stoi(arr2[i + 4]);
+			p2.y = stoi(arr2[i + 5]);
+			shapeGfxinfo.DrawClr = changestringtoints(arr2[i + 6]); // to initialize the draw color
+			if (arr2[i + 7] == "NO_FILL") {
+				shapeGfxinfo.isFilled = FALSE; // to make the fillcolor white
+			}
+			else
+				shapeGfxinfo.FillClr = changestringtoints(arr2[i + 7]); //to initialize the fill color
+			shapeGfxinfo.BorderWdth = stoi(arr2[i + 8]);
+			shapeGfxinfo.isSelected = FALSE;
+			Oval* R = new Oval(p1, p2, shapeGfxinfo);
+			R->setid(stoi(arr2[i + 1])); // setting the id of the rectagle
+			Addshape(R);
+		}
+		if (arr2[i] == "SQUARE") {
+			Point p1, p2;
+			GfxInfo shapeGfxinfo;
+			p1.x = stoi(arr2[i + 2]);
+			p1.y = stoi(arr2[i + 3]);
+			p2.x = stoi(arr2[i + 4]);
+			p2.y = stoi(arr2[i + 5]);
+			shapeGfxinfo.DrawClr = changestringtoints(arr2[i + 6]); // to initialize the draw color
+			if (arr2[i + 7] == "NO_FILL") {
+				shapeGfxinfo.isFilled = FALSE; // to make the fillcolor white
+			}
+			else
+				shapeGfxinfo.FillClr = changestringtoints(arr2[i + 7]); //to initialize the fill color
+			shapeGfxinfo.BorderWdth = stoi(arr2[i + 8]);
+			//shapeGfxinfo.isFilled = FALSE;
+			shapeGfxinfo.isSelected = FALSE;
+			square* s = new square(p1, p2, shapeGfxinfo);
+			s->setid(stoi(arr2[i + 1])); // setting the id of the rectagle
+			Addshape(s);
 		}
 	}
 	inputfile.close();

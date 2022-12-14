@@ -44,4 +44,5 @@ void IrrPolygon::Save(ofstream& OutFile) {
 	{
 		OutFile << "no fill" << endl;
 	}
+	OutFile << endl << "-----------------------------------------------------------------------";
 }
