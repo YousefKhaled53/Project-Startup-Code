@@ -50,13 +50,14 @@ void Graph::deleteshape(shape* pShp) {
 	shapesList.erase(find(shapesList.begin(), shapesList.end(), pShp));
 }
 void Graph::Save(ofstream& outfile) {
-	for (int i = 0; i < (sizeof(shapesList) / sizeof(shapesList[0])); i++) {
+	int zz = shapesList.size();
+	for (int i = 0; i < zz; i++) {
 		shapesList[i]->Save(outfile); 
 
 	}
 }
 color Graph::changestringtoints(string colorstring) {
-	if (colorstring == "Black") {
+	if (colorstring == "black") {
 		color c(0, 0, 0);
 		return c;
 	}
@@ -99,20 +100,17 @@ color Graph::changestringtoints(string colorstring) {
 		return c;
 	}
 
-
-
 	// and do more colors 
 }
 void Graph::load(ifstream& inputfile) { // how to initialize the ID of each shape and is my code enough or there are somthings i need to implement more
-	/*string arr[4]; // an array that has 0 : current draw color , 1 : fill color , 2 : current pen width , 3: number of shapes 
+	string arr[4]; // an array that has 0 : current draw color , 1 : fill color , 2 : current pen width , 3: number of shapes 
 	getline(inputfile, arr[0], ' ');
 	getline(inputfile, arr[1], ' ');
 	getline(inputfile, arr[2]);
 	getline(inputfile, arr[3]);
 	//setborderwidth(stoi(arr[2])); // to set border width
 	int size = stoi(arr[3]); // to get no of files as an int 
-	string arr2[11];
-
+	
 	string arr2[55];
 
 	for (int i = 0; i < (size * 11); i++) {
@@ -141,5 +139,5 @@ void Graph::load(ifstream& inputfile) { // how to initialize the ID of each shap
 
 		}
 	}
-	inputfile.close();*/
+	inputfile.close();
 }
