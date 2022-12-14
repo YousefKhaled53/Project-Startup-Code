@@ -81,13 +81,16 @@ operation* controller::createOperation(operationType OpType)
 			pOp = new opswitchlaymode(this);
 			break;
 		case LOAD:
-		//	pOp = new opload(this);
+			pOp = new opload(this);
 			break;
 		case DRAW_IRRPOLYGON:
 			pOp = new opAddIrrPolygon(this);
 			break;
 		case DRAW_REGPOLYGON:
 			pOp = new opAddRegPolygon(this);
+			break;
+		case Pen_Width:
+			pOp = new opchangepenwidth(this);
 			break;
 	}
 

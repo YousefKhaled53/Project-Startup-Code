@@ -96,7 +96,8 @@ operationType GUI::GetUseroperation() const
 			case ICON_SWITCH: return TO_PLAY;
 			case ICON_IRRPOLYGON: return DRAW_IRRPOLYGON;
 			case ICON_REG_POLYGON: return DRAW_REGPOLYGON;
-
+			case ICON_LOAD: return LOAD;
+			case ICON_PEN: return Pen_Width;
 			default: return EMPTY;	//A click on empty place in desgin toolbar
 			}
 		}
@@ -173,8 +174,9 @@ void GUI::CreateDrawToolBar()
 	MenuIconImages[ICON_SWITCH] = "images\\MenuIcons\\switch.jpg";
 	MenuIconImages[ICON_IRRPOLYGON] = "images\\MenuIcons\\Menu_IrrPolygon.jpg";
 	MenuIconImages[ICON_REG_POLYGON] = "images\\MenuIcons\\Menu_Reg.jpg";
-
-
+	MenuIconImages[ICON_LOAD] = "images\\MenuIcons\\Menu_Load.jpg";
+	MenuIconImages[ICON_Pen] = "images\\MenuIcons\\Menu_Pen.jpg";
+	
 
 	//TODO: Prepare images for each menu icon and add it to the list
 

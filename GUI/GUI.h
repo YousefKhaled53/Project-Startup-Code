@@ -47,6 +47,8 @@ class GUI
 		ICON_SWITCH,
 		ICON_IRRPOLYGON,
 		ICON_REG_POLYGON,
+		ICON_LOAD,
+		ICON_PEN,
 		//TODO: Add more icons names here
 
 		ICON_EXIT,		//Exit icon
