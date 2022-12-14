@@ -1,6 +1,9 @@
 #include "../Shapes/RegPolygon.h"
 #include<iostream>
 #include<fstream>
+#include <corecrt_math_defines.h>
+
+#include <cmath>
 RegPolygon::RegPolygon(Point C, Point *P, int x, GfxInfo shapeGfxInfo) :shape(shapeGfxInfo)
 {
 	Center = C;
@@ -9,10 +12,10 @@ RegPolygon::RegPolygon(Point C, Point *P, int x, GfxInfo shapeGfxInfo) :shape(sh
 	distance = sqrt(pow((Point1->x - Center.x), 2) + pow((Point1->y - Center.y), 2));
 	
 	for (int i = 0; i < x; i++) {
-		vertixx[i] = distance * cos(i * 360 / x);
-		vertixy[i] = distance * sin(i * 360 / x);
-		ArrX[i] = vertixx[i];
-		ArrY[i] = vertixy[i];
+		vertixx = Center.x+ distance * cos(i *2* M_PI / x);
+		vertixy = Center.y+distance * sin(i * 2*M_PI / x);
+		ArrX[i] = vertixx;
+		ArrY[i] = vertixy;
 	}
 }
 

@@ -8,10 +8,10 @@ private:
 	Point* Point1;
 	int distance;
 	int Vertices_num;
-	int* ArrX;
-	int* ArrY;
-	int* vertixx;
-	int* vertixy;
+	int* ArrX=new int;
+	int* ArrY=new int;
+	int vertixx;
+	int vertixy;
 public:
 	RegPolygon(Point, Point*, int, GfxInfo shapeGfxInfo);
 	virtual ~RegPolygon();
