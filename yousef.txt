@@ -1,0 +1,43 @@
+
+TRI ID: 1
+corner1357 179
+corner2472 188
+corner2438 260
+border width is 3
+ draw colors rgb intensities are :
+red intensity is 0	blue intensity is 255	green intensity is 0
+fill color rgb intesities are:
+no fill
+
+-------------------------------------------------------------------------------------------------------------
+
+LINE ID: 1
+corner1356 138
+corner2654 178
+border width is 3
+ draw colors rgb intensities are :
+red intensity is 0	blue intensity is 255	green intensity is 0
+
+-------------------------------------------------------------------------------------------------------------
+
+SQUARE ID: 1
+corner1277 90
+corner2583 396
+border width is 3
+ draw colors rgb intensities are :
+red intensity is 0	blue intensity is 255	green intensity is 0
+fill color rgb intesities are:
+no fill
+
+-------------------------------------------------------------------------------------------------------------
+
+oval ID: 1
+point1232 84
+corner2473 142
+border width is 3
+ draw colors rgb intensities are :
+red intensity is 0	blue intensity is 255	green intensity is 0
+fill color rgb intesities are:
+no fill
+
+-------------------------------------------------------------------------------------------------------------
