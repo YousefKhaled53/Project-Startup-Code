@@ -175,7 +175,7 @@ void GUI::CreateDrawToolBar()
 	MenuIconImages[ICON_IRRPOLYGON] = "images\\MenuIcons\\Menu_IrrPolygon.jpg";
 	MenuIconImages[ICON_REG_POLYGON] = "images\\MenuIcons\\Menu_Reg.jpg";
 	MenuIconImages[ICON_LOAD] = "images\\MenuIcons\\Menu_Load.jpg";
-	MenuIconImages[ICON_Pen] = "images\\MenuIcons\\Menu_Pen.jpg";
+	MenuIconImages[ICON_PEN] = "images\\MenuIcons\\Menu_Pen.jpg";
 	
 
 	//TODO: Prepare images for each menu icon and add it to the list
@@ -438,6 +438,9 @@ void GUI::DrawIrrPolygon(int* Arrx, int* Arry, int x, GfxInfo IrrPolygonGfxInfo)
 		style = FRAME;
 
 	pWind->DrawPolygon(Arrx, Arry, x, style);
+}
+void GUI::Setpenwidth(int n) {
+	PenWidth = n;
 }
 //////////////////////////////////////////////////////////////////////////////////////////
 GUI::~GUI()

@@ -11,7 +11,8 @@
 #include "operations/opsave.h"
 #include "operations/opload.h"
 #include "operations/opAddIrrPolygon.h"
-#include "../Project Startup Code/operations/opAddRegPolygon.h"
+#include"operations/opAddRegPolygon.h"
+#include"../Project-Startup-Code/opchangepenwidth.h"
 
 //#include "operations/"
 
@@ -58,7 +59,7 @@ operation* controller::createOperation(operationType OpType)
 			break;
 
 		case DRAW_CIRC:
-			pOp = new opAddCircle(this);
+			//pOp = new opAddCircle(this);
 			break;
 
 		case DRAW_OVAL:

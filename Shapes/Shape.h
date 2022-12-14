@@ -28,7 +28,7 @@ public:
 	bool getisfilled();
 	int getid();
 	void setid(int i);
-
+	
 
 
 	///The following functions should be supported by the shape class

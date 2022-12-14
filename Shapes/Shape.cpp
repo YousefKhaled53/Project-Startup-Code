@@ -38,4 +38,3 @@ void shape::setid(int i) {
 	ID = i;
 }
 
-
