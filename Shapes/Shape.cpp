@@ -1,8 +1,13 @@
 #include "shape.h"
 
+
+int shape::ID = 0;
+
 shape::shape(GfxInfo shapeGfxInfo)
 { 
 	ShpGfxInfo = shapeGfxInfo;	//Default status is non-filled.
+	ID = ID + 1;
+	setid(ID);
 }
  
 void shape::SetSelected(bool s)

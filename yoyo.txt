@@ -1,0 +1,21 @@
+
+TRI ID: -842150451
+corner1297 282
+corner2728 266
+corner2533 407
+border width is 3
+ draw colors rgb intensities are :
+red intensity is 0	blue intensity is 255	green intensity is 0
+fill color rgb intesities are:
+no fill
+
+-------------------------------------------------------------------------------------------------------------
+
+LINE ID: -842150451
+corner1332 184
+corner2668 161
+border width is 3
+ draw colors rgb intensities are :
+red intensity is 0	blue intensity is 255	green intensity is 0
+
+-------------------------------------------------------------------------------------------------------------
