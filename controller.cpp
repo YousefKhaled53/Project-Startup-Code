@@ -13,15 +13,12 @@
 #include "operations/opAddIrrPolygon.h"
 #include"operations/opAddRegPolygon.h"
 #include "operations/opSelect.h"
-<<<<<<< Updated upstream
 #include"opchangepenwidth.h"
 #include"Opexit.h"
 
-=======
 #include"../Project-Startup-Code/opchangepenwidth.h"
 
 #include"Opexit.h"
->>>>>>> Stashed changes
 #include"operations/opdeleteshape.h"
 //#include "operations/"
 

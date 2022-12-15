@@ -1,10 +1,7 @@
 #pragma once
 #include"controller.h"
-<<<<<<< Updated upstream
 #include"operations/operation.h"
-=======
 #include"../Project-Startup-Code/operations/operation.h"
->>>>>>> Stashed changes
 class opchangepenwidth : public operation
 {	public:
 
