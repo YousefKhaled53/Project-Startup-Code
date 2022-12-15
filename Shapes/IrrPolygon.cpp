@@ -24,10 +24,10 @@ void IrrPolygon::Draw(GUI* pUI) const
 }
 void IrrPolygon::Save(ofstream& OutFile) {
 	OutFile << "irreg pol with  no of sides : " << Vertices_num << endl;
-	for (int i = 0; i < (sizeof(ArrX) / sizeof(ArrX[0])); i++) {
-		OutFile << "x coordinates of point : " << Point1->x << " y coordinates of point : " << Point1->y;
+	for (int i = 0; i < Vertices_num; i++) {
+		OutFile << "point " << i << ": x coordinates of point : " << ArrX[i] << " y coordinates of point : " << ArrY[i] << endl;
 	}
-
+	/*
 	OutFile << "border width is " << shape::getborderwidth() << endl;
 	OutFile << " draw colors rgb intensities are :" << endl;
 	OutFile << "red intensity is " << shape::getdrawclr().getucred() << "	";
@@ -43,7 +43,7 @@ void IrrPolygon::Save(ofstream& OutFile) {
 	else
 	{
 		OutFile << "no fill" << endl;
-	}
+	}*/
 	OutFile << endl << "-----------------------------------------------------------------------";
 }
 bool IrrPolygon::is_in_fig(int x, int y) {

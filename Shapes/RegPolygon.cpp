@@ -30,10 +30,11 @@ void RegPolygon::Draw(GUI* pUI) const
 
 void RegPolygon::Save(ofstream& OutFile) {
 	OutFile << "reg pol with  no of sides : " << Vertices_num << endl;
-	for (int i = 0; i < (sizeof(ArrX) / sizeof(ArrX[0])); i++) {
-		OutFile << "x coordinates of point : " << Point1->x << " y coordinates of point : " << Point1->y;
+	OutFile << "center is  : " <<Center.x<<" "<<Center.y << endl;
+	for (int i = 0; i < Vertices_num; i++) {
+		OutFile << "point " << i << ": x coordinates of point : " << ArrX[i] << " y coordinates of point : " << ArrY[i] << endl;
 	}
-
+	/*
 	OutFile << "border width is " << shape::getborderwidth() << endl;
 	OutFile << " draw colors rgb intensities are :" << endl;
 	OutFile << "red intensity is " << shape::getdrawclr().getucred() << "	";
@@ -49,7 +50,7 @@ void RegPolygon::Save(ofstream& OutFile) {
 	else
 	{
 		OutFile << "no fill" << endl;
-	}
+	}*/
 }
 bool RegPolygon::is_in_fig(int x, int y) {
 	//	if ((x > Point1.x && x < Point2.x && y > Point1.y && y < Point2.y))
