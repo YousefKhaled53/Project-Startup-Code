@@ -439,6 +439,9 @@ void GUI::DrawIrrPolygon(int* Arrx, int* Arry, int x, GfxInfo IrrPolygonGfxInfo)
 
 	pWind->DrawPolygon(Arrx, Arry, x, style);
 }
+void GUI::Setpenwidth(int n) {
+	PenWidth = n;
+}
 //////////////////////////////////////////////////////////////////////////////////////////
 GUI::~GUI()
 {

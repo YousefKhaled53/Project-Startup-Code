@@ -119,6 +119,7 @@ public:
 	void DrawOval(Point P1, Point P2, GfxInfo OvalGfxInfo) const; // Draw an Oval
 	void DrawRegPolygon(int* Arrx, int* ArrY, int x, GfxInfo RegPolygonGfxInfo) const;
 	void DrawIrrPolygon(int *Arrx, int *Arry, int x, GfxInfo IrrPolygonGfxInfo) const;
+	void Setpenwidth(int n);
 
 
 	///Make similar functions for drawing all other shapes.
