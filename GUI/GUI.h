@@ -49,8 +49,9 @@ class GUI
 		ICON_REG_POLYGON,
 		ICON_LOAD,
 		ICON_PEN,
+		ICON_SELECT,      //Select icon in menu to select and unselect the shapes
 		//TODO: Add more icons names here
-
+		
 		ICON_EXIT,		//Exit icon
 
 		DRAW_ICON_COUNT		//no. of menu icons ==> This should be the last line in this enum
