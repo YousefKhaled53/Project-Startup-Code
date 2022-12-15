@@ -15,7 +15,7 @@ public:
 		pUI->PrintMessage("write file name");
 		ofstream savingfile(pUI->GetSrting()); // shouldn't get string return a string to be used by the program ? why does it use printmessage function
 		pControl->getGraph()->Save(savingfile); // how to call save all function 
-
+		pUI->PrintMessage("saved !");
 
 	};
 
