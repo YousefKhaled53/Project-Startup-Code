@@ -13,9 +13,15 @@
 #include "operations/opAddIrrPolygon.h"
 #include"operations/opAddRegPolygon.h"
 #include "operations/opSelect.h"
+<<<<<<< Updated upstream
 #include"opchangepenwidth.h"
 #include"Opexit.h"
 
+=======
+#include"../Project-Startup-Code/opchangepenwidth.h"
+
+#include"Opexit.h"
+>>>>>>> Stashed changes
 #include"operations/opdeleteshape.h"
 //#include "operations/"
 
@@ -45,8 +51,11 @@ operation* controller::createOperation(operationType OpType)
 	{
 		case DRAW_LINE:
 			pOp = new opAddline(this);
+<<<<<<< Updated upstream
 			//pOp = new opdeleteshape(this);
 
+=======
+>>>>>>> Stashed changes
 			break;
 
 		case DRAW_RECT:
@@ -78,7 +87,7 @@ operation* controller::createOperation(operationType OpType)
 
 		case STATUS:	//a click on the status bar ==> no operation
 			break;
-		case DELTE:
+		case DEL:
 			pOp = new opdeleteshape(this);
 			break;
 		case TO_PLAY:

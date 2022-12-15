@@ -99,6 +99,7 @@ operationType GUI::GetUseroperation() const
 			case ICON_LOAD: return LOAD;
 			case ICON_PEN: return Pen_Width;
 			case ICON_SELECT: return SELECT;
+			case ICON_DEL: return DEL;
 			default: return EMPTY;	//A click on empty place in desgin toolbar
 			}
 		}
@@ -178,7 +179,7 @@ void GUI::CreateDrawToolBar()
 	MenuIconImages[ICON_LOAD] = "images\\MenuIcons\\Menu_Load.jpg";
 	MenuIconImages[ICON_PEN] = "images\\MenuIcons\\Menu_Pen.jpg";
 	MenuIconImages[ICON_SELECT] = "images\\MenuIcons\\Menu_SELECT.jfif";
-
+	MenuIconImages[ICON_DEL] = "images\\MenuIcons\\Del.jpg";
 	//TODO: Prepare images for each menu icon and add it to the list
 
 	//Draw menu icon one image at a time
