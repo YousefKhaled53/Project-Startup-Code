@@ -44,3 +44,14 @@ void triangle::Save(ofstream& OutFile) {
 	OutFile << endl;
 	OutFile << "-------------------------------------------------------------------------------------------------------------" << endl;
 }
+bool triangle::is_in_fig(int x, int y) {
+	//	if ((x > Point1.x && x < Point2.x && y > Point1.y && y < Point2.y))
+	//	{
+	//		return true;
+	//	}
+	//	else
+	//	{
+	//		return false;
+	//	}
+	return false;
+}
