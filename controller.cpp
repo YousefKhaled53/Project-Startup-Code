@@ -12,7 +12,11 @@
 #include "operations/opload.h"
 #include "operations/opAddIrrPolygon.h"
 #include"operations/opAddRegPolygon.h"
+<<<<<<< Updated upstream
 #include "operations/opSelect.h"
+=======
+#include"Opexit.h"
+>>>>>>> Stashed changes
 #include"../Project-Startup-Code/opchangepenwidth.h"
 
 //#include "operations/"
@@ -43,7 +47,6 @@ operation* controller::createOperation(operationType OpType)
 	{
 		case DRAW_LINE:
 			pOp = new opAddline(this);
-			
 			break;
 
 		case DRAW_RECT:
@@ -68,7 +71,7 @@ operation* controller::createOperation(operationType OpType)
 			break;
 
 		case EXIT:
-			///create Exitoperation here
+			pOp = new Opexit(this);
 			break;
 		case SAVE:
 			pOp = new opsave(this);

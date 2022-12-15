@@ -8,7 +8,9 @@
 opAddRect::opAddRect(controller * pCont):operation(pCont)
 {}
 opAddRect::~opAddRect()
-{} 
+{
+
+} 
 
 //Execute the operation
 void opAddRect::Execute() 
@@ -44,6 +46,7 @@ void opAddRect::Execute()
 
 	//Create a rectangle with the above parameters
 	Rect *R=new Rect(P1, P2, RectGfxInfo);
+	
 
 	//Get a pointer to the graph
 	Graph* pGr = pControl->getGraph();

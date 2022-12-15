@@ -182,6 +182,7 @@
     <ClCompile Include="operations\opsave.cpp" />
     <ClCompile Include="operations\opSelect.cpp" />
     <ClCompile Include="operations\opswitchplaymode.cpp" />
+    <ClCompile Include="Opexit.cpp" />
     <ClCompile Include="Shapes\Circle.cpp" />
     <ClCompile Include="Shapes\Graph.cpp" />
     <ClCompile Include="Shapes\IrrPolygon.cpp" />
@@ -232,6 +233,7 @@
     <ClInclude Include="operations\opsave.h" />
     <ClInclude Include="operations\opSelect.h" />
     <ClInclude Include="operations\opswitchplaymode.h" />
+    <ClInclude Include="Opexit.h" />
     <ClInclude Include="Shapes\Circle.h" />
     <ClInclude Include="Shapes\Graph.h" />
     <ClInclude Include="Shapes\IrrPolygon.h" />
