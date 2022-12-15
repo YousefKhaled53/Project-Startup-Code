@@ -3,7 +3,7 @@
 #include<fstream>
 Circle::Circle(Point P1, Point P2, GfxInfo shapeGfxInfo) :shape(shapeGfxInfo)
 {
-	Center = P1;
+	Center = P11;
 	radius = P2;
 }
 
