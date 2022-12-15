@@ -30,14 +30,3 @@ void line::Save(ofstream& OutFile) {
 	OutFile<< endl;
 	OutFile << "-------------------------------------------------------------------------------------------------------------" << endl;
 }
-bool line::is_in_fig(int x, int y) {
-	//if ((x > Corner1.x && x < Corner2.x && y > Corner1.y && y < Corner2.y))
-	//{
-	//	return true;
-	//}
-	//else
-	//{
-	//	return false;
-	//}
-	return false;
-}
