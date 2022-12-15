@@ -13,8 +13,14 @@
 #include "operations/opAddIrrPolygon.h"
 #include"operations/opAddRegPolygon.h"
 #include "operations/opSelect.h"
+<<<<<<< HEAD
 #include"../Project Startup Code/opchangepenwidth.h"
 
+=======
+#include"Opexit.h"
+#include"../Project-Startup-Code/opchangepenwidth.h"
+#include"operations/opdeleteshape.h"
+>>>>>>> c3ade8ea421942e2f1967c2c177df8a37afa4f4b
 //#include "operations/"
 
 //Constructor
@@ -42,13 +48,13 @@ operation* controller::createOperation(operationType OpType)
 	switch (OpType)
 	{
 		case DRAW_LINE:
-			pOp = new opAddline(this);
-			
+			//pOp = new opAddline(this);
+			pOp = new opdeleteshape(this);
+
 			break;
 
 		case DRAW_RECT:
 			pOp = new opAddRect(this);
-			//pOp = new opload(this);
 			break;
 
 		case DRAW_TRI:
@@ -68,7 +74,7 @@ operation* controller::createOperation(operationType OpType)
 			break;
 
 		case EXIT:
-			///create Exitoperation here
+			pOp = new Opexit(this);
 			break;
 		case SAVE:
 			pOp = new opsave(this);

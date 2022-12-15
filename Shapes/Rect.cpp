@@ -41,6 +41,7 @@ void Rect::Save(ofstream& OutFile)
 		OutFile << "no fill"<<endl;
 	}
 	OutFile<< endl;
+	OutFile << shape::IsSelected();
 	OutFile<< "-------------------------------------------------------------------------------------------------------------" << endl;
 
 }
