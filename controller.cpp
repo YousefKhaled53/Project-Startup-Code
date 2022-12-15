@@ -12,8 +12,12 @@
 #include "operations/opload.h"
 #include "operations/opAddIrrPolygon.h"
 #include"operations/opAddRegPolygon.h"
+<<<<<<< Updated upstream
 #include "operations/opSelect.h"
 #include"../Project Startup Code/opchangepenwidth.h"
+=======
+#include"..//Project Startup Code/opchangepenwidth.h"
+>>>>>>> Stashed changes
 
 //#include "operations/"
 
