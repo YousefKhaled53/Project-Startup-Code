@@ -13,14 +13,11 @@
 #include "operations/opAddIrrPolygon.h"
 #include"operations/opAddRegPolygon.h"
 #include "operations/opSelect.h"
-<<<<<<< HEAD
 #include"../Project Startup Code/opchangepenwidth.h"
 
-=======
 #include"Opexit.h"
-#include"../Project-Startup-Code/opchangepenwidth.h"
+#include"../Project Startup Code/opchangepenwidth.h"
 #include"operations/opdeleteshape.h"
->>>>>>> c3ade8ea421942e2f1967c2c177df8a37afa4f4b
 //#include "operations/"
 
 //Constructor
