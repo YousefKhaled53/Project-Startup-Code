@@ -48,11 +48,7 @@ operation* controller::createOperation(operationType OpType)
 	{
 		case DRAW_LINE:
 			pOp = new opAddline(this);
-<<<<<<< Updated upstream
-			//pOp = new opdeleteshape(this);
 
-=======
->>>>>>> Stashed changes
 			break;
 
 		case DRAW_RECT:
