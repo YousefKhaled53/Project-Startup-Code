@@ -13,10 +13,9 @@
 #include "operations/opAddIrrPolygon.h"
 #include"operations/opAddRegPolygon.h"
 #include "operations/opSelect.h"
-#include"../Project Startup Code/opchangepenwidth.h"
-
+#include"opchangepenwidth.h"
 #include"Opexit.h"
-#include"../Project Startup Code/opchangepenwidth.h"
+
 #include"operations/opdeleteshape.h"
 //#include "operations/"
 

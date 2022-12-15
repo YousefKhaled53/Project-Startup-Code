@@ -1,6 +1,6 @@
 #pragma once
 #include"controller.h"
-#include"../Project Startup Code/operations/operation.h"
+#include"operations/operation.h"
 class opchangepenwidth : public operation
 {	public:
 

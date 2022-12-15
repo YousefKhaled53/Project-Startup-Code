@@ -73,13 +73,13 @@ void Graph::load(ifstream& inputfile) { // how to initialize the ID of each shap
 
 	int size = stoi(arr[3]); // to get no of files as an int 
 	
-	string arr2[100];
+	string* arr2 = new string[size * 20];
 
 	for (int i = 0; i < (size *20 ); i++) {
 		getline(inputfile, arr2[i], ' ');
 
 	}
-	for (int i = 0; i < (size * 18); i++) {
+	for (int i = 0; i < (size * 20); i++) {
 		if (arr2[i] == "RECT") {
 			Point p1, p2;
 			GfxInfo shapeGfxinfo;
@@ -206,6 +206,7 @@ void Graph::load(ifstream& inputfile) { // how to initialize the ID of each shap
 		}
 
 	}
+	//delete arr2;
 	inputfile.close();
 }
 shape* Graph::GetSelected() {
