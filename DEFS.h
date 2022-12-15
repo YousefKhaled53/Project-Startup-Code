@@ -25,6 +25,9 @@ enum operationType //The operations supported (you can add more if needed)
 	BRNG_FRNT,		//Bring a shape to the front of all shapes
 	SAVE,			//Save the whole graph to a file
 	LOAD,			//Load a graph from a file
+	
+	SELECT,         //select and unselect the shapes 
+	
 	EXIT,			//Exit the application
 
 	DRAWING_AREA,	//A click on the drawing area
@@ -37,6 +40,7 @@ enum operationType //The operations supported (you can add more if needed)
 	///TODO: Add more operation types (if needed)
 	//colors
 	DELTE,
+
 };
 
 #endif

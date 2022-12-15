@@ -39,17 +39,6 @@ void Graph::Draw(GUI* pUI) const
 		shapePointer->Draw(pUI);
 }
 
-
-shape* Graph::Getshape(int x, int y) const
-{
-	//If a shape is found return a pointer to it.
-	//if this point (x,y) does not belong to any shape return NULL
-
-
-	///Add your code here to search for a shape given a point x,y	
-
-	return nullptr;
-}
 void Graph::deleteshape(shape* pShp) {
 	shapesList.erase(find(shapesList.begin(), shapesList.end(), pShp));
 }
@@ -238,4 +227,19 @@ void Graph::load(ifstream& inputfile) { // how to initialize the ID of each shap
 		}
 	}
 	inputfile.close();
+}
+shape* Graph::GetSelected() {
+	return selectedShape;
+}
+
+void Graph::SetSelected(shape* s) {
+	selectedShape = s;
+}
+shape* Graph::Getshape(int x, int y)
+{
+	for (auto shapePointer : shapesList)
+		if (shapePointer->is_in_fig(x, y)) {
+			return shapePointer;
+		}
+	return nullptr;
 }

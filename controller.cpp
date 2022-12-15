@@ -12,7 +12,12 @@
 #include "operations/opload.h"
 #include "operations/opAddIrrPolygon.h"
 #include"operations/opAddRegPolygon.h"
+<<<<<<< HEAD
 #include"opchangepenwidth.h"
+=======
+#include "operations/opSelect.h"
+#include"../Project-Startup-Code/opchangepenwidth.h"
+>>>>>>> 59d669dcec608514c0992ace9cdf121242ec4e25
 
 //#include "operations/"
 
@@ -90,9 +95,13 @@ operation* controller::createOperation(operationType OpType)
 		case DRAW_REGPOLYGON:
 			pOp = new opAddRegPolygon(this);
 			break;
+		case SELECT:
+			pOp = new opSelect(this);
+			break;
 		case Pen_Width:
 			pOp = new opchangepenwidth(this);
 			break;
+
 	}
 
 	return pOp;
