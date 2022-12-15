@@ -60,7 +60,7 @@ operation* controller::createOperation(operationType OpType)
 			break;
 
 		case DRAW_CIRC:
-			//pOp = new opAddCircle(this);
+			pOp = new opAddCircle(this);
 			break;
 
 		case DRAW_OVAL:
