@@ -17,32 +17,22 @@ void triangle ::Draw(GUI* pUI) const
 	pUI->Drawtriangle(Corner1, Corner2, Corner3, ShpGfxInfo);
 }
 void triangle::Save(ofstream& OutFile) {
-	OutFile << endl;
+	OutFile << "TRIANGLE" << " " << getid() << " " << Corner1.x << " " << Corner1.y << " " << Corner2.x << " " << Corner2.y << " "<<Corner3.x<<" "<<Corner3.y<<" ";
 
-	OutFile << "TRI ID: " << getid() << endl;
-	OutFile << "corner1" << Corner1.x << " " << Corner1.y << endl;
-	OutFile << "corner2" << Corner2.x << " " << Corner2.y << endl;
-	OutFile << "corner2" << Corner3.x << " " << Corner3.y << endl;
-
-
-	OutFile << "border width is " << shape::getborderwidth() << endl;
-	OutFile << " draw colors rgb intensities are :" << endl;
-	OutFile << "red intensity is " << shape::getdrawclr().getucred() << "	";
-	OutFile << "blue intensity is " << shape::getdrawclr().getucblue() << "	";
-	OutFile << "green intensity is " << shape::getdrawclr().getucgreen() << endl;
-	OutFile << "fill color rgb intesities are:" << endl;
+	OutFile << shape::getdrawclr().getucred() << " ";
+	OutFile << shape::getdrawclr().getucgreen() << " ";
+	OutFile << shape::getdrawclr().getucblue() << " ";
 	if (shape::getisfilled() == true) {
 		OutFile << shape::getfillclr().getucred() << "  ";
 		OutFile << shape::getfillclr().getucgreen() << "  ";
 		OutFile << shape::getfillclr().getucblue() << "  ";
-		OutFile << endl;
 	}
 	else
 	{
-		OutFile << "no fill" << endl;
+		OutFile << "NO_FILL" << " ";
 	}
-	OutFile << endl;
-	OutFile << "-------------------------------------------------------------------------------------------------------------" << endl;
+	OutFile << shape::getborderwidth() << " ";
+	OutFile << "///" << " ";
 }
 bool triangle::is_in_fig(int x, int y) {
 	//	if ((x > Point1.x && x < Point2.x && y > Point1.y && y < Point2.y))

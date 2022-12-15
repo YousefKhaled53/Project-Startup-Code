@@ -24,7 +24,7 @@ public:
 	void Save(ofstream& outfile);	//Save all shapes to a file
 	void load(ifstream& inputfile);	//Load all shapes from a file
 	void deleteshape(shape* pFig); // deletes a shape
-	color changestringtoints(string colorstring); // changes the string into color components
+	color changestringtoints(int r, int b, int g); // changes the string into color components
 	shape* GetSelected();
 	void SetSelected(shape* s);
 

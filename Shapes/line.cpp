@@ -16,19 +16,14 @@ void line::Draw(GUI* pUI) const
 	pUI->Drawline(Corner1, Corner2, ShpGfxInfo);
 }
 void line::Save(ofstream& OutFile) {
-	OutFile<< endl;
+	
+	OutFile << "LINE" << " " << getid() << " " << Corner1.x << " " << Corner1.y << " " << Corner2.x << " " << Corner2.y << " ";
 
-	OutFile << "LINE ID: " << getid() << endl;
-	OutFile << "corner1" << Corner1.x << " " << Corner1.y << endl;
-	OutFile << "corner2" << Corner2.x << " " << Corner2.y << endl;
-
-	OutFile << "border width is " << shape::getborderwidth() << endl;
-	OutFile << " draw colors rgb intensities are :" << endl;
-	OutFile << "red intensity is " << shape::getdrawclr().getucred() << "	";
-	OutFile << "blue intensity is " << shape::getdrawclr().getucblue() << "	";
-	OutFile << "green intensity is " << shape::getdrawclr().getucgreen() << endl;
-	OutFile<< endl;
-	OutFile << "-------------------------------------------------------------------------------------------------------------" << endl;
+	OutFile << shape::getdrawclr().getucred() << " ";
+	OutFile << shape::getdrawclr().getucgreen() << " ";
+	OutFile << shape::getdrawclr().getucblue() << " ";
+	OutFile << shape::getborderwidth() << " ";
+	OutFile << "///" << " ";
 }
 bool line::is_in_fig(int x, int y) {
 	//if ((x > Corner1.x && x < Corner2.x && y > Corner1.y && y < Corner2.y))

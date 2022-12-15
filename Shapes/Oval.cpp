@@ -17,30 +17,22 @@ void Oval::Draw(GUI* pUI) const
 	pUI->DrawOval(Point1, Point2, ShpGfxInfo);{}
 }
 void Oval::Save(ofstream& OutFile) {
-	OutFile << endl;
+	OutFile << "OVAL" << " " << getid() << " " << Point1.x << " " << Point1.y << " " << Point2.x << " " << Point2.y << " ";
 
-	OutFile << "oval ID: " << getid() << endl;
-	OutFile << "point1" << Point1.x << " " << Point1.y << endl;
-	OutFile << "corner2" << Point2.x << " " << Point2.y << endl;
-
-	OutFile << "border width is " << shape::getborderwidth() << endl;
-	OutFile << " draw colors rgb intensities are :" << endl;
-	OutFile << "red intensity is " << shape::getdrawclr().getucred() << "	";
-	OutFile << "blue intensity is " << shape::getdrawclr().getucblue() << "	";
-	OutFile << "green intensity is " << shape::getdrawclr().getucgreen() << endl;
-	OutFile << "fill color rgb intesities are:" << endl;
+	OutFile << shape::getdrawclr().getucred() << " ";
+	OutFile << shape::getdrawclr().getucgreen() << " ";
+	OutFile << shape::getdrawclr().getucblue() << " ";
 	if (shape::getisfilled() == true) {
 		OutFile << shape::getfillclr().getucred() << "  ";
 		OutFile << shape::getfillclr().getucgreen() << "  ";
 		OutFile << shape::getfillclr().getucblue() << "  ";
-		OutFile << endl;
 	}
 	else
 	{
-		OutFile << "no fill" << endl;
+		OutFile << "NO_FILL" << " ";
 	}
-	OutFile << endl;
-	OutFile << "-------------------------------------------------------------------------------------------------------------" << endl;
+	OutFile << shape::getborderwidth() << " ";
+	OutFile << "///" << " ";
 }
 bool Oval::is_in_fig(int x, int y) {
 //	if ((x > Point1.x && x < Point2.x && y > Point1.y && y < Point2.y))

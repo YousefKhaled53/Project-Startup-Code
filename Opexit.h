@@ -10,6 +10,7 @@ public:
 	virtual void Execute(){
 		
 		GUI* pUI = pControl->GetUI();
+
 		pUI->PrintMessage("do you like to save ");
 		
 		string ask = pUI->GetSrting();
