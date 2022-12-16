@@ -168,8 +168,6 @@
     <ClCompile Include="controller.cpp" />
     <ClCompile Include="GUI\GUI.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="operations\opbordercolor.cpp" />
-    <ClCompile Include="operations\opborderwidth.cpp" />
     <ClCompile Include="operations\Opchangefillcolor.cpp" />
     <ClCompile Include="opchangepenwidth.cpp" />
     <ClCompile Include="operations\opAddCircle.cpp" />
@@ -221,8 +219,6 @@
     <ClInclude Include="controller.h" />
     <ClInclude Include="DEFS.h" />
     <ClInclude Include="GUI\GUI.h" />
-    <ClInclude Include="operations\opbordercolor.h" />
-    <ClInclude Include="operations\opborderwidth.h" />
     <ClInclude Include="operations\Opchangefillcolor.h" />
     <ClInclude Include="opchangepenwidth.h" />
     <ClInclude Include="operations\opAddCircle.h" />

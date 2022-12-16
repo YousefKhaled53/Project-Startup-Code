@@ -14,9 +14,7 @@
 #include"operations/opAddRegPolygon.h"
 #include "operations/opSelect.h"
 #include"opchangepenwidth.h"
-#include"operations/opbordercolor.h"
 #include"Opexit.h"
-#include"operations/opborderwidth.h"
 #include"operations/Opchangefillcolor.h"
 #include"../Project-Startup-Code/opchangepenwidth.h"
 
@@ -104,10 +102,7 @@ operation* controller::createOperation(operationType OpType)
 		case Pen_Width:
 			pOp = new opchangepenwidth(this);
 			break;
-		case Border_width:
-			pOp = new opborderwidth(this);
-		case Border_color:
-			pOp = new opbordercolor(this);
+
 	}
 
 	return pOp;

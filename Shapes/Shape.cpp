@@ -20,14 +20,6 @@ void shape::ChngFillClr(color Fclr)
 	ShpGfxInfo.isFilled = true;
 	ShpGfxInfo.FillClr = Fclr; 
 }
-void shape::bordercolor(color Bclr)
-{
-	ShpGfxInfo.DrawClr = Bclr;
-	ShpGfxInfo.isSelected = false;
-}
-void shape::changeborderwidth(int bw){
-	ShpGfxInfo.BorderWdth = bw;
-}
 color shape::getdrawclr() {
 	return ShpGfxInfo.DrawClr;
 }
