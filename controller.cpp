@@ -126,6 +126,9 @@ Graph* controller::getGraph() const
 {
 	return pGraph;
 }
+/*window* controller::getwind() const {
+	return pWind;
+}*/
 
 
 

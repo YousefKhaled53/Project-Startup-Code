@@ -9,7 +9,7 @@ class operation; //forward declaration
 //Main class that manages everything in the application.
 class controller
 {
-
+	//window* pWind;
 	Graph* pGraph;	//pointe to the grapg
 	GUI* pGUI;		//Pointer to UI class
 	
@@ -25,6 +25,7 @@ public:
 	void Run();
 	
 	Graph* getGraph() const;
+	//window* getwind() const;
 	
 	// -- Interface Management Functions
 	GUI *GetUI() const; //Return pointer to the UI
