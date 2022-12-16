@@ -206,7 +206,7 @@ void Graph::load(ifstream& inputfile) { // how to initialize the ID of each shap
 		}
 
 	}
-	//delete arr2;
+	//delete (arr2);
 	inputfile.close();
 }
 shape* Graph::GetSelected() {

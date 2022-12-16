@@ -7,10 +7,17 @@ Opchangefillcolor::Opchangefillcolor(controller* pCont) : operation(pCont) {}
 void Opchangefillcolor::Execute() {
 	GUI* pUI = pControl->GetUI();
 	Graph* pGr = pControl->getGraph();
-	color c(255,255,0); 
-	//window* pwind = pControl->getwind();
+	
 	//const int x = 111;
 	//const int y = 111;
-	//color c2 =pwind->GetColor(x,y);
+	//double r, g, b;
+	pUI->PrintMessage("write red intensity ");
+	int r = stoi(pUI->GetSrting());
+	pUI->PrintMessage("write green intensity ");
+	int g = stoi(pUI->GetSrting());
+	pUI->PrintMessage("write blue intensity ");
+	int b = stoi(pUI->GetSrting());
+
+	color c(r,g,b);
 	pGr->changefillcolor(pGr->GetSelected(),c );
 }

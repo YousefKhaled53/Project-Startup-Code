@@ -25,7 +25,7 @@ public:
 	void Run();
 	
 	Graph* getGraph() const;
-	//window* getwind() const;
+//	window* getwind() const;
 	
 	// -- Interface Management Functions
 	GUI *GetUI() const; //Return pointer to the UI
