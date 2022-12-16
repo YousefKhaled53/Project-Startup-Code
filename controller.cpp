@@ -15,7 +15,7 @@
 #include "operations/opSelect.h"
 #include"opchangepenwidth.h"
 #include"Opexit.h"
-
+#include"operations/Opchangefillcolor.h"
 #include"../Project-Startup-Code/opchangepenwidth.h"
 
 #include"Opexit.h"
@@ -47,8 +47,8 @@ operation* controller::createOperation(operationType OpType)
 	switch (OpType)
 	{
 		case DRAW_LINE:
-			pOp = new opAddline(this);
-
+			//pOp = new opAddline(this);
+			pOp = new Opchangefillcolor(this);
 			break;
 
 		case DRAW_RECT:

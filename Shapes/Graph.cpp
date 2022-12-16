@@ -212,6 +212,9 @@ void Graph::load(ifstream& inputfile) { // how to initialize the ID of each shap
 shape* Graph::GetSelected() {
 	return selectedShape;
 }
+void Graph::changefillcolor(shape* pFig, color newcolor) {
+	pFig->ChngFillClr(newcolor);
+}
 
 void Graph::SetSelected(shape* s) {
 	selectedShape = s;

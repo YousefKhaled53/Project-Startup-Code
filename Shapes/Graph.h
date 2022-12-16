@@ -27,5 +27,7 @@ public:
 	color changestringtoints(int r, int b, int g); // changes the string into color components
 	shape* GetSelected();
 	void SetSelected(shape* s);
+	void changefillcolor(shape* pFig,color newcolor);
+
 
 };
