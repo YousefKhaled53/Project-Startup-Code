@@ -50,8 +50,7 @@ operation* controller::createOperation(operationType OpType)
 	{
 		case DRAW_LINE:
 			pOp = new opAddline(this);
-			//pOp = new Opchangefillcolor(this);
-			break;
+					break;
 
 		case DRAW_RECT:
 			pOp = new opAddRect(this);
