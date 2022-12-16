@@ -9,6 +9,8 @@ public:
 	Opexit(controller* pCont) :operation(pCont) {}
 	virtual void Execute(){
 		GUI* pUI = pControl->GetUI();
+		int x = pControl->getGraph()->getsizeofvector();
+		if (x != 0) {
 			pUI->PrintMessage("do you want to save ");
 			string ask = pUI->GetSrting();
 			if (ask == "yes") {
@@ -17,6 +19,8 @@ public:
 				pControl->getGraph()->Save(savingfile); // how to call save all function 
 				pUI->PrintMessage("saved !");
 			}
+		}
+			
 		
 	}
 };

@@ -17,7 +17,7 @@ void Opchangefillcolor::Execute() {
 	int g = stoi(pUI->GetSrting());
 	pUI->PrintMessage("write blue intensity ");
 	int b = stoi(pUI->GetSrting());
-
+	pUI->PrintMessage("done");
 	color c(r,g,b);
 	pGr->changefillcolor(pGr->GetSelected(),c );
 }
