@@ -154,9 +154,9 @@ void GUI::ClearStatusBar() const
 	pWind->DrawRectangle(0, height - StatusBarHeight, width, height);
 }
 void GUI::ClearDrawToolBar() const {
-	pWind->SetPen(toolbarcolor, 1);
-	pWind->SetBrush(toolbarcolor);
-	pWind->DrawRectangle(0, height - ToolBarHeight, width, height);
+	pWind->SetPen(RED, 1);
+	pWind->SetBrush(WHITE);
+	pWind->DrawRectangle(0, 0,  width,ToolBarHeight);
 
 }
 //////////////////////////////////////////////////////////////////////////////////////////
@@ -203,25 +203,28 @@ void GUI::CreateDrawToolBar()
 
 void GUI::CreatePlayToolBar() 
 {
-	string MenuIconImages[PLAY_ICON_COUNT];
-	MenuIconImages[ICON_hide] = "images\\MenuIcons\\hide.jpg";
+	InterfaceMode = MODE_PLAY;
+	GUI::ClearStatusBar();
+	GUI::ClearDrawToolBar();
+	
+	//You can draw the tool bar icons in any way you want.
+	//Below is one possible way
 
-	MenuIconImages[ICON_SWITCH] = "images\\MenuIcons\\switch.jpg";
-
-
-
-	//TODO: Prepare images for each menu icon and add it to the list
+	//First prepare List of images for each menu icon
+	//To control the order of these images in the menu, 
+	//reoder them in UI_Info.h ==> enum DrawMenuIcon
+	string MenuIconImages[DRAW_ICON_COUNT];
+	//MenuIconImages[ICON_RECT] = "images\\MenuIcons\\rec.jpg";
+		//TODO: Prepare images for each menu icon and add it to the list
 
 	//Draw menu icon one image at a time
-	for (int i = 0; i < PLAY_ICON_COUNT; i++)
-		pWind->DrawImage(MenuIconImages[i], i * MenuIconWidth, 0, MenuIconWidth, ToolBarHeight);
-
-
+	for (int i = 0; i < DRAW_ICON_COUNT; i++)
+	//	pWind->DrawImage(MenuIconImages[i], i * MenuIconWidth, 0, MenuIconWidth, ToolBarHeight);
 
 	//Draw a line under the toolbar
 	pWind->SetPen(RED, 3);
 	pWind->DrawLine(0, ToolBarHeight, width, ToolBarHeight);
-	InterfaceMode = MODE_PLAY;
+
 }
 //////////////////////////////////////////////////////////////////////////////////////////
 
