@@ -215,12 +215,6 @@ shape* Graph::GetSelected() {
 void Graph::changefillcolor(shape* pFig, color newcolor) {
 	pFig->ChngFillClr(newcolor);
 }
-void Graph::bordercolor(shape* pFig, color newcolor) {
-	pFig->bordercolor(newcolor);
-}
-void Graph::borderwidth(shape* pFig, int bw) {
-	pFig->changeborderwidth(bw);
-}
 
 void Graph::SetSelected(shape* s) {
 	selectedShape = s;
