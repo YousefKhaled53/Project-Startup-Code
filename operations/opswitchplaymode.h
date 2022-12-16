@@ -9,7 +9,10 @@ public:
 	~opswitchlaymode() {};
 	virtual void Execute() {
 		GUI* pUI = pControl->GetUI();
-		pUI->CreatePlayToolBar();
+		//pUI->PrintMessage("-----------------------------");
+		pUI->ClearStatusBar();
+		pUI->ClearDrawToolBar();
+		//pUI->CreatePlayToolBar();
 		//what should be written here ??
 	} // the function which will be responsible for changing to play mode
 };

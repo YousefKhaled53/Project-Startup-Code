@@ -153,6 +153,12 @@ void GUI::ClearStatusBar() const
 	pWind->SetBrush(StatusBarColor);
 	pWind->DrawRectangle(0, height - StatusBarHeight, width, height);
 }
+void GUI::ClearDrawToolBar() const {
+	pWind->SetPen(toolbarcolor, 1);
+	pWind->SetBrush(toolbarcolor);
+	pWind->DrawRectangle(0, height - ToolBarHeight, width, height);
+
+}
 //////////////////////////////////////////////////////////////////////////////////////////
 void GUI::CreateDrawToolBar() 
 {
@@ -216,7 +222,6 @@ void GUI::CreatePlayToolBar()
 	pWind->SetPen(RED, 3);
 	pWind->DrawLine(0, ToolBarHeight, width, ToolBarHeight);
 	InterfaceMode = MODE_PLAY;
-		;
 }
 //////////////////////////////////////////////////////////////////////////////////////////
 

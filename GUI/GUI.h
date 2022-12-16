@@ -86,6 +86,7 @@ class GUI
 	color MsgColor;			//Messages color
 	color BkGrndColor;		//Background color
 	color StatusBarColor;	//Status bar color
+	color toolbarcolor;
 	int PenWidth;			//width of the pen that draws shapes
 
 	/// Add more members if needed
@@ -111,6 +112,7 @@ public:
 
 	void ClearStatusBar() const;	//Clears the status bar
 	void ClearDrawArea() const;	//Clears the drawing area
+	void ClearDrawToolBar() const;
 
 	// -- shapes Drawing functions
 	void DrawRect(Point P1, Point P2, GfxInfo RectGfxInfo) const;  //Draw a rectangle
