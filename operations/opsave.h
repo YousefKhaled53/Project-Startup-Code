@@ -19,7 +19,11 @@ public:
 			pControl->getGraph()->Save(savingfile); // how to call save all function 
 			pUI->PrintMessage("saved");
 		}
-		pUI->PrintMessage("cancelled");
+		else
+		{
+			pUI->PrintMessage("cancelled");
+		}
+		
 	};
 
 };
