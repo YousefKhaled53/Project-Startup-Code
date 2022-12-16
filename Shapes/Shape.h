@@ -24,6 +24,8 @@ public:
 	void ChngFillClr(color Fclr);	//changes the shape's filling color
 	color getdrawclr();
 	color getfillclr();
+	void bordercolor(color Bclr);
+	void changeborderwidth(int bw);
 	int getborderwidth();
 	bool getisfilled();
 	int getid();
