@@ -65,6 +65,8 @@
     <ClCompile Include="Shapes\square.cpp" />
     <ClCompile Include="Shapes\triangle.cpp" />
     <ClCompile Include="operations\Opchangefillcolor.cpp" />
+    <ClCompile Include="operations\opborderwidth.cpp" />
+    <ClCompile Include="operations\opbordercolor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CMUgraphicsLib\auxil.h" />
@@ -117,5 +119,7 @@
     <ClInclude Include="Shapes\square.h" />
     <ClInclude Include="Shapes\triangle.h" />
     <ClInclude Include="operations\Opchangefillcolor.h" />
+    <ClInclude Include="operations\opborderwidth.h" />
+    <ClInclude Include="operations\opbordercolor.h" />
   </ItemGroup>
 </Project>
