@@ -2,6 +2,8 @@
 
 #include<iostream>
 #include<fstream>
+#include <cmath>
+#include <corecrt_math_defines.h>
 Oval::Oval(Point P1, Point P2, GfxInfo shapeGfxInfo) :shape(shapeGfxInfo)
 {
 	Point1 = P1;
@@ -35,15 +37,16 @@ void Oval::Save(ofstream& OutFile) {
 	OutFile << "///" << " ";
 }
 bool Oval::is_in_fig(int x, int y) {
-//	if ((x > Point1.x && x < Point2.x && y > Point1.y && y < Point2.y))
-//	{
-//		return true;
-//	}
-//	else
-//	{
-//		return false;
-//	}
-	return false;
+	double h = (Point1.x + Point2.x)/2;
+	double k = (Point1.y + Point2.y)/2;
+	double a = sqrt(pow((Point1.x - h), 2));
+	double b = sqrt(pow((Point1.y - k), 2));
+	if ((pow((x - h), 2) / pow(a, 2)) + (pow((y - k), 2) / pow(b, 2)) <= 1) {
+		return true;
+	}
+	else {
+		return false;
+	}
 }
 
 

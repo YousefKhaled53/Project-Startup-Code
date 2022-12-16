@@ -1,6 +1,8 @@
 #include "triangle.h"
 #include<iostream>
 #include<fstream>
+#include <cmath>
+#include <corecrt_math_defines.h>
 triangle::triangle (Point P1, Point P2, Point P3, GfxInfo shapeGfxInfo) : shape(shapeGfxInfo)
 {
 	Corner1 = P1;
@@ -35,13 +37,15 @@ void triangle::Save(ofstream& OutFile) {
 	OutFile << "///" << " ";
 }
 bool triangle::is_in_fig(int x, int y) {
-	//	if ((x > Point1.x && x < Point2.x && y > Point1.y && y < Point2.y))
-	//	{
-	//		return true;
-	//	}
-	//	else
-	//	{
-	//		return false;
-	//	}
-	return false;
+	
+	double TriArea = abs((Corner1.x * (Corner2.y - Corner3.y) + Corner2.x * (Corner3.y - Corner1.y) + Corner3.x * (Corner1.y - Corner2.y)) / 2.0);
+	double TriArea1 = abs((x * (Corner2.y - Corner3.y) + Corner2.x * (Corner3.y - y) + Corner3.x * (y - Corner2.y)) / 2.0);
+	double TriArea2 = abs((Corner1.x * (y - Corner3.y) + x * (Corner3.y - Corner1.y) + Corner3.x * (Corner1.y - y)) / 2.0);
+	double TriArea3 = abs((Corner1.x * (Corner2.y - y) + Corner2.x * (y - Corner1.y) + x * (Corner1.y - Corner2.y)) / 2.0);
+	if (TriArea1 + TriArea2 + TriArea3 == TriArea) {
+		return true;
+	}
+	else {
+		return false;
+	}
 }

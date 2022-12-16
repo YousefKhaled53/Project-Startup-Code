@@ -49,7 +49,7 @@ void RegPolygon::Save(ofstream& OutFile) {
 	}
 	else
 	{
-		OutFile << "no fill" << endl;
+		OutFile << "no fill" << endl;	
 	}*/
 }
 bool RegPolygon::is_in_fig(int x, int y) {

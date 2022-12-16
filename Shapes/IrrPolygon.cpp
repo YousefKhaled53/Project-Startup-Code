@@ -1,6 +1,8 @@
 #include "IrrPolygon.h"
 #include<iostream>
 #include<fstream>
+#include <cmath>
+#include <corecrt_math_defines.h>
 IrrPolygon::IrrPolygon(Point *P1, int x, GfxInfo shapeGfxInfo) :shape(shapeGfxInfo)
 {
 	Point1 = P1;
@@ -47,13 +49,7 @@ void IrrPolygon::Save(ofstream& OutFile) {
 	OutFile << endl << "-----------------------------------------------------------------------";
 }
 bool IrrPolygon::is_in_fig(int x, int y) {
-	//if ((x > Corner1.x && x < Corner2.x && y > Corner1.y && y < Corner2.y))
-	//{
-	//	return true;
-	//}
-	//else
-	//{
-	//	return false;
-	//}
+	double X_Max = 1284;
+
 	return false;
 }
