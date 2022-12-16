@@ -18,7 +18,7 @@
 #include"Opexit.h"
 #include"operations/opborderwidth.h"
 #include"operations/Opchangefillcolor.h"
-#include"../Project Startup Code/opchangepenwidth.h"
+#include"../Project-Startup-Code/opchangepenwidth.h"
 
 #include"Opexit.h"
 #include"operations/opdeleteshape.h"

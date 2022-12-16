@@ -1,6 +1,8 @@
 #include "Circle.h"
 #include<iostream>
 #include<fstream>
+#include <cmath>
+#include <corecrt_math_defines.h>
 Circle::Circle(Point P1, Point P2, GfxInfo shapeGfxInfo) :shape(shapeGfxInfo)
 {
 	Center = P1;
@@ -35,13 +37,13 @@ void Circle::Save(ofstream& OutFile) {
 	OutFile << "///" << " ";
 }
 bool Circle::is_in_fig(int x, int y) {
-	//if ((x > Corner1.x && x < Corner2.x && y > Corner1.y && y < Corner2.y))
-	//{
-		//	return true;
-	//}
-	//else
-	//{
-	//	return false;
-	//}
+	double RadiusLength = sqrt(pow((radius.x - Center.x), 2) + pow((radius.y - Center.y), 2));
+	double ClickLength = sqrt(pow((x - Center.x), 2) + pow((y - Center.y), 2));
+	if (ClickLength <= RadiusLength) {
+		return true;
+	}
+	else {
+		return false;
+	}
 	return false;
 }
