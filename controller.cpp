@@ -77,6 +77,7 @@ operation* controller::createOperation(operationType OpType)
 		case EXIT:
 			pOp = new Opexit(this);
 			break;
+
 		case SAVE:
 			pOp = new opsave(this);
 			break;
