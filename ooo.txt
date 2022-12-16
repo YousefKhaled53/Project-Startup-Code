@@ -1,0 +1,4 @@
+blue green 5
+3
+FORMAT : SHAPE	NAME	 ID x,y for n points	redintensityfordrawcolor	greenintensityfordrawcolor	blueintensityfordrawcolor	greenintensityforfillcolor	blueintensityforfillcolor	redintensityforfillcolor	penwidth
+RECT 2 932 318 932 318 0 0 255 NO_FILL 3 /// RECT 2 88 209 251 379 0 0 255 NO_FILL 3 /// RECT 2 250 225 646 440 73 1 4 NO_FILL 30 /// 
