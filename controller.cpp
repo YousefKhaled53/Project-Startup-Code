@@ -49,8 +49,8 @@ operation* controller::createOperation(operationType OpType)
 	switch (OpType)
 	{
 		case DRAW_LINE:
-			pOp = new opAddline(this);
-			//pOp = new Opchangefillcolor(this);
+			//pOp = new opAddline(this);
+			pOp = new Opchangefillcolor(this);
 			break;
 
 		case DRAW_RECT:
