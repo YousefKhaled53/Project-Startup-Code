@@ -55,6 +55,7 @@ operation* controller::createOperation(operationType OpType)
 
 		case DRAW_RECT:
 			pOp = new opAddRect(this);
+			
 			//pOp = new opswitchlaymode(this);
 			break;
 

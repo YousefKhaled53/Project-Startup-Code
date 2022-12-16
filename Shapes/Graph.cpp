@@ -233,3 +233,6 @@ shape* Graph::Getshape(int x, int y)
 		}
 	return nullptr;
 }
+int Graph::getsizeofvector() {
+	return shapesList.size();
+}

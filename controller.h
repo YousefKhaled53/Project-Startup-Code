@@ -12,7 +12,7 @@ class controller
 	//window* pWind;
 	Graph* pGraph;	//pointe to the grapg
 	GUI* pGUI;		//Pointer to UI class
-	
+	 // number of shapes created 
 
 public:	
 	controller(); 
@@ -25,7 +25,6 @@ public:
 	void Run();
 	
 	Graph* getGraph() const;
-//	window* getwind() const;
 	
 	// -- Interface Management Functions
 	GUI *GetUI() const; //Return pointer to the UI
