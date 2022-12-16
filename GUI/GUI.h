@@ -50,6 +50,9 @@ class GUI
 		ICON_LOAD,
 		ICON_PEN,
 		ICON_DEL,
+		ICON_BRUSH_SIGNLE,
+		ICON_BRUSH_GENERAL,
+		ICON_BORDER_SINGLE,
 		ICON_SELECT,      //Select icon in menu to select and unselect the shapes
 		//TODO: Add more icons names here
 		

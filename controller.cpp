@@ -18,7 +18,8 @@
 #include"Opexit.h"
 #include"operations/opborderwidth.h"
 #include"operations/Opchangefillcolor.h"
-#include"../Project-Startup-Code/opchangepenwidth.h"
+#include "../Project Startup Code/operations/Opchangefillcolor.h"
+#include"../Project Startup Code/opchangepenwidth.h"
 
 #include"Opexit.h"
 #include"operations/opdeleteshape.h"
@@ -79,6 +80,15 @@ operation* controller::createOperation(operationType OpType)
 			break;
 		case SAVE:
 			pOp = new opsave(this);
+			break;
+		case BRUSH_SINGLE:
+			pOp = new Opchangefillcolor(this);
+			break;
+		case BRUSH_GENERAL:
+			pOp = new Opchangefillcolor(this);
+			break;
+		case BORDER_SINGLE:
+			pOp = new opborderwidth(this);
 			break;
 
 		case STATUS:	//a click on the status bar ==> no operation
