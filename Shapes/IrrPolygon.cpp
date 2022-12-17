@@ -50,8 +50,9 @@ void IrrPolygon::Save(ofstream& OutFile) {
 }
 bool IrrPolygon::is_in_fig(int x, int y) {
 	for (int i = 0; i < Vertices_num; i++) {
-		if (ArrX[i] == x && ArrY[i] == y) {
-			return true;
+		//if (ArrX[i] <= x+1 || ArrX[i] >= x - 1 && ArrY[i] <= y+1 && ArrY[i] >= y -1 ) {
+		if (ArrX[i] == x && ArrY[i] == y ){
+		     return true;
 		}
 		else {
 			return false;

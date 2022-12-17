@@ -18,14 +18,10 @@
 #include"Opexit.h"
 #include"operations/opborderwidth.h"
 #include"operations/Opchangefillcolor.h"
-<<<<<<< Updated upstream
 #include "../Project-Startup-Code/operations/Opchangefillcolor.h"
 #include"../Project-Startup-Code/opchangepenwidth.h"
-
-=======
 #include"operations/Opchangefillcolor.h"
 #include"../Project-Startup-Code/opchangepenwidth.h"
->>>>>>> Stashed changes
 #include"Opexit.h"
 #include"operations/opdeleteshape.h"
 //#include "operations/"
