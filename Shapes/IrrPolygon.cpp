@@ -24,29 +24,30 @@ void IrrPolygon::Draw(GUI* pUI) const
 	//Call Output::DrawRect to draw a rectangle on the screen	
 	pUI->DrawIrrPolygon(ArrX, ArrY, Vertices_num, ShpGfxInfo);
 }
+<<<<<<< Updated upstream
 void IrrPolygon::Save(ofstream& OutFile , int id) {
 	OutFile << "irreg pol with  no of sides : " << Vertices_num << endl;
+=======
+void IrrPolygon::Save(ofstream& OutFile) {
+	OutFile << "IRREGULAR" << " " << getid() << " " << Point1->x << " " << Point1->y << " ";
+>>>>>>> Stashed changes
 	for (int i = 0; i < Vertices_num; i++) {
-		OutFile << "point " << i << ": x coordinates of point : " << ArrX[i] << " y coordinates of point : " << ArrY[i] << endl;
+		OutFile << ArrX[i]<< " "<<ArrY[i] << " ";
 	}
-	/*
-	OutFile << "border width is " << shape::getborderwidth() << endl;
-	OutFile << " draw colors rgb intensities are :" << endl;
-	OutFile << "red intensity is " << shape::getdrawclr().getucred() << "	";
-	OutFile << "blue intensity is " << shape::getdrawclr().getucblue() << "	";
-	OutFile << "green intensity is " << shape::getdrawclr().getucgreen() << endl;
-	OutFile << "fill color rgb intesities are:" << endl;
+	OutFile << shape::getdrawclr().getucred() << " ";
+	OutFile << shape::getdrawclr().getucgreen() << " ";
+	OutFile << shape::getdrawclr().getucblue() << " ";
 	if (shape::getisfilled() == true) {
-		OutFile << shape::getfillclr().getucred() << "  ";
-		OutFile << shape::getfillclr().getucgreen() << "  ";
-		OutFile << shape::getfillclr().getucblue() << "  ";
-		OutFile << endl;
+		OutFile << shape::getfillclr().getucred() << " ";
+		OutFile << shape::getfillclr().getucgreen() << " ";
+		OutFile << shape::getfillclr().getucblue() << " ";
 	}
 	else
 	{
-		OutFile << "no fill" << endl;
-	}*/
-	OutFile << endl << "-----------------------------------------------------------------------";
+		OutFile << "NO_FILL" << " ";
+	}
+	OutFile << shape::getborderwidth() << " ";
+	OutFile << "///" << " ";
 }
 bool IrrPolygon::is_in_fig(int x, int y) {
 	for (int i = 0; i < Vertices_num; i++) {

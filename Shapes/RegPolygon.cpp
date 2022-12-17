@@ -9,6 +9,7 @@ RegPolygon::RegPolygon(Point C, Point *P, int x, GfxInfo shapeGfxInfo) :shape(sh
 	Center = C;
 	Point1 = P;
 	Vertices_num = x;
+		
 	distance = sqrt(pow((Point1->x - Center.x), 2) + pow((Point1->y - Center.y), 2));
 	
 	for (int i = 0; i < x; i++) {
@@ -28,6 +29,7 @@ void RegPolygon::Draw(GUI* pUI) const
 	pUI->DrawRegPolygon(ArrX, ArrY, Vertices_num, ShpGfxInfo);
 }
 
+<<<<<<< Updated upstream
 void RegPolygon::Save(ofstream& OutFile , int id) {
 	OutFile << "reg pol with  no of sides : " << Vertices_num << endl;
 	OutFile << "center is  : " <<Center.x<<" "<<Center.y << endl;
@@ -41,16 +43,26 @@ void RegPolygon::Save(ofstream& OutFile , int id) {
 	OutFile << "blue intensity is " << shape::getdrawclr().getucblue() << "	";
 	OutFile << "green intensity is " << shape::getdrawclr().getucgreen() << endl;
 	OutFile << "fill color rgb intesities are:" << endl;
+=======
+void RegPolygon::Save(ofstream& OutFile) {
+
+	OutFile << "REGULAR" << " " << getid() << " " << Center.x << " " << Center.y << " " << Point1->x << " " << Point1->y << " ";
+
+	OutFile << shape::getdrawclr().getucred() << " ";
+	OutFile << shape::getdrawclr().getucgreen() << " ";
+	OutFile << shape::getdrawclr().getucblue() << " ";
+>>>>>>> Stashed changes
 	if (shape::getisfilled() == true) {
-		OutFile << shape::getfillclr().getucred() << "  ";
-		OutFile << shape::getfillclr().getucgreen() << "  ";
-		OutFile << shape::getfillclr().getucblue() << "  ";
-		OutFile << endl;
+		OutFile << shape::getfillclr().getucred() << " ";
+		OutFile << shape::getfillclr().getucgreen() << " ";
+		OutFile << shape::getfillclr().getucblue() << " ";
 	}
 	else
 	{
-		OutFile << "no fill" << endl;	
-	}*/
+		OutFile << "NO_FILL" << " ";
+	}
+	OutFile << shape::getborderwidth() << " ";
+	OutFile << "///" << " ";
 }
 bool RegPolygon::is_in_fig(int x, int y) {
 	double RadiusLength = sqrt(pow((Point1->x - Center.x), 2) + pow((Point1->y - Center.y), 2));

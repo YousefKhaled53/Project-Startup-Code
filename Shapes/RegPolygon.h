@@ -7,9 +7,10 @@ private:
 	Point Center;
 	Point* Point1;
 	int distance;
-	int Vertices_num;
-	int* ArrX=new int;
-	int* ArrY=new int;
+	int Vertices_num = 0;
+	
+	int* ArrX = new int[2000];
+	int* ArrY=new int[2000];
 	int vertixx;
 	int vertixy;
 public:

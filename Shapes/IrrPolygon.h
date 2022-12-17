@@ -5,9 +5,9 @@ class IrrPolygon :
 {
 	private:
 		Point* Point1;
-		int Vertices_num;
-		int *ArrX = new int;
-		int *ArrY = new int;
+		int Vertices_num=0;
+		int *ArrX = new int[1000];
+		int *ArrY = new int[1000];
 	public:
 		IrrPolygon(Point*, int, GfxInfo shapeGfxInfo);
 		virtual ~IrrPolygon();

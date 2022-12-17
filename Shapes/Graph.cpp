@@ -16,6 +16,7 @@
 #include"line.h"
 #include"square.h"
 #include"../controller.h"
+#include"RegPolygon.h"
 Graph::Graph()
 {
 	selectedShape = nullptr;
@@ -80,7 +81,7 @@ void Graph::load(ifstream& inputfile) { // how to initialize the ID of each shap
 	
 	string* arr2 = new string[size * 20];
 
-	for (int i = 0; i < (size *20 ); i++) {
+	for (int i = 0; i < (size *30 ); i++) {
 		getline(inputfile, arr2[i], ' ');
 
 	}
@@ -207,8 +208,8 @@ void Graph::load(ifstream& inputfile) { // how to initialize the ID of each shap
 			triangle* t = new triangle(p1, p2,p3, shapeGfxinfo);
 			t->setid(stoi(arr2[i + 1])); // setting the id of the rectagle
 			Addshape(t);
-
 		}
+		
 
 	}
 	//delete (arr2);
