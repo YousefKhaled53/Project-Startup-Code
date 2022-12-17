@@ -39,11 +39,12 @@ void opAddCircle::Execute()
 
 	pUI->PrintMessage("do you want to be filled ?");
 	string t = pUI->GetSrting();
-	if (t == "yes") {
+
+	if (t=="yes") {
 		CircleGfxInfo.isFilled = true;
 		CircleGfxInfo.isSelected = false;//default is not filled
 	}
-	else 
+	else
 	{
 		CircleGfxInfo.isFilled = false;
 		CircleGfxInfo.isSelected = false;//defualt is not selected
