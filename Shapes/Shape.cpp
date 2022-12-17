@@ -40,6 +40,9 @@ int shape::getborderwidth() {
 bool shape::getisfilled() {
 	return ShpGfxInfo.isFilled;
 }
+void shape::setisfilled() {
+	ShpGfxInfo.isFilled=true;
+}
 int shape::getid() {
 	return ID;
 }

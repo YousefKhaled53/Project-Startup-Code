@@ -15,6 +15,8 @@ enum operationType //The operations supported (you can add more if needed)
 	DRAW_REGPOLYGON,
 	Pen_Width,
 	Border_width,
+	BORDER_COLOR_SINGLE,
+	BORDER_COLOR_GENERAL,
 	Border_color,
 	CHNG_DRAW_CLR,	//Change the drawing color
 	CHNG_FILL_CLR,	//Change the filling color

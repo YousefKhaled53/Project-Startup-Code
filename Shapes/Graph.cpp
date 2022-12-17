@@ -214,9 +214,11 @@ shape* Graph::GetSelected() {
 }
 void Graph::changefillcolor(shape* pFig, color newcolor) {
 	pFig->ChngFillClr(newcolor);
+	pFig->setisfilled();	
 }
 void Graph::bordercolor(shape* pFig, color newcolor) {
-	pFig->bordercolor(newcolor);
+	pFig->ChngDrawClr(newcolor);
+
 }
 void Graph::borderwidth(shape* pFig, int bw) {
 	pFig->changeborderwidth(bw);

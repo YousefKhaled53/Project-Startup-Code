@@ -48,11 +48,13 @@ class GUI
 		ICON_IRRPOLYGON,
 		ICON_REG_POLYGON,
 		ICON_LOAD,
+		ICON_BORDER_SINGLE,
 		ICON_PEN,
 		ICON_DEL,
 		ICON_BRUSH_SIGNLE,
 		ICON_BRUSH_GENERAL,
-		ICON_BORDER_SINGLE,
+		ICON_BORDER_COLOR_SINGLE,
+		ICON_BORDER_COLOR_GENERAL,
 		ICON_SELECT,      //Select icon in menu to select and unselect the shapes
 		//TODO: Add more icons names here
 		
