@@ -18,14 +18,14 @@
 #include"Opexit.h"
 #include"operations/opborderwidth.h"
 #include"operations/Opchangefillcolor.h"
-<<<<<<< Updated upstream
 #include "../Project-Startup-Code/operations/Opchangefillcolor.h"
 #include"../Project-Startup-Code/opchangepenwidth.h"
+#include"opChangeGeneralFillColor.h"
+#include"opCHangeGeneralDrawcolor.h"
 
-=======
+
 #include"operations/Opchangefillcolor.h"
 #include"../Project-Startup-Code/opchangepenwidth.h"
->>>>>>> Stashed changes
 #include"Opexit.h"
 #include"operations/opdeleteshape.h"
 //#include "operations/"
@@ -87,18 +87,20 @@ operation* controller::createOperation(operationType OpType)
 		case SAVE:
 			pOp = new opsave(this);
 			break;
-		case BRUSH_SINGLE: // chnge fill color for single shape 
+		case BRUSH_SINGLE: 
 			pOp = new Opchangefillcolor(this);
 			break;
 		case BORDER_COLOR_GENERAL:
+			pOp = new opCHangeGeneralDrawcolor(this);
 			break;
 		case BORDER_COLOR_SINGLE:
 			pOp = new opbordercolor(this); 
 			break;
-		case BRUSH_GENERAL: // change border color for single shape
-			//pOp = new opbordercolor(this);
+		case BRUSH_GENERAL: 
+			pOp = new opChangeGeneralFillColor(this);
+			
 			break;
-		case BORDER_SINGLE: // chnge the border width for single shape
+		case BORDER_SINGLE: 
 			pOp = new opborderwidth(this);
 			break;
 

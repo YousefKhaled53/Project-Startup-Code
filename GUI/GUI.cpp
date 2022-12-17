@@ -440,6 +440,12 @@ void GUI::DrawRegPolygon(int* Arrx, int* ArrY, int x, GfxInfo RegPolygonGfxInfo)
 
 	pWind->DrawPolygon(Arrx, ArrY, x, style);
 }
+void GUI::setcrntfillcolor(color newcolor) {
+	FillColor= newcolor;
+}
+void GUI::setcrntdrawcolor(color newcolor) {
+	DrawColor = newcolor;
+}
 
 
 void GUI::DrawIrrPolygon(int* Arrx, int* Arry, int x, GfxInfo IrrPolygonGfxInfo) const

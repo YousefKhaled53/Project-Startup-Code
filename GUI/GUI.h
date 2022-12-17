@@ -130,6 +130,9 @@ public:
 	void DrawRegPolygon(int* Arrx, int* ArrY, int x, GfxInfo RegPolygonGfxInfo) const;
 	void DrawIrrPolygon(int *Arrx, int *Arry, int x, GfxInfo IrrPolygonGfxInfo) const;
 	void Setpenwidth(int n);
+	void setcrntfillcolor(color newcolor);
+	void setcrntdrawcolor(color newcolor);
+
 
 
 	///Make similar functions for drawing all other shapes.
