@@ -37,26 +37,27 @@ class GUI
 	{
 		//Note: Icons are ordered here as they appear in menu
 		//If you want to change the menu icons order, change the order here
-		ICON_RECT,		//Recangle icon in menu
-		ICON_CIRC,		//Circle icon in menu
-		ICON_OVAL,
-		ICON_SQUARE,
 		ICON_LINE,
 		ICON_TRIANGLE,
-		ICON_SAVE,
-		ICON_SWITCH,
-		ICON_IRRPOLYGON,
+		ICON_RECT,
+		ICON_SQUARE,		//Recangle icon in menu
+		ICON_CIRC,		//Circle icon in menu
+		ICON_OVAL,
 		ICON_REG_POLYGON,
+		ICON_IRRPOLYGON,
+		ICON_SAVE,
 		ICON_LOAD,
+		ICON_SWITCH,
 		ICON_BORDER_SINGLE,
 		ICON_PEN,
-		ICON_DEL,
-		ICON_BRUSH_SIGNLE,
-		ICON_BRUSH_GENERAL,
 		ICON_BORDER_COLOR_SINGLE,
 		ICON_BORDER_COLOR_GENERAL,
+		ICON_BRUSH_SIGNLE,
+		ICON_BRUSH_GENERAL,
+
 		ICON_SELECT,      //Select icon in menu to select and unselect the shapes
 		//TODO: Add more icons names here
+		ICON_DEL,
 		
 		ICON_EXIT,		//Exit icon
 
