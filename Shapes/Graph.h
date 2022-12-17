@@ -30,6 +30,7 @@ public:
 	void SetSelected(shape* s);
 	void changefillcolor(shape* pFig,color newcolor);
 	int getsizeofvector();
-
+	
+	
 
 };

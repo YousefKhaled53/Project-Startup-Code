@@ -15,6 +15,7 @@
 #include"Circle.h"
 #include"line.h"
 #include"square.h"
+#include"../controller.h"
 Graph::Graph()
 {
 	selectedShape = nullptr;
