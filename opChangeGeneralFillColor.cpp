@@ -16,3 +16,4 @@ void opChangeGeneralFillColor::Execute() {
 	color c2 = pUI->getwind()->GetColor(p1.x, p1.y);
 	pUI->setcrntfillcolor(c2);
 }
+ 

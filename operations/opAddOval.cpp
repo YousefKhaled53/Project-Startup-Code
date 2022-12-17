@@ -38,9 +38,19 @@ void opAddOval::Execute()
 	OvalGfxInfo.BorderWdth = pUI->getCrntPenWidth();
 
 
-	OvalGfxInfo.isFilled = false;	//default is not filled
-	OvalGfxInfo.isSelected = false;	//defualt is not selected
+	pUI->PrintMessage("do you want the shape to be filled ");
 
+	if (pUI->GetSrting() == "yes") {
+		OvalGfxInfo.isFilled = true;
+		OvalGfxInfo.isSelected = false;//default is not filled
+	}
+	else
+	{
+
+		OvalGfxInfo.isFilled = false;
+		OvalGfxInfo.isSelected = false;	//defualt is not selected
+
+	}
 
 	//Create a Oval with the above parameters
 	Oval* O = new Oval(P1, P2, OvalGfxInfo);

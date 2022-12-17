@@ -39,10 +39,19 @@ void opAddRect::Execute()
 	RectGfxInfo.FillClr = pUI->getCrntFillColor();
 	RectGfxInfo.BorderWdth = pUI->getCrntPenWidth();
 
+	pUI->PrintMessage("do you want the shape to be filled ");
 
-	RectGfxInfo.isFilled = false;	//default is not filled
-	RectGfxInfo.isSelected = false;	//defualt is not selected
+	if (pUI->GetSrting() == "yes") {
+		RectGfxInfo.isFilled = true;
+		RectGfxInfo.isSelected = false;//default is not filled
+	}
+	else
+	{
 
+		RectGfxInfo.isFilled = false;
+		RectGfxInfo.isSelected = false;	//defualt is not selected
+
+	}
 
 	//Create a rectangle with the above parameters
 	Rect *R=new Rect(P1, P2, RectGfxInfo);

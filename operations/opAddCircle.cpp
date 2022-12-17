@@ -38,9 +38,19 @@ void opAddCircle::Execute()
 	CircleGfxInfo.BorderWdth = pUI->getCrntPenWidth();
 
 
-	CircleGfxInfo.isFilled = false;	//default is not filled
-	CircleGfxInfo.isSelected = false;	//defualt is not selected
+	pUI->PrintMessage("do you want the shape to be filled ");
 
+	if (pUI->GetSrting() == "yes") {
+		CircleGfxInfo.isFilled = true;
+		CircleGfxInfo.isSelected = false;//default is not filled
+	}
+	else
+	{
+
+		CircleGfxInfo.isFilled = false;
+		CircleGfxInfo.isSelected = false;//defualt is not selected
+
+	}
 
 	//Create a Circle with the above parameters
 	Circle* C = new Circle(P1, P2, CircleGfxInfo);
