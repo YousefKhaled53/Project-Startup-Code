@@ -72,12 +72,14 @@ class GUI
 
 		//TODO: Add more icons names here
 		ICON_hide,
+		ICON_un,
+		ICON_Comingsoon,
 		PLAY_ICON_COUNT		//no. of menu icons ==> This should be the last line in this enum
 
 	};
 
 
-	GUI_MODE InterfaceMode;
+	GUI_MODE InterfaceMode ;
 
 	int	width, height,	//Window width and height
 		wx, wy,			//Window starting coordinates
@@ -113,7 +115,7 @@ public:
 	// Output Functions  ---------------------------
 	window* CreateWind(int, int, int, int) const; //creates the application window
 	window* getwind();
-	void CreateDrawToolBar();	//creates Draw mode toolbar & menu
+	void CreateDrawToolBar() ;	//creates Draw mode toolbar & menu
 	void CreatePlayToolBar();	//creates Play mode toolbar & menu
 	void CreateStatusBar() const;	//create the status bar
 

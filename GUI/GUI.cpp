@@ -215,30 +215,22 @@ void GUI::CreateDrawToolBar()
 }
 //////////////////////////////////////////////////////////////////////////////////////////
 
-void GUI::CreatePlayToolBar() 
+void GUI::CreatePlayToolBar()
 {
 	InterfaceMode = MODE_PLAY;
 	GUI::ClearStatusBar();
 	GUI::ClearDrawToolBar();
-	
-	//You can draw the tool bar icons in any way you want.
-	//Below is one possible way
-
-	//First prepare List of images for each menu icon
-	//To control the order of these images in the menu, 
-	//reoder them in UI_Info.h ==> enum DrawMenuIcon
-	string MenuIconImages[DRAW_ICON_COUNT];
-	//MenuIconImages[ICON_RECT] = "images\\MenuIcons\\rec.jpg";
-		//TODO: Prepare images for each menu icon and add it to the list
-
-	//Draw menu icon one image at a time
-	for (int i = 0; i < DRAW_ICON_COUNT; i++)
-	//	pWind->DrawImage(MenuIconImages[i], i * MenuIconWidth, 0, MenuIconWidth, ToolBarHeight);
+	string MenuIconImages[PLAY_ICON_COUNT];
+	MenuIconImages[ICON_hide] = "images\\MenuIcons\\unoip.jpg";
+	MenuIconImages[ICON_un] = "images\\MenuIcons\\eye.jpg";
+	MenuIconImages[ICON_Comingsoon] = "images\\MenuIcons\\soon.jpg";
+	for (int i = 0; i < PLAY_ICON_COUNT; i++)
+		pWind->DrawImage(MenuIconImages[i], i * MenuIconWidth, 0, MenuIconWidth, ToolBarHeight);
 
 	//Draw a line under the toolbar
 	pWind->SetPen(RED, 3);
 	pWind->DrawLine(0, ToolBarHeight, width, ToolBarHeight);
-
+	GUI::ClearStatusBar();
 }
 //////////////////////////////////////////////////////////////////////////////////////////
 
@@ -371,7 +363,7 @@ void GUI::DrawCircle(Point P1, Point P2, GfxInfo CircleGfxInfo) const
 		style = FRAME;
 
 	pWind->DrawCircle(P1.x, P1.y, sqrt(pow((P2.x-P1.x),2)+pow((P2.y-P1.y),2)), style);
-
+	GUI::CreateStatusBar();
 }
 
 void GUI::DrawOval(Point P1, Point P2, GfxInfo OvalGfxInfo) const
