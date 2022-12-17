@@ -103,6 +103,8 @@ operationType GUI::GetUseroperation() const
 			case ICON_BRUSH_SIGNLE: return BRUSH_SINGLE;
 			case ICON_BRUSH_GENERAL: return BRUSH_GENERAL;
 			case ICON_BORDER_SINGLE:  return BORDER_SINGLE;
+			case ICON_BORDER_COLOR_SINGLE: return BORDER_COLOR_SINGLE;
+			case ICON_BORDER_COLOR_GENERAL: return BORDER_COLOR_GENERAL;
 			default: return EMPTY;	//A click on empty place in desgin toolbar
 			}
 		}
@@ -195,6 +197,8 @@ void GUI::CreateDrawToolBar()
 	MenuIconImages[ICON_BRUSH_SIGNLE] = "images\\MenuIcons\\Menu_Brush1.jpg";
 	MenuIconImages[ICON_BRUSH_GENERAL] = "images\\MenuIcons\\Menu_Brush2.jpg";
 	MenuIconImages[ICON_BORDER_SINGLE] = "images\\MenuIcons\\Menu_Width.jpg";
+	MenuIconImages[ICON_BORDER_COLOR_GENERAL] = "images\\MenuIcons\\Border_Color_General.jfif";
+	MenuIconImages[ICON_BORDER_COLOR_SINGLE] = "images\\MenuIcons\\Border_Color_Single.jfif";
 
 	//TODO: Prepare images for each menu icon and add it to the list
 

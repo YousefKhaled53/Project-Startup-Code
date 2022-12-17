@@ -28,6 +28,7 @@ public:
 	void changeborderwidth(int bw);
 	int getborderwidth();
 	bool getisfilled();
+	void setisfilled();
 	int getid();
 	void setid(int i);
 	virtual bool is_in_fig(int x, int y) = 0;
