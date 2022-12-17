@@ -19,14 +19,30 @@ void opAddsquare::Execute()
 	GUI* pUI = pControl->GetUI();
 
 	pUI->PrintMessage("New square: Click at first corner");
-	//Read 1st corner and store in point P1
-	pUI->GetPointClicked(P1.x, P1.y);
+
+	while (true) {
+		pUI->GetPointClicked(P1.x, P1.y);
+		if (!square::InDrawArea(P1))
+			pUI->PrintMessage(" Corner is out of the drawing area, click again");
+		else
+			break;
+
+	}
+
 
 	string msg = "First corner is at (" + to_string(P1.x) + ", " + to_string(P1.y) + " )";
 	msg += " ... Click at second corner";
 	pUI->PrintMessage(msg);
-	//Read 2nd corner and store in point P2
-	pUI->GetPointClicked(P2.x, P2.y);
+	
+
+	while (true) {
+		pUI->GetPointClicked(P2.x, P2.y);
+		if (!square::InDrawArea(P2))
+			pUI->PrintMessage(" Corner is out of the drawing area, click again");
+		else
+			break;
+
+	}
 	pUI->ClearStatusBar();
 	P2.y = P1.y + (P2.x - P1.x);
 

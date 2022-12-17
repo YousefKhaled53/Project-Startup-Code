@@ -15,19 +15,27 @@ void opAddIrrPolygon::Execute()
 	//Get a Pointer to the Input / Output Interfaces
 	GUI* pUI = pControl->GetUI();
 
-	pUI->PrintMessage("New Irregular Polygon: Enter number of vertices");
-	//Read number of vertices
+	pUI->PrintMessage("New irregular Polygon: Enter number of vertices");
 	string x = pUI->GetSrting();
-	Point *array = new Point[stoi(x)];
+	Point* array = new Point[stoi(x)];
 	string msg = "Your vertices are (" + x + " )";
 	msg += " ... Click on your vertices";
 	pUI->PrintMessage(msg);
-	//Read Points
 	for (int i = 0; i < stoi(x); i++) {
-		pUI->GetPointClicked(array[i].x,array[i].y);
-	}
-	pUI->ClearStatusBar();
+		pUI->PrintMessage(" Enter vertix");
+		while (true) {
+			
+			pUI->GetPointClicked(array[i].x, array[i].y);
+			if (!IrrPolygon::InDrawArea(array[i]))
+				pUI->PrintMessage(" Vertix is out of the drawing area, click again");
+			else
+				break;
 
+		}
+
+
+		pUI->ClearStatusBar();
+	}
 	//Preapre all Irregular Polygon parameters
 	GfxInfo IrrPolygonGfxInfo;
 

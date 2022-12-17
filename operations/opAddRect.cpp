@@ -20,15 +20,32 @@ void opAddRect::Execute()
 	//Get a Pointer to the Input / Output Interfaces
 	GUI* pUI = pControl->GetUI();
 
-	pUI->PrintMessage("New Rectangle: Click at first corner");
-	//Read 1st corner and store in point P1
-	pUI->GetPointClicked(P1.x, P1.y);
+
+	pUI->PrintMessage("New rectangle: Click at first corner");
+
+	while (true) {
+		pUI->GetPointClicked(P1.x, P1.y);
+		if (!Rect::InDrawArea(P1))
+			pUI->PrintMessage(" Corner is out of the drawing area, click again");
+		else
+			break;
+
+	}
+
 
 	string msg = "First corner is at (" + to_string(P1.x) + ", " + to_string(P1.y) + " )";
 	msg += " ... Click at second corner";
 	pUI->PrintMessage(msg);
-	//Read 2nd corner and store in point P2
-	pUI->GetPointClicked(P2.x, P2.y);
+
+
+	while (true) {
+		pUI->GetPointClicked(P2.x, P2.y);
+		if (!Rect::InDrawArea(P2))
+			pUI->PrintMessage(" Corner is out of the drawing area, click again");
+		else
+			break;
+
+	}
 	pUI->ClearStatusBar();
 
 	//Preapre all rectangle parameters

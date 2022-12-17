@@ -17,20 +17,42 @@ void opAddtriangle::Execute()
 	GUI* pUI = pControl->GetUI();
 
 	pUI->PrintMessage("New triangle: Click at first corner");
-	//Read 1st corner and store in point P1
-	pUI->GetPointClicked(P1.x, P1.y);
+
+	while (true) {
+		pUI->GetPointClicked(P1.x, P1.y);
+		if (!triangle::InDrawArea(P1))
+			pUI->PrintMessage(" Corner is out of the drawing area, click again");
+		else
+			break;
+
+	}
+
 
 	string msg = "First corner is at (" + to_string(P1.x) + ", " + to_string(P1.y) + " )";
 	msg += " ... Click at second corner";
 	pUI->PrintMessage(msg);
 	//Read 2nd corner and store in point P2
-	pUI->GetPointClicked(P2.x, P2.y);
+	while (true) {
+		pUI->GetPointClicked(P2.x, P2.y);
+		if (!triangle::InDrawArea(P2))
+			pUI->PrintMessage(" Corner is out of the drawing area, click again");
+		else
+			break;
+
+	}
 
 	string msg2 = "Second corner is at (" + to_string(P2.x) + ", " + to_string(P2.y) + " )";
-	msg += " ... Click at third corner";
-	pUI->PrintMessage(msg);
+	msg2 += " ... Click at third corner";
+	pUI->PrintMessage(msg2);
 	//Read 3rd corner and store in point P3
-	pUI->GetPointClicked(P3.x, P3.y);
+	while (true) {
+		pUI->GetPointClicked(P3.x, P3.y);
+		if (!triangle::InDrawArea(P3))
+			pUI->PrintMessage(" Corner is out of the drawing area, click again");
+		else
+			break;
+
+	}
 	pUI->ClearStatusBar();
 
 

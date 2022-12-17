@@ -18,14 +18,33 @@ void opAddCircle::Execute()
 
 	
 
-	//Read Center and store in point P1
-	pUI->GetPointClicked(P1.x, P1.y);
+
+	pUI->PrintMessage("Click at the center of the circle");
+
+	while(true){
+		pUI->GetPointClicked(P1.x, P1.y);
+		if (!Circle::InDrawArea(P1))
+			pUI->PrintMessage(" center is out of the drawing area, click again");
+		else
+			break;
+		
+	}
+
 
 	string msg = "Center is at (" + to_string(P1.x) + ", " + to_string(P1.y) + " )";
 	msg += " ... Click at second point for radius";
 	pUI->PrintMessage(msg);
+
+	while (true) {
+		pUI->GetPointClicked(P2.x, P2.y);
+		if (!Circle::InDrawArea(P2))
+			pUI->PrintMessage(" radius point is out of the drawing area, click again");
+		else
+			break;
+
+	}
 	//Read radius and store in point P2
-	pUI->GetPointClicked(P2.x, P2.y);
+	//pUI->GetPointClicked(P2.x, P2.y);
 	pUI->ClearStatusBar();
 
 	//Preapre all Circle parameters

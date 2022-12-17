@@ -18,9 +18,15 @@ public:
 
 	//Execute operation (code depends on operation type)
 	virtual void Execute() =0;
+<<<<<<< Updated upstream
 	//void setasktrue() { ask = true; };
 	//void setaskfalse() { ask = false; };
 	//bool getask() { return ask; }
+=======
+	bool Abort(Point P) {
+		return (P.x >= 1247 && P.x <= 1300);
+	}
+>>>>>>> Stashed changes
 
 	//To undo this operation (code depends on operation type)
 	//virtual void Undo()=0;

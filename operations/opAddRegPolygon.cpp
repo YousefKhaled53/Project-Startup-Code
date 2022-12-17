@@ -14,21 +14,43 @@ void opAddRegPolygon::Execute()
 
 	//Get a Pointer to the Input / Output Interfaces
 	GUI* pUI = pControl->GetUI();
-
-	pUI->PrintMessage("New regular Polygon: Enter number of vertices");
-	//Read number of vertices
 	Point Center;
+
+	pUI->PrintMessage("New regular Polygon: Click on Center");
+
+	while (true) {
+		pUI->GetPointClicked(Center.x, Center.y);
+		if (!RegPolygon::InDrawArea(Center))
+			pUI->PrintMessage(" Center is out of the drawing area, click again");
+		else
+			break;
+
+	}
+
+
+	string msg = "Center is at (" + to_string(Center.x) + ", " + to_string(Center.y) + " )";
+	msg += " ... Enter number of vetices";
+	pUI->PrintMessage(msg);
 	string x = pUI->GetSrting();
 	Point* array = new Point[stoi(x)];
-	string msg = "Your vertices are (" + x + " )";
-	msg += " ... Click on your Centerx";
-	pUI->PrintMessage(msg);
-	pUI->GetPointClicked(Center.x, Center.y);
+	string msg2 = "Your vertices are (" + x + " )";
+	
+	//Read number of vertices
 
-	msg += " ... Click on your First Vertex";
-	pUI->PrintMessage(msg);
+
+	msg2 += " ... Click on your First Vertex";
+	pUI->PrintMessage(msg2);
 	//Read Points
-	pUI->GetPointClicked(array[0].x, array[0].y);
+	while (true) {
+		pUI->GetPointClicked(array[0].x, array[0].y);
+		if (!RegPolygon::InDrawArea(array[0]))
+			pUI->PrintMessage(" Center is out of the drawing area, click again");
+		else
+			break;
+
+	}
+
+
 
 	pUI->ClearStatusBar();
 
