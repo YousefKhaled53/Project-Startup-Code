@@ -24,13 +24,11 @@ void IrrPolygon::Draw(GUI* pUI) const
 	//Call Output::DrawRect to draw a rectangle on the screen	
 	pUI->DrawIrrPolygon(ArrX, ArrY, Vertices_num, ShpGfxInfo);
 }
-<<<<<<< Updated upstream
+
+
 void IrrPolygon::Save(ofstream& OutFile , int id) {
-	OutFile << "irreg pol with  no of sides : " << Vertices_num << endl;
-=======
-void IrrPolygon::Save(ofstream& OutFile) {
-	OutFile << "IRREGULAR" << " " << getid() << " " << Point1->x << " " << Point1->y << " ";
->>>>>>> Stashed changes
+	OutFile << "IRREGULAR" << " " << id <<" "<<Vertices_num << " " << Point1->x << " " << Point1->y << " ";
+
 	for (int i = 0; i < Vertices_num; i++) {
 		OutFile << ArrX[i]<< " "<<ArrY[i] << " ";
 	}

@@ -209,10 +209,61 @@ void Graph::load(ifstream& inputfile) { // how to initialize the ID of each shap
 			t->setid(stoi(arr2[i + 1])); // setting the id of the rectagle
 			Addshape(t);
 		}
+		if (arr2[i] == "REGULAR") {
+			Point p1;
+			Point* p2=new Point;
+			int num;
+			GfxInfo shapeGfxinfo;
+			p1.x = stoi(arr2[i + 2]);
+			p1.y = stoi(arr2[i + 3]);
+			p2->x = stoi(arr2[i + 4]);
+			p2->y = stoi(arr2[i + 5]);
+			num = stoi(arr2[i + 6]);
+			shapeGfxinfo.DrawClr = changestringtoints(stoi(arr2[i + 7]), stoi(arr2[i + 8]), stoi(arr2[i + 9])); // to initialize the draw color
+			if (arr2[i + 10] == "NO_FILL") {
+				shapeGfxinfo.isFilled = FALSE; // to make the fillcolor white
+				shapeGfxinfo.BorderWdth = stoi(arr2[i + 11]);
+			}
+			else {
+				shapeGfxinfo.FillClr = changestringtoints(stoi(arr2[i + 10]), stoi(arr2[i + 11]), stoi(arr2[i + 12])); //to initialize the fill color
+				shapeGfxinfo.BorderWdth = stoi(arr2[i + 13]);
+			}
+			shapeGfxinfo.isSelected = FALSE;
+			RegPolygon* p = new RegPolygon(p1, p2, num, shapeGfxinfo);
+			p->setid(stoi(arr2[i + 1])); // setting the id of the rectagle
+			Addshape(p);
+		}
+		/*if (arr2[i] == "IRREGULAR") {
+			
+			Point* p1 = new Point;
+			int num;
+			int* arrx = new int[num];
+			int* arry = new int[num];
+			GfxInfo shapeGfxinfo;
+			num = stoi(arr[i + 2]);
+			p1->x = stoi(arr2[i + 3]);
+			p1->y = stoi(arr2[i + 4]);
+			for (int i = 0; i < (num * 2); i++) {
+			num = stoi(arr2[i + 6]);
+			shapeGfxinfo.DrawClr = changestringtoints(stoi(arr2[i + 7]), stoi(arr2[i + 8]), stoi(arr2[i + 9])); // to initialize the draw color
+			if (arr2[i + 10] == "NO_FILL") {
+				shapeGfxinfo.isFilled = FALSE; // to make the fillcolor white
+				shapeGfxinfo.BorderWdth = stoi(arr2[i + 11]);
+			}
+			else {
+				shapeGfxinfo.FillClr = changestringtoints(stoi(arr2[i + 10]), stoi(arr2[i + 11]), stoi(arr2[i + 12])); //to initialize the fill color
+				shapeGfxinfo.BorderWdth = stoi(arr2[i + 13]);
+			}
+			shapeGfxinfo.isSelected = FALSE;
+			RegPolygon* p = new RegPolygon(p1, p2, num, shapeGfxinfo);
+			p->setid(stoi(arr2[i + 1])); // setting the id of the rectagle
+			Addshape(p);
+		}*/
+
 		
 
 	}
-	//delete (arr2);
+	delete [] arr2;
 	inputfile.close();
 }
 shape* Graph::GetSelected() {

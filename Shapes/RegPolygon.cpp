@@ -29,29 +29,14 @@ void RegPolygon::Draw(GUI* pUI) const
 	pUI->DrawRegPolygon(ArrX, ArrY, Vertices_num, ShpGfxInfo);
 }
 
-<<<<<<< Updated upstream
-void RegPolygon::Save(ofstream& OutFile , int id) {
-	OutFile << "reg pol with  no of sides : " << Vertices_num << endl;
-	OutFile << "center is  : " <<Center.x<<" "<<Center.y << endl;
-	for (int i = 0; i < Vertices_num; i++) {
-		OutFile << "point " << i << ": x coordinates of point : " << ArrX[i] << " y coordinates of point : " << ArrY[i] << endl;
-	}
-	/*
-	OutFile << "border width is " << shape::getborderwidth() << endl;
-	OutFile << " draw colors rgb intensities are :" << endl;
-	OutFile << "red intensity is " << shape::getdrawclr().getucred() << "	";
-	OutFile << "blue intensity is " << shape::getdrawclr().getucblue() << "	";
-	OutFile << "green intensity is " << shape::getdrawclr().getucgreen() << endl;
-	OutFile << "fill color rgb intesities are:" << endl;
-=======
-void RegPolygon::Save(ofstream& OutFile) {
 
-	OutFile << "REGULAR" << " " << getid() << " " << Center.x << " " << Center.y << " " << Point1->x << " " << Point1->y << " ";
+void RegPolygon::Save(ofstream& OutFile , int id) {
+
+	OutFile << "REGULAR" << " " << id << " " << Center.x << " " << Center.y << " " << Point1->x << " " << Point1->y << " "<<Vertices_num<<" ";
 
 	OutFile << shape::getdrawclr().getucred() << " ";
 	OutFile << shape::getdrawclr().getucgreen() << " ";
 	OutFile << shape::getdrawclr().getucblue() << " ";
->>>>>>> Stashed changes
 	if (shape::getisfilled() == true) {
 		OutFile << shape::getfillclr().getucred() << " ";
 		OutFile << shape::getfillclr().getucgreen() << " ";
