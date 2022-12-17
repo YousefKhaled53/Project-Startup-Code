@@ -24,9 +24,9 @@ void square::Save(ofstream& OutFile) {
 	OutFile << shape::getdrawclr().getucgreen() << " ";
 	OutFile << shape::getdrawclr().getucblue() << " ";
 	if (shape::getisfilled() == true) {
-		OutFile << shape::getfillclr().getucred() << "  ";
-		OutFile << shape::getfillclr().getucgreen() << "  ";
-		OutFile << shape::getfillclr().getucblue() << "  ";
+		OutFile << shape::getfillclr().getucred() << " ";
+		OutFile << shape::getfillclr().getucgreen() << " ";
+		OutFile << shape::getfillclr().getucblue() << " ";
 	}
 	else
 	{
