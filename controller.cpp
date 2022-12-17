@@ -18,17 +18,17 @@
 #include"Opexit.h"
 #include"operations/opborderwidth.h"
 #include"operations/Opchangefillcolor.h"
-#include "../Project Startup Code/operations/Opchangefillcolor.h"
-#include"../Project Startup Code/opchangepenwidth.h"
+#include"opCHangeGeneralDrawcolor.h"
+#include"opchangepenwidth.h"
 #include"opChangeGeneralFillColor.h"
 #include"opCHangeGeneralDrawcolor.h"
-
-
+#include"../Project-Startup-Code/opCancelFillingGeneral.h"
 #include"operations/Opchangefillcolor.h"
-#include"../Project Startup Code/opchangepenwidth.h"
+#include"./opchangepenwidth.h"
 #include"Opexit.h"
+#include "opCancelFillingGeneral.h"
 #include"operations/opdeleteshape.h"
-//#include "operations/"
+
 
 //Constructor
 controller::controller()
@@ -55,13 +55,13 @@ operation* controller::createOperation(operationType OpType)
 	switch (OpType)
 	{
 		case DRAW_LINE:
+			//pOp = new opCancelFillingGeneral(this);
 			pOp = new opAddline(this);
 			break;
 
 		case DRAW_RECT:
 			pOp = new opAddRect(this);
 			
-			//pOp = new opswitchlaymode(this);
 			break;
 
 		case DRAW_TRI:
@@ -107,6 +107,7 @@ operation* controller::createOperation(operationType OpType)
 		case STATUS:	//a click on the status bar ==> no operation
 			break;
 		case DEL:
+			//pOp = new opCancelFillingGeneral(this);
 			pOp = new opdeleteshape(this);
 			break;
 		case TO_PLAY:

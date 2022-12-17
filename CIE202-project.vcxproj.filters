@@ -69,6 +69,7 @@
     <ClCompile Include="operations\opbordercolor.cpp" />
     <ClCompile Include="opChangeGeneralFillColor.cpp" />
     <ClCompile Include="opCHangeGeneralDrawcolor.cpp" />
+    <ClCompile Include="opCancelFillingGeneral.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CMUgraphicsLib\auxil.h" />
@@ -125,5 +126,6 @@
     <ClInclude Include="operations\opbordercolor.h" />
     <ClInclude Include="opChangeGeneralFillColor.h" />
     <ClInclude Include="opCHangeGeneralDrawcolor.h" />
+    <ClInclude Include="opCancelFillingGeneral.h" />
   </ItemGroup>
 </Project>

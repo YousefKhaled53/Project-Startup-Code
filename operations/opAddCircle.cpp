@@ -37,16 +37,14 @@ void opAddCircle::Execute()
 	CircleGfxInfo.FillClr = pUI->getCrntFillColor();
 	CircleGfxInfo.BorderWdth = pUI->getCrntPenWidth();
 
-
-	pUI->PrintMessage("do you want the shape to be filled ");
-
-	if (pUI->GetSrting() == "yes") {
+	pUI->PrintMessage("do you want to be filled ?");
+	string t = pUI->GetSrting();
+	if (t == "yes") {
 		CircleGfxInfo.isFilled = true;
 		CircleGfxInfo.isSelected = false;//default is not filled
 	}
-	else
+	else 
 	{
-
 		CircleGfxInfo.isFilled = false;
 		CircleGfxInfo.isSelected = false;//defualt is not selected
 

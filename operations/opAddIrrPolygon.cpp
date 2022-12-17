@@ -37,9 +37,18 @@ void opAddIrrPolygon::Execute()
 	IrrPolygonGfxInfo.BorderWdth = pUI->getCrntPenWidth();
 
 
-	IrrPolygonGfxInfo.isFilled = false;	//default is not filled
-	IrrPolygonGfxInfo.isSelected = false;	//defualt is not selected
+	pUI->PrintMessage("do you want to be filled ?");
+	string t = pUI->GetSrting();
+	if (t == "yes") {
+		IrrPolygonGfxInfo.isFilled = true;
+		IrrPolygonGfxInfo.isSelected = false;//default is not filled
+	}
+	else 
+	{
+		IrrPolygonGfxInfo.isFilled = false;
+		IrrPolygonGfxInfo.isSelected = false;//defualt is not selected
 
+	}
 
 	//Create an Irregular Polygon with the above parameters
 	IrrPolygon* I = new IrrPolygon(array, stoi(x), IrrPolygonGfxInfo);

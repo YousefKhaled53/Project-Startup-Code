@@ -39,8 +39,19 @@ void opAddsquare::Execute()
 	squareGfxInfo.BorderWdth = pUI->getCrntPenWidth();
 
 
-	squareGfxInfo.isFilled = false;	//default is not filled
-	squareGfxInfo.isSelected = false;	//defualt is not selected
+	pUI->PrintMessage("do you want to be filled ?");
+	string t = pUI->GetSrting();
+	if (t == "yes") {
+		squareGfxInfo.isFilled = true;
+		squareGfxInfo.isSelected = false;//default is not filled
+	}
+	else
+	{
+
+		squareGfxInfo.isFilled = false;
+		squareGfxInfo.isSelected = false;//defualt is not selected
+
+	}
 
 
 	//Create a square with the above parameters

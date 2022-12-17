@@ -41,9 +41,19 @@ void opAddRegPolygon::Execute()
 	RegPolygonGfxInfo.BorderWdth = pUI->getCrntPenWidth();
 
 
-	RegPolygonGfxInfo.isFilled = false;	//default is not filled
-	RegPolygonGfxInfo.isSelected = false;	//defualt is not selected
+	pUI->PrintMessage("do you want to be filled ?");
+	string t = pUI->GetSrting();
+	if (t == "yes") {
+		RegPolygonGfxInfo.isFilled = true;
+		RegPolygonGfxInfo.isSelected = false;//default is not filled
+	}
+	else
+	{
 
+		RegPolygonGfxInfo.isFilled = false;
+		RegPolygonGfxInfo.isSelected = false;//defualt is not selected
+
+	}
 
 	//Create an Irregular Polygon with the above parameters
 	RegPolygon* I = new RegPolygon(Center ,array, stoi(x), RegPolygonGfxInfo);

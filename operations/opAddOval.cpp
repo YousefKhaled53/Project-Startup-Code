@@ -38,9 +38,9 @@ void opAddOval::Execute()
 	OvalGfxInfo.BorderWdth = pUI->getCrntPenWidth();
 
 
-	pUI->PrintMessage("do you want the shape to be filled ");
-
-	if (pUI->GetSrting() == "yes") {
+	pUI->PrintMessage("do you want to be filled ?");
+	string t = pUI->GetSrting();
+	if (t == "yes") {
 		OvalGfxInfo.isFilled = true;
 		OvalGfxInfo.isSelected = false;//default is not filled
 	}

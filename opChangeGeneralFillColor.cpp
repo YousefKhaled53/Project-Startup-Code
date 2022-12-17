@@ -4,7 +4,7 @@ opChangeGeneralFillColor::opChangeGeneralFillColor(controller* pCont) : operatio
 {}
 opChangeGeneralFillColor::~opChangeGeneralFillColor() {};
 void opChangeGeneralFillColor::Execute() {
-
+	//operation::setasktrue();
 	GUI* pUI = pControl->GetUI();
 	Graph* pGr = pControl->getGraph();
 	Point p1;
@@ -15,5 +15,6 @@ void opChangeGeneralFillColor::Execute() {
 	pUI->GetPointClicked(p1.x, p1.y);
 	color c2 = pUI->getwind()->GetColor(p1.x, p1.y);
 	pUI->setcrntfillcolor(c2);
+	
 }
  

@@ -39,17 +39,17 @@ void opAddRect::Execute()
 	RectGfxInfo.FillClr = pUI->getCrntFillColor();
 	RectGfxInfo.BorderWdth = pUI->getCrntPenWidth();
 
-	pUI->PrintMessage("do you want the shape to be filled ");
-
-	if (pUI->GetSrting() == "yes") {
+	pUI->PrintMessage("do you want to be filled ?");
+	string t = pUI->GetSrting();
+	if (t == "yes") {
 		RectGfxInfo.isFilled = true;
 		RectGfxInfo.isSelected = false;//default is not filled
 	}
-	else
+	else 
 	{
 
 		RectGfxInfo.isFilled = false;
-		RectGfxInfo.isSelected = false;	//defualt is not selected
+		RectGfxInfo.isSelected = false;//defualt is not selected
 
 	}
 

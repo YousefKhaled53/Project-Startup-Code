@@ -44,9 +44,19 @@ void opAddtriangle::Execute()
 	triangleGfxInfo.BorderWdth = pUI->getCrntPenWidth();
 
 
-	triangleGfxInfo.isFilled = false;	//default is not filled
-	triangleGfxInfo.isSelected = false;	//defualt is not selected
+	pUI->PrintMessage("do you want to be filled ?");
+	string t = pUI->GetSrting();
+	if (t == "yes") {
+		triangleGfxInfo.isFilled = true;
+		triangleGfxInfo.isSelected = false;//default is not filled
+	}
+	else
+	{
 
+		triangleGfxInfo.isFilled = false;
+		triangleGfxInfo.isSelected = false;//defualt is not selected
+
+	}
 
 	//Create a triangle with the above parameters
 	triangle* T = new triangle(P1, P2, P3, triangleGfxInfo);

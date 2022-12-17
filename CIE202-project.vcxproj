@@ -168,6 +168,7 @@
     <ClCompile Include="controller.cpp" />
     <ClCompile Include="GUI\GUI.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="opCancelFillingGeneral.cpp" />
     <ClCompile Include="opCHangeGeneralDrawcolor.cpp" />
     <ClCompile Include="opChangeGeneralFillColor.cpp" />
     <ClCompile Include="operations\opbordercolor.cpp" />
@@ -223,6 +224,7 @@
     <ClInclude Include="controller.h" />
     <ClInclude Include="DEFS.h" />
     <ClInclude Include="GUI\GUI.h" />
+    <ClInclude Include="opCancelFillingGeneral.h" />
     <ClInclude Include="opCHangeGeneralDrawcolor.h" />
     <ClInclude Include="opChangeGeneralFillColor.h" />
     <ClInclude Include="operations\opbordercolor.h" />
