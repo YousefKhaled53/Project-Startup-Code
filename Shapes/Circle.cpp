@@ -3,6 +3,10 @@
 #include<fstream>
 #include <cmath>
 #include <corecrt_math_defines.h>
+#include "../operations/operation.h"
+#include "../GUI\GUI.h"
+#include "../controller.h"
+#include "../operations/opAddCircle.h"
 Circle::Circle(Point P1, Point P2, GfxInfo shapeGfxInfo) :shape(shapeGfxInfo)
 {
 	Center = P1;
@@ -40,10 +44,18 @@ bool Circle::is_in_fig(int x, int y) {
 	double RadiusLength = sqrt(pow((radius.x - Center.x), 2) + pow((radius.y - Center.y), 2));
 	double ClickLength = sqrt(pow((x - Center.x), 2) + pow((y - Center.y), 2));
 	if (ClickLength <= RadiusLength) {
+		
 		return true;
 	}
 	else {
 		return false;
 	}
 	return false;
+
+}
+string Circle::printforselection() {
+	int RadiusLength = sqrt(pow((radius.x - Center.x), 2) + pow((radius.y - Center.y), 2));
+	string msg = "selecteed shape is circle with center coordinates  (" + to_string(Center.x) + ","+ to_string(Center.y) + ")"
+		" and radius(" + to_string(radius.x) + ", "+ to_string(radius.y) + ")and raduis Length ("+to_string(RadiusLength)+")";
+	return msg;
 }

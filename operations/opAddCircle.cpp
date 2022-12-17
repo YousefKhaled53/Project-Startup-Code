@@ -16,7 +16,8 @@ void opAddCircle::Execute()
 	//Get a Pointer to the Input / Output Interfaces
 	GUI* pUI = pControl->GetUI();
 
-	pUI->PrintMessage("New Circle: Click at Center");
+	
+
 	//Read Center and store in point P1
 	pUI->GetPointClicked(P1.x, P1.y);
 

@@ -13,5 +13,6 @@ public:
 	virtual void Draw(GUI* pUI) const;
 	virtual void Save(ofstream& OutFile);
 	bool is_in_fig(int x, int y);
+	virtual string printforselection();
 };
 

@@ -31,6 +31,7 @@ public:
 	int getid();
 	void setid(int i);
 	virtual bool is_in_fig(int x, int y) = 0;
+	virtual string printforselection()=0;
 
 
 	///The following functions should be supported by the shape class

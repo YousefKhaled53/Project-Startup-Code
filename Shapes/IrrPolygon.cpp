@@ -49,7 +49,17 @@ void IrrPolygon::Save(ofstream& OutFile) {
 	OutFile << endl << "-----------------------------------------------------------------------";
 }
 bool IrrPolygon::is_in_fig(int x, int y) {
-	double X_Max = 1284;
+	for (int i = 0; i < Vertices_num; i++) {
+		if (ArrX[i] == x && ArrY[i] == y) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+}
+string IrrPolygon::printforselection() {
 
-	return false;
+	string msg = "selecteed shape is Irregular Polygon with  (" +to_string(Vertices_num) + ")Vertices";
+	return msg;
 }

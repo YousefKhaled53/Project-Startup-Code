@@ -48,5 +48,13 @@ bool Oval::is_in_fig(int x, int y) {
 		return false;
 	}
 }
+string Oval::printforselection() {
+	int h = (Point1.x + Point2.x) / 2;
+	int k = (Point1.y + Point2.y) / 2;
+	int a = sqrt(pow((Point1.x - h), 2));
+	int b = sqrt(pow((Point1.y - k), 2));
+	string msg = "selecteed shape is Oval with center (" + to_string(h) + " ," + to_string(k) + ") and axis(" + to_string(a) + ") and (" + to_string(b) + ")";
+	return msg;
+}
 
 

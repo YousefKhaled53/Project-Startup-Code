@@ -49,3 +49,8 @@ bool triangle::is_in_fig(int x, int y) {
 		return false;
 	}
 }
+string triangle::printforselection() {
+
+	string msg = "selecteed shape is triangle with corner coordinates  (" + to_string(Corner1.x) + "," + to_string(Corner1.y) + ")  and  (" + to_string(Corner2.x) + ", " + to_string(Corner2.y) + ") and (" + to_string(Corner3.x) + ", " + to_string(Corner3.y) + ")";
+	return msg;
+}

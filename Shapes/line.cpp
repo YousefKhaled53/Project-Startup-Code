@@ -39,6 +39,10 @@ bool line::is_in_fig(int x, int y) {
 	//{
 	//	return false;
 	//}
+	//double C1_x = Corner1.x;
+	//double C2_x = Corner2.x;
+	//double C1_y = Corner1.y;
+	//double C2_y = Corner2.y;
 	int LineLength = sqrt(pow((Corner1.x - Corner2.x), 2) + pow((Corner1.y - Corner2.y), 2));
 	int Line1 = sqrt(pow((Corner1.x - x), 2) + pow((Corner1.y - y), 2));
 	int Line2= sqrt(pow((x - Corner2.x), 2) + pow((y - Corner2.y), 2));
@@ -49,4 +53,10 @@ bool line::is_in_fig(int x, int y) {
 	else {
 		return false;
 	}
+}
+string line::printforselection() {
+	int LineLength = sqrt(pow((Corner1.x - Corner2.x), 2) + pow((Corner1.y - Corner2.y), 2));
+	string msg = "selecteed shape is line with coordinates  (" + to_string(Corner1.x) + "," + to_string(Corner1.y) + ")"
+		" and (" + to_string(Corner2.x) + ", " + to_string(Corner2.y) + ")and Length ("+to_string(LineLength) + ")";
+	return msg;
 }

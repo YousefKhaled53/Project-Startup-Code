@@ -1,8 +1,8 @@
 #include "../Shapes/RegPolygon.h"
 #include<iostream>
 #include<fstream>
-#include <corecrt_math_defines.h>
 
+#include <corecrt_math_defines.h>
 #include <cmath>
 RegPolygon::RegPolygon(Point C, Point *P, int x, GfxInfo shapeGfxInfo) :shape(shapeGfxInfo)
 {
@@ -53,13 +53,18 @@ void RegPolygon::Save(ofstream& OutFile) {
 	}*/
 }
 bool RegPolygon::is_in_fig(int x, int y) {
-	//	if ((x > Point1.x && x < Point2.x && y > Point1.y && y < Point2.y))
-	//	{
-	//		return true;
-	//	}
-	//	else
-	//	{
-	//		return false;
-	//	}
+	double RadiusLength = sqrt(pow((Point1->x - Center.x), 2) + pow((Point1->y - Center.y), 2));
+	double ClickLength = sqrt(pow((x - Center.x), 2) + pow((y - Center.y), 2));
+	if (ClickLength <= RadiusLength) {
+		return true;
+	}
+	else {
+		return false;
+	}
 	return false;
+}
+string RegPolygon::printforselection() {
+
+	string msg = "selecteed shape is Regular Polygon with  (" + to_string(Vertices_num) + ") Vertices";
+	return msg;
 }

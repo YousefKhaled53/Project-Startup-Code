@@ -59,3 +59,8 @@ bool Rect::is_in_fig(int x, int y) {
 		return false;
 	}
 }
+string Rect::printforselection() {
+
+	string msg = "selecteed shape is rectangle with corner coordinates  (" + to_string(Corner1.x) + "," + to_string(Corner1.y) + ") and (" + to_string(Corner2.x) + ", "+ to_string(Corner2.y) + ")";
+	return msg;
+}

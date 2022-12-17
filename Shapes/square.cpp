@@ -1,6 +1,8 @@
 #include "square.h"
 #include<iostream>
 #include<fstream>
+#include <cmath>
+#include <corecrt_math_defines.h>
 square::square(Point P1, Point P2, GfxInfo shapeGfxInfo) :shape(shapeGfxInfo)
 {
 	Corner1 = P1;
@@ -54,4 +56,9 @@ bool square::is_in_fig(int x, int y) {
 	{
 		return false;
 	}
+}
+string square::printforselection() {
+	double Length = sqrt(pow((Corner1.x - Corner2.x), 2) + pow((Corner1.y - Corner2.y), 2));
+	string msg = "selecteed shape is square with side length (" + to_string(Length) + ")";
+	return msg;
 }

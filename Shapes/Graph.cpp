@@ -231,6 +231,8 @@ shape* Graph::Getshape(int x, int y)
 		if (shapePointer->is_in_fig(x, y)) {
 			return shapePointer;
 		}
+	
+	
 	return nullptr;
 }
 int Graph::getsizeofvector() {
