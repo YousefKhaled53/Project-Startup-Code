@@ -17,9 +17,9 @@ void line::Draw(GUI* pUI) const
 	//Call Output::Drawline to draw a line on the screen	
 	pUI->Drawline(Corner1, Corner2, ShpGfxInfo);
 }
-void line::Save(ofstream& OutFile) {
+void line::Save(ofstream& OutFile , int id) {
 	
-	OutFile << "LINE" << " " << getid() << " " << Corner1.x << " " << Corner1.y << " " << Corner2.x << " " << Corner2.y << " ";
+	OutFile << "LINE" << " " << id << " " << Corner1.x << " " << Corner1.y << " " << Corner2.x << " " << Corner2.y << " ";
 
 	OutFile << shape::getdrawclr().getucred() << " ";
 	OutFile << shape::getdrawclr().getucgreen() << " ";

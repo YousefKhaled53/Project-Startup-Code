@@ -17,10 +17,10 @@ void Rect::Draw(GUI* pUI) const
 	//Call Output::DrawRect to draw a rectangle on the screen	
 	pUI->DrawRect(Corner1, Corner2, ShpGfxInfo);
 }
-void Rect::Save(ofstream& OutFile)
+void Rect::Save(ofstream& OutFile , int id)
 {
 
-	OutFile << "RECT" <<" " << getid() << " " << Corner1.x << " " << Corner1.y << " " << Corner2.x << " " << Corner2.y << " ";
+	OutFile << "RECT" <<" " << id << " " << Corner1.x << " " << Corner1.y << " " << Corner2.x << " " << Corner2.y << " ";
 	
 	OutFile << shape::getdrawclr().getucred() << " ";
 	OutFile << shape::getdrawclr().getucgreen() << " ";

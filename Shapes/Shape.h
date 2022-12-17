@@ -7,7 +7,7 @@
 class shape
 {
 protected:
-	static int ID;		//Each shape has an ID
+	int ID;		//Each shape has an ID
 	GfxInfo ShpGfxInfo;	//shape graphis info
 	
 	/// Add more parameters if needed.
@@ -46,7 +46,7 @@ public:
 	//virtual void Resize() = 0;	//Resize the shape
 	//virtual void Move() = 0;		//Move the shape
 
-	virtual void Save(ofstream &OutFile) = 0;	//Save the shape parameters to the file
+	virtual void Save(ofstream &OutFile , int id) = 0;	//Save the shape parameters to the file
 	//virtual void Load(ifstream &Infile) = 0;	//Load the shape parameters to the file
 
 	//virtual void PrintInfo(Output* pOut) = 0;	//print all shape info on the status bar

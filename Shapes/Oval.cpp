@@ -18,8 +18,8 @@ void Oval::Draw(GUI* pUI) const
 	//Call Output::DrawOval to draw a Oval on the screen	
 	pUI->DrawOval(Point1, Point2, ShpGfxInfo);{}
 }
-void Oval::Save(ofstream& OutFile) {
-	OutFile << "OVAL" << " " << getid() << " " << Point1.x << " " << Point1.y << " " << Point2.x << " " << Point2.y << " ";
+void Oval::Save(ofstream& OutFile , int id) {
+	OutFile << "OVAL" << " " << id << " " << Point1.x << " " << Point1.y << " " << Point2.x << " " << Point2.y << " ";
 
 	OutFile << shape::getdrawclr().getucred() << " ";
 	OutFile << shape::getdrawclr().getucgreen() << " ";

@@ -28,7 +28,7 @@ void RegPolygon::Draw(GUI* pUI) const
 	pUI->DrawRegPolygon(ArrX, ArrY, Vertices_num, ShpGfxInfo);
 }
 
-void RegPolygon::Save(ofstream& OutFile) {
+void RegPolygon::Save(ofstream& OutFile , int id) {
 	OutFile << "reg pol with  no of sides : " << Vertices_num << endl;
 	OutFile << "center is  : " <<Center.x<<" "<<Center.y << endl;
 	for (int i = 0; i < Vertices_num; i++) {

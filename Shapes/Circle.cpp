@@ -21,9 +21,9 @@ void Circle::Draw(GUI* pUI) const
 	//Call Output::DrawRect to draw a rectangle on the screen	
 	pUI->DrawCircle(Center, radius, ShpGfxInfo);
 }
-void Circle::Save(ofstream& OutFile) {
+void Circle::Save(ofstream& OutFile , int id) {
 
-	OutFile << "CIRCLE" << " " << getid() << " " << Center.x << " " << Center.y << " " << radius.x << " " << radius.y << " ";
+	OutFile << "CIRCLE" << " " << id << " " << Center.x << " " << Center.y << " " << radius.x << " " << radius.y << " ";
 
 	OutFile << shape::getdrawclr().getucred() << " ";
 	OutFile << shape::getdrawclr().getucgreen() << " ";

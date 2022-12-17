@@ -24,7 +24,7 @@ void IrrPolygon::Draw(GUI* pUI) const
 	//Call Output::DrawRect to draw a rectangle on the screen	
 	pUI->DrawIrrPolygon(ArrX, ArrY, Vertices_num, ShpGfxInfo);
 }
-void IrrPolygon::Save(ofstream& OutFile) {
+void IrrPolygon::Save(ofstream& OutFile , int id) {
 	OutFile << "irreg pol with  no of sides : " << Vertices_num << endl;
 	for (int i = 0; i < Vertices_num; i++) {
 		OutFile << "point " << i << ": x coordinates of point : " << ArrX[i] << " y coordinates of point : " << ArrY[i] << endl;

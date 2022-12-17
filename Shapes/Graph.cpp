@@ -59,7 +59,7 @@ void Graph::Save(ofstream& outfile) {
 	for (int i = 0; i < zz; i++) {
 		
 		
-		shapesList[i]->Save(outfile); 
+		shapesList[i]->Save(outfile, i+1); 
 
 	}
 }

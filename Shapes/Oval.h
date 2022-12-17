@@ -9,7 +9,7 @@ private:
 public:
 	Oval(Point, Point, GfxInfo shapeGfxInfo);
 	virtual ~Oval();
-	virtual void Save(ofstream& OutFile);
+	virtual void Save(ofstream& OutFile , int id);
 	virtual void Draw(GUI* pUI) const;
 	bool is_in_fig(int x, int y);
 	virtual string printforselection();

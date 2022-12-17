@@ -18,8 +18,8 @@ void triangle ::Draw(GUI* pUI) const
 	//Call Output::Drawline to draw a line on the screen	
 	pUI->Drawtriangle(Corner1, Corner2, Corner3, ShpGfxInfo);
 }
-void triangle::Save(ofstream& OutFile) {
-	OutFile << "TRIANGLE" << " " << getid() << " " << Corner1.x << " " << Corner1.y << " " << Corner2.x << " " << Corner2.y << " "<<Corner3.x<<" "<<Corner3.y<<" ";
+void triangle::Save(ofstream& OutFile, int id) {
+	OutFile << "TRIANGLE" << " " << id << " " << Corner1.x << " " << Corner1.y << " " << Corner2.x << " " << Corner2.y << " "<<Corner3.x<<" "<<Corner3.y<<" ";
 
 	OutFile << shape::getdrawclr().getucred() << " ";
 	OutFile << shape::getdrawclr().getucgreen() << " ";
