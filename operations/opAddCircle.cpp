@@ -32,13 +32,14 @@ void opAddCircle::Execute()
 	GfxInfo CircleGfxInfo;
 
 	//get drawing, filling colors and pen width from the interface
+	
 	CircleGfxInfo.DrawClr = pUI->getCrntDrawColor();
 	CircleGfxInfo.FillClr = pUI->getCrntFillColor();
 	CircleGfxInfo.BorderWdth = pUI->getCrntPenWidth();
 
 
-	CircleGfxInfo.isFilled = false;	//default is not filled
-	CircleGfxInfo.isSelected = false;	//defualt is not selected
+	//CircleGfxInfo.isFilled = false;	//default is not filled
+	//CircleGfxInfo.isSelected = false;	//defualt is not selected
 
 
 	//Create a Circle with the above parameters
