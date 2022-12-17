@@ -18,14 +18,14 @@
 #include"Opexit.h"
 #include"operations/opborderwidth.h"
 #include"operations/Opchangefillcolor.h"
-#include "../Project-Startup-Code/operations/Opchangefillcolor.h"
-#include"../Project-Startup-Code/opchangepenwidth.h"
+#include "../Project Startup Code/operations/Opchangefillcolor.h"
+#include"../Project Startup Code/opchangepenwidth.h"
 #include"opChangeGeneralFillColor.h"
 #include"opCHangeGeneralDrawcolor.h"
 
 
 #include"operations/Opchangefillcolor.h"
-#include"../Project-Startup-Code/opchangepenwidth.h"
+#include"../Project Startup Code/opchangepenwidth.h"
 #include"Opexit.h"
 #include"operations/opdeleteshape.h"
 //#include "operations/"

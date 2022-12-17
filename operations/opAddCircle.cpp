@@ -38,8 +38,8 @@ void opAddCircle::Execute()
 	CircleGfxInfo.BorderWdth = pUI->getCrntPenWidth();
 
 
-	//CircleGfxInfo.isFilled = false;	//default is not filled
-	//CircleGfxInfo.isSelected = false;	//defualt is not selected
+	CircleGfxInfo.isFilled = false;	//default is not filled
+	CircleGfxInfo.isSelected = false;	//defualt is not selected
 
 
 	//Create a Circle with the above parameters
