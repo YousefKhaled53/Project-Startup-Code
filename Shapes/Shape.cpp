@@ -29,7 +29,6 @@ void shape::changeborderwidth(int bw){
 color shape::getdrawclr() {
 	return ShpGfxInfo.DrawClr;
 }
-/**/
 color shape::getfillclr() {
 	return ShpGfxInfo.FillClr;
 }
