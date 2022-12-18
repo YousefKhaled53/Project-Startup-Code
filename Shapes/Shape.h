@@ -31,6 +31,7 @@ public:
 	void setisfilled();
 	int getid();
 	void setid(int i);
+	virtual int*  getparamters()=0;
 	virtual bool is_in_fig(int x, int y) = 0;
 	virtual string printforselection()=0;
 	static bool InDrawArea(Point P);

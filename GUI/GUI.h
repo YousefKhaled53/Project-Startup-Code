@@ -51,11 +51,16 @@ class GUI
 		ICON_BORDER_SINGLE,
 		ICON_PEN,
 		ICON_BORDER_COLOR_SINGLE,
+<<<<<<< Updated upstream
 		ICON_BORDER_COLOR_GENERAL,
 		ICON_BRUSH_SIGNLE,
 		ICON_BRUSH_GENERAL,
 
+=======
+		ICON_BORDER_COLOR_GENERAL, 
+>>>>>>> Stashed changes
 		ICON_SELECT,      //Select icon in menu to select and unselect the shapes
+		ICON_STICK_IMAGE,
 		//TODO: Add more icons names here
 		ICON_DEL,
 		
@@ -132,6 +137,7 @@ public:
 	void DrawOval(Point P1, Point P2, GfxInfo OvalGfxInfo) const; // Draw an Oval
 	void DrawRegPolygon(int* Arrx, int* ArrY, int x, GfxInfo RegPolygonGfxInfo) const;
 	void DrawIrrPolygon(int *Arrx, int *Arry, int x, GfxInfo IrrPolygonGfxInfo) const;
+	//void StickImage(string image, int x, int y, int width, int hight) const;
 	void Setpenwidth(int n);
 	void setcrntfillcolor(color newcolor);
 	void setcrntdrawcolor(color newcolor);

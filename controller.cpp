@@ -22,7 +22,11 @@
 #include"opchangepenwidth.h"
 #include"opChangeGeneralFillColor.h"
 #include"opCHangeGeneralDrawcolor.h"
+<<<<<<< Updated upstream
 #include"../Project-Startup-Code/opCancelFillingGeneral.h"
+=======
+#include "../Project-Startup-Code/operations/opStickImage.h"
+>>>>>>> Stashed changes
 #include"operations/Opchangefillcolor.h"
 #include"./opchangepenwidth.h"
 #include"Opexit.h"
@@ -127,6 +131,9 @@ operation* controller::createOperation(operationType OpType)
 			break;
 		case Pen_Width:
 			pOp = new opchangepenwidth(this);
+			break;
+		case STICK_IMAGE:
+			pOp = new opStickImage(this);
 			break;
 
 	}
