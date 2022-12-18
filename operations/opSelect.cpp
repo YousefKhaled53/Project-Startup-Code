@@ -40,7 +40,7 @@ void opSelect::Execute()
 		else {
 			sel->SetSelected(true);
 			pUI->ClearStatusBar(); //tring msg = "selecteed shape with width (" + to_string(sel->getborderwidth()) + ")";
-			pUI->PrintMessage(sel->printforselection());
+		//	pUI->PrintMessage(sel->printforselection());
 			pGraph->SetSelected(sel);
 		}
 	}
