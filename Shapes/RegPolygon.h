@@ -21,6 +21,9 @@ public:
 	bool is_in_fig(int x, int y);
 	virtual string printforselection();
 	int* getparamters();
+	virtual int getx();
+	virtual int gety();
+
 
 };
 

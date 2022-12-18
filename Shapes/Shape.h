@@ -35,6 +35,9 @@ public:
 	virtual bool is_in_fig(int x, int y) = 0;
 	virtual string printforselection()=0;
 	static bool InDrawArea(Point P);
+	virtual int getx() = 0;
+	virtual int gety() = 0;
+
 
 
 	///The following functions should be supported by the shape class
