@@ -22,11 +22,7 @@
 #include"opchangepenwidth.h"
 #include"opChangeGeneralFillColor.h"
 #include"opCHangeGeneralDrawcolor.h"
-#include"../Project-Startup-Code/opCancelFillingGeneral.h"
-<<<<<<< HEAD
-#include "../Project-Startup-Code/operations/opStickImage.h"
-=======
->>>>>>> parent of 1be56ea (Operation stick image)
+#include"../Project Startup Code/opCancelFillingGeneral.h"
 #include"operations/Opchangefillcolor.h"
 #include"./opchangepenwidth.h"
 #include"Opexit.h"

@@ -17,11 +17,8 @@
 #include"square.h"
 #include"../controller.h"
 #include"RegPolygon.h"
-<<<<<<< HEAD
 #include "../GUI/GUI.h"
-#include "../operations/opStickImage.h"
-=======
->>>>>>> parent of 1be56ea (Operation stick image)
+
 Graph::Graph()
 {
 	selectedShape = nullptr;

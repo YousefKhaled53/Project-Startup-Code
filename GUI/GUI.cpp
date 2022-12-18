@@ -199,10 +199,6 @@ void GUI::CreateDrawToolBar()
 	MenuIconImages[ICON_BORDER_SINGLE] = "images\\MenuIcons\\Menu_Width.jpg";
 	MenuIconImages[ICON_BORDER_COLOR_GENERAL] = "images\\MenuIcons\\Border_Color_General.jpg";
 	MenuIconImages[ICON_BORDER_COLOR_SINGLE] = "images\\MenuIcons\\Border_Color_Single.jpg";
-<<<<<<< HEAD
-	MenuIconImages[ICON_STICK_IMAGE] = "images\\MenuIcons\\STICK_IMAGE.jpg";
-=======
->>>>>>> parent of 1be56ea (Operation stick image)
 
 	//TODO: Prepare images for each menu icon and add it to the list
 
