@@ -198,14 +198,9 @@ void GUI::CreateDrawToolBar()
 	MenuIconImages[ICON_BRUSH_SIGNLE] = "images\\MenuIcons\\Menu_Brush1.jpg";
 	MenuIconImages[ICON_BRUSH_GENERAL] = "images\\MenuIcons\\Menu_Brush2.jpg";
 	MenuIconImages[ICON_BORDER_SINGLE] = "images\\MenuIcons\\Menu_Width.jpg";
-<<<<<<< Updated upstream
 	MenuIconImages[ICON_BORDER_COLOR_GENERAL] = "images\\MenuIcons\\Border_Color_General.jpg";
 	MenuIconImages[ICON_BORDER_COLOR_SINGLE] = "images\\MenuIcons\\Border_Color_Single.jpg";
-=======
-	MenuIconImages[ICON_BORDER_COLOR_GENERAL] = "images\\MenuIcons\\Border_Color_General.jfif";
-	MenuIconImages[ICON_BORDER_COLOR_SINGLE] = "images\\MenuIcons\\Border_Color_Single.jfif";
 	MenuIconImages[ICON_STICK_IMAGE] = "images\\MenuIcons\\STICK_IMAGE.jpg";
->>>>>>> Stashed changes
 
 	//TODO: Prepare images for each menu icon and add it to the list
 

@@ -22,11 +22,8 @@
 #include"opchangepenwidth.h"
 #include"opChangeGeneralFillColor.h"
 #include"opCHangeGeneralDrawcolor.h"
-<<<<<<< Updated upstream
 #include"../Project-Startup-Code/opCancelFillingGeneral.h"
-=======
 #include "../Project-Startup-Code/operations/opStickImage.h"
->>>>>>> Stashed changes
 #include"operations/Opchangefillcolor.h"
 #include"./opchangepenwidth.h"
 #include"Opexit.h"

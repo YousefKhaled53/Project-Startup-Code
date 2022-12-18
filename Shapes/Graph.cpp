@@ -16,12 +16,9 @@
 #include"line.h"
 #include"square.h"
 #include"../controller.h"
-<<<<<<< Updated upstream
 #include"RegPolygon.h"
-=======
 #include "../GUI/GUI.h"
 #include "../operations/opStickImage.h"
->>>>>>> Stashed changes
 Graph::Graph()
 {
 	selectedShape = nullptr;
