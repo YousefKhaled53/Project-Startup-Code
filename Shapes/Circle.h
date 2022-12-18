@@ -17,6 +17,9 @@ public:
 	virtual string printforselection();
 	bool is_in_fig(int x, int y);
 	int* getparamters();
+	virtual int getx();
+	virtual int gety() ;
+
 
 };
 

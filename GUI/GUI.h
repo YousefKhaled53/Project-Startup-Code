@@ -51,14 +51,10 @@ class GUI
 		ICON_BORDER_SINGLE,
 		ICON_PEN,
 		ICON_BORDER_COLOR_SINGLE,
-<<<<<<< Updated upstream
 		ICON_BORDER_COLOR_GENERAL,
 		ICON_BRUSH_SIGNLE,
 		ICON_BRUSH_GENERAL,
-
-=======
-		ICON_BORDER_COLOR_GENERAL, 
->>>>>>> Stashed changes
+		
 		ICON_SELECT,      //Select icon in menu to select and unselect the shapes
 		ICON_STICK_IMAGE,
 		//TODO: Add more icons names here
@@ -78,6 +74,7 @@ class GUI
 		//TODO: Add more icons names here
 		ICON_hide,
 		ICON_un,
+		ICON_STICK_IMAGE_2,
 		ICON_Comingsoon,
 		PLAY_ICON_COUNT		//no. of menu icons ==> This should be the last line in this enum
 
