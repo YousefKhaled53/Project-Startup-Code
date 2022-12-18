@@ -105,6 +105,7 @@ operationType GUI::GetUseroperation() const
 			case ICON_BORDER_SINGLE:  return BORDER_SINGLE;
 			case ICON_BORDER_COLOR_SINGLE: return BORDER_COLOR_SINGLE;
 			case ICON_BORDER_COLOR_GENERAL: return BORDER_COLOR_GENERAL;
+			case ICON_STICK_IMAGE: return STICK_IMAGE;
 			default: return EMPTY;	//A click on empty place in desgin toolbar
 			}
 		}
@@ -199,6 +200,7 @@ void GUI::CreateDrawToolBar()
 	MenuIconImages[ICON_BORDER_SINGLE] = "images\\MenuIcons\\Menu_Width.jpg";
 	MenuIconImages[ICON_BORDER_COLOR_GENERAL] = "images\\MenuIcons\\Border_Color_General.jpg";
 	MenuIconImages[ICON_BORDER_COLOR_SINGLE] = "images\\MenuIcons\\Border_Color_Single.jpg";
+	MenuIconImages[ICON_STICK_IMAGE] = "images\\MenuIcons\\STICK_IMAGE.jpg";
 
 	//TODO: Prepare images for each menu icon and add it to the list
 
@@ -466,6 +468,11 @@ void GUI::DrawIrrPolygon(int* Arrx, int* Arry, int x, GfxInfo IrrPolygonGfxInfo)
 void GUI::Setpenwidth(int n) {
 	PenWidth = n;
 }
+
+/*void GUI::StickImage(string image, int x, int y, int width, int hight) const {
+	pWind->DrawImage(image, x, y, width, hight);
+}*/
+
 //////////////////////////////////////////////////////////////////////////////////////////
 GUI::~GUI()
 {

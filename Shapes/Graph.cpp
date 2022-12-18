@@ -17,6 +17,8 @@
 #include"square.h"
 #include"../controller.h"
 #include"RegPolygon.h"
+#include "../GUI/GUI.h"
+#include "../operations/opStickImage.h"
 Graph::Graph()
 {
 	selectedShape = nullptr;
@@ -293,4 +295,13 @@ shape* Graph::Getshape(int x, int y)
 }
 int Graph::getsizeofvector() {
 	return shapesList.size();
+}
+void Graph::stickimage(GUI* pUI) {
+	for (int i = 0; i < shapesList.size(); i++) {
+		int x = shapesList[i]->getparamters()[0];
+		int y = shapesList[i]->getparamters()[1];
+		int width = shapesList[i]->getparamters()[2];
+		int height = shapesList[i]->getparamters()[3];
+		pUI->getwind()->DrawImage("images\\MenuIcons\\ZC.jpg", x, y, width, height);
+	}
 }
