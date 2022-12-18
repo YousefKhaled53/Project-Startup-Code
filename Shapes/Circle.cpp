@@ -67,5 +67,3 @@ int* Circle::getparamters() {
 	list[3] = 2 * sqrt(pow((Center.x - radius.x), 2) + (pow((Center.y - radius.y), 2)));
 	return list;
 }
-int Circle::getx() { return Center.x; };
-int Circle::gety() { return Center.y; };
