@@ -16,7 +16,6 @@ public:
 	virtual void Save(ofstream& OutFile , int id);
 	virtual string printforselection();
 	bool is_in_fig(int x, int y);
-	int* getparamters();
 
 };
 

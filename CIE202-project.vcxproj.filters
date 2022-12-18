@@ -69,11 +69,7 @@
     <ClCompile Include="operations\opbordercolor.cpp" />
     <ClCompile Include="opChangeGeneralFillColor.cpp" />
     <ClCompile Include="opCHangeGeneralDrawcolor.cpp" />
-<<<<<<< Updated upstream
     <ClCompile Include="opCancelFillingGeneral.cpp" />
-=======
-    <ClCompile Include="operations\opStickImage.cpp" />
->>>>>>> Stashed changes
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CMUgraphicsLib\auxil.h" />
@@ -130,10 +126,6 @@
     <ClInclude Include="operations\opbordercolor.h" />
     <ClInclude Include="opChangeGeneralFillColor.h" />
     <ClInclude Include="opCHangeGeneralDrawcolor.h" />
-<<<<<<< Updated upstream
     <ClInclude Include="opCancelFillingGeneral.h" />
-=======
-    <ClInclude Include="operations\opStickImage.h" />
->>>>>>> Stashed changes
   </ItemGroup>
 </Project>

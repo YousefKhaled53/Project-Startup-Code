@@ -59,11 +59,3 @@ string Circle::printforselection() {
 		" and radius(" + to_string(radius.x) + ", "+ to_string(radius.y) + ")and raduis Length ("+to_string(RadiusLength)+")";
 	return msg;
 }
-int* Circle::getparamters() {
-	int* list=new int[4];
-	list[0] = Center.x;
-	list[1] = Center.y;
-	list[2] = 2*sqrt(pow((Center.x - radius.x), 2) + (pow((Center.y - radius.y), 2)));
-	list[3] = 2 * sqrt(pow((Center.x - radius.x), 2) + (pow((Center.y - radius.y), 2)));
-	return list;
-}

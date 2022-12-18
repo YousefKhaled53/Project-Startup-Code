@@ -187,7 +187,6 @@
     <ClCompile Include="operations\opload.cpp" />
     <ClCompile Include="operations\opsave.cpp" />
     <ClCompile Include="operations\opSelect.cpp" />
-    <ClCompile Include="operations\opStickImage.cpp" />
     <ClCompile Include="operations\opswitchplaymode.cpp" />
     <ClCompile Include="Opexit.cpp" />
     <ClCompile Include="Shapes\Circle.cpp" />
@@ -245,7 +244,6 @@
     <ClInclude Include="operations\opload.h" />
     <ClInclude Include="operations\opsave.h" />
     <ClInclude Include="operations\opSelect.h" />
-    <ClInclude Include="operations\opStickImage.h" />
     <ClInclude Include="operations\opswitchplaymode.h" />
     <ClInclude Include="Opexit.h" />
     <ClInclude Include="Shapes\Circle.h" />

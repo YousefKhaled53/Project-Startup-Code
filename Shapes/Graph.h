@@ -2,7 +2,6 @@
 #include "Shape.h"
 #include <fstream>
 #include <vector>
-#include "../GUI/GUI.h"
 
 using namespace std;
 
@@ -28,8 +27,6 @@ public:
 	void deleteshape(shape* pFig); // deletes a shape
 	color changestringtoints(int r, int b, int g); // changes the string into color components
 	shape* GetSelected();
-	void stickimage(GUI* pUI);
-	//int* getparamters() ;
 	void SetSelected(shape* s);
 	void changefillcolor(shape* pFig,color newcolor);
 	int getsizeofvector();

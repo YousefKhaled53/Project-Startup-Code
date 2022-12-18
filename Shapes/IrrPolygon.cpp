@@ -63,12 +63,3 @@ string IrrPolygon::printforselection() {
 	string msg = "selecteed shape is Irregular Polygon with  (" +to_string(Vertices_num) + ")Vertices";
 	return msg;
 }
-int* IrrPolygon::getparamters() {
-	int* list = new int[4];
-		list[0] = 0;
-		list[1] = 0;
-		list[2] = 0;
-		list[3] = 0;
-		return list;
-
-}

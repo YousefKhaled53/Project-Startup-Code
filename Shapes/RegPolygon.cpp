@@ -65,11 +65,3 @@ string RegPolygon::printforselection() {
 	string msg = "selecteed shape is Regular Polygon with  (" + to_string(Vertices_num) + ") Vertices";
 	return msg;
 }
-int* RegPolygon::getparamters() {
-	int* list = new int[4];
-	list[0] = Center.x;
-	list[1] = Center.y;
-	list[2] = 2 * sqrt(pow((Center.x - Point1->x), 2) + (pow((Center.y - Point1->y), 2)));
-	list[3] = 2 * sqrt(pow((Center.x - Point1->x), 2) + (pow((Center.y - Point1->y), 2)));
-	return list;
-}
