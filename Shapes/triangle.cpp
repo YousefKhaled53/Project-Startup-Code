@@ -54,3 +54,16 @@ string triangle::printforselection() {
 	string msg = "selecteed shape is triangle with corner coordinates  (" + to_string(Corner1.x) + "," + to_string(Corner1.y) + ")  and  (" + to_string(Corner2.x) + ", " + to_string(Corner2.y) + ") and (" + to_string(Corner3.x) + ", " + to_string(Corner3.y) + ")";
 	return msg;
 }
+void triangle::scramble() {
+
+	int diffinx1 = abs((Corner1.x - Corner2.x));
+	int diffiny1 = abs((Corner1.y - Corner2.y));
+	int diffinx2 = abs((Corner1.x - Corner3.x));
+	int diffiny2 = abs((Corner1.y - Corner3.y));
+	Corner1.x = (rand() % 1300) - diffinx1;
+	Corner1.y = 50 + ((rand()) % 600);
+	Corner2.x = Corner1.x + diffinx1;
+	Corner2.y = Corner1.y + diffiny1;
+	Corner3.x = Corner1.x + diffinx2;
+	Corner3.y = Corner1.y + diffiny2;
+}

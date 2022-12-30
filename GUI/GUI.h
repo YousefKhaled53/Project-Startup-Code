@@ -135,6 +135,8 @@ public:
 	void Setpenwidth(int n);
 	void setcrntfillcolor(color newcolor);
 	void setcrntdrawcolor(color newcolor);
+	int getwidth();
+	int getheight();
 
 
 

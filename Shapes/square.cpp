@@ -62,3 +62,11 @@ string square::printforselection() {
 	string msg = "selecteed shape is square with side length (" + to_string(Length) + ")";
 	return msg;
 }
+void square::scramble() {
+	int diffinx = abs((Corner1.x - Corner2.x));
+	int diffiny = abs((Corner1.y - Corner2.y));
+	Corner1.x = (rand() % 1300)-diffinx;
+	Corner1.y = 50 + ( (rand()) % 600);
+	Corner2.x = Corner1.x + diffinx;
+	Corner2.y = Corner1.y + diffiny;
+}

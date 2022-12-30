@@ -6,6 +6,8 @@ class IrrPolygon :
 	private:
 		Point* Point1;
 		int Vertices_num=0;
+		int arrdiffinx[200];
+		int arrdiffiny[200];
 		int *ArrX = new int[1000];
 		int *ArrY = new int[1000];
 	public:
@@ -15,6 +17,7 @@ class IrrPolygon :
 		virtual void Save(ofstream& OutFile , int id);
 		bool is_in_fig(int x, int y);
 		virtual string printforselection();
+		virtual void scramble();
 
 };
 

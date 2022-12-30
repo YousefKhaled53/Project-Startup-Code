@@ -12,5 +12,4 @@ void opCHangeGeneralDrawcolor::Execute() {
 	pUI->GetPointClicked(p1.x, p1.y);
 	color c2 = pUI->getwind()->GetColor(p1.x, p1.y);
 	pUI->setcrntdrawcolor(c2);
-	
 }

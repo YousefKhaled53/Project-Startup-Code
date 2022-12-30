@@ -437,6 +437,7 @@ void GUI::DrawRegPolygon(int* Arrx, int* ArrY, int x, GfxInfo RegPolygonGfxInfo)
 void GUI::setcrntfillcolor(color newcolor) {
 	FillColor= newcolor;
 }
+
 void GUI::setcrntdrawcolor(color newcolor) {
 	DrawColor = newcolor;
 }

@@ -18,6 +18,7 @@
 #include"../controller.h"
 #include"RegPolygon.h"
 #include "../GUI/GUI.h"
+#include<algorithm>
 
 Graph::Graph()
 {
@@ -57,7 +58,6 @@ void Graph::Save(ofstream& outfile) {
 	outfile << shapesList.size()<<endl;
 	outfile << "FORMAT : SHAPE	NAME	 ID x,y for n points	redintensityfordrawcolor	greenintensityfordrawcolor	blueintensityfordrawcolor	greenintensityforfillcolor	blueintensityforfillcolor	redintensityforfillcolor	penwidth" << endl;
 	for (int i = 0; i < zz; i++) {
-		
 		
 		shapesList[i]->Save(outfile, i+1); 
 
@@ -295,4 +295,24 @@ shape* Graph::Getshape(int x, int y)
 }
 int Graph::getsizeofvector() {
 	return shapesList.size();
+}
+void Graph::scramble() {
+	srand(time(0));
+	int x = rand();
+	for (int i = 0; i < shapesList.size(); i++) {
+		
+		shapesList[i]->scramble();
+	}
+}
+void Graph::dublicate(GUI* pUI) {
+	Draw(pUI);
+}
+void Graph::sendtoback(shape* pShp) {
+	for (int i = 0; i < shapesList.size(); i++) {
+		shapesList.erase(find(shapesList.begin(), shapesList.end(), pShp));
+		shapesList.insert(shapesList.begin(), pShp);
+
+		//int z = (int)*(find(shapesList.begin(), shapesList.end(), pShp));
+		//iter_swap(shapesList.begin() + 0, shapesList.begin() + z);// why doesn't work with z
+	}
 }

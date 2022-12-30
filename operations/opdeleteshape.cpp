@@ -9,5 +9,4 @@ void opdeleteshape::Execute() {
 	Graph* pGr = pControl->getGraph(); // getting a pointer of grapg so that i can call delete shape and getshape (but what does getshape do ??)
 	pGr->deleteshape(pGr->GetSelected()); // is done after making select function 
 	
-
 }

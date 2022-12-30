@@ -30,7 +30,9 @@ public:
 	void SetSelected(shape* s);
 	void changefillcolor(shape* pFig,color newcolor);
 	int getsizeofvector();
-	
+	void scramble();
+	void dublicate(GUI* pUI);
+	void sendtoback(shape* pShp);
 	
 
 };

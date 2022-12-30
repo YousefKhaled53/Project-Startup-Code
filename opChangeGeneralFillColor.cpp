@@ -1,5 +1,7 @@
 #include "opChangeGeneralFillColor.h"
 #include"controller.h"
+#include<iostream >
+using namespace std;
 opChangeGeneralFillColor::opChangeGeneralFillColor(controller* pCont) : operation(pCont)
 {}
 opChangeGeneralFillColor::~opChangeGeneralFillColor() {};

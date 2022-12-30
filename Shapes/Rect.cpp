@@ -64,3 +64,13 @@ string Rect::printforselection() {
 	string msg = "selecteed shape is rectangle with corner coordinates  (" + to_string(Corner1.x) + "," + to_string(Corner1.y) + ") and (" + to_string(Corner2.x) + ", "+ to_string(Corner2.y) + ")";
 	return msg;
 }
+
+void Rect::scramble() {
+
+	int diffinx = abs((Corner1.x - Corner2.x));
+	int diffiny = abs((Corner1.y - Corner2.y));
+	Corner1.x = (rand() % 1300) - diffinx;
+	Corner1.y = 50 + ((rand()) % 600);
+	Corner2.x = Corner1.x + diffinx;
+	Corner2.y = Corner1.y + diffiny;
+}

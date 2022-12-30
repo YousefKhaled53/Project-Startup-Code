@@ -36,7 +36,7 @@ public:
 	static bool InDrawArea(Point P);
 
 
-	///The following functions should be supported by the shape class
+	///The following functions should be supported by the shape class	
 	///It should be overridden by each inherited shape
 
 	///Decide the parameters that you should pass to each function	
@@ -45,7 +45,7 @@ public:
 	//virtual void Rotate() = 0;	//Rotate the shape
 	//virtual void Resize() = 0;	//Resize the shape
 	//virtual void Move() = 0;		//Move the shape
-
+	virtual void scramble() =0 ;
 	virtual void Save(ofstream &OutFile , int id) = 0;	//Save the shape parameters to the file
 	//virtual void Load(ifstream &Infile) = 0;	//Load the shape parameters to the file
 

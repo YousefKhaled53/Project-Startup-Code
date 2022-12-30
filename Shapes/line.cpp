@@ -2,6 +2,8 @@
 #include<iostream>
 #include<fstream>
 #include <cmath>
+
+#include <time.h>
 #include <corecrt_math_defines.h>
 line::line(Point P1, Point P2, GfxInfo shapeGfxInfo) :shape(shapeGfxInfo)
 {
@@ -26,6 +28,16 @@ void line::Save(ofstream& OutFile , int id) {
 	OutFile << shape::getdrawclr().getucblue() << " ";
 	OutFile << shape::getborderwidth() << " ";
 	OutFile << "///" << " ";
+}
+void line::scramble() {
+	int diffinx = abs((Corner1.x - Corner2.x));
+	int diffiny = abs((Corner1.y - Corner2.y));
+	//srand(time(0));
+	Corner1.x = ((rand()) % 1300)-diffinx;
+	Corner1.y = 50 +((rand() )%600)-diffiny;
+	
+	Corner2.x = Corner1.x + diffinx;
+	Corner2.y = Corner1.y + diffiny;
 }
 bool line::is_in_fig(int x, int y) {
 	//int LineSlope = ((Corner2.y - Corner1.y) / (Corner2.x - Corner1.x));

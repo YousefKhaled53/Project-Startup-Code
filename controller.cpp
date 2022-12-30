@@ -22,14 +22,15 @@
 #include"opchangepenwidth.h"
 #include"opChangeGeneralFillColor.h"
 #include"opCHangeGeneralDrawcolor.h"
-#include"../Project Startup Code/opCancelFillingGeneral.h"
+#include"opCancelFillingGeneral.h"
 #include"operations/Opchangefillcolor.h"
 #include"./opchangepenwidth.h"
 #include"Opexit.h"
 #include "opCancelFillingGeneral.h"
 #include"operations/opdeleteshape.h"
-
-
+#include"opscramble.h"
+#include"opdublicate.h"
+#include"opsendtoback.h"
 //Constructor
 controller::controller()
 {
@@ -61,14 +62,16 @@ operation* controller::createOperation(operationType OpType)
 
 		case DRAW_RECT:
 			pOp = new opAddRect(this);
-			
+			//pOp = new opdublicate(this);
 			break;
 
 		case DRAW_TRI:
-			
+			//pOp = new opscramble(this);
+
+			//pOp = new opsendtoback(this);
 			pOp = new opAddtriangle(this);
 			break;
-
+			
 		case DRAW_SQUARE:
 			pOp = new opAddsquare(this);
 			break;
@@ -85,7 +88,8 @@ operation* controller::createOperation(operationType OpType)
 			pOp = new Opexit(this);
 			break;
 		case SAVE:
-			pOp = new opsave(this);
+			pOp = new opscramble(this);
+			//pOp = new opsave(this);
 			break;
 		case BRUSH_SINGLE: 
 			pOp = new Opchangefillcolor(this);

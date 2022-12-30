@@ -65,3 +65,25 @@ string RegPolygon::printforselection() {
 	string msg = "selecteed shape is Regular Polygon with  (" + to_string(Vertices_num) + ") Vertices";
 	return msg;
 }
+
+void RegPolygon::scramble() {
+
+	/*int diffinx = abs((Center.x - Point1->x));
+	int diffiny = abs((Center.y - Point1->y));
+	for (int i = 0; i < 2; i++) {
+		arrdiffinx[i] = abs((Center.x - ArrX[i]));
+		arrdiffiny[i] = abs((Center.y - ArrY[i]));
+		
+	}
+	Center.x = (rand() % 1300) ;
+	Center.y = 50 + ((rand()) % 600);
+	Point1->x = Center.x + diffinx;
+	Point1->y = Center.y + diffiny;
+
+	for (int i = 0; i < 2; i++) {
+		ArrX[i] = (Center.x + arrdiffinx[i]);
+		ArrY[i] = (Center.y + arrdiffiny[i]);
+	
+	}*/
+	
+}

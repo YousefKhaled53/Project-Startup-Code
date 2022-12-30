@@ -63,3 +63,17 @@ string IrrPolygon::printforselection() {
 	string msg = "selecteed shape is Irregular Polygon with  (" +to_string(Vertices_num) + ")Vertices";
 	return msg;
 }
+void IrrPolygon::scramble() {
+	/*
+	for (int i = 0; i < 1; i++) {
+		arrdiffinx[i] = abs((Point1->x - ArrX[i+1]));
+		arrdiffiny[i] = abs((Point1->y - ArrY[i+1]));
+
+	}
+	Point1->x = (rand() % 1300) ;
+	Point1->y = 50 + ((rand()) % 600);
+	for (int i = 0; i < 1; i++) {
+		ArrX[i] = (Point1->x + arrdiffinx[i+1]);
+		ArrY[i] = (Point1->y + arrdiffiny[i+1]);
+	}*/
+}

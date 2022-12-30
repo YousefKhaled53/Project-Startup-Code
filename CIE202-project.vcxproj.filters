@@ -70,6 +70,9 @@
     <ClCompile Include="opChangeGeneralFillColor.cpp" />
     <ClCompile Include="opCHangeGeneralDrawcolor.cpp" />
     <ClCompile Include="opCancelFillingGeneral.cpp" />
+    <ClCompile Include="opscramble.cpp" />
+    <ClCompile Include="opdublicate.cpp" />
+    <ClCompile Include="opsendtoback.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CMUgraphicsLib\auxil.h" />
@@ -127,5 +130,8 @@
     <ClInclude Include="opChangeGeneralFillColor.h" />
     <ClInclude Include="opCHangeGeneralDrawcolor.h" />
     <ClInclude Include="opCancelFillingGeneral.h" />
+    <ClInclude Include="opscramble.h" />
+    <ClInclude Include="opdublicate.h" />
+    <ClInclude Include="opsendtoback.h" />
   </ItemGroup>
 </Project>

@@ -59,3 +59,14 @@ string Circle::printforselection() {
 		" and radius(" + to_string(radius.x) + ", "+ to_string(radius.y) + ")and raduis Length ("+to_string(RadiusLength)+")";
 	return msg;
 }
+
+void Circle::scramble() {
+	int diffinx = abs((radius.x - Center.x));
+	int diffiny = abs((radius.y - Center.y));
+	//srand(time(0));
+	Center.x = (rand() % 1300)-diffinx;
+	Center.y = 50 + ((rand()) % 600)-diffiny;
+	radius.x = Center.x + diffinx;
+	radius.x = Center.x + diffinx;
+	radius.y = Center.y + diffiny;
+}
