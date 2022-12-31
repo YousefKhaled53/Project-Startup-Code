@@ -73,6 +73,7 @@
     <ClCompile Include="opscramble.cpp" />
     <ClCompile Include="opdublicate.cpp" />
     <ClCompile Include="opsendtoback.cpp" />
+    <ClCompile Include="opmultidelete.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CMUgraphicsLib\auxil.h" />
@@ -133,5 +134,6 @@
     <ClInclude Include="opscramble.h" />
     <ClInclude Include="opdublicate.h" />
     <ClInclude Include="opsendtoback.h" />
+    <ClInclude Include="opmultidelete.h" />
   </ItemGroup>
 </Project>

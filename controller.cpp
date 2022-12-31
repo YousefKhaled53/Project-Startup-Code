@@ -31,6 +31,7 @@
 #include"opscramble.h"
 #include"opdublicate.h"
 #include"opsendtoback.h"
+#include "opmultidelete.h"
 //Constructor
 controller::controller()
 {
@@ -57,17 +58,17 @@ operation* controller::createOperation(operationType OpType)
 	{
 		case DRAW_LINE:
 			//pOp = new opCancelFillingGeneral(this);
-			pOp = new opAddline(this);
+			//pOp = new opmultidelete(this);
 			break;
 
 		case DRAW_RECT:
 			pOp = new opAddRect(this);
-			//pOp = new opdublicate(this);
 			break;
 
 		case DRAW_TRI:
+			//pOp = new opAddline(this);
 			//pOp = new opscramble(this);
-
+			//pOp = new opdublicate(this);
 			//pOp = new opsendtoback(this);
 			pOp = new opAddtriangle(this);
 			break;
@@ -88,8 +89,7 @@ operation* controller::createOperation(operationType OpType)
 			pOp = new Opexit(this);
 			break;
 		case SAVE:
-			pOp = new opscramble(this);
-			//pOp = new opsave(this);
+			pOp = new opsave(this);
 			break;
 		case BRUSH_SINGLE: 
 			pOp = new Opchangefillcolor(this);
@@ -115,7 +115,8 @@ operation* controller::createOperation(operationType OpType)
 			pOp = new opdeleteshape(this);
 			break;
 		case TO_PLAY:
-			pOp = new opswitchlaymode(this);
+			pOp = new opsendtoback(this);
+			//pOp = new opswitchlaymode(this);
 			break;
 		case LOAD:
 			pOp = new opload(this);

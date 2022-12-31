@@ -49,6 +49,7 @@ void Graph::Draw(GUI* pUI) const
 
 }
 
+
 void Graph::deleteshape(shape* pShp) {
 	shapesList.erase(find(shapesList.begin(), shapesList.end(), pShp));
 }
@@ -285,6 +286,7 @@ void Graph::SetSelected(shape* s) {
 }
 shape* Graph::Getshape(int x, int y)
 {
+	
 	for (auto shapePointer : shapesList)
 		if (shapePointer->is_in_fig(x, y)) {
 			return shapePointer;
@@ -305,14 +307,28 @@ void Graph::scramble() {
 	}
 }
 void Graph::dublicate(GUI* pUI) {
-	Draw(pUI);
+	const int z = shapesList.size();
+	for (int i = 0; i < z; i++) {
+		shapesList.emplace_back(shapesList[i]);
+	}
 }
 void Graph::sendtoback(shape* pShp) {
 	for (int i = 0; i < shapesList.size(); i++) {
 		shapesList.erase(find(shapesList.begin(), shapesList.end(), pShp));
 		shapesList.insert(shapesList.begin(), pShp);
-
-		//int z = (int)*(find(shapesList.begin(), shapesList.end(), pShp));
-		//iter_swap(shapesList.begin() + 0, shapesList.begin() + z);// why doesn't work with z
+	}
+}
+void Graph::multidelete(int arrx[], int arry[], int size,GUI* pUI) {
+	for (auto shapePointer : shapesList)
+		for (int i = 0; i < size; i++) {
+			if (shapePointer->is_in_fig(arrx[i], arry[i])) {
+				shapePointer->SetSelected(true) ;
+				multishapesselected.push_back(shapePointer);
+			}
+			
+		}
+		
+	for (int i = 0; i < multishapesselected.size(); i++) {
+		shapesList.erase(find(shapesList.begin(), shapesList.end(), multishapesselected[i]));
 	}
 }

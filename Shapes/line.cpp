@@ -34,7 +34,7 @@ void line::scramble() {
 	int diffiny = abs((Corner1.y - Corner2.y));
 	//srand(time(0));
 	Corner1.x = ((rand()) % 1300)-diffinx;
-	Corner1.y = 50 +((rand() )%600)-diffiny;
+	Corner1.y = (50 +((rand() )%600))-diffiny;
 	
 	Corner2.x = Corner1.x + diffinx;
 	Corner2.y = Corner1.y + diffiny;

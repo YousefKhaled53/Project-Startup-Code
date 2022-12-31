@@ -12,7 +12,8 @@ class GUI;
 class Graph
 {
 private:
-	vector <shape*> shapesList; //a container to hold all shapes							   
+	vector <shape*> shapesList; //a container to hold all shapes	
+	vector <shape*> multishapesselected;
 	shape* selectedShape;	//pointer to the currently selected shape
 public:										
 	Graph();
@@ -33,6 +34,8 @@ public:
 	void scramble();
 	void dublicate(GUI* pUI);
 	void sendtoback(shape* pShp);
-	
+	void multidelete(int arrx[], int arry[],int size, GUI* pUI);
+
+
 
 };

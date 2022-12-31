@@ -190,6 +190,7 @@
     <ClCompile Include="operations\opSelect.cpp" />
     <ClCompile Include="operations\opswitchplaymode.cpp" />
     <ClCompile Include="Opexit.cpp" />
+    <ClCompile Include="opmultidelete.cpp" />
     <ClCompile Include="opscramble.cpp" />
     <ClCompile Include="opsendtoback.cpp" />
     <ClCompile Include="Shapes\Circle.cpp" />
@@ -250,6 +251,7 @@
     <ClInclude Include="operations\opSelect.h" />
     <ClInclude Include="operations\opswitchplaymode.h" />
     <ClInclude Include="Opexit.h" />
+    <ClInclude Include="opmultidelete.h" />
     <ClInclude Include="opscramble.h" />
     <ClInclude Include="opsendtoback.h" />
     <ClInclude Include="Shapes\Circle.h" />
