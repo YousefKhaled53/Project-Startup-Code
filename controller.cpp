@@ -58,7 +58,7 @@ operation* controller::createOperation(operationType OpType)
 	{
 		case DRAW_LINE:
 			//pOp = new opCancelFillingGeneral(this);
-			//pOp = new opmultidelete(this);
+			//pOp = new opAddline(this);
 			break;
 
 		case DRAW_RECT:
@@ -66,11 +66,13 @@ operation* controller::createOperation(operationType OpType)
 			break;
 
 		case DRAW_TRI:
-			//pOp = new opAddline(this);
+
+			pOp = new opmultidelete(this);
+
 			//pOp = new opscramble(this);
 			//pOp = new opdublicate(this);
 			//pOp = new opsendtoback(this);
-			pOp = new opAddtriangle(this);
+		//	pOp = new opAddtriangle(this);
 			break;
 			
 		case DRAW_SQUARE:

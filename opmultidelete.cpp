@@ -1,5 +1,6 @@
 #include "opmultidelete.h"
 #include"controller.h"
+#include<windows.h>  
 opmultidelete::opmultidelete(controller* pCont) : operation(pCont) {};
 void opmultidelete::Execute() {
 	
@@ -13,5 +14,7 @@ void opmultidelete::Execute() {
 	for (int i = 0; i < n; i++) {
 		pUI->GetPointClicked(arrx[i],arry[i]);
 	}
-	pControl->getGraph()->multidelete(arrx,arry,n,pUI);
+	pControl->getGraph()->multiselect(arrx,arry,n,pUI);
+	pControl->getGraph()->multidelete();
+	
 }

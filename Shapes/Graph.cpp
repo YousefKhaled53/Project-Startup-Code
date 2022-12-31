@@ -318,17 +318,17 @@ void Graph::sendtoback(shape* pShp) {
 		shapesList.insert(shapesList.begin(), pShp);
 	}
 }
-void Graph::multidelete(int arrx[], int arry[], int size,GUI* pUI) {
+void Graph::multiselect(int arrx[], int arry[], int size, GUI* pUI) {
 	for (auto shapePointer : shapesList)
 		for (int i = 0; i < size; i++) {
 			if (shapePointer->is_in_fig(arrx[i], arry[i])) {
-				shapePointer->SetSelected(true) ;
+				shapePointer->SetSelected(true);
 				multishapesselected.push_back(shapePointer);
 			}
-			
 		}
-		
+}
+void Graph::multidelete (){
 	for (int i = 0; i < multishapesselected.size(); i++) {
-		shapesList.erase(find(shapesList.begin(), shapesList.end(), multishapesselected[i]));
+	shapesList.erase(find(shapesList.begin(), shapesList.end(), multishapesselected[i]));
 	}
 }

@@ -34,7 +34,8 @@ public:
 	void scramble();
 	void dublicate(GUI* pUI);
 	void sendtoback(shape* pShp);
-	void multidelete(int arrx[], int arry[],int size, GUI* pUI);
+	void multiselect(int arrx[], int arry[],int size, GUI* pUI);
+	void multidelete();
 
 
 
