@@ -32,7 +32,7 @@ void RegPolygon::Draw(GUI* pUI) const
 
 void RegPolygon::Save(ofstream& OutFile , int id) {
 
-	OutFile << "REGULAR" << " " << id << " " << Center.x << " " << Center.y << " " << Point1->x << " " << Point1->y << " "<<Vertices_num<<" ";
+	OutFile << "REGULAR" << " " << ID << " " << Center.x << " " << Center.y << " " << Point1->x << " " << Point1->y << " "<<Vertices_num<<" ";
 
 	OutFile << shape::getdrawclr().getucred() << " ";
 	OutFile << shape::getdrawclr().getucgreen() << " ";

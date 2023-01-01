@@ -19,7 +19,7 @@ void Oval::Draw(GUI* pUI) const
 	pUI->DrawOval(Point1, Point2, ShpGfxInfo);{}
 }
 void Oval::Save(ofstream& OutFile , int id) {
-	OutFile << "OVAL" << " " << id << " " << Point1.x << " " << Point1.y << " " << Point2.x << " " << Point2.y << " ";
+	OutFile << "OVAL" << " " << ID << " " << Point1.x << " " << Point1.y << " " << Point2.x << " " << Point2.y << " ";
 
 	OutFile << shape::getdrawclr().getucred() << " ";
 	OutFile << shape::getdrawclr().getucgreen() << " ";

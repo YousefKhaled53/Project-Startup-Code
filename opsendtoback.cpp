@@ -5,6 +5,5 @@ void opsendtoback::Execute() {
 	GUI* pUI = pControl->GetUI();
 	Graph* pGr = pControl->getGraph();
 	pControl->getGraph()->sendtoback(pGr->GetSelected());
-	pControl->UpdateInterface();
 
 }

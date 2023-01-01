@@ -20,7 +20,7 @@ void Rect::Draw(GUI* pUI) const
 void Rect::Save(ofstream& OutFile , int id)
 {
 
-	OutFile << "RECT" <<" " << id << " " << Corner1.x << " " << Corner1.y << " " << Corner2.x << " " << Corner2.y << " ";
+	OutFile << "RECT" <<" " << ID<< " " << Corner1.x << " " << Corner1.y << " " << Corner2.x << " " << Corner2.y << " ";
 	
 	OutFile << shape::getdrawclr().getucred() << " ";
 	OutFile << shape::getdrawclr().getucgreen() << " ";

@@ -60,7 +60,7 @@ void opAddline::Execute()
 
 	//Create a line with the above parameters
 	line* L = new line(P1, P2, lineGfxInfo);
-
+	
 	//Get a pointer to the graph
 	Graph* pGr = pControl->getGraph();
 

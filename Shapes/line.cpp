@@ -21,7 +21,7 @@ void line::Draw(GUI* pUI) const
 }
 void line::Save(ofstream& OutFile , int id) {
 	
-	OutFile << "LINE" << " " << id << " " << Corner1.x << " " << Corner1.y << " " << Corner2.x << " " << Corner2.y << " ";
+	OutFile << "LINE" << " " << ID << " " << Corner1.x << " " << Corner1.y << " " << Corner2.x << " " << Corner2.y << " ";
 
 	OutFile << shape::getdrawclr().getucred() << " ";
 	OutFile << shape::getdrawclr().getucgreen() << " ";

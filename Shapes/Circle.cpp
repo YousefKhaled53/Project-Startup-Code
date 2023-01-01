@@ -23,7 +23,7 @@ void Circle::Draw(GUI* pUI) const
 }
 void Circle::Save(ofstream& OutFile , int id) {
 
-	OutFile << "CIRCLE" << " " << id << " " << Center.x << " " << Center.y << " " << radius.x << " " << radius.y << " ";
+	OutFile << "CIRCLE" << " " << ID << " " << Center.x << " " << Center.y << " " << radius.x << " " << radius.y << " ";
 
 	OutFile << shape::getdrawclr().getucred() << " ";
 	OutFile << shape::getdrawclr().getucgreen() << " ";

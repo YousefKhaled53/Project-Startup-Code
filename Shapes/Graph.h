@@ -32,9 +32,9 @@ public:
 	void changefillcolor(shape* pFig,color newcolor);
 	int getsizeofvector();
 	void scramble();
-	void dublicate(GUI* pUI);
+	void dublicate();
 	void sendtoback(shape* pShp);
-	void multiselect(int arrx[], int arry[],int size, GUI* pUI);
+	void multiselect(int arrx[], int arry[],int size);
 	void multidelete();
 
 

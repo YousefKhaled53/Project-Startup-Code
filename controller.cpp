@@ -67,12 +67,11 @@ operation* controller::createOperation(operationType OpType)
 
 		case DRAW_TRI:
 
-			pOp = new opmultidelete(this);
-
+			//pOp = new opmultidelete(this);
 			//pOp = new opscramble(this);
 			//pOp = new opdublicate(this);
 			//pOp = new opsendtoback(this);
-		//	pOp = new opAddtriangle(this);
+			//pOp = new opAddtriangle(this);
 			break;
 			
 		case DRAW_SQUARE:
@@ -117,8 +116,8 @@ operation* controller::createOperation(operationType OpType)
 			pOp = new opdeleteshape(this);
 			break;
 		case TO_PLAY:
-			pOp = new opsendtoback(this);
-			//pOp = new opswitchlaymode(this);
+
+			pOp = new opswitchlaymode(this);
 			break;
 		case LOAD:
 			pOp = new opload(this);

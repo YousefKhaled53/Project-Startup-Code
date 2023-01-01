@@ -27,7 +27,7 @@ void IrrPolygon::Draw(GUI* pUI) const
 
 
 void IrrPolygon::Save(ofstream& OutFile , int id) {
-	OutFile << "IRREGULAR" << " " << id <<" "<<Vertices_num << " " << Point1->x << " " << Point1->y << " ";
+	OutFile << "IRREGULAR" << " " << ID <<" "<<Vertices_num << " " << Point1->x << " " << Point1->y << " ";
 
 	for (int i = 0; i < Vertices_num; i++) {
 		OutFile << ArrX[i]<< " "<<ArrY[i] << " ";

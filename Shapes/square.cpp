@@ -18,7 +18,7 @@ void square::Draw(GUI* pUI) const
 	pUI->Drawsquare(Corner1, Corner2, ShpGfxInfo);
 }
 void square::Save(ofstream& OutFile , int id) {
-	OutFile << "SQUARE" << " " << id << " " << Corner1.x << " " << Corner1.y << " " << Corner2.x << " " << Corner2.y << " ";
+	OutFile << "SQUARE" << " " << ID << " " << Corner1.x << " " << Corner1.y << " " << Corner2.x << " " << Corner2.y << " ";
 
 	OutFile << shape::getdrawclr().getucred() << " ";
 	OutFile << shape::getdrawclr().getucgreen() << " ";
