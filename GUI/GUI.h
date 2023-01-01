@@ -64,6 +64,10 @@ class GUI
 		DRAW_ICON_COUNT		//no. of menu icons ==> This should be the last line in this enum
 
 	};
+	enum ToolBar2 {
+		ICON_copy,
+		ToolBar2
+	};
 
 	enum PlayMenuIcon //The icons of the Play menu (you should add more icons)
 	{
@@ -116,6 +120,7 @@ public:
 	window* CreateWind(int, int, int, int) const; //creates the application window
 	window* getwind();
 	void CreateDrawToolBar() ;	//creates Draw mode toolbar & menu
+	void CreateDrawToolBar2();
 	void CreatePlayToolBar();	//creates Play mode toolbar & menu
 	void CreateStatusBar() const;	//create the status bar
 
