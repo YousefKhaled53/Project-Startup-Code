@@ -25,6 +25,7 @@
 #include"opCancelFillingGeneral.h"
 #include"operations/Opchangefillcolor.h"
 #include"./opchangepenwidth.h"
+#include"./operations/opCopy.h"
 #include"Opexit.h"
 #include "opCancelFillingGeneral.h"
 #include"operations/opdeleteshape.h"

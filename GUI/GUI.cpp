@@ -30,6 +30,7 @@ GUI::GUI()
 	pWind->ChangeTitle("- - - - - - - - - - PAINT ^ ^ PLAY - - - - - - - - - -");
 
 	CreateDrawToolBar();
+	CreateDrawToolBar2();
 	CreateStatusBar();
 }
 
@@ -114,7 +115,10 @@ operationType GUI::GetUseroperation() const
 		{
 			return DRAWING_AREA;
 		}
-
+		if (y >= 60 && y < ToolBarHeight - StatusBarHeight)
+		{
+			 return DRAWING_AREA;
+		}
 		//[3] User clicks on the status bar
 		return STATUS;
 	}
@@ -213,6 +217,25 @@ void GUI::CreateDrawToolBar()
 	pWind->DrawLine(0, ToolBarHeight, width, ToolBarHeight);
 
 }
+void GUI::CreateDrawToolBar2() 
+{
+	// ...
+	InterfaceMode = MODE_DRAW;
+	// Calculate the width and height of each icon in the vertical toolbar
+	int iconWidth = ToolBarHeight;
+	int iconHeight = MenuIconWidth;
+	string MenuIconImages[ToolBar2];
+	MenuIconImages[ICON_copy] = "images\\MenuIcons\\Menu_Rect.jpg";
+	// Draw the vertical toolbar
+	for (int i = 0; i < ToolBar2; i++) {
+		pWind->DrawImage(MenuIconImages[i], 0, (i + 1) * iconHeight, iconWidth, iconHeight);
+	}
+
+	// Draw a line to the right of the vertical toolbar
+	pWind->SetPen(RED, 3);
+	pWind->DrawLine(60, 50, iconWidth, height);
+}
+
 //////////////////////////////////////////////////////////////////////////////////////////
 
 void GUI::CreatePlayToolBar()
