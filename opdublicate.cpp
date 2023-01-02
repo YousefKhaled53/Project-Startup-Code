@@ -6,10 +6,13 @@ void opdublicate::Execute() {
 	pControl->getGraph()->dublicate();
 	ofstream myfile;
 	myfile.open("temp.txt");
-	//myfile.close();
 	pControl->getGraph()->Save(myfile);
-	ifstream myfile("temp.txt");
-//	pControl->getGraph()->load(myfile);
 	myfile.close();
-	
+
+	pControl->getGraph()->deleteall();
+
+	ifstream file("temp.txt");
+	pControl->getGraph()->load(file);
+	myfile.close();
+	remove("temp.txt");	
 }

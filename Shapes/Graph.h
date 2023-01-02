@@ -41,6 +41,7 @@ public:
 
 	void Resize(shape* pFig , double ratio);
 	void Rotate(shape* pFig);
+	void deleteall();
 
 	
 

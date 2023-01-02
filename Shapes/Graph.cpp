@@ -379,3 +379,8 @@ void Graph::hide2(GUI* pUI) {
 		shapesList[i]->hide(pUI);
 	}
 }
+void Graph::deleteall() {
+	for (int i = 0; i < shapesList.size(); i++) {
+		shapesList.clear();
+	}
+}
