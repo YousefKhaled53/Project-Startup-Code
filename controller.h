@@ -3,6 +3,7 @@
 #include "DEFS.h"
 #include "shapes/Graph.h"
 #include "GUI\GUI.h"
+#include "operations/opRotate.h"
 
 class operation; //forward declaration
 

@@ -15,6 +15,15 @@ class IrrPolygon :
 		virtual ~IrrPolygon();
 		virtual void Draw(GUI* pUI) const;
 		virtual void Save(ofstream& OutFile , int id);
+		void Resize(double r) {
+			double Rad=2;
+			
+			Point1->x = Rad;
+			Point1->y = Rad;
+
+		}
+		void Rotate();
+
 		bool is_in_fig(int x, int y);
 		virtual string printforselection();
 		virtual void scramble();
