@@ -29,6 +29,7 @@ void line::Save(ofstream& OutFile , int id) {
 	OutFile << shape::getborderwidth() << " ";
 	OutFile << "///" << " ";
 }
+<<<<<<< Updated upstream
 void line::scramble() {
 	int diffinx = abs((Corner1.x - Corner2.x));
 	int diffiny = abs((Corner1.y - Corner2.y));
@@ -38,6 +39,53 @@ void line::scramble() {
 	
 	Corner2.x = Corner1.x + diffinx;
 	Corner2.y = Corner1.y + diffiny;
+=======
+void line:: Resize(double r) {
+	Point npoint1 = Corner1;
+	Point npoint2 = Corner2;
+	
+	
+	double Distance = abs(Corner2.x - Corner1.x);
+	double x = Distance * 2 - Distance;
+	if (npoint1.x > npoint2.x) {
+		npoint1.x += x / 2;
+		npoint2.x -= x / 2;
+	}
+	else {
+		npoint1.x -= x / 2;
+		npoint2.x += x / 2;
+	}
+	Distance = abs(Corner2.y - Corner1.y);
+	if (npoint1.y > npoint2.y) {
+		npoint1.y += x / 2;
+		npoint2.y -= x / 2;
+	}
+	else {
+		npoint1.y -= x / 2;
+		npoint2.y += x / 2;
+	}
+	Corner1 = npoint1;
+	Corner2 = npoint2;
+
+}
+void line::Rotate() {
+	Point C1;
+	C1.x = (Corner1.x + Corner2.x) / 2;
+	C1.y = (Corner1.y + Corner2.y) / 2;
+	Corner1.x -= C1.x; Corner1.y -= C1.y;
+	Corner2.x -= C1.x; Corner2.y -= C1.y;
+	Point temp;
+	temp.x = Corner1.x ; temp.y = Corner1.y;
+	Corner1.x = -temp.y; Corner1.y = temp.x;
+
+	temp.x = Corner2.x; temp.y = Corner2.y;
+	Corner2.x = -temp.y; Corner2.y = temp.x;
+
+
+	Corner1.x += C1.x; Corner1.y += C1.y;
+	Corner2.x += C1.x; Corner2.y += C1.y;
+
+>>>>>>> Stashed changes
 }
 bool line::is_in_fig(int x, int y) {
 	//int LineSlope = ((Corner2.y - Corner1.y) / (Corner2.x - Corner1.x));

@@ -14,7 +14,9 @@ public:
 	virtual ~Circle();
 	virtual void Draw(GUI* pUI) const;
 	virtual void Save(ofstream& OutFile , int id);
+	void Resize(double r);
 	virtual string printforselection();
+	void Rotate();
 	bool is_in_fig(int x, int y);
 	virtual void scramble();
 

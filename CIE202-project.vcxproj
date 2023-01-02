@@ -187,14 +187,22 @@
     <ClCompile Include="operations\opCopy.cpp" />
     <ClCompile Include="operations\opdeleteshape.cpp" />
     <ClCompile Include="operations\opload.cpp" />
+<<<<<<< Updated upstream
     <ClCompile Include="operations\opPest.cpp" />
+=======
+    <ClCompile Include="operations\opResize.cpp" />
+>>>>>>> Stashed changes
     <ClCompile Include="operations\opsave.cpp" />
     <ClCompile Include="operations\opSelect.cpp" />
     <ClCompile Include="operations\opswitchplaymode.cpp" />
     <ClCompile Include="Opexit.cpp" />
+<<<<<<< Updated upstream
     <ClCompile Include="opmultidelete.cpp" />
     <ClCompile Include="opscramble.cpp" />
     <ClCompile Include="opsendtoback.cpp" />
+=======
+    <ClCompile Include="operations\opRotate.cpp" />
+>>>>>>> Stashed changes
     <ClCompile Include="Shapes\Circle.cpp" />
     <ClCompile Include="Shapes\Graph.cpp" />
     <ClCompile Include="Shapes\IrrPolygon.cpp" />
@@ -250,14 +258,22 @@
     <ClInclude Include="operations\opdeleteshape.h" />
     <ClInclude Include="operations\operation.h" />
     <ClInclude Include="operations\opload.h" />
+<<<<<<< Updated upstream
     <ClInclude Include="operations\opPest.h" />
+=======
+    <ClInclude Include="operations\opResize.h" />
+>>>>>>> Stashed changes
     <ClInclude Include="operations\opsave.h" />
     <ClInclude Include="operations\opSelect.h" />
     <ClInclude Include="operations\opswitchplaymode.h" />
     <ClInclude Include="Opexit.h" />
+<<<<<<< Updated upstream
     <ClInclude Include="opmultidelete.h" />
     <ClInclude Include="opscramble.h" />
     <ClInclude Include="opsendtoback.h" />
+=======
+    <ClInclude Include="operations\opRotate.h" />
+>>>>>>> Stashed changes
     <ClInclude Include="Shapes\Circle.h" />
     <ClInclude Include="Shapes\Graph.h" />
     <ClInclude Include="Shapes\IrrPolygon.h" />
