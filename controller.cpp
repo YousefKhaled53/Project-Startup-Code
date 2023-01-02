@@ -29,16 +29,13 @@
 #include"Opexit.h"
 #include "opCancelFillingGeneral.h"
 #include"operations/opdeleteshape.h"
-<<<<<<< Updated upstream
 #include"opscramble.h"
 #include"opdublicate.h"
 #include"opsendtoback.h"
 #include "opmultidelete.h"
-=======
 #include "../Project Startup Code/operations/opResize.h"
 
 
->>>>>>> Stashed changes
 //Constructor
 controller::controller()
 {
@@ -130,12 +127,9 @@ operation* controller::createOperation(operationType OpType)
 		//	pOp = new opswitchlaymode(this);
 			//break;
 		case TO_PLAY:
-<<<<<<< Updated upstream
 
-			pOp = new opswitchlaymode(this);
-=======
+			//pOp = new opswitchlaymode(this);
 			pOp = new opRotate(this);
->>>>>>> Stashed changes
 			break;
 
 		case LOAD:

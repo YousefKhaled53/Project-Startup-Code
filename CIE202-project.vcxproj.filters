@@ -70,17 +70,14 @@
     <ClCompile Include="opChangeGeneralFillColor.cpp" />
     <ClCompile Include="opCHangeGeneralDrawcolor.cpp" />
     <ClCompile Include="opCancelFillingGeneral.cpp" />
-<<<<<<< Updated upstream
     <ClCompile Include="opscramble.cpp" />
     <ClCompile Include="opdublicate.cpp" />
     <ClCompile Include="opsendtoback.cpp" />
     <ClCompile Include="opmultidelete.cpp" />
     <ClCompile Include="operations\opCopy.cpp" />
     <ClCompile Include="operations\opPest.cpp" />
-=======
     <ClCompile Include="operations\opResize.cpp" />
     <ClCompile Include="operations\opRotate.cpp" />
->>>>>>> Stashed changes
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CMUgraphicsLib\auxil.h" />
@@ -138,16 +135,13 @@
     <ClInclude Include="opChangeGeneralFillColor.h" />
     <ClInclude Include="opCHangeGeneralDrawcolor.h" />
     <ClInclude Include="opCancelFillingGeneral.h" />
-<<<<<<< Updated upstream
     <ClInclude Include="opscramble.h" />
     <ClInclude Include="opdublicate.h" />
     <ClInclude Include="opsendtoback.h" />
     <ClInclude Include="opmultidelete.h" />
     <ClInclude Include="operations\opCopy.h" />
     <ClInclude Include="operations\opPest.h" />
-=======
     <ClInclude Include="operations\opResize.h" />
     <ClInclude Include="operations\opRotate.h" />
->>>>>>> Stashed changes
   </ItemGroup>
 </Project>
