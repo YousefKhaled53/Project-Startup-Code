@@ -100,7 +100,7 @@ operationType GUI::GetUseroperation() const
 			case ICON_LOAD: return LOAD;
 			case ICON_PEN: return Pen_Width;
 			case ICON_SELECT: return SELECT;
-			case ICON_DEL: return RESIZE;
+			case ICON_DEL: return DEL;
 			case ICON_BRUSH_SIGNLE: return BRUSH_SINGLE;
 			case ICON_BRUSH_GENERAL: return BRUSH_GENERAL;
 			case ICON_BORDER_SINGLE:  return BORDER_SINGLE;

@@ -13,8 +13,6 @@ public:
 	virtual void Draw(GUI* pUI) const;
 	virtual void Save(ofstream& OutFile , int id);
 	bool is_in_fig(int x, int y);
-	void Resize(double r);
-	void Rotate();
 	virtual string printforselection();
 	virtual void scramble();
 };

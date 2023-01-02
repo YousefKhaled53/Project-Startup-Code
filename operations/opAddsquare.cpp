@@ -44,7 +44,7 @@ void opAddsquare::Execute()
 
 	}
 	pUI->ClearStatusBar();
-	//P2.y = P1.y + (P2.x - P1.x);
+	P2.y = P1.y + (P2.x - P1.x);
 
 	//Preapre all square parameters
 	GfxInfo squareGfxInfo;

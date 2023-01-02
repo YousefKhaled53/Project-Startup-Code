@@ -53,23 +53,6 @@ void Graph::Draw(GUI* pUI) const
 void Graph::deleteshape(shape* pShp) {
 	shapesList.erase(find(shapesList.begin(), shapesList.end(), pShp));
 }
-
-void Graph::Rotate(shape* pFig) {
-	for (int i = 0; i < shapesList.size(); i++) {
-		if (shapesList[i]->IsSelected()) {
-			shapesList[i]->Rotate();
-		}
-	}
-}
-
-void Graph::Resize(shape* pFig, double ratio) {
-	for (int i = 0; i < shapesList.size(); i++) {
-		if (shapesList[i]->IsSelected()) {
-			shapesList[i]->Resize(ratio);
-		}
-	}
-}
-
 void Graph::Save(ofstream& outfile) {
 	int zz = shapesList.size();
 	outfile << "blue green 5" << endl;
@@ -81,7 +64,6 @@ void Graph::Save(ofstream& outfile) {
 
 	}
 }
-
 color Graph::changestringtoints(int r, int g, int b) {
 	color c(r, g, b);
 	return c;

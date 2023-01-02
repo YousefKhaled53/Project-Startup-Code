@@ -13,12 +13,6 @@ public:
 	virtual void Save(ofstream& OutFile, int id);
 	bool is_in_fig(int x, int y);
 	virtual string printforselection();
-<<<<<<< Updated upstream
 	virtual void scramble();
-=======
-	void Resize(double r);
-	void Rotate();
-
->>>>>>> Stashed changes
 };
 

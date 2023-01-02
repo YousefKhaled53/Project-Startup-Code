@@ -31,7 +31,6 @@ public:
 	void SetSelected(shape* s);
 	void changefillcolor(shape* pFig,color newcolor);
 	int getsizeofvector();
-<<<<<<< Updated upstream
 	void scramble();
 	void dublicate();
 	void sendtoback(shape* pShp);
@@ -39,11 +38,5 @@ public:
 	void multidelete();
 
 
-=======
-	void Resize(shape* pFig , double ratio);
-	void Rotate(shape* pFig);
-
-	
->>>>>>> Stashed changes
 
 };

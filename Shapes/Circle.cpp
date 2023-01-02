@@ -21,42 +21,6 @@ void Circle::Draw(GUI* pUI) const
 	//Call Output::DrawRect to draw a rectangle on the screen	
 	pUI->DrawCircle(Center, radius, ShpGfxInfo);
 }
-//void Circle::GetRadius() {
-//	double Rad;
-//	Rad = sqrt(pow((Center.x + radius.x), 2) + pow((Center.y + radius.y), 2));
-//	return Rad;
-//}
-void Circle::Resize(double r) {
-	Point npoint1 =Center;
-	Point npoint2 = radius;
-
-	double Distance = abs(radius.x - Center.x);
-	double x = Distance * 2 - Distance;
-	if (npoint1.x > npoint2.x) {
-		npoint2.x -= x;
-	}
-	else {
-		npoint2.x += x ;
-	}
-	Distance = abs(radius.y - Center.y);
-	if (npoint1.y > npoint2.y) {
-		npoint2.y -= x ;
-	}
-	else {
-		npoint2.y += x ;
-	}
-	radius = npoint2;
-
-}
-void Circle::Rotate() {
-	Point C1 = Center;
-	radius.x -= C1.x; radius.y -= C1.y;
-	Point temp;
-	temp.x = radius.x; temp.y = radius.y;
-	radius.x = -temp.y; radius.y = temp.x;
-
-	radius.x += C1.x; radius.y += C1.y;
-}
 void Circle::Save(ofstream& OutFile , int id) {
 
 	OutFile << "CIRCLE" << " " << ID << " " << Center.x << " " << Center.y << " " << radius.x << " " << radius.y << " ";
