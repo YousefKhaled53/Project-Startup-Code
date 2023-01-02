@@ -119,3 +119,7 @@ string line::printforselection() {
 		" and (" + to_string(Corner2.x) + ", " + to_string(Corner2.y) + ")and Length ("+to_string(LineLength) + ")";
 	return msg;
 }
+void line::hide(GUI* pUI) {};
+void line::setishidentrue() {};// ishiden = true; };
+void line::setishidenfalse() { };//ishiden = false; };
+

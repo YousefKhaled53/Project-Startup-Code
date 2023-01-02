@@ -112,3 +112,6 @@ void Oval::scramble() {
 	Point2.x = Point1.x + diffinx;
 	Point2.y = Point1.y + diffiny;
 }
+void Oval::hide(GUI* pUI) {};
+void Oval::setishidentrue() {};// ishiden = true; };
+void Oval::setishidenfalse() { };//ishiden = false; };

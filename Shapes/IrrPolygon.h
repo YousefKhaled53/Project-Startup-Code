@@ -27,6 +27,10 @@ class IrrPolygon :
 		bool is_in_fig(int x, int y);
 		virtual string printforselection();
 		virtual void scramble();
+		virtual void hide(GUI* pUI);
+		virtual void setishidentrue();
+		virtual void setishidenfalse();
+
 
 };
 

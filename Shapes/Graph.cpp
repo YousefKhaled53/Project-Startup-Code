@@ -42,10 +42,13 @@ void Graph::Addshape(shape* pShp)
 ////////////////////////////////////////////////////////////////////////////////////
 //Draw all shapes on the user interface
 void Graph::Draw(GUI* pUI) const
-{
+{	
 	pUI->ClearDrawArea();
 	for (auto shapePointer : shapesList)
 		shapePointer->Draw(pUI);
+	
+	//pUI->CreateDrawToolBar();
+	//pUI->CreateStatusBar();
 
 }
 
@@ -364,5 +367,15 @@ void Graph::multiselect(int arrx[], int arry[], int size) {
 void Graph::multidelete (){
 	for (int i = 0; i < multishapesselected.size(); i++) {
 	shapesList.erase(find(shapesList.begin(), shapesList.end(), multishapesselected[i]));
+	}
+}
+void Graph::hide(GUI* pUI) {
+	for (int i = 0; i < shapesList.size(); i++) {
+		shapesList[i]->setishidentrue();
+	}
+}
+void Graph::hide2(GUI* pUI) {
+	for (int i = 0; i < shapesList.size(); i++) {
+		shapesList[i]->hide(pUI);
 	}
 }

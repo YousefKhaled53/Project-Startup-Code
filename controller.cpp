@@ -33,9 +33,13 @@
 #include"opdublicate.h"
 #include"opsendtoback.h"
 #include "opmultidelete.h"
+<<<<<<< Updated upstream
 #include "../Project Startup Code/operations/opResize.h"
 
 
+=======
+#include"ophide.h"
+>>>>>>> Stashed changes
 //Constructor
 controller::controller()
 {
@@ -61,8 +65,10 @@ operation* controller::createOperation(operationType OpType)
 	switch (OpType)
 	{
 		case DRAW_LINE:
+			//pOp = new ophide(this);
+
 			//pOp = new opCancelFillingGeneral(this);
-			//pOp = new opAddline(this);
+			pOp = new opAddline(this);
 			break;
 
 		case DRAW_RECT:
@@ -72,10 +78,9 @@ operation* controller::createOperation(operationType OpType)
 		case DRAW_TRI:
 
 			//pOp = new opmultidelete(this);
-			//pOp = new opscramble(this);
-			//pOp = new opdublicate(this);
+			
 			//pOp = new opsendtoback(this);
-			//pOp = new opAddtriangle(this);
+			pOp = new opAddtriangle(this);
 			break;
 			
 		case DRAW_SQUARE:
@@ -127,9 +132,13 @@ operation* controller::createOperation(operationType OpType)
 		//	pOp = new opswitchlaymode(this);
 			//break;
 		case TO_PLAY:
+<<<<<<< Updated upstream
 
 			//pOp = new opswitchlaymode(this);
 			pOp = new opRotate(this);
+=======
+			pOp = new opswitchlaymode(this);
+>>>>>>> Stashed changes
 			break;
 
 		case LOAD:
@@ -147,6 +156,17 @@ operation* controller::createOperation(operationType OpType)
 		case Pen_Width:
 			pOp = new opchangepenwidth(this);
 			break;
+		case hide:
+			pOp = new ophide(this);
+			break;
+		case scramble:
+			pOp = new opscramble(this);
+			break;
+		case duplicate:
+			pOp = new opdublicate(this);
+			break;
+			
+		
 
 	}
 
@@ -160,7 +180,9 @@ operation* controller::createOperation(operationType OpType)
 //Draw all shapes on the user interface
 void controller::UpdateInterface() const
 {	
+
 	pGraph->Draw(pGUI);
+	pGraph->hide2(pGUI);
 }
 ////////////////////////////////////////////////////////////////////////////////////
 //Return a pointer to the UI

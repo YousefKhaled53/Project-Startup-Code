@@ -17,5 +17,9 @@ public:
 	void Rotate();
 	virtual string printforselection();
 	virtual void scramble();
+	void hide(GUI* pUI);
+	virtual void setishidentrue();
+	virtual void setishidenfalse();
+
 };
 

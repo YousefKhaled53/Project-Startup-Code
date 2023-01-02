@@ -15,5 +15,12 @@ public:
 	bool is_in_fig(int x, int y);
 	virtual void scramble();
 	virtual string printforselection();
+<<<<<<< Updated upstream
 	void Rotate();
+=======
+	virtual void hide(GUI* pUI);
+	virtual void setishidentrue();
+	virtual void setishidenfalse();
+
+>>>>>>> Stashed changes
 };

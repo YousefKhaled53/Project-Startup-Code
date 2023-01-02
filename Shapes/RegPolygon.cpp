@@ -145,3 +145,6 @@ void RegPolygon::scramble() {
 	}*/
 	
 }
+void RegPolygon::hide(GUI* pUI) {};
+void RegPolygon::setishidentrue() {};// ishiden = true; };
+void RegPolygon::setishidenfalse() { };//ishiden = false; };

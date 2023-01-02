@@ -7,6 +7,7 @@
 #include "../GUI\GUI.h"
 #include "../controller.h"
 #include "../operations/opAddCircle.h"
+#include<Windows.h>
 Circle::Circle(Point P1, Point P2, GfxInfo shapeGfxInfo) :shape(shapeGfxInfo)
 {
 	Center = P1;
@@ -99,10 +100,21 @@ string Circle::printforselection() {
 void Circle::scramble() {
 	int diffinx = ((Center.x - radius.x));
 	int diffiny = ((Center.y - radius.y));
-	//srand(time(0));
 	Center.x = ((rand() % 1300))-diffinx;
 	Center.y = (50 + ((rand()) % 600))-diffiny;
 	radius.x = Center.x + diffinx;
 	radius.x = Center.x + diffinx;
 	radius.y = Center.y + diffiny;
 }
+void Circle::hide(GUI* pUI) {
+	
+	if (ishiden == true) {
+		int diffx = sqrt(((Center.x - radius.x) * (Center.x - radius.x)) + ((Center.y - radius.y) * (Center.y - radius.y)));
+		pUI->getwind()->DrawImage("images\\MenuIcons\\Menu_Load.jpg", (Center.x - diffx), (Center.y - diffx), 2 * diffx, 2 * diffx);
+		
+	}
+	
+	
+}
+void Circle::setishidentrue() { ishiden = true; };
+void Circle::setishidenfalse() { ishiden = false; };

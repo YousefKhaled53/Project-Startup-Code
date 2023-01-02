@@ -24,6 +24,10 @@ public:
 	bool is_in_fig(int x, int y);
 	virtual string printforselection();
 	virtual void scramble();
+	void hide(GUI* pUI);
+	virtual void setishidentrue();
+	virtual void setishidenfalse();
+
 
 };
 

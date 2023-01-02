@@ -124,6 +124,37 @@ operationType GUI::GetUseroperation() const
 	}
 	else	//GUI is in PLAY mode
 	{
+		if (y >= 0 && y < ToolBarHeight)
+		{
+			//Check whick Menu icon was clicked
+			//==> This assumes that menu icons are lined up horizontally <==
+			int ClickedIconOrder = (x / MenuIconWidth);
+			//Divide x coord of the point clicked by the menu icon width (int division)
+			//if division result is 0 ==> first icon is clicked, if 1 ==> 2nd icon and so on
+
+			switch (ClickedIconOrder)
+			{
+			case ICON_hide: return hide;
+			case ICON_scramble: return scramble;
+			case ICON_EXIT2: return EXIT;
+			case ICON_duplicate: return duplicate;
+			
+			
+			default: return EMPTY;	//A click on empty place in desgin toolbar
+			}
+		}
+
+		//[2] User clicks on the drawing area
+		if (y >= ToolBarHeight && y < height - StatusBarHeight)
+		{
+			return DRAWING_AREA;
+		}
+		if (y >= 60 && y < ToolBarHeight - StatusBarHeight)
+		{
+			return DRAWING_AREA;
+		}
+		//[3] User clicks on the status bar
+		return STATUS;
 		///TODO:
 		//perform checks similar to Draw mode checks above
 		//and return the correspoding operation
@@ -245,8 +276,12 @@ void GUI::CreatePlayToolBar()
 	GUI::ClearDrawToolBar();
 	string MenuIconImages[PLAY_ICON_COUNT];
 	MenuIconImages[ICON_hide] = "images\\MenuIcons\\unoip.jpg";
-	MenuIconImages[ICON_un] = "images\\MenuIcons\\eye.jpg";
-	MenuIconImages[ICON_Comingsoon] = "images\\MenuIcons\\soon.jpg";
+	
+	MenuIconImages[ICON_scramble] = "images\\MenuIcons\\switch.jpg";
+	MenuIconImages[ICON_duplicate] = "images\\MenuIcons\\double.jfif";
+
+	MenuIconImages[ICON_EXIT2] = "images\\MenuIcons\\Menu_Exit.jpg";
+	
 	for (int i = 0; i < PLAY_ICON_COUNT; i++)
 		pWind->DrawImage(MenuIconImages[i], i * MenuIconWidth, 0, MenuIconWidth, ToolBarHeight);
 

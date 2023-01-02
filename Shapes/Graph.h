@@ -36,7 +36,8 @@ public:
 	void sendtoback(shape* pShp);
 	void multiselect(int arrx[], int arry[],int size);
 	void multidelete();
-
+	void hide(GUI* pUI);
+	void hide2(GUI* pUI);
 
 	void Resize(shape* pFig , double ratio);
 	void Rotate(shape* pFig);

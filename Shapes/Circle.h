@@ -8,6 +8,7 @@ class Circle :
 private:
 	Point Center;
 	Point radius;
+	bool ishiden = false;
 
 public:
 	Circle(Point, Point, GfxInfo shapeGfxInfo);
@@ -19,6 +20,11 @@ public:
 	void Rotate();
 	bool is_in_fig(int x, int y);
 	virtual void scramble();
+	virtual void hide(GUI* pUI);
+	virtual void setishidentrue();
+	virtual void setishidenfalse();
+	
+
 
 };
 

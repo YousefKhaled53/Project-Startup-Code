@@ -135,3 +135,6 @@ void triangle::scramble() {
 	Corner3.x = Corner1.x + diffinx2;
 	Corner3.y = Corner1.y + diffiny2;
 }
+void triangle:: hide(GUI* pUI) {};
+void triangle::setishidentrue() {};// ishiden = true; };
+void triangle ::setishidenfalse() { };//ishiden = false; };

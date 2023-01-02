@@ -117,3 +117,6 @@ void Rect::scramble() {
 	Corner2.x = Corner1.x + diffinx;
 	Corner2.y = Corner1.y + diffiny;
 }
+void Rect::hide(GUI* pUI) {};
+void Rect::setishidentrue() {};// ishiden = true; };
+void Rect::setishidenfalse() { };//ishiden = false; };

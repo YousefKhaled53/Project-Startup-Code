@@ -117,3 +117,6 @@ void square::scramble() {
 	Corner2.x = Corner1.x + diffinx;
 	Corner2.y = Corner1.y + diffiny;
 }
+void square::hide(GUI* pUI) {};
+void square::setishidentrue() {};// ishiden = true; };
+void square::setishidenfalse() { };//ishiden = false; };

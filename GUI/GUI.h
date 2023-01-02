@@ -54,6 +54,7 @@ class GUI
 		ICON_BORDER_COLOR_GENERAL,
 		ICON_BRUSH_SIGNLE,
 		ICON_BRUSH_GENERAL,
+		
 
 		ICON_SELECT,      //Select icon in menu to select and unselect the shapes
 		//TODO: Add more icons names here
@@ -76,8 +77,9 @@ class GUI
 
 		//TODO: Add more icons names here
 		ICON_hide,
-		ICON_un,
-		ICON_Comingsoon,
+		ICON_scramble,
+		ICON_duplicate,
+		ICON_EXIT2,
 		PLAY_ICON_COUNT		//no. of menu icons ==> This should be the last line in this enum
 
 	};
@@ -140,9 +142,7 @@ public:
 	void Setpenwidth(int n);
 	void setcrntfillcolor(color newcolor);
 	void setcrntdrawcolor(color newcolor);
-	int getwidth();
-	int getheight();
-
+	
 
 
 	///Make similar functions for drawing all other shapes.
