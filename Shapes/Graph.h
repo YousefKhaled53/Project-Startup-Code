@@ -38,8 +38,9 @@ public:
 	void multidelete();
 	void hide(GUI* pUI);
 	void hide2(GUI* pUI);
-
+	//void Move(shape* pFig, Point P1, Point P2);
 	void Resize(shape* pFig , double ratio);
+	//void move(shape* pFig, Point P1, Point P2);
 	void Rotate(shape* pFig);
 	void deleteall();
 

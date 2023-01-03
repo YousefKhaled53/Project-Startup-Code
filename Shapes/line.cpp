@@ -4,6 +4,9 @@
 #include <cmath>
 
 #include <time.h>
+#include "../GUI/GUI.h"
+#include "../controller.h"
+#include "../operations/operation.h"
 #include <corecrt_math_defines.h>
 line::line(Point P1, Point P2, GfxInfo shapeGfxInfo) :shape(shapeGfxInfo)
 {
@@ -39,6 +42,41 @@ void line::scramble() {
 	Corner2.x = Corner1.x + diffinx;
 	Corner2.y = Corner1.y + diffiny;
 };
+void line::Move(Point P1, Point P2) {
+	/*double Distx1 = P1.x - Corner1.x;
+	double Disty1 = P1.y - Corner1.y;
+	double Distx2 = P1.x - Corner2.x;
+	double Disty2 = P1.y - Corner2.y;
+	
+	if (P1.x < P2.x) {
+		Corner1.x = P2.x - Distx1;
+	}
+	if (P1.x > P2.x) {
+		Corner1.x = P2.x + Distx1;
+	}
+	if (P1.y < P2.y) {
+		Corner1.y = P2.y - Disty1;
+	}
+	if (P1.y > P2.y) {
+		Corner1.y = P2.y - Disty1;
+	}
+	if (P1.x < P2.x) {
+		Corner2.x = P2.x - Distx2;
+	}
+	if (P1.x > P2.x) {
+		Corner2.x = P2.x + Distx2;
+	}
+	if (P1.y < P2.y) {
+		Corner2.y = P2.y - Disty2;
+	}
+	if (P1.y > P2.y) {
+		Corner2.y = P2.y - Disty2;
+	}*/
+	Corner1.x = P2.x - P1.x + Corner1.x;
+	Corner2.x = P2.x - P1.x + Corner2.x;
+	Corner1.y = P2.y - P1.y + Corner1.y;
+	Corner2.y = P2.y - P1.y + Corner2.y;
+}
 
 	void line::Resize(double r) {
 		Point npoint1 = Corner1;

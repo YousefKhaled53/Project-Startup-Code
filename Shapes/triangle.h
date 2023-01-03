@@ -15,6 +15,8 @@ public:
 	virtual string printforselection();
 	virtual void scramble();
 	void Resize(double r);
+	void Move(Point P1, Point P2) {}
+
 	void Rotate();
 	void hide(GUI* pUI);
 	virtual void setishidentrue();

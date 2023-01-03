@@ -71,19 +71,29 @@ void Graph::Resize(shape* pFig, double ratio) {
 			shapesList[i]->Resize(ratio);
 		}
 	}
-}
+};
 
-void Graph::Save(ofstream& outfile) {
-	int zz = shapesList.size();
-	outfile << "blue green 5" << endl;
-	outfile << shapesList.size()<<endl;
-	outfile << "FORMAT : SHAPE	NAME	 ID x,y for n points	redintensityfordrawcolor	greenintensityfordrawcolor	blueintensityfordrawcolor	greenintensityforfillcolor	blueintensityforfillcolor	redintensityforfillcolor	penwidth" << endl;
-	for (int i = 0; i < zz; i++) {
-		
-		shapesList[i]->Save(outfile, i+1); 
 
-	}
-}
+void Graph::Save(ofstream & outfile) {
+		int zz = shapesList.size();
+		outfile << "blue green 5" << endl;
+		outfile << shapesList.size() << endl;
+		outfile << "FORMAT : SHAPE	NAME	 ID x,y for n points	redintensityfordrawcolor	greenintensityfordrawcolor	blueintensityfordrawcolor	greenintensityforfillcolor	blueintensityforfillcolor	redintensityforfillcolor	penwidth" << endl;
+		for (int i = 0; i < zz; i++) {
+
+			shapesList[i]->Save(outfile, i + 1);
+
+		}
+	};
+//void Graph::move(shape* pFig, Point P1, Point P2) {
+	//pWind->WaitMouseClick(P2.x, P2.y);
+	//while (pWind->GetButtonState(LEFT_BUTTON, P2.x, P2.y)) {
+	//if (pGr->GetSelected()) {
+		//pGr->GetSelected()->move(P1, P2); // is done after making select function 
+		//Sleep(16);
+	//}
+//}
+//};
 
 color Graph::changestringtoints(int r, int g, int b) {
 	color c(r, g, b);

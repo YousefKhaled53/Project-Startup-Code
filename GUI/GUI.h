@@ -115,9 +115,10 @@ public:
 
 	// Input Functions  ---------------------------
 	void GetPointClicked(int& x, int& y) const;//Get coordinate where user clicks
+	void GetButtonState();
 	string GetSrting() const;	 //Returns a string entered by the user
 	operationType GetUseroperation() const; //Read the user click and map to an operation
-
+	buttonstate Drag(Point &P2);
 	// Output Functions  ---------------------------
 	window* CreateWind(int, int, int, int) const; //creates the application window
 	window* getwind();
@@ -143,8 +144,6 @@ public:
 	void setcrntfillcolor(color newcolor);
 	void setcrntdrawcolor(color newcolor);
 	
-
-
 	///Make similar functions for drawing all other shapes.
 
 	void PrintMessage(string msg) const;	//Print a message on Status bar

@@ -33,8 +33,9 @@
 #include"opdublicate.h"
 #include"opsendtoback.h"
 #include "opmultidelete.h"
-#include "../Project-Startup-Code/operations/opResize.h"
+#include "../Project Startup Code/operations/opResize.h"
 #include"ophide.h"
+#include "operations/opMove.h"
 //Constructor
 controller::controller()
 {
@@ -75,7 +76,8 @@ operation* controller::createOperation(operationType OpType)
 			//pOp = new opmultidelete(this);
 			
 			//pOp = new opsendtoback(this);
-			pOp = new opAddtriangle(this);
+			//pOp = new opAddtriangle(this);
+			pOp = new opMove(this);
 			break;
 			
 		case DRAW_SQUARE:
