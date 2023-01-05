@@ -6,6 +6,6 @@ void ophide::Execute() {
 	GUI* pUI = pControl->GetUI();
 
 	pControl->getGraph()->hide(pUI);
-	//Sleep(5000);
+	
 
 }

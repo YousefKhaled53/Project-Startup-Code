@@ -33,7 +33,7 @@
 #include"opdublicate.h"
 #include"opsendtoback.h"
 #include "opmultidelete.h"
-#include "../Project Startup Code/operations/opResize.h"
+#include "operations/opResize.h"
 #include"ophide.h"
 #include "operations/opMove.h"
 //Constructor
@@ -72,16 +72,13 @@ operation* controller::createOperation(operationType OpType)
 			break;
 
 		case DRAW_TRI:
-<<<<<<< HEAD
 			pOp = new opAddtriangle(this);
-=======
 
 			//pOp = new opmultidelete(this);
 			
 			//pOp = new opsendtoback(this);
 			//pOp = new opAddtriangle(this);
-			pOp = new opMove(this);
->>>>>>> 0b2df14358de392b9167d8a4fa11f46597322d5e
+			//pOp = new opMove(this);
 			break;
 			
 		case DRAW_SQUARE:
@@ -188,7 +185,7 @@ void controller::UpdateInterface() const
 {	
 
 	pGraph->Draw(pGUI);
-	pGraph->hide2(pGUI);
+	//pGraph->hide2(pGUI);
 }
 ////////////////////////////////////////////////////////////////////////////////////
 //Return a pointer to the UI
