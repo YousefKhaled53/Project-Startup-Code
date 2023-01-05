@@ -42,7 +42,9 @@ void GUI::GetPointClicked(int& x, int& y) const
 {
 	pWind->WaitMouseClick(x, y);	//Wait for mouse click
 }
-
+buttonstate GUI::Drag(Point &P2) {
+	return pWind->GetButtonState(LEFT_BUTTON, P2.x, P2.y);
+}
 string GUI::GetSrting() const
 {
 	string Label;

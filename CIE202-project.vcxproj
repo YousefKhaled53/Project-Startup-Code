@@ -187,6 +187,7 @@
     <ClCompile Include="operations\opCopy.cpp" />
     <ClCompile Include="operations\opdeleteshape.cpp" />
     <ClCompile Include="operations\opload.cpp" />
+    <ClCompile Include="operations\opMove.cpp" />
     <ClCompile Include="operations\opPest.cpp" />
     <ClCompile Include="operations\opResize.cpp" />
     <ClCompile Include="operations\opsave.cpp" />
@@ -253,6 +254,7 @@
     <ClInclude Include="operations\opdeleteshape.h" />
     <ClInclude Include="operations\operation.h" />
     <ClInclude Include="operations\opload.h" />
+    <ClInclude Include="operations\opMove.h" />
     <ClInclude Include="operations\opPest.h" />
     <ClInclude Include="operations\opResize.h" />
     <ClInclude Include="operations\opsave.h" />
