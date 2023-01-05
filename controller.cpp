@@ -71,10 +71,6 @@ operation* controller::createOperation(operationType OpType)
 			break;
 
 		case DRAW_TRI:
-
-			//pOp = new opmultidelete(this);
-			
-			//pOp = new opsendtoback(this);
 			pOp = new opAddtriangle(this);
 			break;
 			
@@ -156,9 +152,18 @@ operation* controller::createOperation(operationType OpType)
 		case duplicate:
 			pOp = new opdublicate(this);
 			break;
-			
-		
-
+		case COPY:
+			pOp = new opAddline(this);
+			break;
+		case PASTE:
+			pOp = new opAddRect(this);
+			break;	
+		case MULTIDELTE:
+			pOp = new opmultidelete(this);
+			break;
+		case sendtoback: 
+			pOp = new opsendtoback(this);
+			break;
 	}
 
 	return pOp;
@@ -185,10 +190,6 @@ Graph* controller::getGraph() const
 {
 	return pGraph;
 }
-/*window* controller::getwind() const {
-	return pWind;
-}*/
-
 
 //Destructor
 controller::~controller()

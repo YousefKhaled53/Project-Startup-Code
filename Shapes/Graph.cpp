@@ -46,7 +46,8 @@ void Graph::Draw(GUI* pUI) const
 	pUI->ClearDrawArea();
 	for (auto shapePointer : shapesList)
 		shapePointer->Draw(pUI);
-	
+
+	//pUI->CreateDrawToolBar2();
 	//pUI->CreateDrawToolBar();
 	//pUI->CreateStatusBar();
 

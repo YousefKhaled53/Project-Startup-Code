@@ -45,6 +45,11 @@ enum operationType //The operations supported (you can add more if needed)
 	hide,
 	scramble, 
 	duplicate,
+	COPY,
+	PASTE,
+	MULTIDELTE,
+	sendtoback,
+	
 
 	///TODO: Add more operation types (if needed)
 	//colors
