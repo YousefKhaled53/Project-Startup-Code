@@ -350,10 +350,7 @@ void Graph::scramble() {
 }
 void Graph::dublicate() {
 	const int z = shapesList.size();
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 	for (int i = 0; i < z; i++) {
 		shapesList.push_back(shapesList[i]);
 		int currentreplicaindex = i + z;
@@ -370,10 +367,7 @@ void Graph::dublicate() {
 	load(file);
 	myfile.close();
 	remove("temp.txt");
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 }
 void Graph::sendtoback(shape* pShp) {
 	for (int i = 0; i < shapesList.size(); i++) {

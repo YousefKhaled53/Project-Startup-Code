@@ -40,11 +40,7 @@
 #include"ophide.h"
 #include "operations/opMove.h"
 #include"operations/opStartr.h"
-<<<<<<< Updated upstream
 
-
-=======
->>>>>>> Stashed changes
 #include"operations/opUnhide.h"
 //Constructor
 controller::controller()
