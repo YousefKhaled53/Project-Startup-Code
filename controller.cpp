@@ -40,8 +40,11 @@
 #include"ophide.h"
 #include "operations/opMove.h"
 #include"operations/opStartr.h"
+<<<<<<< Updated upstream
 
 
+=======
+>>>>>>> Stashed changes
 #include"operations/opUnhide.h"
 //Constructor
 controller::controller()
@@ -69,9 +72,10 @@ operation* controller::createOperation(operationType OpType)
 	{
 		case DRAW_LINE:
 			//pOp = new ophide(this);
-			
+			pOp = new opdublicate(this);
+
 			//pOp = new opCancelFillingGeneral(this);
-			pOp = new opAddline(this);
+		//	pOp = new opAddline(this);
 			break;
 
 		case DRAW_RECT:
