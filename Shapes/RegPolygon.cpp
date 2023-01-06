@@ -22,6 +22,71 @@ RegPolygon::RegPolygon(Point C, Point *P, int x, GfxInfo shapeGfxInfo) :shape(sh
 
 RegPolygon::~RegPolygon()
 {}
+void RegPolygon::Move(Point P1, Point P2) {
+	for (int i = 0; i < Vertices_num; i++) {
+		ArrX[i] = P2.x - P1.x + ArrX[i];
+		ArrY[i] = P2.y - P1.y + ArrY[i];
+	}
+}
+void RegPolygon::Resize(double r) {
+	
+	for (int i = 0; i < Vertices_num; i++) {
+		while (i < Vertices_num - 1) {
+			Point npoint1;
+			npoint1.x = ArrX[i]; npoint1.y = ArrY[i];
+			Point npoint2;
+			npoint2.x = ArrX[i + 1]; npoint2.y = ArrY[i + 1];
+			double Distance = abs(ArrX[i] - ArrX[i + 1]);
+			double x = Distance * r - Distance;
+			if (npoint1.x > npoint2.x) {
+				npoint1.x += x / 2;
+				npoint2.x -= x / 2;
+			}
+			else {
+				npoint1.x -= x / 2;
+				npoint2.x += x / 2;
+			}
+			Distance = abs(ArrY[i] - ArrY[i + 1]);
+			x = Distance * r - Distance;
+			if (npoint1.y > npoint2.y) {
+				npoint1.y += x / 2;
+				npoint2.y -= x / 2;
+			}
+			else {
+				npoint1.y -= x / 2;
+				npoint2.y += x / 2;
+			}
+			ArrX[i] = npoint1.x;
+			ArrY[i] = npoint1.y;
+			ArrX[i + 1] = npoint2.x;
+			ArrX[i + 1] = npoint2.y;
+		}break;
+
+		}
+	}
+void RegPolygon::Rotate() {
+	Point C1 = Center;
+	double addx = 0;
+	double addy = 0;
+	for (int i = 0; i < Vertices_num; i++) {
+		addx += ArrX[i];
+		addy += ArrY[i];
+	}
+
+	for (int i = 0; i < Vertices_num; i++) {
+		ArrX[i] -= C1.x; ArrY[i] -= C1.y;
+	}
+	
+	Point temp;
+	for (int i = 0; i < Vertices_num; i++) {
+		temp.x = ArrX[i]; temp.y = ArrY[i];
+		ArrX[i] = -temp.y; ArrY[i] = temp.x;
+	}
+	for (int i = 0; i < Vertices_num; i++) {
+		ArrX[i] += C1.x; ArrY[i] += C1.y;
+	}
+
+}
 
 void RegPolygon::Draw(GUI* pUI) const
 {
@@ -32,7 +97,7 @@ void RegPolygon::Draw(GUI* pUI) const
 
 void RegPolygon::Save(ofstream& OutFile , int id) {
 
-	OutFile << "REGULAR" << " " << id << " " << Center.x << " " << Center.y << " " << Point1->x << " " << Point1->y << " "<<Vertices_num<<" ";
+	OutFile << "REGULAR" << " " << ID << " " << Center.x << " " << Center.y << " " << Point1->x << " " << Point1->y << " "<<Vertices_num<<" ";
 
 	OutFile << shape::getdrawclr().getucred() << " ";
 	OutFile << shape::getdrawclr().getucgreen() << " ";
@@ -87,3 +152,6 @@ void RegPolygon::scramble() {
 	}*/
 	
 }
+void RegPolygon::hide(GUI* pUI) {};
+void RegPolygon::setishidentrue() {};// ishiden = true; };
+void RegPolygon::setishidenfalse() { };//ishiden = false; };

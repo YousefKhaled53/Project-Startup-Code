@@ -12,6 +12,7 @@ void opChangeGeneralFillColor::Execute() {
 	Point p1;
 	pUI->getwind()->SetPen(BLACK);
 	pUI->getwind()->DrawString(300, 60, "the pallete ");
+	
 	pUI->getwind()->DrawImage("images\\MenuIcons\\p.jpg", 300, 100);
 	pUI->PrintMessage("click on the needed color ");
 	pUI->GetPointClicked(p1.x, p1.y);

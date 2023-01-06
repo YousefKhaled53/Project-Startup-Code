@@ -54,6 +54,7 @@ class GUI
 		ICON_BORDER_COLOR_GENERAL,
 		ICON_BRUSH_SIGNLE,
 		ICON_BRUSH_GENERAL,
+		
 
 		ICON_SELECT,      //Select icon in menu to select and unselect the shapes
 		//TODO: Add more icons names here
@@ -66,6 +67,16 @@ class GUI
 		DRAW_ICON_COUNT		//no. of menu icons ==> This should be the last line in this enum
 
 	};
+	enum ToolBar2 {
+		ICON_paste,
+		ICON_copy,
+		ICON_multidelete,
+		ICON_sendtoback,
+		ICON_MOVE,
+		ICON_RESIZE,
+		ICON_ROTATE,
+		ToolBar2
+	};
 
 	enum PlayMenuIcon //The icons of the Play menu (you should add more icons)
 	{
@@ -74,8 +85,9 @@ class GUI
 
 		//TODO: Add more icons names here
 		ICON_hide,
-		ICON_un,
-		ICON_Comingsoon,
+		ICON_scramble,
+		ICON_duplicate,
+		ICON_EXIT2,
 		PLAY_ICON_COUNT		//no. of menu icons ==> This should be the last line in this enum
 
 	};
@@ -112,19 +124,22 @@ public:
 
 	// Input Functions  ---------------------------
 	void GetPointClicked(int& x, int& y) const;//Get coordinate where user clicks
+	void GetButtonState();
 	string GetSrting() const;	 //Returns a string entered by the user
 	operationType GetUseroperation() const; //Read the user click and map to an operation
-
+	buttonstate Drag(Point &P2);
 	// Output Functions  ---------------------------
 	window* CreateWind(int, int, int, int) const; //creates the application window
 	window* getwind();
 	void CreateDrawToolBar() ;	//creates Draw mode toolbar & menu
+	void CreateDrawToolBar2();
 	void CreatePlayToolBar();	//creates Play mode toolbar & menu
 	void CreateStatusBar() const;	//create the status bar
 
 	void ClearStatusBar() const;	//Clears the status bar
 	void ClearDrawArea() const;	//Clears the drawing area
 	void ClearDrawToolBar() const;
+	void Cleartoolbar2() const;	//Clears the drawing area
 
 	// -- shapes Drawing functions
 	void DrawRect(Point P1, Point P2, GfxInfo RectGfxInfo) const;  //Draw a rectangle
@@ -138,12 +153,16 @@ public:
 	void Setpenwidth(int n);
 	void setcrntfillcolor(color newcolor);
 	void setcrntdrawcolor(color newcolor);
+<<<<<<< HEAD
 	void ZOOM(double Z);
 	int getwidth();
 	int getheight();
 
 
 
+=======
+	
+>>>>>>> 073d3d733cd788231ea1682db1c5a6aa502f2f9a
 	///Make similar functions for drawing all other shapes.
 
 	void PrintMessage(string msg) const;	//Print a message on Status bar

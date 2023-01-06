@@ -42,10 +42,16 @@ void Graph::Addshape(shape* pShp)
 ////////////////////////////////////////////////////////////////////////////////////
 //Draw all shapes on the user interface
 void Graph::Draw(GUI* pUI) const
-{
+{	
 	pUI->ClearDrawArea();
 	for (auto shapePointer : shapesList)
 		shapePointer->Draw(pUI);
+	for (int i = 0; i < shapesList.size(); i++) {
+		shapesList[i]->hide(pUI);
+	}
+	//pUI->CreateDrawToolBar2();
+	//pUI->CreateDrawToolBar();
+	//pUI->CreateStatusBar();
 
 }
 
@@ -53,17 +59,45 @@ void Graph::Draw(GUI* pUI) const
 void Graph::deleteshape(shape* pShp) {
 	shapesList.erase(find(shapesList.begin(), shapesList.end(), pShp));
 }
-void Graph::Save(ofstream& outfile) {
-	int zz = shapesList.size();
-	outfile << "blue green 5" << endl;
-	outfile << shapesList.size()<<endl;
-	outfile << "FORMAT : SHAPE	NAME	 ID x,y for n points	redintensityfordrawcolor	greenintensityfordrawcolor	blueintensityfordrawcolor	greenintensityforfillcolor	blueintensityforfillcolor	redintensityforfillcolor	penwidth" << endl;
-	for (int i = 0; i < zz; i++) {
-		
-		shapesList[i]->Save(outfile, i+1); 
 
+void Graph::Rotate(shape* pFig) {
+	for (int i = 0; i < shapesList.size(); i++) {
+		if (shapesList[i]->IsSelected()) {
+			shapesList[i]->Rotate();
+		}
 	}
 }
+
+void Graph::Resize(shape* pFig, double ratio) {
+	for (int i = 0; i < shapesList.size(); i++) {
+		if (shapesList[i]->IsSelected()) {
+			shapesList[i]->Resize(ratio);
+		}
+	}
+};
+
+
+void Graph::Save(ofstream & outfile) {
+		int zz = shapesList.size();
+		outfile << "blue green 5" << endl;
+		outfile << shapesList.size() << endl;
+		outfile << "FORMAT : SHAPE	NAME	 ID x,y for n points	redintensityfordrawcolor	greenintensityfordrawcolor	blueintensityfordrawcolor	greenintensityforfillcolor	blueintensityforfillcolor	redintensityforfillcolor	penwidth" << endl;
+		for (int i = 0; i < zz; i++) {
+
+			shapesList[i]->Save(outfile, i + 1);
+
+		}
+	};
+//void Graph::move(shape* pFig, Point P1, Point P2) {
+	//pWind->WaitMouseClick(P2.x, P2.y);
+	//while (pWind->GetButtonState(LEFT_BUTTON, P2.x, P2.y)) {
+	//if (pGr->GetSelected()) {
+		//pGr->GetSelected()->move(P1, P2); // is done after making select function 
+		//Sleep(16);
+	//}
+//}
+//};
+
 color Graph::changestringtoints(int r, int g, int b) {
 	color c(r, g, b);
 	return c;
@@ -306,10 +340,26 @@ void Graph::scramble() {
 		shapesList[i]->scramble();
 	}
 }
-void Graph::dublicate(GUI* pUI) {
+void Graph::dublicate() {
 	const int z = shapesList.size();
+	/*GfxInfo line;
+	line.BorderWdth = shapesList[0]->getborderwidth();
+	line.DrawClr = shapesList[0]->getdrawclr();
+	line.FillClr = shapesList[0]->getfillclr();
+	line.isFilled = shapesList[0]->getisfilled();
+	line.isSelected = false;
+	POINT p1, p2;
+	p1.x= shapesList[0]
+		Circle* p = (Circle*)shapesList[i];
+		if (Circle) {
+
+		}
+	*/
 	for (int i = 0; i < z; i++) {
-		shapesList.emplace_back(shapesList[i]);
+		shapesList.push_back(shapesList[i]);
+		int currentreplicaindex = i + z;
+		//int previd = shapesList[i]->getid();
+		shapesList[currentreplicaindex]->setid(i);
 	}
 }
 void Graph::sendtoback(shape* pShp) {
@@ -318,7 +368,7 @@ void Graph::sendtoback(shape* pShp) {
 		shapesList.insert(shapesList.begin(), pShp);
 	}
 }
-void Graph::multiselect(int arrx[], int arry[], int size, GUI* pUI) {
+void Graph::multiselect(int arrx[], int arry[], int size) {
 	for (auto shapePointer : shapesList)
 		for (int i = 0; i < size; i++) {
 			if (shapePointer->is_in_fig(arrx[i], arry[i])) {
@@ -330,5 +380,20 @@ void Graph::multiselect(int arrx[], int arry[], int size, GUI* pUI) {
 void Graph::multidelete (){
 	for (int i = 0; i < multishapesselected.size(); i++) {
 	shapesList.erase(find(shapesList.begin(), shapesList.end(), multishapesselected[i]));
+	}
+}
+void Graph::hide(GUI* pUI) {
+	for (int i = 0; i < shapesList.size(); i++) {
+		shapesList[i]->setishidentrue();
+	}
+}
+void Graph::hide2(GUI* pUI) {
+	for (int i = 0; i < shapesList.size(); i++) {
+		shapesList[i]->hide(pUI);
+	}
+}
+void Graph::deleteall() {
+	for (int i = 0; i < shapesList.size(); i++) {
+		shapesList.clear();
 	}
 }

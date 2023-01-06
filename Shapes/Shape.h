@@ -31,9 +31,15 @@ public:
 	void setisfilled();
 	int getid();
 	void setid(int i);
+	virtual void Resize(double ratio) = 0;
+	virtual void Rotate() = 0;
+	virtual void Move(Point P1, Point P2) = 0;
 	virtual bool is_in_fig(int x, int y) = 0;
 	virtual string printforselection()=0;
 	static bool InDrawArea(Point P);
+	virtual void hide(GUI* pUI)=0;
+	virtual void setishidentrue()=0;
+	virtual void setishidenfalse()=0;
 
 
 	///The following functions should be supported by the shape class	

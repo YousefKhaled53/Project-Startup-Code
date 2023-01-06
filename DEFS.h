@@ -44,6 +44,14 @@ enum operationType //The operations supported (you can add more if needed)
 
 	TO_DRAW,		//Switch interface to Draw mode
 	TO_PLAY,			//Switch interface to Play mode
+	hide,
+	scramble, 
+	duplicate,
+	COPY,
+	PASTE,
+	MULTIDELTE,
+	sendtoback,
+	
 
 	///TODO: Add more operation types (if needed)
 	//colors

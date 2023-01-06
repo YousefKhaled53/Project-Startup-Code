@@ -3,6 +3,6 @@ opscramble::opscramble(controller* pCont) : operation(pCont) {};
 void opscramble::Execute() {
 	GUI* pUI = pControl->GetUI();
 	pControl->getGraph()->scramble();
-	pUI->CreateDrawToolBar();
+	pUI->CreatePlayToolBar();
 	pUI->CreateStatusBar();
 }

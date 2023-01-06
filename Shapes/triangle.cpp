@@ -12,14 +12,92 @@ triangle::triangle (Point P1, Point P2, Point P3, GfxInfo shapeGfxInfo) : shape(
 
 triangle::~triangle()
 {}
+void triangle::Resize(double r) {
+		Point npoint1 = Corner1;
+		Point npoint2 = Corner2;
+		Point npoint3 = Corner3;
 
+
+		double Distance = abs(Corner2.x - Corner1.x);
+		double x = Distance * r - Distance;
+		if (npoint1.x > npoint2.x) {
+			npoint1.x += x / 2;
+			npoint2.x -= x / 2;
+		}
+		else {
+			npoint1.x -= x / 2;
+			npoint2.x += x / 2;
+		}
+		Distance = abs(Corner2.y - Corner1.y);
+		x = Distance * r - Distance;
+		if (npoint1.y > npoint2.y) {
+			npoint1.y += x / 2;
+			npoint2.y -= x / 2;
+		}
+		else {
+			npoint1.y -= x / 2;
+			npoint2.y += x / 2;
+		}
+
+
+		Distance = abs(Corner3.x - Corner2.x);
+		x = Distance * r - Distance;
+		if (npoint3.x > npoint2.x) {
+			npoint3.x += x / 2;
+		}
+		else {
+			npoint3.x -= x / 2;
+		}
+		Distance = abs(Corner2.y - Corner3.y);
+		x = Distance * r - Distance;
+		if (npoint3.y > npoint2.y) {
+			npoint3.y += x / 2;
+		}
+		else {
+			npoint3.y -= x / 2;
+		}
+		Corner1 = npoint1;
+		Corner2 = npoint2;
+		Corner3 = npoint3;
+	}
+void triangle::Move(Point P1, Point P2) {
+	Corner1.x = P2.x - P1.x + Corner1.x;
+	Corner2.x = P2.x - P1.x + Corner2.x;
+	Corner1.y = P2.y - P1.y + Corner1.y;
+	Corner2.y = P2.y - P1.y + Corner2.y;
+	Corner3.x = P2.x - P1.x + Corner3.x;
+	Corner3.y = P2.y - P1.y + Corner3.y;
+
+}
+void triangle::Rotate() {
+	Point C1;
+	C1.x = (Corner1.x + Corner2.x + Corner3.x) / 3;
+	C1.y = (Corner1.y + Corner2.y + Corner3.y) / 3;
+	Corner1.x -= C1.x; Corner1.y -= C1.y;
+	Corner2.x -= C1.x; Corner2.y -= C1.y;
+	Corner3.x -= C1.x; Corner3.y -= C1.y;
+	Point temp;
+	temp.x = Corner1.x; temp.y = Corner1.y;
+	Corner1.x = -temp.y; Corner1.y = temp.x;
+
+	temp.x = Corner2.x; temp.y = Corner2.y;
+	Corner2.x = -temp.y; Corner2.y = temp.x;
+	
+	temp.x = Corner3.x; temp.y = Corner3.y;
+	Corner3.x = -temp.y; Corner3.y = temp.x;
+
+
+	Corner1.x += C1.x; Corner1.y += C1.y;
+	Corner2.x += C1.x; Corner2.y += C1.y;
+	Corner3.x += C1.x; Corner3.y += C1.y;
+}
 void triangle ::Draw(GUI* pUI) const
 {
 	//Call Output::Drawline to draw a line on the screen	
 	pUI->Drawtriangle(Corner1, Corner2, Corner3, ShpGfxInfo);
 }
 void triangle::Save(ofstream& OutFile, int id) {
-	OutFile << "TRIANGLE" << " " << id << " " << Corner1.x << " " << Corner1.y << " " << Corner2.x << " " << Corner2.y << " "<<Corner3.x<<" "<<Corner3.y<<" ";
+	OutFile << "TRIANGLE" << " " << ID << " " << Corner1.x << " " << Corner1.y << " " << Corner2.x << " " << Corner2.y << " "<<Corner3.x<<" "<<Corner3.y<<" ";
 
 	OutFile << shape::getdrawclr().getucred() << " ";
 	OutFile << shape::getdrawclr().getucgreen() << " ";
@@ -67,3 +145,6 @@ void triangle::scramble() {
 	Corner3.x = Corner1.x + diffinx2;
 	Corner3.y = Corner1.y + diffiny2;
 }
+void triangle:: hide(GUI* pUI) {};
+void triangle::setishidentrue() {};// ishiden = true; };
+void triangle ::setishidenfalse() { };//ishiden = false; };

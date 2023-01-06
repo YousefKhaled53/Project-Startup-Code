@@ -7,6 +7,7 @@
 #include "../GUI\GUI.h"
 #include "../controller.h"
 #include "../operations/opAddCircle.h"
+#include<Windows.h>
 Circle::Circle(Point P1, Point P2, GfxInfo shapeGfxInfo) :shape(shapeGfxInfo)
 {
 	Center = P1;
@@ -21,9 +22,45 @@ void Circle::Draw(GUI* pUI) const
 	//Call Output::DrawRect to draw a rectangle on the screen	
 	pUI->DrawCircle(Center, radius, ShpGfxInfo);
 }
+//void Circle::GetRadius() {
+//	double Rad;
+//	Rad = sqrt(pow((Center.x + radius.x), 2) + pow((Center.y + radius.y), 2));
+//	return Rad;
+//}
+void Circle::Resize(double r) {
+	Point npoint1 =Center;
+	Point npoint2 = radius;
+
+	double Distance = abs(radius.x - Center.x);
+	double x = Distance * 2 - Distance;
+	if (npoint1.x > npoint2.x) {
+		npoint2.x -= x;
+	}
+	else {
+		npoint2.x += x ;
+	}
+	Distance = abs(radius.y - Center.y);
+	if (npoint1.y > npoint2.y) {
+		npoint2.y -= x ;
+	}
+	else {
+		npoint2.y += x ;
+	}
+	radius = npoint2;
+
+}
+void Circle::Rotate() {
+	Point C1 = Center;
+	radius.x -= C1.x; radius.y -= C1.y;
+	Point temp;
+	temp.x = radius.x; temp.y = radius.y;
+	radius.x = -temp.y; radius.y = temp.x;
+
+	radius.x += C1.x; radius.y += C1.y;
+}
 void Circle::Save(ofstream& OutFile , int id) {
 
-	OutFile << "CIRCLE" << " " << id << " " << Center.x << " " << Center.y << " " << radius.x << " " << radius.y << " ";
+	OutFile << "CIRCLE" << " " << ID << " " << Center.x << " " << Center.y << " " << radius.x << " " << radius.y << " ";
 
 	OutFile << shape::getdrawclr().getucred() << " ";
 	OutFile << shape::getdrawclr().getucgreen() << " ";
@@ -63,10 +100,21 @@ string Circle::printforselection() {
 void Circle::scramble() {
 	int diffinx = ((Center.x - radius.x));
 	int diffiny = ((Center.y - radius.y));
-	//srand(time(0));
 	Center.x = ((rand() % 1300))-diffinx;
 	Center.y = (50 + ((rand()) % 600))-diffiny;
 	radius.x = Center.x + diffinx;
 	radius.x = Center.x + diffinx;
 	radius.y = Center.y + diffiny;
 }
+void Circle::hide(GUI* pUI) {
+	
+	if (ishiden == true) {
+		int diffx = sqrt(((Center.x - radius.x) * (Center.x - radius.x)) + ((Center.y - radius.y) * (Center.y - radius.y)));
+		pUI->getwind()->DrawImage("images\\MenuIcons\\Menu_Load.jpg", (Center.x - diffx), (Center.y - diffx), 2 * diffx, 2 * diffx);
+		
+	}
+	
+	
+}
+void Circle::setishidentrue() { ishiden = true; };
+void Circle::setishidenfalse() { ishiden = false; };

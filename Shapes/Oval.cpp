@@ -12,6 +12,57 @@ Oval::Oval(Point P1, Point P2, GfxInfo shapeGfxInfo) :shape(shapeGfxInfo)
 
 Oval::~Oval()
 {}
+void Oval::Resize(double r) {
+	Point npoint1 = Point1;
+	Point npoint2 = Point2;
+
+
+	double Distance = abs(Point2.x - Point1.x);
+	double x = Distance * r - Distance;
+	if (npoint1.x > npoint2.x) {
+		npoint1.x += x / 2;
+		npoint2.x -= x / 2;
+	}
+	else {
+		npoint1.x -= x / 2;
+		npoint2.x += x / 2;
+	}
+	Distance = abs(Point2.y - Point1.y);
+	x = Distance * r - Distance;
+	if (npoint1.y > npoint2.y) {
+		npoint1.y += x / 2;
+		npoint2.y -= x / 2;
+	}
+	else {
+		npoint1.y -= x / 2;
+		npoint2.y += x / 2;
+	}
+	Point1 = npoint1;
+	Point2 = npoint2;
+}
+void Oval::Move(Point P1, Point P2) {
+	Point1.x = P2.x - P1.x + Point1.x;
+	Point2.x = P2.x - P1.x + Point2.x;
+	Point1.y = P2.y - P1.y + Point1.y;
+	Point2.y = P2.y - P1.y + Point2.y;
+}
+void Oval::Rotate() {
+	Point C1;
+	C1.x = (Point1.x + Point2.x) / 2;
+	C1.y = (Point1.y + Point2.y) / 2;
+	Point1.x -= C1.x; Point1.y -= C1.y;
+	Point2.x -= C1.x; Point2.y -= C1.y;
+	Point temp;
+	temp.x = Point1.x; temp.y = Point1.y;
+	Point1.x = -temp.y; Point1.y = temp.x;
+
+	temp.x = Point2.x; temp.y = Point2.y;
+	Point2.x = -temp.y; Point2.y = temp.x;
+
+
+	Point1.x += C1.x; Point1.y += C1.y;
+	Point2.x += C1.x; Point2.y += C1.y;
+}
 
 void Oval::Draw(GUI* pUI) const
 {
@@ -19,7 +70,7 @@ void Oval::Draw(GUI* pUI) const
 	pUI->DrawOval(Point1, Point2, ShpGfxInfo);{}
 }
 void Oval::Save(ofstream& OutFile , int id) {
-	OutFile << "OVAL" << " " << id << " " << Point1.x << " " << Point1.y << " " << Point2.x << " " << Point2.y << " ";
+	OutFile << "OVAL" << " " << ID << " " << Point1.x << " " << Point1.y << " " << Point2.x << " " << Point2.y << " ";
 
 	OutFile << shape::getdrawclr().getucred() << " ";
 	OutFile << shape::getdrawclr().getucgreen() << " ";
@@ -68,3 +119,6 @@ void Oval::scramble() {
 	Point2.x = Point1.x + diffinx;
 	Point2.y = Point1.y + diffiny;
 }
+void Oval::hide(GUI* pUI) {};
+void Oval::setishidentrue() {};// ishiden = true; };
+void Oval::setishidenfalse() { };//ishiden = false; };

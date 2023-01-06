@@ -14,7 +14,7 @@ void opmultidelete::Execute() {
 	for (int i = 0; i < n; i++) {
 		pUI->GetPointClicked(arrx[i],arry[i]);
 	}
-	pControl->getGraph()->multiselect(arrx,arry,n,pUI);
+	pControl->getGraph()->multiselect(arrx,arry,n);
 	pControl->getGraph()->multidelete();
 	
 }

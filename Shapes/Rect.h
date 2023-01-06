@@ -13,8 +13,15 @@ public:
 	virtual ~Rect();
 	virtual void Draw(GUI* pUI) const;
 	virtual void Save(ofstream& OutFile , int id);
+	void Resize(double r);
+	void Rotate();
+	void Move(Point P1, Point P2);
 	bool is_in_fig(int x, int y);
 	virtual string printforselection();
 	virtual void scramble();
+	void hide(GUI* pUI);
+	virtual void setishidentrue();
+	virtual void setishidenfalse();
+
 };
 

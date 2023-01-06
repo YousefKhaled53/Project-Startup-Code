@@ -6,7 +6,7 @@
 #include"../controller.h"
 class opload : public operation
 {
-public:
+public: 
 	opload(controller* pCont) : operation(pCont) {};
 	void Execute() {
 		GUI* pUI = pControl->GetUI();

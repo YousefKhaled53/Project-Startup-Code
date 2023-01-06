@@ -31,6 +31,7 @@ GUI::GUI()
 	pWind->ChangeTitle("- - - - - - - - - - PAINT ^ ^ PLAY - - - - - - - - - -");
 
 	CreateDrawToolBar();
+	CreateDrawToolBar2();
 	CreateStatusBar();
 }
 
@@ -42,7 +43,9 @@ void GUI::GetPointClicked(int& x, int& y) const
 {
 	pWind->WaitMouseClick(x, y);	//Wait for mouse click
 }
-
+buttonstate GUI::Drag(Point &P2) {
+	return pWind->GetButtonState(LEFT_BUTTON, P2.x, P2.y);
+}
 string GUI::GetSrting() const
 {
 	string Label;
@@ -78,12 +81,8 @@ operationType GUI::GetUseroperation() const
 		//[1] If user clicks on the Toolbar
 		if (y >= 0 && y < ToolBarHeight)
 		{
-			//Check whick Menu icon was clicked
-			//==> This assumes that menu icons are lined up horizontally <==
 			int ClickedIconOrder = (x / MenuIconWidth);
-			//Divide x coord of the point clicked by the menu icon width (int division)
-			//if division result is 0 ==> first icon is clicked, if 1 ==> 2nd icon and so on
-
+			
 			switch (ClickedIconOrder)
 			{
 			case ICON_RECT: return DRAW_RECT;
@@ -100,7 +99,7 @@ operationType GUI::GetUseroperation() const
 			case ICON_LOAD: return LOAD;
 			case ICON_PEN: return Pen_Width;
 			case ICON_SELECT: return SELECT;
-			case ICON_DEL: return DEL;
+			case ICON_DEL: return RESIZE;
 			case ICON_BRUSH_SIGNLE: return BRUSH_SINGLE;
 			case ICON_BRUSH_GENERAL: return BRUSH_GENERAL;
 			case ICON_BORDER_SINGLE:  return BORDER_SINGLE;
@@ -112,18 +111,68 @@ operationType GUI::GetUseroperation() const
 			default: return EMPTY;	//A click on empty place in desgin toolbar
 			}
 		}
+		if ( x >= 0 && x < 50)
+		{
+			int clickontoolbar2= ((y / 40)-1);
+			switch (clickontoolbar2)
+			{
+			case ICON_paste:return PASTE;
+			case ICON_copy: return COPY;
+			case ICON_multidelete: return MULTIDELTE;
+			case ICON_sendtoback: return sendtoback;
+			case ICON_MOVE: return MOVE;
+			case ICON_RESIZE: return RESIZE;
+			case ICON_ROTATE:return ROTATE;
+
+			default: return EMPTY;	//A click on empty place in desgin toolbar
+			}
+		}
 
 		//[2] User clicks on the drawing area
 		if (y >= ToolBarHeight && y < height - StatusBarHeight)
 		{
 			return DRAWING_AREA;
 		}
-
+		if (y >= 60 && y < ToolBarHeight - StatusBarHeight)
+		{
+			 return DRAWING_AREA;
+		}
 		//[3] User clicks on the status bar
 		return STATUS;
 	}
 	else	//GUI is in PLAY mode
 	{
+		if (y >= 0 && y < ToolBarHeight)
+		{
+			//Check whick Menu icon was clicked
+			//==> This assumes that menu icons are lined up horizontally <==
+			int ClickedIconOrder = (x / MenuIconWidth);
+			//Divide x coord of the point clicked by the menu icon width (int division)
+			//if division result is 0 ==> first icon is clicked, if 1 ==> 2nd icon and so on
+
+			switch (ClickedIconOrder)
+			{
+			case ICON_hide: return hide;
+			case ICON_scramble: return scramble;
+			case ICON_EXIT2: return EXIT;
+			case ICON_duplicate: return duplicate;
+			
+			
+			default: return EMPTY;	//A click on empty place in desgin toolbar
+			}
+		}
+
+		//[2] User clicks on the drawing area
+		if (y >= ToolBarHeight && y < height - StatusBarHeight)
+		{
+			return DRAWING_AREA;
+		}
+		if (y >= 60 && y < ToolBarHeight - StatusBarHeight)
+		{
+			return DRAWING_AREA;
+		}
+		//[3] User clicks on the status bar
+		return STATUS;
 		///TODO:
 		//perform checks similar to Draw mode checks above
 		//and return the correspoding operation
@@ -220,6 +269,7 @@ void GUI::CreateDrawToolBar()
 	MenuIconImages[ICON_ZOOM_IN] = "images\\MenuIcons\\ZOOM_IN.jpg";
 	MenuIconImages[ICON_ZOOM_OUT] = "images\\MenuIcons\\ZOOM_OUT.jpg";
 
+
 	//TODO: Prepare images for each menu icon and add it to the list
 
 	//Draw menu icon one image at a time
@@ -233,6 +283,34 @@ void GUI::CreateDrawToolBar()
 	pWind->DrawLine(0, ToolBarHeight, width, ToolBarHeight);
 
 }
+void GUI::CreateDrawToolBar2() 
+{
+	// ...
+	InterfaceMode = MODE_DRAW;
+	// Calculate the width and height of each icon in the vertical toolbar
+	int iconWidth = ToolBarHeight;
+	int iconHeight =40;
+	string MenuIconImages[ToolBar2];
+	MenuIconImages[ICON_paste] = "images\\MenuIcons\\Menu_Rect.jpg";
+	MenuIconImages[ICON_copy] = "images\\MenuIcons\\line.jpg";
+	MenuIconImages[ICON_multidelete] = "images\\MenuIcons\\download.jfif";	
+	MenuIconImages[ICON_sendtoback] = "images\\MenuIcons\\sendtoback.jfif";
+	MenuIconImages[ICON_MOVE] = "images\\MenuIcons\\Move_icon.jpg";
+	MenuIconImages[ICON_RESIZE] = "images\\MenuIcons\\Resize_icon.jpg";
+	MenuIconImages[ICON_ROTATE] = "images\\MenuIcons\\Rotate_icon.jpg";
+
+
+
+	// Draw the vertical toolbar
+	for (int i = 0; i < ToolBar2; i++) {
+		pWind->DrawImage(MenuIconImages[i], 0, (i + 1) * iconHeight, iconWidth, iconHeight);
+	}
+
+	// Draw a line to the right of the vertical toolbar
+	pWind->SetPen(RED, 3);
+	pWind->DrawLine(50, 50, iconWidth, height);
+}
+
 //////////////////////////////////////////////////////////////////////////////////////////
 
 void GUI::CreatePlayToolBar()
@@ -240,14 +318,18 @@ void GUI::CreatePlayToolBar()
 	InterfaceMode = MODE_PLAY;
 	GUI::ClearStatusBar();
 	GUI::ClearDrawToolBar();
+	GUI::Cleartoolbar2();
 	string MenuIconImages[PLAY_ICON_COUNT];
 	MenuIconImages[ICON_hide] = "images\\MenuIcons\\unoip.jpg";
-	MenuIconImages[ICON_un] = "images\\MenuIcons\\eye.jpg";
-	MenuIconImages[ICON_Comingsoon] = "images\\MenuIcons\\soon.jpg";
+	
+	MenuIconImages[ICON_scramble] = "images\\MenuIcons\\switch.jpg";
+	MenuIconImages[ICON_duplicate] = "images\\MenuIcons\\double.jfif";
+
+	MenuIconImages[ICON_EXIT2] = "images\\MenuIcons\\Menu_Exit.jpg";
+	
 	for (int i = 0; i < PLAY_ICON_COUNT; i++)
 		pWind->DrawImage(MenuIconImages[i], i * MenuIconWidth, 0, MenuIconWidth, ToolBarHeight);
 
-	//Draw a line under the toolbar
 	pWind->SetPen(RED, 3);
 	pWind->DrawLine(0, ToolBarHeight, width, ToolBarHeight);
 	GUI::ClearStatusBar();
@@ -258,11 +340,18 @@ void GUI::ClearDrawArea() const
 {
 	pWind->SetPen(BkGrndColor, 1);
 	pWind->SetBrush(BkGrndColor);
-	pWind->DrawRectangle(0, ToolBarHeight, width, height - StatusBarHeight);
+	pWind->DrawRectangle(50, ToolBarHeight,  width, height - StatusBarHeight);
 
 }
 //////////////////////////////////////////////////////////////////////////////////////////
 
+void GUI::Cleartoolbar2() const
+{
+	pWind->SetPen(WHITE, 1);
+	pWind->SetBrush(WHITE);
+	pWind->DrawRectangle(0, 0, 50, height);
+
+}
 void GUI::PrintMessage(string msg) const	//Prints a message on status bar
 {
 	ClearStatusBar();	//First clear the status bar

@@ -25,6 +25,7 @@
 #include"opCancelFillingGeneral.h"
 #include"operations/Opchangefillcolor.h"
 #include"./opchangepenwidth.h"
+#include"./operations/opCopy.h"
 #include"Opexit.h"
 #include "opCancelFillingGeneral.h"
 #include"operations/opdeleteshape.h"
@@ -32,9 +33,15 @@
 #include"opdublicate.h"
 #include"opsendtoback.h"
 #include "opmultidelete.h"
+<<<<<<< HEAD
 #include "operations/opMultiSelect.h"
 #include "operations/opZoomIn.h"
 #include "operations/opZoomOut.h"
+=======
+#include "operations/opResize.h"
+#include"ophide.h"
+#include "operations/opMove.h"
+>>>>>>> 073d3d733cd788231ea1682db1c5a6aa502f2f9a
 //Constructor
 controller::controller()
 {
@@ -60,8 +67,10 @@ operation* controller::createOperation(operationType OpType)
 	switch (OpType)
 	{
 		case DRAW_LINE:
+			//pOp = new ophide(this);
+
 			//pOp = new opCancelFillingGeneral(this);
-			//pOp = new opAddline(this);
+			pOp = new opAddline(this);
 			break;
 
 		case DRAW_RECT:
@@ -69,13 +78,13 @@ operation* controller::createOperation(operationType OpType)
 			break;
 
 		case DRAW_TRI:
+			pOp = new opAddtriangle(this);
 
-			pOp = new opmultidelete(this);
-
-			//pOp = new opscramble(this);
-			//pOp = new opdublicate(this);
+			//pOp = new opmultidelete(this);
+			
 			//pOp = new opsendtoback(this);
-		//	pOp = new opAddtriangle(this);
+			//pOp = new opAddtriangle(this);
+			//pOp = new opMove(this);
 			break;
 			
 		case DRAW_SQUARE:
@@ -112,16 +121,29 @@ operation* controller::createOperation(operationType OpType)
 		case BORDER_SINGLE: 
 			pOp = new opborderwidth(this);
 			break;
-
+		case MOVE:
+			pOp = new opMove(this);
+			break;
 		case STATUS:	//a click on the status bar ==> no operation
 			break;
 		case DEL:
 			//pOp = new opCancelFillingGeneral(this);
 			pOp = new opdeleteshape(this);
+			//break;
+		case RESIZE:
+			//pOp = new opCancelFillingGeneral(this);
+			pOp = new opResize(this);
 			break;
+		case ROTATE:
+			pOp = new opRotate(this);
+			break;
+	//	case TO_PLAY:
+		//	pOp = new opswitchlaymode(this);
+			//break;
 		case TO_PLAY:
-			pOp = new opsendtoback(this);
-			//pOp = new opswitchlaymode(this);
+
+			pOp = new opswitchlaymode(this);
+			//pOp = new opRotate(this);
 			break;
 		case LOAD:
 			pOp = new opload(this);
@@ -138,6 +160,7 @@ operation* controller::createOperation(operationType OpType)
 		case Pen_Width:
 			pOp = new opchangepenwidth(this);
 			break;
+<<<<<<< HEAD
 		case MultiSelect:
 			pOp = new opMultiSelect(this);
 			break;
@@ -148,6 +171,29 @@ operation* controller::createOperation(operationType OpType)
 			pOp = new opZoomOut(this);
 			break;
 
+=======
+		case hide:
+			pOp = new ophide(this);
+			break;
+		case scramble:
+			pOp = new opscramble(this);
+			break;
+		case duplicate:
+			pOp = new opdublicate(this);
+			break;
+		case COPY:
+			pOp = new opAddline(this);
+			break;
+		case PASTE:
+			pOp = new opAddRect(this);
+			break;	
+		case MULTIDELTE:
+			pOp = new opmultidelete(this);
+			break;
+		case sendtoback: 
+			pOp = new opsendtoback(this);
+			break;
+>>>>>>> 073d3d733cd788231ea1682db1c5a6aa502f2f9a
 	}
 
 	return pOp;
@@ -160,7 +206,9 @@ operation* controller::createOperation(operationType OpType)
 //Draw all shapes on the user interface
 void controller::UpdateInterface() const
 {	
+
 	pGraph->Draw(pGUI);
+	//pGraph->hide2(pGUI);
 }
 ////////////////////////////////////////////////////////////////////////////////////
 //Return a pointer to the UI
@@ -172,10 +220,6 @@ Graph* controller::getGraph() const
 {
 	return pGraph;
 }
-/*window* controller::getwind() const {
-	return pWind;
-}*/
-
 
 //Destructor
 controller::~controller()

@@ -17,7 +17,32 @@ IrrPolygon::IrrPolygon(Point *P1, int x, GfxInfo shapeGfxInfo) :shape(shapeGfxIn
 
 IrrPolygon::~IrrPolygon()
 {}
+void IrrPolygon::Rotate() {
+	Point C1;
+	double addx = 0;
+	double addy = 0;
+	for (int i = 0; i < Vertices_num; i++) {
+		addx += ArrX[i];
+		addy += ArrY[i];
+	}
 
+
+	C1.x = addx / Vertices_num;
+	C1.y = addy / Vertices_num;
+	for (int i = 0; i < Vertices_num; i++) {
+		ArrX[i] -= C1.x; ArrY[i] -= C1.y;
+	}
+
+	Point temp;
+	for (int i = 0; i < Vertices_num; i++) {
+		temp.x = ArrX[i]; temp.y = ArrY[i];
+		ArrX[i] = -temp.y; ArrY[i] = temp.x;
+	}
+	for (int i = 0; i < Vertices_num; i++) {
+		ArrX[i] += C1.x; ArrY[i] += C1.y;
+	}
+
+}
 void IrrPolygon::Draw(GUI* pUI) const
 {
 	
@@ -27,7 +52,7 @@ void IrrPolygon::Draw(GUI* pUI) const
 
 
 void IrrPolygon::Save(ofstream& OutFile , int id) {
-	OutFile << "IRREGULAR" << " " << id <<" "<<Vertices_num << " " << Point1->x << " " << Point1->y << " ";
+	OutFile << "IRREGULAR" << " " << ID <<" "<<Vertices_num << " " << Point1->x << " " << Point1->y << " ";
 
 	for (int i = 0; i < Vertices_num; i++) {
 		OutFile << ArrX[i]<< " "<<ArrY[i] << " ";
@@ -77,3 +102,6 @@ void IrrPolygon::scramble() {
 		ArrY[i] = (Point1->y + arrdiffiny[i+1]);
 	}*/
 }
+void IrrPolygon::hide(GUI* pUI) {};
+void IrrPolygon::setishidentrue() {};// ishiden = true; };
+void IrrPolygon::setishidenfalse() { };//ishiden = false; };
