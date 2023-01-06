@@ -7,6 +7,9 @@ class square :
 private:
 	Point Corner1;
 	Point Corner2;
+	bool ishiden = false;
+	int ShapeID;
+
 public:
 	square(Point, Point, GfxInfo shapeGfxInfo);
 	virtual ~square();
@@ -21,6 +24,7 @@ public:
 	void hide(GUI* pUI);
 	virtual void setishidentrue();
 	virtual void setishidenfalse();
+	virtual bool getishiden();
 	//virtual void    setisselectedfalse();
 };
 

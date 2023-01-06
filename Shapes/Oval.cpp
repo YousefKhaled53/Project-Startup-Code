@@ -8,6 +8,7 @@ Oval::Oval(Point P1, Point P2, GfxInfo shapeGfxInfo) :shape(shapeGfxInfo)
 {
 	Point1 = P1;
 	Point2 = P2;
+	ShapeID = ID;
 }
 
 Oval::~Oval()
@@ -70,7 +71,7 @@ void Oval::Draw(GUI* pUI) const
 	pUI->DrawOval(Point1, Point2, ShpGfxInfo);{}
 }
 void Oval::Save(ofstream& OutFile , int id) {
-	OutFile << "OVAL" << " " << ID << " " << Point1.x << " " << Point1.y << " " << Point2.x << " " << Point2.y << " ";
+	OutFile << "OVAL" << " " << ShapeID << " " << Point1.x << " " << Point1.y << " " << Point2.x << " " << Point2.y << " ";
 
 	OutFile << shape::getdrawclr().getucred() << " ";
 	OutFile << shape::getdrawclr().getucgreen() << " ";
@@ -123,5 +124,8 @@ void Oval::scramble() {
 	Point2.y = Point1.y + diffiny;
 }
 void Oval::hide(GUI* pUI) {};
-void Oval::setishidentrue() {};// ishiden = true; };
-void Oval::setishidenfalse() { };//ishiden = false; };
+void Oval::setishidentrue() { ishiden = true; };
+void Oval::setishidenfalse() { ishiden = false; };
+bool Oval::getishiden() {
+	return ishiden;
+}

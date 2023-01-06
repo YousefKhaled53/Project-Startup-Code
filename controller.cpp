@@ -39,8 +39,12 @@
 #include "operations/opResize.h"
 #include"ophide.h"
 #include "operations/opMove.h"
+<<<<<<< Updated upstream
 #include"opstart.h"
 
+=======
+#include"operations/opUnhide.h"
+>>>>>>> Stashed changes
 //Constructor
 controller::controller()
 {
@@ -173,7 +177,8 @@ operation* controller::createOperation(operationType OpType)
 			pOp = new ophide(this);
 			break;
 		case scramble:
-			pOp = new opscramble(this);
+		//	pOp = new opscramble(this);
+			pOp = new opUnhide(this);
 			break;
 		case duplicate:
 			pOp = new opdublicate(this);

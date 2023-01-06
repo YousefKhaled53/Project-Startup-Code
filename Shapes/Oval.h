@@ -6,6 +6,9 @@ class Oval :
 private:
 	Point Point1;
 	Point Point2;
+	bool ishiden = false;
+	int ShapeID;
+
 public:
 	Oval(Point, Point, GfxInfo shapeGfxInfo);
 	virtual ~Oval();
@@ -20,6 +23,7 @@ public:
 	void hide(GUI* pUI);
 	virtual void setishidentrue();
 	virtual void setishidenfalse();
+	virtual bool getishiden();
 
 };
 

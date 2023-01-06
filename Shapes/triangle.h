@@ -6,6 +6,9 @@ private:
 	Point Corner1;
 	Point Corner2;
 	Point Corner3;
+	bool ishiden = false;
+	int ShapeID;
+
 public:
 	triangle(Point, Point, Point, GfxInfo shapeGfxInfo);
 	virtual ~triangle();
@@ -20,6 +23,7 @@ public:
 	void hide(GUI* pUI);
 	virtual void setishidentrue();
 	virtual void setishidenfalse();
+	virtual bool getishiden();
 
 };
 

@@ -12,6 +12,8 @@ Circle::Circle(Point P1, Point P2, GfxInfo shapeGfxInfo) :shape(shapeGfxInfo)
 {
 	Center = P1;
 	radius = P2;
+	ShapeID = ID;
+
 }
 
 Circle::~Circle()
@@ -32,7 +34,7 @@ void Circle::Resize(double r) {
 	Point npoint2 = radius;
 
 	double Distance = abs(radius.x - Center.x);
-	double x = Distance * 2 - Distance;
+	double x = Distance * r - Distance;
 	if (npoint1.x > npoint2.x) {
 		npoint2.x -= x;
 	}
@@ -40,6 +42,8 @@ void Circle::Resize(double r) {
 		npoint2.x += x ;
 	}
 	Distance = abs(radius.y - Center.y);
+	 x = Distance * r - Distance;
+
 	if (npoint1.y > npoint2.y) {
 		npoint2.y -= x ;
 	}
@@ -60,7 +64,7 @@ void Circle::Rotate() {
 }
 void Circle::Save(ofstream& OutFile , int id) {
 
-	OutFile << "CIRCLE" << " " << ID << " " << Center.x << " " << Center.y << " " << radius.x << " " << radius.y << " ";
+	OutFile << "CIRCLE" << " " << ShapeID << " " << Center.x << " " << Center.y << " " << radius.x << " " << radius.y << " ";
 
 	OutFile << shape::getdrawclr().getucred() << " ";
 	OutFile << shape::getdrawclr().getucgreen() << " ";
@@ -122,3 +126,6 @@ void Circle::hide(GUI* pUI) {
 }
 void Circle::setishidentrue() { ishiden = true; };
 void Circle::setishidenfalse() { ishiden = false; };
+bool Circle::getishiden() {
+	return ishiden;
+}

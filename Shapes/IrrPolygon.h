@@ -10,6 +10,9 @@ class IrrPolygon :
 		int arrdiffiny[200];
 		int *ArrX = new int[1000];
 		int *ArrY = new int[1000];
+		bool ishiden = false;
+		int ShapeID;
+
 	public:
 		IrrPolygon(Point*, int, GfxInfo shapeGfxInfo);
 		virtual ~IrrPolygon();
@@ -30,6 +33,7 @@ class IrrPolygon :
 		virtual void hide(GUI* pUI);
 		virtual void setishidentrue();
 		virtual void setishidenfalse();
+		virtual bool getishiden();
 
 
 };

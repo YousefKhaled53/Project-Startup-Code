@@ -18,6 +18,8 @@ RegPolygon::RegPolygon(Point C, Point *P, int x, GfxInfo shapeGfxInfo) :shape(sh
 		ArrX[i] = vertixx;
 		ArrY[i] = vertixy;
 	}
+	ShapeID = ID;
+
 }
 
 RegPolygon::~RegPolygon()
@@ -97,7 +99,7 @@ void RegPolygon::Draw(GUI* pUI) const
 
 void RegPolygon::Save(ofstream& OutFile , int id) {
 
-	OutFile << "REGULAR" << " " << ID << " " << Center.x << " " << Center.y << " " << Point1->x << " " << Point1->y << " "<<Vertices_num<<" ";
+	OutFile << "REGULAR" << " " << ShapeID << " " << Center.x << " " << Center.y << " " << Point1->x << " " << Point1->y << " "<<Vertices_num<<" ";
 
 	OutFile << shape::getdrawclr().getucred() << " ";
 	OutFile << shape::getdrawclr().getucgreen() << " ";
@@ -153,5 +155,8 @@ void RegPolygon::scramble() {
 	
 }
 void RegPolygon::hide(GUI* pUI) {};
-void RegPolygon::setishidentrue() {};// ishiden = true; };
-void RegPolygon::setishidenfalse() { };//ishiden = false; };
+void RegPolygon::setishidentrue() { ishiden = true; };
+void RegPolygon::setishidenfalse() { ishiden = false; };
+bool RegPolygon::getishiden() {
+	return ishiden;
+}

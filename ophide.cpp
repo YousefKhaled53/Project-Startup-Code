@@ -7,5 +7,4 @@ void ophide::Execute() {
 
 	pControl->getGraph()->hide(pUI);
 	
-
 }

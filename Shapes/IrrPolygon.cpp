@@ -12,6 +12,8 @@ IrrPolygon::IrrPolygon(Point *P1, int x, GfxInfo shapeGfxInfo) :shape(shapeGfxIn
 		ArrX[i] = Point1[i].x;
 		ArrY[i] = Point1[i].y;
 	}
+	ShapeID = ID;
+
 
 }
 
@@ -52,7 +54,7 @@ void IrrPolygon::Draw(GUI* pUI) const
 
 
 void IrrPolygon::Save(ofstream& OutFile , int id) {
-	OutFile << "IRREGULAR" << " " << ID <<" "<<Vertices_num << " " << Point1->x << " " << Point1->y << " ";
+	OutFile << "IRREGULAR" << " " << ShapeID <<" "<<Vertices_num << " " << Point1->x << " " << Point1->y << " ";
 
 	for (int i = 0; i < Vertices_num; i++) {
 		OutFile << ArrX[i]<< " "<<ArrY[i] << " ";
@@ -103,5 +105,8 @@ void IrrPolygon::scramble() {
 	}*/
 }
 void IrrPolygon::hide(GUI* pUI) {};
-void IrrPolygon::setishidentrue() {};// ishiden = true; };
-void IrrPolygon::setishidenfalse() { };//ishiden = false; };
+void IrrPolygon::setishidentrue() { ishiden = true; };
+void IrrPolygon::setishidenfalse() { ishiden = false; };
+bool IrrPolygon::getishiden() {
+	return ishiden;
+}

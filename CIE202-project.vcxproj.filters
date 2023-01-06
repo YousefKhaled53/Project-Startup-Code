@@ -93,6 +93,8 @@
     <ClCompile Include="operations\opZoomIn.cpp" />
     <ClCompile Include="operations\opZoomOut.cpp" />
     <ClCompile Include="operations\opMove.cpp" />
+    <ClCompile Include="operations\opMatch.cpp" />
+    <ClCompile Include="operations\opUnhide.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CMUgraphicsLib\auxil.h" />
@@ -173,5 +175,7 @@
     <ClInclude Include="operations\opZoomIn.h" />
     <ClInclude Include="operations\opZoomOut.h" />
     <ClInclude Include="operations\opMove.h" />
+    <ClInclude Include="operations\opMatch.h" />
+    <ClInclude Include="operations\opUnhide.h" />
   </ItemGroup>
 </Project>
