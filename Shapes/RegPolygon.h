@@ -14,6 +14,9 @@ private:
 	int* ArrY=new int[2000];
 	int vertixx;
 	int vertixy;
+	bool ishiden = false;
+	int ShapeID;
+
 public:
 	RegPolygon(Point, Point*, int, GfxInfo shapeGfxInfo);
 	virtual ~RegPolygon();
@@ -28,6 +31,7 @@ public:
 	void hide(GUI* pUI);
 	virtual void setishidentrue();
 	virtual void setishidenfalse();
+	virtual bool getishiden();
 
 
 };

@@ -6,6 +6,9 @@ class line :public shape
 private:
 	Point Corner1;
 	Point Corner2;
+	bool ishiden = false;
+	int ShapeID;
+
 public:
 	line(Point, Point, GfxInfo shapeGfxInfo);
 	virtual ~line();
@@ -20,4 +23,5 @@ public:
 	virtual void hide(GUI* pUI);
 	virtual void setishidentrue();
 	virtual void setishidenfalse();
+	virtual bool getishiden();
 };

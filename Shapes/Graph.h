@@ -32,12 +32,14 @@ public:
 	void changefillcolor(shape* pFig,color newcolor);
 	int getsizeofvector();
 	void scramble();
+	void Match(GUI* pUI);
 	void dublicate();
 	void sendtoback(shape* pShp);
 	void multiselect(int arrx[], int arry[],int size);
 	void multidelete();
 	void hide(GUI* pUI);
 	void hide2(GUI* pUI);
+	void Unhide(Point* P1);
 	//void Move(shape* pFig, Point P1, Point P2);
 	void Resize(shape* pFig , double ratio);
 	//void move(shape* pFig, Point P1, Point P2);

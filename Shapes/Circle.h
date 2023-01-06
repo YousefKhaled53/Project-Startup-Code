@@ -8,6 +8,7 @@ class Circle :
 private:
 	Point Center;
 	Point radius;
+	int ShapeID;
 	bool ishiden = false;
 
 public:
@@ -24,6 +25,7 @@ public:
 	virtual void hide(GUI* pUI);
 	virtual void setishidentrue();
 	virtual void setishidenfalse();
+	virtual bool getishiden();
 	
 
 

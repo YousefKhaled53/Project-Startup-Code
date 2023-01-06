@@ -8,6 +8,8 @@ triangle::triangle (Point P1, Point P2, Point P3, GfxInfo shapeGfxInfo) : shape(
 	Corner1 = P1;
 	Corner2 = P2;
 	Corner3 = P3;
+	ShapeID = ID;
+
 }
 
 triangle::~triangle()
@@ -97,7 +99,7 @@ void triangle ::Draw(GUI* pUI) const
 	pUI->Drawtriangle(Corner1, Corner2, Corner3, ShpGfxInfo);
 }
 void triangle::Save(ofstream& OutFile, int id) {
-	OutFile << "TRIANGLE" << " " << ID << " " << Corner1.x << " " << Corner1.y << " " << Corner2.x << " " << Corner2.y << " "<<Corner3.x<<" "<<Corner3.y<<" ";
+	OutFile << "TRIANGLE" << " " << ShapeID << " " << Corner1.x << " " << Corner1.y << " " << Corner2.x << " " << Corner2.y << " "<<Corner3.x<<" "<<Corner3.y<<" ";
 
 	OutFile << shape::getdrawclr().getucred() << " ";
 	OutFile << shape::getdrawclr().getucgreen() << " ";
@@ -149,5 +151,8 @@ do
 	Corner3.y = Corner1.y + diffiny2;
 }
 void triangle:: hide(GUI* pUI) {};
-void triangle::setishidentrue() {};// ishiden = true; };
-void triangle ::setishidenfalse() { };//ishiden = false; };
+void triangle::setishidentrue() { ishiden = true; };
+void triangle::setishidenfalse() { ishiden = false; };
+bool triangle::getishiden() {
+	return ishiden;
+}

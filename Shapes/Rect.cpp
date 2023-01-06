@@ -7,6 +7,7 @@ Rect::Rect(Point P1, Point P2, GfxInfo shapeGfxInfo):shape(shapeGfxInfo)
 	Corner1 = P1;
 	Corner2 = P2;
 	ShapeID = ID;
+
 }
 
 Rect::~Rect()
@@ -70,7 +71,7 @@ void Rect::Draw(GUI* pUI) const
 void Rect::Save(ofstream& OutFile , int id)
 {
 
-	OutFile << "RECT" <<" " << ID<< " " << Corner1.x << " " << Corner1.y << " " << Corner2.x << " " << Corner2.y << " ";
+	OutFile << "RECT" <<" " << ShapeID<< " " << Corner1.x << " " << Corner1.y << " " << Corner2.x << " " << Corner2.y << " ";
 	
 	OutFile << shape::getdrawclr().getucred() << " ";
 	OutFile << shape::getdrawclr().getucgreen() << " ";
@@ -128,5 +129,8 @@ void Rect::scramble() {
 	Corner2.y = Corner1.y + diffiny;
 }
 void Rect::hide(GUI* pUI) {};
-void Rect::setishidentrue() {};// ishiden = true; };
-void Rect::setishidenfalse() { };//ishiden = false; };
+void Rect::setishidentrue() { ishiden = true; };
+void Rect::setishidenfalse() { ishiden = false; };
+bool Rect::getishiden() {
+	return ishiden;
+}

@@ -8,6 +8,8 @@ square::square(Point P1, Point P2, GfxInfo shapeGfxInfo) :shape(shapeGfxInfo)
 	Corner1 = P1;
 	Corner2 = P2;
 	Corner2.y = Corner1.y + (Corner2.x - Corner1.x);
+	ShapeID = ID;
+
 
 }
 
@@ -72,7 +74,7 @@ void square::Draw(GUI* pUI) const
 	pUI->Drawsquare(Corner1, Corner2, ShpGfxInfo);
 }
 void square::Save(ofstream& OutFile , int id) {
-	OutFile << "SQUARE" << " " << ID << " " << Corner1.x << " " << Corner1.y << " " << Corner2.x << " " << Corner2.y << " ";
+	OutFile << "SQUARE" << " " << ShapeID << " " << Corner1.x << " " << Corner1.y << " " << Corner2.x << " " << Corner2.y << " ";
 
 	OutFile << shape::getdrawclr().getucred() << " ";
 	OutFile << shape::getdrawclr().getucgreen() << " ";
@@ -128,6 +130,9 @@ void square::scramble() {
 	Corner2.y = Corner1.y + diffiny;
 }
 void square::hide(GUI* pUI) {};
-void square::setishidentrue() {};// ishiden = true; };
-void square::setishidenfalse() { };//ishiden = false; };
+void square::setishidentrue() { ishiden = true; };
+void square::setishidenfalse() { ishiden = false; };
+bool square::getishiden() {
+	return ishiden;
+}
 

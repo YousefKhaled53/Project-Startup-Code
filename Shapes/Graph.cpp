@@ -382,9 +382,34 @@ void Graph::multidelete (){
 	shapesList.erase(find(shapesList.begin(), shapesList.end(), multishapesselected[i]));
 	}
 }
+void Graph::Match(GUI* pUI){
+	for (int i = 0; i < shapesList.size(); i++) {
+		if (shapesList[i]->getishiden()==false) {
+			for (int j = i+1; j < shapesList.size(); i++) {
+				if (shapesList[j]->getishiden() == false) {
+					if (shapesList[i]->getid() == shapesList[i]->getid()) {
+						deleteshape(shapesList[i]);
+						deleteshape(shapesList[j]);
+					}
+					else {
+						shapesList[i]->setishidentrue();
+						shapesList[j]->setishidentrue();
+					}
+				}
+		}
+		}
+	}
+}
 void Graph::hide(GUI* pUI) {
 	for (int i = 0; i < shapesList.size(); i++) {
 		shapesList[i]->setishidentrue();
+	}
+}
+void Graph::Unhide(Point* P1) {
+	for (int i = 0; i < shapesList.size(); i++) {
+		if (shapesList[i]->is_in_fig(P1->x, P1->y)) {
+			shapesList[i]->setishidenfalse();
+		}
 	}
 }
 void Graph::hide2(GUI* pUI) {

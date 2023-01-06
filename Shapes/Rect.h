@@ -8,6 +8,8 @@ private:
 	Point Corner1;	
 	Point Corner2;
 	int ShapeID;
+	bool ishiden = false;
+
 public:
 	Rect(Point , Point, GfxInfo shapeGfxInfo );
 	virtual ~Rect();
@@ -22,6 +24,7 @@ public:
 	void hide(GUI* pUI);
 	virtual void setishidentrue();
 	virtual void setishidenfalse();
+	virtual bool getishiden();
 
 };
 

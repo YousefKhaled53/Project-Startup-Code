@@ -30,6 +30,7 @@ void opMove::Execute() {
 
 				while (!flag) {
 					pUI->Drag(P1);
+
 					while (!pUI->Drag(P2)) {
 						Sleep(16);
 						if (pGr->GetSelected()) {

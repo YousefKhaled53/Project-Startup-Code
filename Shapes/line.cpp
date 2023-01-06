@@ -12,6 +12,8 @@ line::line(Point P1, Point P2, GfxInfo shapeGfxInfo) :shape(shapeGfxInfo)
 {
 	Corner1 = P1;
 	Corner2 = P2;
+	ShapeID = ID;
+
 }
 
 line::~line()
@@ -24,7 +26,7 @@ void line::Draw(GUI* pUI) const
 }
 void line::Save(ofstream& OutFile , int id) {
 	
-	OutFile << "LINE" << " " << ID << " " << Corner1.x << " " << Corner1.y << " " << Corner2.x << " " << Corner2.y << " ";
+	OutFile << "LINE" << " " << ShapeID << " " << Corner1.x << " " << Corner1.y << " " << Corner2.x << " " << Corner2.y << " ";
 
 	OutFile << shape::getdrawclr().getucred() << " ";
 	OutFile << shape::getdrawclr().getucgreen() << " ";
@@ -46,35 +48,7 @@ void line::scramble() {
 	Corner2.y = Corner1.y + diffiny;
 };
 void line::Move(Point P1, Point P2) {
-	/*double Distx1 = P1.x - Corner1.x;
-	double Disty1 = P1.y - Corner1.y;
-	double Distx2 = P1.x - Corner2.x;
-	double Disty2 = P1.y - Corner2.y;
 	
-	if (P1.x < P2.x) {
-		Corner1.x = P2.x - Distx1;
-	}
-	if (P1.x > P2.x) {
-		Corner1.x = P2.x + Distx1;
-	}
-	if (P1.y < P2.y) {
-		Corner1.y = P2.y - Disty1;
-	}
-	if (P1.y > P2.y) {
-		Corner1.y = P2.y - Disty1;
-	}
-	if (P1.x < P2.x) {
-		Corner2.x = P2.x - Distx2;
-	}
-	if (P1.x > P2.x) {
-		Corner2.x = P2.x + Distx2;
-	}
-	if (P1.y < P2.y) {
-		Corner2.y = P2.y - Disty2;
-	}
-	if (P1.y > P2.y) {
-		Corner2.y = P2.y - Disty2;
-	}*/
 	Corner1.x = P2.x - P1.x + Corner1.x;
 	Corner2.x = P2.x - P1.x + Corner2.x;
 	Corner1.y = P2.y - P1.y + Corner1.y;
@@ -162,6 +136,9 @@ string line::printforselection() {
 	return msg;
 }
 void line::hide(GUI* pUI) {};
-void line::setishidentrue() {};// ishiden = true; };
-void line::setishidenfalse() { };//ishiden = false; };
+void line::setishidentrue() { ishiden = true; };
+void line::setishidenfalse() { ishiden = false; };
+bool line::getishiden() {
+	return ishiden;
+}
 

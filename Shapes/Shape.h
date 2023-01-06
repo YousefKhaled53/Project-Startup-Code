@@ -7,7 +7,7 @@
 class shape
 {
 protected:
-	int ID;		//Each shape has an ID
+	static int ID;		//Each shape has an ID
 	GfxInfo ShpGfxInfo;	//shape graphis info
 	
 	/// Add more parameters if needed.
@@ -40,6 +40,7 @@ public:
 	virtual void hide(GUI* pUI)=0;
 	virtual void setishidentrue()=0;
 	virtual void setishidenfalse()=0;
+	virtual bool getishiden() = 0;
 
 
 	///The following functions should be supported by the shape class	

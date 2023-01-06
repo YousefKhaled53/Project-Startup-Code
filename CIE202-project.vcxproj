@@ -188,6 +188,7 @@
     <ClCompile Include="operations\opdeleteshape.cpp" />
     <ClCompile Include="operations\opload.cpp" />
     <ClCompile Include="operations\opMultiSelect.cpp" />
+    <ClCompile Include="operations\opMatch.cpp" />
     <ClCompile Include="operations\opMove.cpp" />
     <ClCompile Include="operations\opPest.cpp" />
     <ClCompile Include="operations\opResize.cpp" />
@@ -197,6 +198,8 @@
     <ClCompile Include="operations\opswitchplaymode.cpp" />
     <ClCompile Include="operations\opZoomIn.cpp" />
     <ClCompile Include="operations\opZoomOut.cpp" />
+
+    <ClCompile Include="operations\opUnhide.cpp" />
     <ClCompile Include="Opexit.cpp" />
     <ClCompile Include="ophide.cpp" />
     <ClCompile Include="opmultidelete.cpp" />
@@ -259,6 +262,7 @@
     <ClInclude Include="operations\operation.h" />
     <ClInclude Include="operations\opload.h" />
     <ClInclude Include="operations\opMultiSelect.h" />
+    <ClInclude Include="operations\opMatch.h" />
     <ClInclude Include="operations\opMove.h" />
     <ClInclude Include="operations\opPest.h" />
     <ClInclude Include="operations\opResize.h" />
@@ -268,6 +272,8 @@
     <ClInclude Include="operations\opswitchplaymode.h" />
     <ClInclude Include="operations\opZoomIn.h" />
     <ClInclude Include="operations\opZoomOut.h" />
+
+    <ClInclude Include="operations\opUnhide.h" />
     <ClInclude Include="Opexit.h" />
     <ClInclude Include="ophide.h" />
     <ClInclude Include="opmultidelete.h" />

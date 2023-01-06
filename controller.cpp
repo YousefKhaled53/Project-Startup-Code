@@ -39,7 +39,13 @@
 #include "operations/opResize.h"
 #include"ophide.h"
 #include "operations/opMove.h"
+<<<<<<< HEAD
 #include"operations/opStartr.h"
+=======
+#include"opstart.h"
+
+#include"operations/opUnhide.h"
+>>>>>>> 93c4918dad421d2288ef715ff2b1a70ea0fe03df
 //Constructor
 controller::controller()
 {
@@ -172,7 +178,8 @@ operation* controller::createOperation(operationType OpType)
 			pOp = new ophide(this);
 			break;
 		case scramble:
-			pOp = new opscramble(this);
+		//	pOp = new opscramble(this);
+			pOp = new opUnhide(this);
 			break;
 		case duplicate:
 			pOp = new opdublicate(this);
