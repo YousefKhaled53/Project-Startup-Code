@@ -39,8 +39,7 @@
 #include "operations/opResize.h"
 #include"ophide.h"
 #include "operations/opMove.h"
-#include"opstart.h"
-
+#include"operations/opStartr.h"
 //Constructor
 controller::controller()
 {
@@ -191,7 +190,7 @@ operation* controller::createOperation(operationType OpType)
 			pOp = new opsendtoback(this);
 			break;
 		case start:
-			pOp = new opstart(this);
+			pOp = new opStartr(this);
 			break;
 	}
 

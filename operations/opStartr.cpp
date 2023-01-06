@@ -1,7 +1,7 @@
-#include "opstart.h"
-opstart::opstart(controller* pCont) : operation(pCont) {};
-opstart::~opstart() {};
-void opstart::Execute() {
+#include"opStartr.h"
+opStartr::opStartr(controller* pCont) : operation(pCont) {};
+opStartr::~opStartr() {};
+void opStartr::Execute() {
 	GUI* pUI = pControl->GetUI();
 
 	pControl->getGraph()->dublicate();

@@ -115,8 +115,8 @@ operationType GUI::GetUseroperation() const
 			switch (clickontoolbar2)
 			{
 			case ICON_Multi_Select: return MultiSelect;
-			case ICON_ZOOM_IN: return ZOOM_IN;
-			case ICON_ZOOM_OUT: return ZOOM_OUT;
+			//case ICON_ZOOM_IN: return ZOOM_IN;
+			//case ICON_ZOOM_OUT: return ZOOM_OUT;
 			case ICON_paste:return PASTE;
 			case ICON_copy: return COPY;
 			case ICON_multidelete: return MULTIDELTE;
@@ -298,8 +298,8 @@ void GUI::CreateDrawToolBar2()
 	MenuIconImages[ICON_MOVE] = "images\\MenuIcons\\Move_icon.jpg";
 	MenuIconImages[ICON_RESIZE] = "images\\MenuIcons\\Resize_icon.jpg";
 	MenuIconImages[ICON_ROTATE] = "images\\MenuIcons\\Rotate_icon.jpg";
-	MenuIconImages[ICON_ZOOM_IN] = "images\\MenuIcons\\ZOOM_IN.jpg";
-	MenuIconImages[ICON_ZOOM_OUT] = "images\\MenuIcons\\ZOOM_OUT.jpg";
+	//MenuIconImages[ICON_ZOOM_IN] = "images\\MenuIcons\\ZOOM_IN.jpg";
+	//MenuIconImages[ICON_ZOOM_OUT] = "images\\MenuIcons\\ZOOM_OUT.jpg";
 	MenuIconImages[ICON_Multi_Select] = "images\\MenuIcons\\Multi_Select.jpg";
 
 
@@ -324,8 +324,9 @@ void GUI::CreatePlayToolBar()
 	GUI::ClearDrawToolBar();
 	GUI::Cleartoolbar2();
 	string MenuIconImages[PLAY_ICON_COUNT];
-	MenuIconImages[ICON_hide] = "images\\MenuIcons\\unoip.jpg";
 	MenuIconImages[ICON_START] = "images\\MenuIcons\\start.jfif";
+
+	MenuIconImages[ICON_hide] = "images\\MenuIcons\\unoip.jpg";
 	
 	MenuIconImages[ICON_scramble] = "images\\MenuIcons\\switch.jpg";
 	MenuIconImages[ICON_duplicate] = "images\\MenuIcons\\double.jfif";

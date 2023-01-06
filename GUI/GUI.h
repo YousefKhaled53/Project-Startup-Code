@@ -67,8 +67,8 @@ class GUI
 	};
 	enum ToolBar2 {
 		ICON_Multi_Select,
-		ICON_ZOOM_IN,
-		ICON_ZOOM_OUT,
+		//ICON_ZOOM_IN,
+		//ICON_ZOOM_OUT,
 		ICON_paste,
 		ICON_copy,
 		ICON_multidelete,
@@ -85,8 +85,9 @@ class GUI
 		//If you want to change the menu icons order, change the order here
 
 		//TODO: Add more icons names here
-		ICON_hide,
 		ICON_START,
+		ICON_hide,
+
 		ICON_scramble,
 		ICON_duplicate,
 		ICON_EXIT2,
@@ -156,9 +157,7 @@ public:
 	void setcrntfillcolor(color newcolor);
 	void setcrntdrawcolor(color newcolor);
 	void ZOOM(double Z);
-	int getwidth();
-	int getheight();
-
+	
 
 
 	
