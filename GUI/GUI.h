@@ -70,6 +70,9 @@ class GUI
 		ICON_copy,
 		ICON_multidelete,
 		ICON_sendtoback,
+		ICON_MOVE,
+		ICON_RESIZE,
+		ICON_ROTATE,
 		ToolBar2
 	};
 

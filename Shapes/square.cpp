@@ -19,7 +19,7 @@ void square::Resize(double r) {
 
 
 	double Distance = abs(Corner2.x - Corner1.x);
-	double x = Distance * 2 - Distance;
+	double x = Distance * r - Distance;
 	if (npoint1.x > npoint2.x) {
 		npoint1.x += x / 2;
 		npoint2.x -= x / 2;
@@ -29,6 +29,7 @@ void square::Resize(double r) {
 		npoint2.x += x / 2;
 	}
 	Distance = abs(Corner2.y - Corner1.y);
+	x = Distance * r - Distance;
 	if (npoint1.y > npoint2.y) {
 		npoint1.y += x / 2;
 		npoint2.y -= x / 2;

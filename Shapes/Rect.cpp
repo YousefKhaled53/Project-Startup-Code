@@ -33,6 +33,7 @@ void Rect::Resize(double r) {
 		npoint2.x += x / 2;
 	}
 	Distance = abs(Corner2.y - Corner1.y);
+	x = Distance * r - Distance;
 	if (npoint1.y > npoint2.y) {
 		npoint1.y += x / 2;
 		npoint2.y -= x / 2;

@@ -116,6 +116,9 @@ operationType GUI::GetUseroperation() const
 			case ICON_copy: return COPY;
 			case ICON_multidelete: return MULTIDELTE;
 			case ICON_sendtoback: return sendtoback;
+			case ICON_MOVE: return MOVE;
+			case ICON_RESIZE: return RESIZE;
+			case ICON_ROTATE:return ROTATE;
 
 			default: return EMPTY;	//A click on empty place in desgin toolbar
 			}
@@ -246,6 +249,7 @@ void GUI::CreateDrawToolBar()
 	MenuIconImages[ICON_BORDER_COLOR_GENERAL] = "images\\MenuIcons\\Border_Color_General.jpg";
 	MenuIconImages[ICON_BORDER_COLOR_SINGLE] = "images\\MenuIcons\\Border_Color_Single.jpg";
 
+
 	//TODO: Prepare images for each menu icon and add it to the list
 
 	//Draw menu icon one image at a time
@@ -271,6 +275,11 @@ void GUI::CreateDrawToolBar2()
 	MenuIconImages[ICON_copy] = "images\\MenuIcons\\line.jpg";
 	MenuIconImages[ICON_multidelete] = "images\\MenuIcons\\download.jfif";	
 	MenuIconImages[ICON_sendtoback] = "images\\MenuIcons\\sendtoback.jfif";
+	MenuIconImages[ICON_MOVE] = "images\\MenuIcons\\Move_icon.jpg";
+	MenuIconImages[ICON_RESIZE] = "images\\MenuIcons\\Resize_icon.jpg";
+	MenuIconImages[ICON_ROTATE] = "images\\MenuIcons\\Rotate_icon.jpg";
+
+
 
 	// Draw the vertical toolbar
 	for (int i = 0; i < ToolBar2; i++) {

@@ -115,16 +115,21 @@ operation* controller::createOperation(operationType OpType)
 		case BORDER_SINGLE: 
 			pOp = new opborderwidth(this);
 			break;
-
+		case MOVE:
+			pOp = new opMove(this);
+			break;
 		case STATUS:	//a click on the status bar ==> no operation
 			break;
-		//case DEL:
+		case DEL:
 			//pOp = new opCancelFillingGeneral(this);
-			//pOp = new opdeleteshape(this);
+			pOp = new opdeleteshape(this);
 			//break;
 		case RESIZE:
 			//pOp = new opCancelFillingGeneral(this);
 			pOp = new opResize(this);
+			break;
+		case ROTATE:
+			pOp = new opRotate(this);
 			break;
 	//	case TO_PLAY:
 		//	pOp = new opswitchlaymode(this);
@@ -134,7 +139,6 @@ operation* controller::createOperation(operationType OpType)
 			pOp = new opswitchlaymode(this);
 			//pOp = new opRotate(this);
 			break;
-
 		case LOAD:
 			pOp = new opload(this);
 			break;
