@@ -324,9 +324,8 @@ void GUI::CreatePlayToolBar()
 	GUI::ClearDrawToolBar();
 	GUI::Cleartoolbar2();
 	string MenuIconImages[PLAY_ICON_COUNT];
-	MenuIconImages[ICON_START] = "images\\MenuIcons\\start.jfif";
-
 	MenuIconImages[ICON_hide] = "images\\MenuIcons\\unoip.jpg";
+	MenuIconImages[ICON_START] = "images\\MenuIcons\\start.jfif";
 	
 	MenuIconImages[ICON_scramble] = "images\\MenuIcons\\switch.jpg";
 	MenuIconImages[ICON_duplicate] = "images\\MenuIcons\\double.jfif";

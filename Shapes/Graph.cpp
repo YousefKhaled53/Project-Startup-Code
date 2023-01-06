@@ -332,6 +332,14 @@ shape* Graph::Getshape(int x, int y)
 int Graph::getsizeofvector() {
 	return shapesList.size();
 }
+bool Graph::getshapeslist() {
+	if (shapesList.size()==0){
+		return false;
+	}
+	else {
+		return true;
+	}
+}
 void Graph::scramble() {
 	srand(time(0));
 	int x = rand();
@@ -342,25 +350,25 @@ void Graph::scramble() {
 }
 void Graph::dublicate() {
 	const int z = shapesList.size();
-	/*GfxInfo line;
-	line.BorderWdth = shapesList[0]->getborderwidth();
-	line.DrawClr = shapesList[0]->getdrawclr();
-	line.FillClr = shapesList[0]->getfillclr();
-	line.isFilled = shapesList[0]->getisfilled();
-	line.isSelected = false;
-	POINT p1, p2;
-	p1.x= shapesList[0]
-		Circle* p = (Circle*)shapesList[i];
-		if (Circle) {
 
-		}
-	*/
 	for (int i = 0; i < z; i++) {
 		shapesList.push_back(shapesList[i]);
 		int currentreplicaindex = i + z;
 		//int previd = shapesList[i]->getid();
 		shapesList[currentreplicaindex]->setid(i);
 	}
+	ofstream myfile;
+	myfile.open("temp.txt");
+	Save(myfile);
+	myfile.close();
+
+	deleteall();
+
+	ifstream file("temp.txt");
+	load(file);
+	myfile.close();
+	remove("temp.txt");
+
 }
 void Graph::sendtoback(shape* pShp) {
 	for (int i = 0; i < shapesList.size(); i++) {
@@ -382,24 +390,31 @@ void Graph::multidelete (){
 	shapesList.erase(find(shapesList.begin(), shapesList.end(), multishapesselected[i]));
 	}
 }
-void Graph::Match(GUI* pUI){
+void Graph::Match(GUI* pUI) {
 	for (int i = 0; i < shapesList.size(); i++) {
-		if (shapesList[i]->getishiden()==false) {
-			for (int j = i+1; j < shapesList.size(); i++) {
+		if (shapesList[i]->getishiden() == false) {
+			for (int j = i + 1; j < shapesList.size(); j++) {
 				if (shapesList[j]->getishiden() == false) {
-					if (shapesList[i]->getid() == shapesList[i]->getid()) {
-						deleteshape(shapesList[i]);
-						deleteshape(shapesList[j]);
-					}
-					else {
-						shapesList[i]->setishidentrue();
-						shapesList[j]->setishidentrue();
+					if (shapesList[i]->getid() == shapesList[j]->getid()) {
+						if (i > j) {
+							deleteshape(shapesList[i]);
+							deleteshape(shapesList[j]);
+						}
+						if (i < j) {
+							deleteshape(shapesList[i]);
+							deleteshape(shapesList[j - 1]);
+						};
+					};
+				}
+				else {
+					shapesList[i]->setishidentrue();
+					shapesList[j]->setishidentrue();
 					}
 				}
-		}
+			}
 		}
 	}
-}
+
 void Graph::hide(GUI* pUI) {
 	for (int i = 0; i < shapesList.size(); i++) {
 		shapesList[i]->setishidentrue();
@@ -410,6 +425,7 @@ void Graph::Unhide(Point* P1) {
 		if (shapesList[i]->is_in_fig(P1->x, P1->y)) {
 			shapesList[i]->setishidenfalse();
 		}
+		
 	}
 }
 void Graph::hide2(GUI* pUI) {

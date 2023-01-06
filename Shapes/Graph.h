@@ -32,6 +32,7 @@ public:
 	void changefillcolor(shape* pFig,color newcolor);
 	int getsizeofvector();
 	void scramble();
+	bool getshapeslist();
 	void Match(GUI* pUI);
 	void dublicate();
 	void sendtoback(shape* pShp);
