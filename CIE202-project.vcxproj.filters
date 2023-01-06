@@ -74,6 +74,9 @@
     <ClCompile Include="opdublicate.cpp" />
     <ClCompile Include="opsendtoback.cpp" />
     <ClCompile Include="opmultidelete.cpp" />
+    <ClCompile Include="operations\opMultiSelect.cpp" />
+    <ClCompile Include="operations\opZoomIn.cpp" />
+    <ClCompile Include="operations\opZoomOut.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CMUgraphicsLib\auxil.h" />
@@ -135,5 +138,8 @@
     <ClInclude Include="opdublicate.h" />
     <ClInclude Include="opsendtoback.h" />
     <ClInclude Include="opmultidelete.h" />
+    <ClInclude Include="operations\opMultiSelect.h" />
+    <ClInclude Include="operations\opZoomIn.h" />
+    <ClInclude Include="operations\opZoomOut.h" />
   </ItemGroup>
 </Project>

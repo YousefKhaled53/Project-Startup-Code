@@ -33,7 +33,9 @@ enum operationType //The operations supported (you can add more if needed)
 	BRUSH_GENERAL,
 	BORDER_SINGLE,
 	SELECT,         //select and unselect the shapes 
-	
+	MultiSelect,
+	ZOOM_IN,
+	ZOOM_OUT,
 	EXIT,			//Exit the application
 
 	DRAWING_AREA,	//A click on the drawing area

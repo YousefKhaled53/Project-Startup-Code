@@ -58,7 +58,9 @@ class GUI
 		ICON_SELECT,      //Select icon in menu to select and unselect the shapes
 		//TODO: Add more icons names here
 		ICON_DEL,
-		
+		ICON_Multi_Select,
+		ICON_ZOOM_IN,
+		ICON_ZOOM_OUT,
 		ICON_EXIT,		//Exit icon
 
 		DRAW_ICON_COUNT		//no. of menu icons ==> This should be the last line in this enum
@@ -96,7 +98,8 @@ class GUI
 	color StatusBarColor;	//Status bar color
 	color toolbarcolor;
 	int PenWidth;			//width of the pen that draws shapes
-
+	double Zoom; 
+	Point ZoomMajor;
 	/// Add more members if needed
 
 
@@ -135,6 +138,7 @@ public:
 	void Setpenwidth(int n);
 	void setcrntfillcolor(color newcolor);
 	void setcrntdrawcolor(color newcolor);
+	void ZOOM(double Z);
 	int getwidth();
 	int getheight();
 

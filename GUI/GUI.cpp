@@ -4,12 +4,13 @@ GUI::GUI()
 {
 	//Initialize user interface parameters
 	InterfaceMode = MODE_DRAW;
-
 	width = 1300;
 	height = 650;
 	wx = 5;
 	wy = 5;
-
+	Zoom = 1;
+	ZoomMajor.x = width / 2;
+	ZoomMajor.y = height / 2;
 
 	StatusBarHeight = 50;
 	ToolBarHeight = 50;
@@ -24,7 +25,7 @@ GUI::GUI()
 	PenWidth = 3;	//default width of the shapes frames
 
 
-	//Create the output window
+	//Create the output window3.
 	pWind = CreateWind(width, height, wx, wy);
 	//Change the title
 	pWind->ChangeTitle("- - - - - - - - - - PAINT ^ ^ PLAY - - - - - - - - - -");
@@ -105,6 +106,9 @@ operationType GUI::GetUseroperation() const
 			case ICON_BORDER_SINGLE:  return BORDER_SINGLE;
 			case ICON_BORDER_COLOR_SINGLE: return BORDER_COLOR_SINGLE;
 			case ICON_BORDER_COLOR_GENERAL: return BORDER_COLOR_GENERAL;
+			case ICON_Multi_Select: return MultiSelect;
+			case ICON_ZOOM_IN: return ZOOM_IN;
+			case ICON_ZOOM_OUT: return ZOOM_OUT;
 			default: return EMPTY;	//A click on empty place in desgin toolbar
 			}
 		}
@@ -134,7 +138,20 @@ operationType GUI::GetUseroperation() const
 //======================================================================================//
 //								Output Functions										//
 //======================================================================================//
-
+void GUI::ZOOM(double Z) {
+	if (Z > 1) {
+		Zoom += 0.25;
+	}
+	else if (Z < 1) {
+		Zoom -= 0.25;
+	}
+	if (Zoom <= 0) {
+		Zoom = 1;
+	}
+	else if (Zoom >= 4) {
+		Zoom = 1;
+	}
+}
 window* GUI::CreateWind(int w, int h, int x, int y) const
 {
 	window* pW = new window(w, h, x, y);
@@ -199,6 +216,9 @@ void GUI::CreateDrawToolBar()
 	MenuIconImages[ICON_BORDER_SINGLE] = "images\\MenuIcons\\Menu_Width.jpg";
 	MenuIconImages[ICON_BORDER_COLOR_GENERAL] = "images\\MenuIcons\\Border_Color_General.jpg";
 	MenuIconImages[ICON_BORDER_COLOR_SINGLE] = "images\\MenuIcons\\Border_Color_Single.jpg";
+	MenuIconImages[ICON_Multi_Select] = "images\\MenuIcons\\Multi_Select.jpg";
+	MenuIconImages[ICON_ZOOM_IN] = "images\\MenuIcons\\ZOOM_IN.jpg";
+	MenuIconImages[ICON_ZOOM_OUT] = "images\\MenuIcons\\ZOOM_OUT.jpg";
 
 	//TODO: Prepare images for each menu icon and add it to the list
 

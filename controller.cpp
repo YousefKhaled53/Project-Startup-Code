@@ -32,6 +32,9 @@
 #include"opdublicate.h"
 #include"opsendtoback.h"
 #include "opmultidelete.h"
+#include "operations/opMultiSelect.h"
+#include "operations/opZoomIn.h"
+#include "operations/opZoomOut.h"
 //Constructor
 controller::controller()
 {
@@ -134,6 +137,15 @@ operation* controller::createOperation(operationType OpType)
 			break;
 		case Pen_Width:
 			pOp = new opchangepenwidth(this);
+			break;
+		case MultiSelect:
+			pOp = new opMultiSelect(this);
+			break;
+		case ZOOM_IN:
+			pOp = new opZoomIn(this);
+			break;
+		case ZOOM_OUT:
+			pOp = new opZoomOut(this);
 			break;
 
 	}
