@@ -15,13 +15,12 @@ public:
 	bool is_in_fig(int x, int y);
 	void Resize(double r);
 	void Rotate(); 
-	void Move(Point P1, Point P2) {}
-
+	void Move(Point P1, Point P2);
 	virtual string printforselection();
 	virtual void scramble();
 	void hide(GUI* pUI);
 	virtual void setishidentrue();
 	virtual void setishidenfalse();
-
+	//virtual void    setisselectedfalse();
 };
 

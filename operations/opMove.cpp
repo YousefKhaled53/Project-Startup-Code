@@ -6,16 +6,48 @@ void opMove::Execute() {
 	Point P2;
 	GUI* pUI = pControl->GetUI(); // getting a pointer from gui so that i can call print message and call selectshape
 	Graph* pGr = pControl->getGraph(); // getting a pointer of grapg so that i can call delete shape and getshape (but what does getshape do ??)
-	pUI->PrintMessage("click and start dragging");
+	pUI->PrintMessage("click in the shape you want to move");
 	pUI->GetPointClicked(P1.x, P1.y);
-	pUI->GetPointClicked(P2.x, P2.y);
-//	pWind->WaitMouseClick(P2.x, P2.y);
-	while (pUI->Drag(P2)) {
-		if (pGr->GetSelected()) {
-			pGr->GetSelected()->Move(P1, P2); // is done after making select function 
-			
-		}
-	Sleep(16);
+	//if (pGr->GetSelected()->is_in_fig(P1.x, P1.y)) {
+		shape* sel = pGr->Getshape(P1.x, P1.y);
+
+		if (sel) {
+
+			if (pGr->GetSelected()) {
+				sel->SetSelected(true);
+				pUI->ClearStatusBar();
+				pUI->PrintMessage(sel->printforselection());
+				pGr->GetSelected()->SetSelected(false);
+				pGr->SetSelected(sel);
+
+			}
+			else {
+
+				sel->SetSelected(true);
+				pGr->SetSelected(sel);
+				bool flag = false;
+				pUI->PrintMessage("click again to stop moving");
+
+				while (!flag) {
+					pUI->Drag(P1);
+					while (!pUI->Drag(P2)) {
+						Sleep(16);
+						if (pGr->GetSelected()) {
+							pGr->GetSelected()->Move(P1, P2); // is done after making select function 
+							pGr->Draw(pUI);
+							P1 = P2;
+
+						}
+					}
+
+					flag = true;
+				
+				}
+
+			}
+			pUI->CreateDrawToolBar();
+			sel->SetSelected(false);
+
 	}
 
 }

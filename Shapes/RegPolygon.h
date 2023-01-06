@@ -19,7 +19,7 @@ public:
 	virtual ~RegPolygon();
 	virtual void Draw(GUI* pUI) const;
 	void Resize(double r);
-	void Move(Point P1, Point P2) {}
+	void Move(Point P1, Point P2);
 	void Rotate();
 	virtual void Save(ofstream& OutFile , int id);
 	bool is_in_fig(int x, int y);

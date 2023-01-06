@@ -58,6 +58,12 @@ void square::Rotate() {
 	Corner1.x += C1.x; Corner1.y += C1.y;
 	Corner2.x += C1.x; Corner2.y += C1.y;
 }
+void square::Move(Point P1, Point P2) {
+	Corner1.x = P2.x - P1.x + Corner1.x;
+	Corner2.x = P2.x - P1.x + Corner2.x;
+	Corner1.y = P2.y - P1.y + Corner1.y;
+	Corner2.y = P2.y - P1.y + Corner2.y;
+}
 
 void square::Draw(GUI* pUI) const
 {
@@ -120,3 +126,4 @@ void square::scramble() {
 void square::hide(GUI* pUI) {};
 void square::setishidentrue() {};// ishiden = true; };
 void square::setishidenfalse() { };//ishiden = false; };
+

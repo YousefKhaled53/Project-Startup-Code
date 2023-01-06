@@ -11,13 +11,19 @@ Rect::Rect(Point P1, Point P2, GfxInfo shapeGfxInfo):shape(shapeGfxInfo)
 
 Rect::~Rect()
 {}
+void Rect::Move(Point P1,Point P2) {
+	Corner1.x = P2.x - P1.x + Corner1.x;
+	Corner2.x = P2.x - P1.x + Corner2.x;
+	Corner1.y = P2.y - P1.y + Corner1.y;
+	Corner2.y = P2.y - P1.y + Corner2.y;
+}
 void Rect::Resize(double r) {
 	Point npoint1 = Corner1;
 	Point npoint2 = Corner2;
 
 
 	double Distance = abs(Corner2.x - Corner1.x);
-	double x = Distance * 2 - Distance;
+	double x = Distance * r - Distance;
 	if (npoint1.x > npoint2.x) {
 		npoint1.x += x / 2;
 		npoint2.x -= x / 2;

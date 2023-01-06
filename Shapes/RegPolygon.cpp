@@ -22,6 +22,12 @@ RegPolygon::RegPolygon(Point C, Point *P, int x, GfxInfo shapeGfxInfo) :shape(sh
 
 RegPolygon::~RegPolygon()
 {}
+void RegPolygon::Move(Point P1, Point P2) {
+	for (int i = 0; i < Vertices_num; i++) {
+		ArrX[i] = P2.x - P1.x + ArrX[i];
+		ArrY[i] = P2.y - P1.y + ArrY[i];
+	}
+}
 void RegPolygon::Resize(double r) {
 	
 	for (int i = 0; i < Vertices_num; i++) {

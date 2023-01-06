@@ -58,7 +58,15 @@ void triangle::Resize(double r) {
 		Corner2 = npoint2;
 		Corner3 = npoint3;
 	}
+void triangle::Move(Point P1, Point P2) {
+	Corner1.x = P2.x - P1.x + Corner1.x;
+	Corner2.x = P2.x - P1.x + Corner2.x;
+	Corner1.y = P2.y - P1.y + Corner1.y;
+	Corner2.y = P2.y - P1.y + Corner2.y;
+	Corner3.x = P2.x - P1.x + Corner3.x;
+	Corner3.y = P2.y - P1.y + Corner3.y;
 
+}
 void triangle::Rotate() {
 	Point C1;
 	C1.x = (Corner1.x + Corner2.x + Corner3.x) / 3;

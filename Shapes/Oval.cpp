@@ -39,6 +39,12 @@ void Oval::Resize(double r) {
 	Point1 = npoint1;
 	Point2 = npoint2;
 }
+void Oval::Move(Point P1, Point P2) {
+	Point1.x = P2.x - P1.x + Point1.x;
+	Point2.x = P2.x - P1.x + Point2.x;
+	Point1.y = P2.y - P1.y + Point1.y;
+	Point2.y = P2.y - P1.y + Point2.y;
+}
 void Oval::Rotate() {
 	Point C1;
 	C1.x = (Point1.x + Point2.x) / 2;
