@@ -39,12 +39,9 @@
 #include "operations/opResize.h"
 #include"ophide.h"
 #include "operations/opMove.h"
-<<<<<<< Updated upstream
 #include"opstart.h"
 
-=======
 #include"operations/opUnhide.h"
->>>>>>> Stashed changes
 //Constructor
 controller::controller()
 {
