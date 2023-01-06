@@ -79,7 +79,6 @@
     <ClCompile Include="Shapes\Shape.cpp" />
     <ClCompile Include="Shapes\square.cpp" />
     <ClCompile Include="Shapes\triangle.cpp" />
-<<<<<<< HEAD
     <ClCompile Include="operations\Opchangefillcolor.cpp" />
     <ClCompile Include="operations\opborderwidth.cpp" />
     <ClCompile Include="operations\opbordercolor.cpp" />
@@ -93,9 +92,7 @@
     <ClCompile Include="operations\opMultiSelect.cpp" />
     <ClCompile Include="operations\opZoomIn.cpp" />
     <ClCompile Include="operations\opZoomOut.cpp" />
-=======
     <ClCompile Include="operations\opMove.cpp" />
->>>>>>> 073d3d733cd788231ea1682db1c5a6aa502f2f9a
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CMUgraphicsLib\auxil.h" />
@@ -162,7 +159,6 @@
     <ClInclude Include="Shapes\Shape.h" />
     <ClInclude Include="Shapes\square.h" />
     <ClInclude Include="Shapes\triangle.h" />
-<<<<<<< HEAD
     <ClInclude Include="operations\Opchangefillcolor.h" />
     <ClInclude Include="operations\opborderwidth.h" />
     <ClInclude Include="operations\opbordercolor.h" />
@@ -176,8 +172,6 @@
     <ClInclude Include="operations\opMultiSelect.h" />
     <ClInclude Include="operations\opZoomIn.h" />
     <ClInclude Include="operations\opZoomOut.h" />
-=======
     <ClInclude Include="operations\opMove.h" />
->>>>>>> 073d3d733cd788231ea1682db1c5a6aa502f2f9a
   </ItemGroup>
 </Project>

@@ -33,15 +33,12 @@
 #include"opdublicate.h"
 #include"opsendtoback.h"
 #include "opmultidelete.h"
-<<<<<<< HEAD
 #include "operations/opMultiSelect.h"
 #include "operations/opZoomIn.h"
 #include "operations/opZoomOut.h"
-=======
 #include "operations/opResize.h"
 #include"ophide.h"
 #include "operations/opMove.h"
->>>>>>> 073d3d733cd788231ea1682db1c5a6aa502f2f9a
 //Constructor
 controller::controller()
 {
@@ -160,7 +157,6 @@ operation* controller::createOperation(operationType OpType)
 		case Pen_Width:
 			pOp = new opchangepenwidth(this);
 			break;
-<<<<<<< HEAD
 		case MultiSelect:
 			pOp = new opMultiSelect(this);
 			break;
@@ -171,7 +167,6 @@ operation* controller::createOperation(operationType OpType)
 			pOp = new opZoomOut(this);
 			break;
 
-=======
 		case hide:
 			pOp = new ophide(this);
 			break;
@@ -193,7 +188,6 @@ operation* controller::createOperation(operationType OpType)
 		case sendtoback: 
 			pOp = new opsendtoback(this);
 			break;
->>>>>>> 073d3d733cd788231ea1682db1c5a6aa502f2f9a
 	}
 
 	return pOp;

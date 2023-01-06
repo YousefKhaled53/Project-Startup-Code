@@ -105,9 +105,7 @@ operationType GUI::GetUseroperation() const
 			case ICON_BORDER_SINGLE:  return BORDER_SINGLE;
 			case ICON_BORDER_COLOR_SINGLE: return BORDER_COLOR_SINGLE;
 			case ICON_BORDER_COLOR_GENERAL: return BORDER_COLOR_GENERAL;
-			case ICON_Multi_Select: return MultiSelect;
-			case ICON_ZOOM_IN: return ZOOM_IN;
-			case ICON_ZOOM_OUT: return ZOOM_OUT;
+
 			default: return EMPTY;	//A click on empty place in desgin toolbar
 			}
 		}
@@ -116,6 +114,9 @@ operationType GUI::GetUseroperation() const
 			int clickontoolbar2= ((y / 40)-1);
 			switch (clickontoolbar2)
 			{
+			case ICON_Multi_Select: return MultiSelect;
+			case ICON_ZOOM_IN: return ZOOM_IN;
+			case ICON_ZOOM_OUT: return ZOOM_OUT;
 			case ICON_paste:return PASTE;
 			case ICON_copy: return COPY;
 			case ICON_multidelete: return MULTIDELTE;
@@ -265,9 +266,6 @@ void GUI::CreateDrawToolBar()
 	MenuIconImages[ICON_BORDER_SINGLE] = "images\\MenuIcons\\Menu_Width.jpg";
 	MenuIconImages[ICON_BORDER_COLOR_GENERAL] = "images\\MenuIcons\\Border_Color_General.jpg";
 	MenuIconImages[ICON_BORDER_COLOR_SINGLE] = "images\\MenuIcons\\Border_Color_Single.jpg";
-	MenuIconImages[ICON_Multi_Select] = "images\\MenuIcons\\Multi_Select.jpg";
-	MenuIconImages[ICON_ZOOM_IN] = "images\\MenuIcons\\ZOOM_IN.jpg";
-	MenuIconImages[ICON_ZOOM_OUT] = "images\\MenuIcons\\ZOOM_OUT.jpg";
 
 
 	//TODO: Prepare images for each menu icon and add it to the list
@@ -298,6 +296,10 @@ void GUI::CreateDrawToolBar2()
 	MenuIconImages[ICON_MOVE] = "images\\MenuIcons\\Move_icon.jpg";
 	MenuIconImages[ICON_RESIZE] = "images\\MenuIcons\\Resize_icon.jpg";
 	MenuIconImages[ICON_ROTATE] = "images\\MenuIcons\\Rotate_icon.jpg";
+	MenuIconImages[ICON_ZOOM_IN] = "images\\MenuIcons\\ZOOM_IN.jpg";
+	MenuIconImages[ICON_ZOOM_OUT] = "images\\MenuIcons\\ZOOM_OUT.jpg";
+	MenuIconImages[ICON_Multi_Select] = "images\\MenuIcons\\Multi_Select.jpg";
+
 
 
 

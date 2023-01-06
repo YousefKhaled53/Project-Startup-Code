@@ -59,15 +59,16 @@ class GUI
 		ICON_SELECT,      //Select icon in menu to select and unselect the shapes
 		//TODO: Add more icons names here
 		ICON_DEL,
-		ICON_Multi_Select,
-		ICON_ZOOM_IN,
-		ICON_ZOOM_OUT,
+
 		ICON_EXIT,		//Exit icon
 
 		DRAW_ICON_COUNT		//no. of menu icons ==> This should be the last line in this enum
 
 	};
 	enum ToolBar2 {
+		ICON_Multi_Select,
+		ICON_ZOOM_IN,
+		ICON_ZOOM_OUT,
 		ICON_paste,
 		ICON_copy,
 		ICON_multidelete,
@@ -153,16 +154,13 @@ public:
 	void Setpenwidth(int n);
 	void setcrntfillcolor(color newcolor);
 	void setcrntdrawcolor(color newcolor);
-<<<<<<< HEAD
 	void ZOOM(double Z);
 	int getwidth();
 	int getheight();
 
 
 
-=======
 	
->>>>>>> 073d3d733cd788231ea1682db1c5a6aa502f2f9a
 	///Make similar functions for drawing all other shapes.
 
 	void PrintMessage(string msg) const;	//Print a message on Status bar
