@@ -157,6 +157,8 @@ operationType GUI::GetUseroperation() const
 			case ICON_scramble: return scramble;
 			case ICON_EXIT2: return EXIT;
 			case ICON_duplicate: return duplicate;
+			case ICON_START: return start;
+
 			
 			
 			default: return EMPTY;	//A click on empty place in desgin toolbar
@@ -305,7 +307,7 @@ void GUI::CreateDrawToolBar2()
 
 	// Draw the vertical toolbar
 	for (int i = 0; i < ToolBar2; i++) {
-		pWind->DrawImage(MenuIconImages[i], 0, (i + 1) * iconHeight, iconWidth, iconHeight);
+		pWind->DrawImage(MenuIconImages[i], 0, ((i + 1) * iconHeight)+50, iconWidth, iconHeight);
 	}
 
 	// Draw a line to the right of the vertical toolbar
@@ -323,6 +325,7 @@ void GUI::CreatePlayToolBar()
 	GUI::Cleartoolbar2();
 	string MenuIconImages[PLAY_ICON_COUNT];
 	MenuIconImages[ICON_hide] = "images\\MenuIcons\\unoip.jpg";
+	MenuIconImages[ICON_START] = "images\\MenuIcons\\start.jfif";
 	
 	MenuIconImages[ICON_scramble] = "images\\MenuIcons\\switch.jpg";
 	MenuIconImages[ICON_duplicate] = "images\\MenuIcons\\double.jfif";

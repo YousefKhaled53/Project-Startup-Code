@@ -98,10 +98,14 @@ string Circle::printforselection() {
 }
 
 void Circle::scramble() {
-	int diffinx = ((Center.x - radius.x));
-	int diffiny = ((Center.y - radius.y));
-	Center.x = ((rand() % 1300))-diffinx;
-	Center.y = (50 + ((rand()) % 600))-diffiny;
+	int diffinx = abs((Center.x - radius.x));
+	int diffiny = abs((Center.y - radius.y));
+	do
+	{
+		Center.x = ((rand() % 1300)) - diffinx;
+		Center.y = (50 + ((rand()) % 600)) - diffiny;
+	} while (Center.x>(1300-diffinx) && Center .y>(550-diffiny) && Center.x < 50 && Center.y <50);
+	
 	radius.x = Center.x + diffinx;
 	radius.x = Center.x + diffinx;
 	radius.y = Center.y + diffiny;

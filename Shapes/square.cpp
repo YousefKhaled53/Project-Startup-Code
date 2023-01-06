@@ -119,8 +119,11 @@ string square::printforselection() {
 void square::scramble() {
 	int diffinx = abs((Corner1.x - Corner2.x));
 	int diffiny = abs((Corner1.y - Corner2.y));
-	Corner1.x = (rand() % 1300)-diffinx;
-	Corner1.y = (50 + ( (rand()) % 600))-diffiny;
+	do
+	{
+		Corner1.x = ((rand() % 1300)) - diffinx;
+		Corner1.y = (50 + ((rand()) % 600)) - diffiny;
+	} while (Corner1.x > (1300 - diffinx) && Corner1.y > (550 - diffiny) && Corner1.x < 50 && Corner1.y < 50);
 	Corner2.x = Corner1.x + diffinx;
 	Corner2.y = Corner1.y + diffiny;
 }

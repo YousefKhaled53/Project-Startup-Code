@@ -39,6 +39,8 @@
 #include "operations/opResize.h"
 #include"ophide.h"
 #include "operations/opMove.h"
+#include"opstart.h"
+
 //Constructor
 controller::controller()
 {
@@ -65,7 +67,7 @@ operation* controller::createOperation(operationType OpType)
 	{
 		case DRAW_LINE:
 			//pOp = new ophide(this);
-
+			
 			//pOp = new opCancelFillingGeneral(this);
 			pOp = new opAddline(this);
 			break;
@@ -187,6 +189,9 @@ operation* controller::createOperation(operationType OpType)
 			break;
 		case sendtoback: 
 			pOp = new opsendtoback(this);
+			break;
+		case start:
+			pOp = new opstart(this);
 			break;
 	}
 

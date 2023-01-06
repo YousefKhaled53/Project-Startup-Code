@@ -114,8 +114,11 @@ void Oval::scramble() {
 
 	int diffinx = abs((Point1.x-Point2.x));
 	int diffiny = abs((Point1.y-Point2.y));
-	Point1.x = (rand() % 1300)-diffinx;
-	Point1.y = (50 + ((rand()) % 600))-diffiny;
+	do
+	{
+		Point1.x = ((rand() % 1300)) - diffinx;
+		Point1.y = (50 + ((rand()) % 600)) - diffiny;
+	} while (Point1.x > (1300 - diffinx) && Point1.y > (550 - diffiny) && Point1.x < 50 && Point1.y < 50);
 	Point2.x = Point1.x + diffinx;
 	Point2.y = Point1.y + diffiny;
 }

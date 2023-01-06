@@ -51,6 +51,8 @@ enum operationType //The operations supported (you can add more if needed)
 	PASTE,
 	MULTIDELTE,
 	sendtoback,
+	start,
+
 	
 
 	///TODO: Add more operation types (if needed)

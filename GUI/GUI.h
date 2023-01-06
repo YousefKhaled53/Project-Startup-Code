@@ -86,6 +86,7 @@ class GUI
 
 		//TODO: Add more icons names here
 		ICON_hide,
+		ICON_START,
 		ICON_scramble,
 		ICON_duplicate,
 		ICON_EXIT2,

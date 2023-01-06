@@ -138,8 +138,11 @@ void triangle::scramble() {
 	int diffiny1 = abs((Corner1.y - Corner2.y));
 	int diffinx2 = abs((Corner1.x - Corner3.x));
 	int diffiny2 = abs((Corner1.y - Corner3.y));
-	Corner1.x = (rand() % 1300) - diffinx1;
-	Corner1.y = (50 + ((rand()) % 600))-diffiny1;
+do
+	{
+		Corner1.x = ((rand() % 1300)) - diffinx1;
+		Corner1.y = (50 + ((rand()) % 600)) - diffiny1;
+	} while (Corner1.x > (1300 - diffinx1) && Corner1.y > (550 - diffiny1) && Corner1.x < 50 && Corner1.y < 50);
 	Corner2.x = Corner1.x + diffinx1;
 	Corner2.y = Corner1.y + diffiny1;
 	Corner3.x = Corner1.x + diffinx2;
