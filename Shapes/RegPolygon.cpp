@@ -154,13 +154,7 @@ void RegPolygon::scramble() {
 	}*/
 	
 }
-void RegPolygon::hide(GUI* pUI) {
-	if (ishiden == true) {
-		int diffx = sqrt(((Center.x - Point1->x) * (Center.x - Point1->x)) + ((Center.y - Point1->y) * (Center.y - Point1->y)));
-		pUI->getwind()->DrawImage("images\\MenuIcons\\Menu_Load.jpg", (Center.x - diffx), (Center.y - diffx), 2 * diffx, 2 * diffx);
-
-	}
-};
+void RegPolygon::hide(GUI* pUI) {};
 void RegPolygon::setishidentrue() { ishiden = true; };
 void RegPolygon::setishidenfalse() { ishiden = false; };
 bool RegPolygon::getishiden() {
