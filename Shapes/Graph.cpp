@@ -402,17 +402,17 @@ void Graph::Match(GUI* pUI) {
 						if (i < j) {
 							deleteshape(shapesList[i]);
 							deleteshape(shapesList[j - 1]);
-						};
-					};
-				}
-				else {
-					shapesList[i]->setishidentrue();
-					shapesList[j]->setishidentrue();
+						}
+					}
+					else {
+						shapesList[i]->setishidentrue();
+						shapesList[j]->setishidentrue();
 					}
 				}
 			}
 		}
 	}
+}
 
 void Graph::hide(GUI* pUI) {
 	for (int i = 0; i < shapesList.size(); i++) {
