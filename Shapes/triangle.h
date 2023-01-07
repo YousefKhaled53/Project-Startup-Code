@@ -8,7 +8,7 @@ private:
 	Point Corner3;
 	bool ishiden = false;
 	int ShapeID;
-
+	bool isingroup = false;
 public:
 	triangle(Point, Point, Point, GfxInfo shapeGfxInfo);
 	virtual ~triangle();
@@ -26,5 +26,11 @@ public:
 	virtual bool getishiden();
 	void setid(int i);
 	int getid();
+	virtual void setisingroup(bool b) {
+		isingroup = b;
+	}
+	virtual bool getisingroup() {
+		return isingroup;
+	}
 };
 

@@ -124,7 +124,8 @@ operationType GUI::GetUseroperation() const
 			case ICON_MOVE: return MOVE;
 			case ICON_RESIZE: return RESIZE;
 			case ICON_ROTATE:return ROTATE;
-
+			case ICON_GROUP:return GROUP;
+			case ICON_UNGROUP:return UNGROUP;
 			default: return EMPTY;	//A click on empty place in desgin toolbar
 			}
 		}
@@ -298,6 +299,8 @@ void GUI::CreateDrawToolBar2()
 	MenuIconImages[ICON_RESIZE] = "images\\MenuIcons\\Resize_icon.jpg";
 	MenuIconImages[ICON_ROTATE] = "images\\MenuIcons\\Rotate_icon.jpg";
 	MenuIconImages[ICON_Multi_Select] = "images\\MenuIcons\\Multi_Select.jpg";
+	MenuIconImages[ICON_GROUP] = "images\\MenuIcons\\group.jfif";
+	MenuIconImages[ICON_UNGROUP] = "images\\MenuIcons\\ungroup.jfif";
 
 
 

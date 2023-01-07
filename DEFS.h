@@ -45,7 +45,7 @@ enum operationType //The operations supported (you can add more if needed)
 	TO_DRAW,		//Switch interface to Draw mode
 	TO_PLAY,			//Switch interface to Play mode
 	hide,
-	scramble, 
+	scramble,
 	duplicate,
 	COPY,
 	PASTE,
@@ -53,7 +53,13 @@ enum operationType //The operations supported (you can add more if needed)
 	sendtoback,
 	start,
 	restart,
+<<<<<<< Updated upstream
 
+=======
+	todraw,
+	GROUP,
+	UNGROUP,
+>>>>>>> Stashed changes
 	
 
 	///TODO: Add more operation types (if needed)

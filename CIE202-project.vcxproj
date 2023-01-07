@@ -186,6 +186,7 @@
     <ClCompile Include="operations\opAddtriangle.cpp" />
     <ClCompile Include="operations\opCopy.cpp" />
     <ClCompile Include="operations\opdeleteshape.cpp" />
+    <ClCompile Include="operations\opgroup.cpp" />
     <ClCompile Include="operations\opload.cpp" />
     <ClCompile Include="operations\opMultiSelect.cpp" />
     <ClCompile Include="operations\opMatch.cpp" />
@@ -198,6 +199,7 @@
     <ClCompile Include="operations\opStartr.cpp" />
     <ClCompile Include="operations\opswitchplaymode.cpp" />
     <ClCompile Include="operations\opswitchtodrawmode.cpp" />
+    <ClCompile Include="operations\opungroup.cpp" />
     <ClCompile Include="operations\opZoomIn.cpp" />
     <ClCompile Include="operations\opZoomOut.cpp" />
     <ClCompile Include="operations\opUnhide.cpp" />
@@ -261,6 +263,7 @@
     <ClInclude Include="operations\opCopy.h" />
     <ClInclude Include="operations\opdeleteshape.h" />
     <ClInclude Include="operations\operation.h" />
+    <ClInclude Include="operations\opgroup.h" />
     <ClInclude Include="operations\opload.h" />
     <ClInclude Include="operations\opMultiSelect.h" />
     <ClInclude Include="operations\opMatch.h" />
@@ -273,6 +276,7 @@
     <ClInclude Include="operations\opStartr.h" />
     <ClInclude Include="operations\opswitchplaymode.h" />
     <ClInclude Include="operations\opswitchtodrawmode.h" />
+    <ClInclude Include="operations\opungroup.h" />
     <ClInclude Include="operations\opZoomIn.h" />
     <ClInclude Include="operations\opZoomOut.h" />
     <ClInclude Include="operations\opUnhide.h" />

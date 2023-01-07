@@ -15,6 +15,10 @@ void opmultidelete::Execute() {
 		pUI->GetPointClicked(arrx[i],arry[i]);
 	}
 	pControl->getGraph()->multiselect(arrx,arry,n);
+	pControl->UpdateInterface();
+	pUI->PrintMessage("the selcted shapes are highlighted ");
+	Sleep(3000);
 	pControl->getGraph()->multidelete();
-	
+	pUI->PrintMessage("shapes deleted succefully ");
+	pControl->getGraph()->clearmultiselectedvector();
 }

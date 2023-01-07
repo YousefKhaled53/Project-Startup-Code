@@ -76,6 +76,8 @@ class GUI
 		ICON_MOVE,
 		ICON_RESIZE,
 		ICON_ROTATE,
+		ICON_GROUP,
+		ICON_UNGROUP,
 		ToolBar2
 	};
 

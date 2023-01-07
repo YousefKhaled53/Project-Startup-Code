@@ -12,7 +12,7 @@ class IrrPolygon :
 		int *ArrY = new int[1000];
 		bool ishiden = false;
 		int ShapeID;
-
+		bool isingroup = false;
 	public:
 		IrrPolygon(Point*, int, GfxInfo shapeGfxInfo);
 		virtual ~IrrPolygon();
@@ -36,6 +36,12 @@ class IrrPolygon :
 		virtual bool getishiden();
 		void setid(int i);
 		int getid();
+		virtual void setisingroup(bool b) {
+			isingroup = b;
+		}
+		virtual bool getisingroup() {
+			return isingroup;
+		}
 
 };
 

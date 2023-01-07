@@ -9,7 +9,7 @@ private:
 	Point Corner2;
 	bool ishiden = false;
 	int ShapeID;
-
+	bool isingroup = false;
 public:
 	square(Point, Point, GfxInfo shapeGfxInfo);
 	virtual ~square();
@@ -28,5 +28,11 @@ public:
 	//virtual void    setisselectedfalse();
 	void setid(int i);
 	int getid();
+	virtual void setisingroup(bool b) {
+		isingroup = b;
+	}
+	virtual bool getisingroup() {
+		return isingroup;
+	}
 };
 
