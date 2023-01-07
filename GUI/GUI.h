@@ -91,9 +91,7 @@ class GUI
 
 		ICON_scramble,
 		ICON_duplicate,
-		ICON_SSwitch,
 		ICON_EXIT2,
-		
 		PLAY_ICON_COUNT		//no. of menu icons ==> This should be the last line in this enum
 
 	};

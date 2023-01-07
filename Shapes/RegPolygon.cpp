@@ -134,17 +134,24 @@ string RegPolygon::printforselection() {
 }
 
 void RegPolygon::scramble() {
-	for (int i = 0; i < Vertices_num; i++) {
-		arrdiffinx[i]= ((Center.x - ArrX[i]));
-		arrdiffiny[i] = ((Center.y - ArrY[i]));
+
+	/*int diffinx = abs((Center.x - Point1->x));
+	int diffiny = abs((Center.y - Point1->y));
+	for (int i = 0; i < 2; i++) {
+		arrdiffinx[i] = abs((Center.x - ArrX[i]));
+		arrdiffiny[i] = abs((Center.y - ArrY[i]));
+		
 	}
-	Center.x = (rand() % 1300);
+	Center.x = (rand() % 1300) ;
 	Center.y = 50 + ((rand()) % 600);
-	for (int i = 0; i < Vertices_num; i++) {
-		ArrX[i] = Center.x + arrdiffinx[i];
-		ArrY[i] = Center.y + arrdiffiny[i];
-	}
+	Point1->x = Center.x + diffinx;
+	Point1->y = Center.y + diffiny;
+
+	for (int i = 0; i < 2; i++) {
+		ArrX[i] = (Center.x + arrdiffinx[i]);
+		ArrY[i] = (Center.y + arrdiffiny[i]);
 	
+	}*/
 	
 }
 void RegPolygon::hide(GUI* pUI) {

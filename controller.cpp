@@ -69,10 +69,10 @@ operation* controller::createOperation(operationType OpType)
 	{
 		case DRAW_LINE:
 			//pOp = new ophide(this);
-			//pOp = new opdublicate(this);
+			pOp = new opdublicate(this);
 
 			//pOp = new opCancelFillingGeneral(this);
-			pOp = new opAddline(this);
+		//	pOp = new opAddline(this);
 			break;
 
 		case DRAW_RECT:
@@ -174,6 +174,7 @@ operation* controller::createOperation(operationType OpType)
 
 		case hide:
 			pOp = new ophide(this);
+			//pOp = new opswitchtodrawmode(this);
 			break;
 		case scramble:
 			pOp = new opscramble(this);
@@ -199,9 +200,6 @@ operation* controller::createOperation(operationType OpType)
 			break;
 		case restart:
 			pOp = new oprestart(this);
-			break;
-		case todraw:
-			pOp = new opswitchtodrawmode(this);
 			break;
 	}
 

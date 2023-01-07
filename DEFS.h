@@ -53,7 +53,7 @@ enum operationType //The operations supported (you can add more if needed)
 	sendtoback,
 	start,
 	restart,
-	todraw,
+
 	
 
 	///TODO: Add more operation types (if needed)
