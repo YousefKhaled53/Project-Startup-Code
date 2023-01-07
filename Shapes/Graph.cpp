@@ -49,10 +49,7 @@ void Graph::Draw(GUI* pUI) const
 	for (int i = 0; i < shapesList.size(); i++) {
 		shapesList[i]->hide(pUI);
 	}
-	//pUI->CreateDrawToolBar2();
-	//pUI->CreateDrawToolBar();
-	//pUI->CreateStatusBar();
-
+	
 }
 
 

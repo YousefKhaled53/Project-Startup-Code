@@ -91,18 +91,18 @@ string IrrPolygon::printforselection() {
 	return msg;
 }
 void IrrPolygon::scramble() {
-	/*
-	for (int i = 0; i < 1; i++) {
-		arrdiffinx[i] = abs((Point1->x - ArrX[i+1]));
-		arrdiffiny[i] = abs((Point1->y - ArrY[i+1]));
-
+	
+	for (int i = 1; i < Vertices_num; i++) {
+		arrdiffinx[i] = ((ArrX[0] - ArrX[i]));
+		arrdiffiny[i] = ((ArrY[0] - ArrY[i]));
 	}
-	Point1->x = (rand() % 1300) ;
-	Point1->y = 50 + ((rand()) % 600);
-	for (int i = 0; i < 1; i++) {
-		ArrX[i] = (Point1->x + arrdiffinx[i+1]);
-		ArrY[i] = (Point1->y + arrdiffiny[i+1]);
-	}*/
+	ArrX[0] = (rand() % 1300);
+	ArrY[0] = 50 + ((rand()) % 600);
+	for (int i = 1; i < Vertices_num; i++) {
+		ArrX[i] = ArrX[0] + arrdiffinx[i];
+		ArrY[i] = ArrY[0] + arrdiffiny[i];
+	}
+
 }
 void IrrPolygon::hide(GUI* pUI) {
 

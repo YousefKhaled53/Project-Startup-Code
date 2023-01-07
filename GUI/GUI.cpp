@@ -159,6 +159,8 @@ operationType GUI::GetUseroperation() const
 			case ICON_duplicate: return duplicate;
 			case ICON_START: return start;
 			case ICON_RESTART: return restart;
+	//		case ICON_SWITCH2: switch2;
+			case ICON_SSwitch: return todraw;
 			
 			default: return EMPTY;	//A click on empty place in desgin toolbar
 			}
@@ -285,7 +287,7 @@ void GUI::CreateDrawToolBar()
 void GUI::CreateDrawToolBar2() 
 {
 	// ...
-	InterfaceMode = MODE_DRAW;
+	//InterfaceMode = MODE_DRAW;
 	// Calculate the width and height of each icon in the vertical toolbar
 	int iconWidth = ToolBarHeight;
 	int iconHeight =40;
@@ -299,15 +301,9 @@ void GUI::CreateDrawToolBar2()
 	MenuIconImages[ICON_ROTATE] = "images\\MenuIcons\\Rotate_icon.jpg";
 	MenuIconImages[ICON_Multi_Select] = "images\\MenuIcons\\Multi_Select.jpg";
 
-
-
-
-	// Draw the vertical toolbar
 	for (int i = 0; i < ToolBar2; i++) {
 		pWind->DrawImage(MenuIconImages[i], 0, ((i + 1) * iconHeight), iconWidth, iconHeight);
 	}
-
-	// Draw a line to the right of the vertical toolbar
 	pWind->SetPen(RED, 3);
 	pWind->DrawLine(50, 50, iconWidth, height);
 }
@@ -326,7 +322,7 @@ void GUI::CreatePlayToolBar()
 	MenuIconImages[ICON_RESTART] = "images\\MenuIcons\\restart.jfif";
 	MenuIconImages[ICON_scramble] = "images\\MenuIcons\\scramble.jpg";
 	MenuIconImages[ICON_duplicate] = "images\\MenuIcons\\double.jfif";
-
+	MenuIconImages[ICON_SSwitch] = "images\\MenuIcons\\switch.jpg";
 	MenuIconImages[ICON_EXIT2] = "images\\MenuIcons\\Menu_Exit.jpg";
 	
 	for (int i = 0; i < PLAY_ICON_COUNT; i++)
@@ -334,6 +330,7 @@ void GUI::CreatePlayToolBar()
 
 	pWind->SetPen(RED, 3);
 	pWind->DrawLine(0, ToolBarHeight, width, ToolBarHeight);
+
 	GUI::ClearStatusBar();
 }
 //////////////////////////////////////////////////////////////////////////////////////////
