@@ -14,6 +14,7 @@ class Graph
 private:
 	vector <shape*> shapesList; //a container to hold all shapes	
 	vector <shape*> multishapesselected;
+	vector <shape*> temporaryvectorforrestarting ;
 	shape* selectedShape;	//pointer to the currently selected shape
 	int score = 0;
 public:										
@@ -48,7 +49,9 @@ public:
 	void Rotate(shape* pFig);
 	void deleteall();
 	int getscore();
-
+	void filltemporary();
+	void filloriginalfromtemporary();
+	void resetscore();
 	
 
 };

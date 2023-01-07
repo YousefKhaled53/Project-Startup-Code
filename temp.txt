@@ -1,4 +1,0 @@
-blue green 5
-6
-FORMAT : SHAPE	NAME	 ID x,y for n points	redintensityfordrawcolor	greenintensityfordrawcolor	blueintensityfordrawcolor	greenintensityforfillcolor	blueintensityforfillcolor	redintensityforfillcolor	penwidth
-CIRCLE 1 296 217 341 249 0 0 255 NO_FILL 3 /// CIRCLE 2 482 263 495 274 0 0 255 NO_FILL 3 /// CIRCLE 3 617 235 648 249 0 0 255 NO_FILL 3 /// CIRCLE 1 296 217 341 249 0 0 255 NO_FILL 3 /// CIRCLE 2 482 263 495 274 0 0 255 NO_FILL 3 /// CIRCLE 3 617 235 648 249 0 0 255 NO_FILL 3 /// 

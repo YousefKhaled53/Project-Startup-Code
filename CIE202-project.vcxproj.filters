@@ -58,11 +58,18 @@
     <ClCompile Include="operations\opCopy.cpp" />
     <ClCompile Include="operations\opdeleteshape.cpp" />
     <ClCompile Include="operations\opload.cpp" />
+    <ClCompile Include="operations\opMultiSelect.cpp" />
+    <ClCompile Include="operations\opMatch.cpp" />
+    <ClCompile Include="operations\opMove.cpp" />
     <ClCompile Include="operations\opPest.cpp" />
     <ClCompile Include="operations\opResize.cpp" />
     <ClCompile Include="operations\opsave.cpp" />
     <ClCompile Include="operations\opSelect.cpp" />
+    <ClCompile Include="operations\opStartr.cpp" />
     <ClCompile Include="operations\opswitchplaymode.cpp" />
+    <ClCompile Include="operations\opZoomIn.cpp" />
+    <ClCompile Include="operations\opZoomOut.cpp" />
+    <ClCompile Include="operations\opUnhide.cpp" />
     <ClCompile Include="Opexit.cpp" />
     <ClCompile Include="ophide.cpp" />
     <ClCompile Include="opmultidelete.cpp" />
@@ -79,26 +86,8 @@
     <ClCompile Include="Shapes\Shape.cpp" />
     <ClCompile Include="Shapes\square.cpp" />
     <ClCompile Include="Shapes\triangle.cpp" />
-    <ClCompile Include="operations\Opchangefillcolor.cpp" />
-    <ClCompile Include="operations\opborderwidth.cpp" />
-    <ClCompile Include="operations\opbordercolor.cpp" />
-    <ClCompile Include="opChangeGeneralFillColor.cpp" />
-    <ClCompile Include="opCHangeGeneralDrawcolor.cpp" />
-    <ClCompile Include="opCancelFillingGeneral.cpp" />
-    <ClCompile Include="opscramble.cpp" />
-    <ClCompile Include="opdublicate.cpp" />
-    <ClCompile Include="opsendtoback.cpp" />
-    <ClCompile Include="opmultidelete.cpp" />
-    <ClCompile Include="operations\opMultiSelect.cpp" />
-    <ClCompile Include="operations\opZoomIn.cpp" />
-    <ClCompile Include="operations\opZoomOut.cpp" />
-    <ClCompile Include="operations\opMove.cpp" />
-<<<<<<< HEAD
-    <ClCompile Include="operations\opStartr.cpp" />
-=======
-    <ClCompile Include="operations\opMatch.cpp" />
-    <ClCompile Include="operations\opUnhide.cpp" />
->>>>>>> 93c4918dad421d2288ef715ff2b1a70ea0fe03df
+    <ClCompile Include="operations\oprestart.cpp" />
+    <ClCompile Include="operations\opswitchtodrawmode.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CMUgraphicsLib\auxil.h" />
@@ -144,11 +133,18 @@
     <ClInclude Include="operations\opdeleteshape.h" />
     <ClInclude Include="operations\operation.h" />
     <ClInclude Include="operations\opload.h" />
+    <ClInclude Include="operations\opMultiSelect.h" />
+    <ClInclude Include="operations\opMatch.h" />
+    <ClInclude Include="operations\opMove.h" />
     <ClInclude Include="operations\opPest.h" />
     <ClInclude Include="operations\opResize.h" />
     <ClInclude Include="operations\opsave.h" />
     <ClInclude Include="operations\opSelect.h" />
+    <ClInclude Include="operations\opStartr.h" />
     <ClInclude Include="operations\opswitchplaymode.h" />
+    <ClInclude Include="operations\opZoomIn.h" />
+    <ClInclude Include="operations\opZoomOut.h" />
+    <ClInclude Include="operations\opUnhide.h" />
     <ClInclude Include="Opexit.h" />
     <ClInclude Include="ophide.h" />
     <ClInclude Include="opmultidelete.h" />
@@ -165,25 +161,7 @@
     <ClInclude Include="Shapes\Shape.h" />
     <ClInclude Include="Shapes\square.h" />
     <ClInclude Include="Shapes\triangle.h" />
-    <ClInclude Include="operations\Opchangefillcolor.h" />
-    <ClInclude Include="operations\opborderwidth.h" />
-    <ClInclude Include="operations\opbordercolor.h" />
-    <ClInclude Include="opChangeGeneralFillColor.h" />
-    <ClInclude Include="opCHangeGeneralDrawcolor.h" />
-    <ClInclude Include="opCancelFillingGeneral.h" />
-    <ClInclude Include="opscramble.h" />
-    <ClInclude Include="opdublicate.h" />
-    <ClInclude Include="opsendtoback.h" />
-    <ClInclude Include="opmultidelete.h" />
-    <ClInclude Include="operations\opMultiSelect.h" />
-    <ClInclude Include="operations\opZoomIn.h" />
-    <ClInclude Include="operations\opZoomOut.h" />
-    <ClInclude Include="operations\opMove.h" />
-<<<<<<< HEAD
-    <ClInclude Include="operations\opStartr.h" />
-=======
-    <ClInclude Include="operations\opMatch.h" />
-    <ClInclude Include="operations\opUnhide.h" />
->>>>>>> 93c4918dad421d2288ef715ff2b1a70ea0fe03df
+    <ClInclude Include="operations\oprestart.h" />
+    <ClInclude Include="operations\opswitchtodrawmode.h" />
   </ItemGroup>
 </Project>

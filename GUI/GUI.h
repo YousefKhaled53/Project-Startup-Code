@@ -86,6 +86,7 @@ class GUI
 
 		//TODO: Add more icons names here
 		ICON_START,
+		ICON_RESTART,
 		ICON_hide,
 
 		ICON_scramble,
@@ -168,7 +169,7 @@ public:
 	color getCrntDrawColor() const;	//get current drwawing color
 	color getCrntFillColor() const;	//get current filling color
 	int getCrntPenWidth() const;		//get current pen width
-
+	bool isinttoolbar(Point* p);
 
 	~GUI();
 };

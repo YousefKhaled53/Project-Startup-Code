@@ -158,8 +158,7 @@ operationType GUI::GetUseroperation() const
 			case ICON_EXIT2: return EXIT;
 			case ICON_duplicate: return duplicate;
 			case ICON_START: return start;
-
-			
+			case ICON_RESTART: return restart;
 			
 			default: return EMPTY;	//A click on empty place in desgin toolbar
 			}
@@ -298,8 +297,6 @@ void GUI::CreateDrawToolBar2()
 	MenuIconImages[ICON_MOVE] = "images\\MenuIcons\\Move_icon.jpg";
 	MenuIconImages[ICON_RESIZE] = "images\\MenuIcons\\Resize_icon.jpg";
 	MenuIconImages[ICON_ROTATE] = "images\\MenuIcons\\Rotate_icon.jpg";
-	//MenuIconImages[ICON_ZOOM_IN] = "images\\MenuIcons\\ZOOM_IN.jpg";
-	//MenuIconImages[ICON_ZOOM_OUT] = "images\\MenuIcons\\ZOOM_OUT.jpg";
 	MenuIconImages[ICON_Multi_Select] = "images\\MenuIcons\\Multi_Select.jpg";
 
 
@@ -307,7 +304,7 @@ void GUI::CreateDrawToolBar2()
 
 	// Draw the vertical toolbar
 	for (int i = 0; i < ToolBar2; i++) {
-		pWind->DrawImage(MenuIconImages[i], 0, ((i + 1) * iconHeight)+50, iconWidth, iconHeight);
+		pWind->DrawImage(MenuIconImages[i], 0, ((i + 1) * iconHeight), iconWidth, iconHeight);
 	}
 
 	// Draw a line to the right of the vertical toolbar
@@ -326,7 +323,7 @@ void GUI::CreatePlayToolBar()
 	string MenuIconImages[PLAY_ICON_COUNT];
 	MenuIconImages[ICON_hide] = "images\\MenuIcons\\unoip.jpg";
 	MenuIconImages[ICON_START] = "images\\MenuIcons\\start.jfif";
-	
+	MenuIconImages[ICON_RESTART] = "images\\MenuIcons\\restart.jfif";
 	MenuIconImages[ICON_scramble] = "images\\MenuIcons\\scramble.jpg";
 	MenuIconImages[ICON_duplicate] = "images\\MenuIcons\\double.jfif";
 
@@ -587,3 +584,11 @@ GUI::~GUI()
 	delete pWind;
 }
 
+bool GUI::isinttoolbar(Point* p) {
+	if (p->y < 50) {
+		return false;
+	}
+	else {
+		return true;
+	}
+}

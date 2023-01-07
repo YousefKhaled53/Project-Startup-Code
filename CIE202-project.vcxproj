@@ -192,13 +192,14 @@
     <ClCompile Include="operations\opMove.cpp" />
     <ClCompile Include="operations\opPest.cpp" />
     <ClCompile Include="operations\opResize.cpp" />
+    <ClCompile Include="operations\oprestart.cpp" />
     <ClCompile Include="operations\opsave.cpp" />
     <ClCompile Include="operations\opSelect.cpp" />
     <ClCompile Include="operations\opStartr.cpp" />
     <ClCompile Include="operations\opswitchplaymode.cpp" />
+    <ClCompile Include="operations\opswitchtodrawmode.cpp" />
     <ClCompile Include="operations\opZoomIn.cpp" />
     <ClCompile Include="operations\opZoomOut.cpp" />
-
     <ClCompile Include="operations\opUnhide.cpp" />
     <ClCompile Include="Opexit.cpp" />
     <ClCompile Include="ophide.cpp" />
@@ -266,13 +267,14 @@
     <ClInclude Include="operations\opMove.h" />
     <ClInclude Include="operations\opPest.h" />
     <ClInclude Include="operations\opResize.h" />
+    <ClInclude Include="operations\oprestart.h" />
     <ClInclude Include="operations\opsave.h" />
     <ClInclude Include="operations\opSelect.h" />
     <ClInclude Include="operations\opStartr.h" />
     <ClInclude Include="operations\opswitchplaymode.h" />
+    <ClInclude Include="operations\opswitchtodrawmode.h" />
     <ClInclude Include="operations\opZoomIn.h" />
     <ClInclude Include="operations\opZoomOut.h" />
-
     <ClInclude Include="operations\opUnhide.h" />
     <ClInclude Include="Opexit.h" />
     <ClInclude Include="ophide.h" />

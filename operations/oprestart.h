@@ -1,12 +1,11 @@
 #pragma once
 #include"operation.h"
 #include"../controller.h"
-class opStartr : public operation
+class oprestart: public operation
 {
 private:
 public:
-	opStartr(controller* pCont);
-	~opStartr();
+	oprestart(controller* pCont);
+	~oprestart();
 	virtual void Execute();
 };
-

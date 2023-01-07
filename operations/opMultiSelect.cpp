@@ -40,7 +40,7 @@ void opMultiSelect::Execute()
 		else {
 			msel->SetSelected(true);
 			pUI->ClearStatusBar(); //tring msg = "selecteed shape with width (" + to_string(sel->getborderwidth()) + ")";
-			pUI->PrintMessage(msel->printforselection());
+//			pUI->PrintMessage(msel->printforselection());
 			pGraph->SetSelected(msel);
 		}
 	}

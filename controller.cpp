@@ -40,8 +40,9 @@
 #include"ophide.h"
 #include "operations/opMove.h"
 #include"operations/opStartr.h"
-
+#include"operations/oprestart.h"
 #include"operations/opUnhide.h"
+#include"operations/opswitchtodrawmode.h"
 //Constructor
 controller::controller()
 {
@@ -173,6 +174,7 @@ operation* controller::createOperation(operationType OpType)
 
 		case hide:
 			pOp = new ophide(this);
+			//pOp = new opswitchtodrawmode(this);
 			break;
 		case scramble:
 			pOp = new opscramble(this);
@@ -195,6 +197,9 @@ operation* controller::createOperation(operationType OpType)
 			break;
 		case start:
 			pOp = new opStartr(this);
+			break;
+		case restart:
+			pOp = new oprestart(this);
 			break;
 	}
 

@@ -366,7 +366,7 @@ void Graph::dublicate() {
 	ifstream file("temp.txt");
 	load(file);
 	myfile.close();
-	//remove("temp.txt");
+	remove("temp.txt");
 
 }
 void Graph::sendtoback(shape* pShp) {
@@ -422,7 +422,7 @@ void Graph::Match(GUI* pUI) {
 			}
 		}
 	}
-//	pUI->getwind()->DrawInteger(1200,575,score);
+
 }
 
 void Graph::hide(GUI* pUI) {
@@ -451,3 +451,18 @@ void Graph::deleteall() {
 int Graph::getscore() {
 	return score;
 };
+
+void Graph::filltemporary() {
+	for (int i = 0; i < shapesList.size(); i++) {
+		temporaryvectorforrestarting.push_back(shapesList[i]);
+	}
+
+}
+void Graph::filloriginalfromtemporary () {
+	for (int i = 0; i < temporaryvectorforrestarting.size(); i++) {
+		shapesList.push_back(temporaryvectorforrestarting[i]);
+	}
+}
+void Graph::resetscore() {
+	score = 0;
+}

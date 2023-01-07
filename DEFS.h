@@ -52,6 +52,7 @@ enum operationType //The operations supported (you can add more if needed)
 	MULTIDELTE,
 	sendtoback,
 	start,
+	restart,
 
 	
 
