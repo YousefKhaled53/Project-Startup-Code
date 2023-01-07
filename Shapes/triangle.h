@@ -7,11 +7,8 @@ private:
 	Point Corner2;
 	Point Corner3;
 	bool ishiden = false;
-<<<<<<< Updated upstream
 	int ShapeID;
 
-=======
->>>>>>> Stashed changes
 public:
 	triangle(Point, Point, Point, GfxInfo shapeGfxInfo);
 	virtual ~triangle();

@@ -154,22 +154,9 @@ void RegPolygon::scramble() {
 	}*/
 	
 }
-<<<<<<< Updated upstream
 void RegPolygon::hide(GUI* pUI) {};
 void RegPolygon::setishidentrue() { ishiden = true; };
 void RegPolygon::setishidenfalse() { ishiden = false; };
 bool RegPolygon::getishiden() {
 	return ishiden;
 }
-=======
-void RegPolygon::hide(GUI* pUI) {
-	if (ishiden == true) {
-		int diffx = sqrt(((Center.x - Point1->x) * (Center.x - Point1->x)) + ((Center.y - Point1->y) * (Center.y - Point1->y)));
-		pUI->getwind()->DrawImage("images\\MenuIcons\\Menu_Load.jpg", (Center.x - diffx), (Center.y - diffx), 2 * diffx, 2 * diffx);
-
-	}
-
-};
-void RegPolygon::setishidentrue() {};// ishiden = true; };
-void RegPolygon::setishidenfalse() { };//ishiden = false; };
->>>>>>> Stashed changes
