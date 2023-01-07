@@ -4,6 +4,7 @@ opStartr::~opStartr() {};
 void opStartr::Execute() {
 	GUI* pUI = pControl->GetUI();
 	pControl->getGraph()->filltemporary();
+	pControl->getGraph()->resetscore();
 	pControl->getGraph()->dublicate();
 	pControl->getGraph()->hide(pUI);
 	pControl->getGraph()->scramble();
