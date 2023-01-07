@@ -150,7 +150,17 @@ do
 	Corner3.x = Corner1.x + diffinx2;
 	Corner3.y = Corner1.y + diffiny2;
 }
-void triangle:: hide(GUI* pUI) {};
+void triangle:: hide(GUI* pUI) {
+	if (ishiden == true) {
+
+		int width1 = sqrt(pow((Corner1.x - Corner2.x), 2) + pow((Corner1.y - Corner2.y), 2));
+		int width2 = sqrt(pow((Corner1.x - Corner3.x), 2) + pow((Corner1.y - Corner3.y), 2));
+		int width3 = sqrt(pow((Corner3.x - Corner2.x), 2) + pow((Corner3.y - Corner2.y), 2));
+		int total = width1 + width2 + width3;
+
+		pUI->getwind()->DrawImage("images\\MenuIcons\\Menu_Load.jpg", min(min(Corner1.x, Corner2.x), Corner3.x), min(min(Corner1.y, Corner2.y), Corner3.y), max(max(width1,width2),width3), max(max(width1, width2), width3));
+	}
+};
 void triangle::setishidentrue() { ishiden = true; };
 void triangle::setishidenfalse() { ishiden = false; };
 bool triangle::getishiden() {
