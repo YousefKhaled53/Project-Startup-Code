@@ -129,10 +129,29 @@ void square::scramble() {
 	Corner2.x = Corner1.x + diffinx;
 	Corner2.y = Corner1.y + diffiny;
 }
+<<<<<<< Updated upstream
 void square::hide(GUI* pUI) {};
 void square::setishidentrue() { ishiden = true; };
 void square::setishidenfalse() { ishiden = false; };
 bool square::getishiden() {
 	return ishiden;
 }
+=======
+void square::hide(GUI* pUI) {
+	if (ishiden == true) {
+		int width = sqrt(pow((Corner1.x - Corner2.x), 2) + pow((Corner1.y - Corner1.y), 2));
+		int height = sqrt(pow((Corner1.x - Corner1.x), 2) + pow((Corner1.y - Corner2.y), 2));
+		int yy = 0;
+		if (min(Corner1.x, Corner2.x) = Corner2.x) {
+			yy = Corner2.y;
+		}
+		else if (min(Corner1.x, Corner2.x) = Corner1.x) {
+			yy = Corner1.y;
+		}
+		pUI->getwind()->DrawImage("images\\MenuIcons\\Menu_Load.jpg", min(Corner1.x, Corner2.x), yy, width, height);
+	}
+};
+void square::setishidentrue() { ishiden = true; };
+void square::setishidenfalse() { ishiden = false; };
+>>>>>>> Stashed changes
 

@@ -7,8 +7,11 @@ private:
 	Point Point1;
 	Point Point2;
 	bool ishiden = false;
+<<<<<<< Updated upstream
 	int ShapeID;
 
+=======
+>>>>>>> Stashed changes
 public:
 	Oval(Point, Point, GfxInfo shapeGfxInfo);
 	virtual ~Oval();

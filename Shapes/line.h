@@ -7,8 +7,11 @@ private:
 	Point Corner1;
 	Point Corner2;
 	bool ishiden = false;
+<<<<<<< Updated upstream
 	int ShapeID;
 
+=======
+>>>>>>> Stashed changes
 public:
 	line(Point, Point, GfxInfo shapeGfxInfo);
 	virtual ~line();

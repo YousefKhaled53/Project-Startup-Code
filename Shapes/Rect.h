@@ -9,7 +9,10 @@ private:
 	Point Corner2;
 	int ShapeID;
 	bool ishiden = false;
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 public:
 	Rect(Point , Point, GfxInfo shapeGfxInfo );
 	virtual ~Rect();

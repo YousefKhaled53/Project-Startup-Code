@@ -15,8 +15,11 @@ private:
 	int vertixx;
 	int vertixy;
 	bool ishiden = false;
+<<<<<<< Updated upstream
 	int ShapeID;
 
+=======
+>>>>>>> Stashed changes
 public:
 	RegPolygon(Point, Point*, int, GfxInfo shapeGfxInfo);
 	virtual ~RegPolygon();
