@@ -366,7 +366,7 @@ void Graph::dublicate() {
 	ifstream file("temp.txt");
 	load(file);
 	myfile.close();
-//	remove("temp.txt");
+	//remove("temp.txt");
 
 }
 void Graph::sendtoback(shape* pShp) {
@@ -390,6 +390,7 @@ void Graph::multidelete (){
 	}
 }
 void Graph::Match(GUI* pUI) {
+	
 	for (int i = 0; i < shapesList.size(); i++) {
 		if (shapesList[i]->getishiden() == false) {
 			for (int j = i + 1; j < shapesList.size(); j++) {
@@ -398,20 +399,28 @@ void Graph::Match(GUI* pUI) {
 						if (i > j) {
 							deleteshape(shapesList[i]);
 							deleteshape(shapesList[j]);
+
+							
 						}
 						if (i < j) {
 							deleteshape(shapesList[i]);
 							deleteshape(shapesList[j - 1]);
+
+						
 						}
+						
 					}
 					else {
 						shapesList[i]->setishidentrue();
 						shapesList[j]->setishidentrue();
+						
+						
 					}
 				}
 			}
 		}
 	}
+//	pUI->getwind()->DrawInteger(1200,575,score);
 }
 
 void Graph::hide(GUI* pUI) {

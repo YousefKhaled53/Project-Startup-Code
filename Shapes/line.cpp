@@ -41,7 +41,7 @@ void line::scramble() {
 	{
 		Corner1.x = ((rand() % 1300)) - diffinx;
 		Corner1.y = (50 + ((rand()) % 600)) - diffiny;
-	} while (Corner1.x > (1300 - diffinx) && Corner1.y > (550 - diffiny) && Corner1.x < 50 && Corner1.y < 50);
+	} while (Corner1.x > (1300 - diffinx) || Corner1.y > (550 - diffiny) || Corner1.x < 50 || Corner1.y < 50);
 
 
 	Corner2.x = Corner1.x + diffinx;
@@ -141,4 +141,9 @@ void line::setishidenfalse() { ishiden = false; };
 bool line::getishiden() {
 	return ishiden;
 }
-
+void line::setid(int i) {
+	ShapeID = i;
+};
+int line::getid() {
+	return ShapeID;
+}

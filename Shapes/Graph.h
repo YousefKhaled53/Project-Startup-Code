@@ -15,6 +15,7 @@ private:
 	vector <shape*> shapesList; //a container to hold all shapes	
 	vector <shape*> multishapesselected;
 	shape* selectedShape;	//pointer to the currently selected shape
+	int score = 0;
 public:										
 	Graph();
 	~Graph();

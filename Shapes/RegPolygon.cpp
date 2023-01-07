@@ -160,3 +160,9 @@ void RegPolygon::setishidenfalse() { ishiden = false; };
 bool RegPolygon::getishiden() {
 	return ishiden;
 }
+void RegPolygon::setid(int i) {
+	ShapeID = i;
+};
+int RegPolygon::getid() {
+	return ShapeID;
+}

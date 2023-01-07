@@ -26,5 +26,7 @@ public:
 	virtual void setishidenfalse();
 	virtual bool getishiden();
 	//virtual void    setisselectedfalse();
+	void setid(int i);
+	int getid();
 };
 

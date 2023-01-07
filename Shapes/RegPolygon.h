@@ -32,7 +32,7 @@ public:
 	virtual void setishidentrue();
 	virtual void setishidenfalse();
 	virtual bool getishiden();
-
-
+	void setid(int i);
+	int getid();
 };
 

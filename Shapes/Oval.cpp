@@ -119,7 +119,7 @@ void Oval::scramble() {
 	{
 		Point1.x = ((rand() % 1300)) - diffinx;
 		Point1.y = (50 + ((rand()) % 600)) - diffiny;
-	} while (Point1.x > (1300 - diffinx) && Point1.y > (550 - diffiny) && Point1.x < 50 && Point1.y < 50);
+	} while (Point1.x > (1300 - diffinx) || Point1.y > (550 - diffiny) || Point1.x < 50 || Point1.y < 50);
 	Point2.x = Point1.x + diffinx;
 	Point2.y = Point1.y + diffiny;
 }
@@ -128,4 +128,10 @@ void Oval::setishidentrue() { ishiden = true; };
 void Oval::setishidenfalse() { ishiden = false; };
 bool Oval::getishiden() {
 	return ishiden;
+}
+void Oval::setid(int i) {
+	ShapeID = i;
+};
+int Oval::getid() {
+	return ShapeID;
 }

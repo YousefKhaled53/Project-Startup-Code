@@ -13,7 +13,6 @@ Circle::Circle(Point P1, Point P2, GfxInfo shapeGfxInfo) :shape(shapeGfxInfo)
 	Center = P1;
 	radius = P2;
 	ShapeID = ID;
-
 }
 
 Circle::~Circle()
@@ -64,7 +63,7 @@ void Circle::Rotate() {
 }
 void Circle::Save(ofstream& OutFile , int id) {
 
-	OutFile << "CIRCLE" << " " << ShapeID << " " << Center.x << " " << Center.y << " " << radius.x << " " << radius.y << " ";
+	OutFile << "CIRCLE" << " " << ShapeID<< " " << Center.x << " " << Center.y << " " << radius.x << " " << radius.y << " ";
 
 	OutFile << shape::getdrawclr().getucred() << " ";
 	OutFile << shape::getdrawclr().getucgreen() << " ";
@@ -106,9 +105,9 @@ void Circle::scramble() {
 	int diffiny = abs((Center.y - radius.y));
 	do
 	{
-		Center.x = ((rand() % 1300)) - diffinx;
-		Center.y = (50 + ((rand()) % 600)) - diffiny;
-	} while (Center.x>(1300-diffinx) && Center .y>(550-diffiny) && Center.x < 50 && Center.y <50);
+		Center.x = (diffinx+(rand() % 1300)) - diffinx;
+		Center.y = (diffiny + ((rand()) % 600)) - diffiny;
+	} while (Center.x>(1300-diffinx) || Center .y>(550-diffiny) || Center.x < 50 || Center.y <50);
 	
 	radius.x = Center.x + diffinx;
 	radius.x = Center.x + diffinx;
@@ -128,4 +127,10 @@ void Circle::setishidentrue() { ishiden = true; };
 void Circle::setishidenfalse() { ishiden = false; };
 bool Circle::getishiden() {
 	return ishiden;
+}
+void Circle::setid(int i) {
+	ShapeID=i;
+};
+int Circle::getid() {
+	return ShapeID;
 }

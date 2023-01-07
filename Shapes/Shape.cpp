@@ -43,12 +43,9 @@ bool shape::getisfilled() {
 void shape::setisfilled() {
 	ShpGfxInfo.isFilled=true;
 }
-int shape::getid() {
-	return ID;
-}
-void shape::setid(int i) {
+/*void shape::setid(int i) {
 	ID = i;
-}
+}*/
 bool shape::InDrawArea(Point P) {
 	return (P.x >= 0 && P.x <= 1300 && P.y >= 50 && P.y <= 550);
 }

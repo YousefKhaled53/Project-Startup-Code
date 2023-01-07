@@ -29,8 +29,8 @@ public:
 	int getborderwidth();
 	bool getisfilled();
 	void setisfilled();
-	int getid();
-	void setid(int i);
+	virtual void setid(int i)=0;
+	virtual int getid() = 0;
 	virtual void Resize(double ratio) = 0;
 	virtual void Rotate() = 0;
 	virtual void Move(Point P1, Point P2) = 0;

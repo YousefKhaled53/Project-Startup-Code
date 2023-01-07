@@ -110,3 +110,9 @@ void IrrPolygon::setishidenfalse() { ishiden = false; };
 bool IrrPolygon::getishiden() {
 	return ishiden;
 }
+void IrrPolygon::setid(int i) {
+	ShapeID = i;
+};
+int IrrPolygon::getid() {
+	return ShapeID;
+}

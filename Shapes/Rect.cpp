@@ -124,7 +124,7 @@ void Rect::scramble() {
 	{
 		Corner1.x = ((rand() % 1300)) - diffinx;
 		Corner1.y = (50 + ((rand()) % 600)) - diffiny;
-	} while (Corner1.x > (1300 - diffinx) && Corner1.y > (550 - diffiny) && Corner1.x < 50 && Corner1.y < 50);
+	} while (Corner1.x > (1300 - diffinx) || Corner1.y > (550 - diffiny) || Corner1.x < 50 || Corner1.y < 50);
 	Corner2.x = Corner1.x + diffinx;
 	Corner2.y = Corner1.y + diffiny;
 }
@@ -133,4 +133,10 @@ void Rect::setishidentrue() { ishiden = true; };
 void Rect::setishidenfalse() { ishiden = false; };
 bool Rect::getishiden() {
 	return ishiden;
+}
+void Rect::setid(int i) {
+	ShapeID = i;
+};
+int Rect::getid() {
+	return ShapeID;
 }

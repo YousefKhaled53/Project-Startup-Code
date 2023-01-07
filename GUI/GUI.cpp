@@ -327,7 +327,7 @@ void GUI::CreatePlayToolBar()
 	MenuIconImages[ICON_hide] = "images\\MenuIcons\\unoip.jpg";
 	MenuIconImages[ICON_START] = "images\\MenuIcons\\start.jfif";
 	
-	MenuIconImages[ICON_scramble] = "images\\MenuIcons\\switch.jpg";
+	MenuIconImages[ICON_scramble] = "images\\MenuIcons\\scramble.jpg";
 	MenuIconImages[ICON_duplicate] = "images\\MenuIcons\\double.jfif";
 
 	MenuIconImages[ICON_EXIT2] = "images\\MenuIcons\\Menu_Exit.jpg";
