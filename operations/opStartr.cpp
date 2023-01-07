@@ -10,7 +10,7 @@ void opStartr::Execute() {
 	while (pControl->getGraph()->getshapeslist()==true) {
 		
 		Point P1;
-		pUI->PrintMessage("the game has started and your score is : ");
+		pUI->PrintMessage("the game has started and your score is : "+ to_string(pControl->getGraph()->getscore()));
 		pUI->GetPointClicked(P1.x, P1.y);
 		pControl->getGraph()->Unhide(&P1);
 		pControl->getGraph()->Match(pUI);
@@ -19,5 +19,5 @@ void opStartr::Execute() {
 		
 		pControl->UpdateInterface();
 	} 
-	pUI->PrintMessage("congratulations you finished with score ");
+	pUI->PrintMessage("congratulations you finished with score " + to_string(pControl->getGraph()->getscore()));
 }

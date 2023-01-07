@@ -400,12 +400,13 @@ void Graph::Match(GUI* pUI) {
 							deleteshape(shapesList[i]);
 							deleteshape(shapesList[j]);
 
-							
+							score = score + 3;
 						}
 						if (i < j) {
 							deleteshape(shapesList[i]);
 							deleteshape(shapesList[j - 1]);
 
+							score = score + 3;
 						
 						}
 						
@@ -414,7 +415,8 @@ void Graph::Match(GUI* pUI) {
 						shapesList[i]->setishidentrue();
 						shapesList[j]->setishidentrue();
 						
-						
+
+						score = score + 1;
 					}
 				}
 			}
@@ -446,3 +448,6 @@ void Graph::deleteall() {
 		shapesList.clear();
 	}
 }
+int Graph::getscore() {
+	return score;
+};

@@ -47,6 +47,7 @@ public:
 	//void move(shape* pFig, Point P1, Point P2);
 	void Rotate(shape* pFig);
 	void deleteall();
+	int getscore();
 
 	
 
