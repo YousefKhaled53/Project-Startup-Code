@@ -123,7 +123,28 @@ void Oval::scramble() {
 	Point2.x = Point1.x + diffinx;
 	Point2.y = Point1.y + diffiny;
 }
-void Oval::hide(GUI* pUI) {};
+void Oval::hide(GUI* pUI) {
+	if (ishiden == true) {
+
+		int width = sqrt(pow((Point1.x - Point2.x), 2) + pow((Point1.y - Point1.y), 2));
+		int height = sqrt(pow((Point1.x - Point1.x), 2) + pow((Point1.y - Point2.y), 2));
+		//int yy = 0;
+		//int xx = 0;
+		//if (min(Point1.x, Point2.x) = Point2.x) {
+		//	yy = Point2.y;
+		//}
+		//else if (min(Point1.x, Point2.x) = Point1.x) {
+		//	yy = Point1.y;
+		//}
+		//if (min(Point1.y, Point2.y) = Point2.y) {
+		//	xx = Point2.x;
+		//}
+		//else if (min(Point1.y, Point2.y) = Point1.y) {
+		//	xx = Point1.x;
+		//}
+		pUI->getwind()->DrawImage("images\\MenuIcons\\Menu_Load.jpg", min(Point1.x, Point2.x), min(Point1.y, Point2.y), width, height);
+	}
+};
 void Oval::setishidentrue() { ishiden = true; };
 void Oval::setishidenfalse() { ishiden = false; };
 bool Oval::getishiden() {

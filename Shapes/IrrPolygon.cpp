@@ -104,7 +104,9 @@ void IrrPolygon::scramble() {
 		ArrY[i] = (Point1->y + arrdiffiny[i+1]);
 	}*/
 }
-void IrrPolygon::hide(GUI* pUI) {};
+void IrrPolygon::hide(GUI* pUI) {
+
+};
 void IrrPolygon::setishidentrue() { ishiden = true; };
 void IrrPolygon::setishidenfalse() { ishiden = false; };
 bool IrrPolygon::getishiden() {
