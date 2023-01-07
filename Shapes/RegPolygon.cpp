@@ -135,27 +135,28 @@ string RegPolygon::printforselection() {
 
 void RegPolygon::scramble() {
 
-	/*int diffinx = abs((Center.x - Point1->x));
-	int diffiny = abs((Center.y - Point1->y));
-	for (int i = 0; i < 2; i++) {
-		arrdiffinx[i] = abs((Center.x - ArrX[i]));
-		arrdiffiny[i] = abs((Center.y - ArrY[i]));
+	for (int i = 0; i < Vertices_num; i++) {
+		arrdiffinx[i] = ((Center.x - ArrX[i]));
+		arrdiffiny[i] = ((Center.y - ArrY[i]));
 		
 	}
-	Center.x = (rand() % 1300) ;
+	Center.x = (rand() % 1300);
 	Center.y = 50 + ((rand()) % 600);
-	Point1->x = Center.x + diffinx;
-	Point1->y = Center.y + diffiny;
 
-	for (int i = 0; i < 2; i++) {
-		ArrX[i] = (Center.x + arrdiffinx[i]);
-		ArrY[i] = (Center.y + arrdiffiny[i]);
+	for (int i = 0; i < Vertices_num; i++) {
+		ArrX[i] = Center.x + arrdiffinx[i];
+		ArrY[i] = Center.y + arrdiffiny[i];
+	}
 	
-	}*/
 	
 }
-void RegPolygon::hide(GUI* pUI) {};
-void RegPolygon::setishidentrue() { ishiden = true; };
+void RegPolygon::hide(GUI* pUI) {
+	if (ishiden == true) {
+		int diffx = sqrt(((Center.x - Point1->x) * (Center.x - Point1->x)) + ((Center.y - Point1->y) * (Center.y - Point1->y)));
+		pUI->getwind()->DrawImage("images\\MenuIcons\\Menu_Load.jpg", (Center.x - diffx), (Center.y - diffx), 2 * diffx, 2 * diffx);
+
+	}
+}; void RegPolygon::setishidentrue() { ishiden = true; };
 void RegPolygon::setishidenfalse() { ishiden = false; };
 bool RegPolygon::getishiden() {
 	return ishiden;

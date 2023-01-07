@@ -10,7 +10,7 @@ public:
 	virtual void Execute() {
 		GUI* pUI = pControl->GetUI();
 		pUI->CreateDrawToolBar();
-		pUI->CreateDrawToolBar2();
+		//pUI->CreateDrawToolBar2();
 
 	}
 };

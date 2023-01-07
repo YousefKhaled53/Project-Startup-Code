@@ -128,8 +128,15 @@ void Rect::scramble() {
 	Corner2.x = Corner1.x + diffinx;
 	Corner2.y = Corner1.y + diffiny;
 }
-void Rect::hide(GUI* pUI) {};
-void Rect::setishidentrue() { ishiden = true; };
+void Rect::hide(GUI* pUI) {
+	if (ishiden == true) {
+
+		int width = sqrt(pow((Corner1.x - Corner2.x), 2) + pow((Corner1.y - Corner1.y), 2));
+		int height = sqrt(pow((Corner1.x - Corner1.x), 2) + pow((Corner1.y - Corner2.y), 2));
+
+		pUI->getwind()->DrawImage("images\\MenuIcons\\Menu_Load.jpg", min(Corner1.x, Corner2.x), min(Corner1.y, Corner2.y), width, height);
+	}
+}; void Rect::setishidentrue() { ishiden = true; };
 void Rect::setishidenfalse() { ishiden = false; };
 bool Rect::getishiden() {
 	return ishiden;
