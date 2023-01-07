@@ -354,7 +354,7 @@ void Graph::dublicate() {
 	for (int i = 0; i < z; i++) {
 		shapesList.push_back(shapesList[i]);
 		int currentreplicaindex = i + z;
-		shapesList[currentreplicaindex]->setid(i);
+		shapesList[currentreplicaindex]->setid(i+1);
 	}
 	ofstream myfile;
 	myfile.open("temp.txt");
@@ -366,7 +366,7 @@ void Graph::dublicate() {
 	ifstream file("temp.txt");
 	load(file);
 	myfile.close();
-	remove("temp.txt");
+//	remove("temp.txt");
 
 }
 void Graph::sendtoback(shape* pShp) {

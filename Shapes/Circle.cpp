@@ -64,7 +64,7 @@ void Circle::Rotate() {
 }
 void Circle::Save(ofstream& OutFile , int id) {
 
-	OutFile << "CIRCLE" << " " << ID << " " << Center.x << " " << Center.y << " " << radius.x << " " << radius.y << " ";
+	OutFile << "CIRCLE" << " " << ShapeID << " " << Center.x << " " << Center.y << " " << radius.x << " " << radius.y << " ";
 
 	OutFile << shape::getdrawclr().getucred() << " ";
 	OutFile << shape::getdrawclr().getucgreen() << " ";
