@@ -20,6 +20,5 @@ void opgroup::Execute() {
 	Sleep(3000);
 	pControl->getGraph()->makeallunselected();
 	pControl->UpdateInterface();
-	pControl->getGraph()->addtoagroup(n);
-	//pControl->getGraph()->clearmultiselectedvector();
+	
 }

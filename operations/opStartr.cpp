@@ -18,17 +18,18 @@ void opStartr::Execute() {
 		if (pUI->isinttoolbar(&P1) == true) {
 			pControl->getGraph()->Unhide(&P1);
 			pControl->getGraph()->Match(pUI);
-			pUI->CreatePlayToolBar();
-			pUI->CreateStatusBar();
-
 			pControl->UpdateInterface();
 		}
 		else
 		{
+			
+			pUI->PrintMessage("game is stopped, you can now choose an operation ");
+			Sleep(2000);
 			break;
-			pUI->PrintMessage("click on the needed operation ");
-			pControl->GetUseroperation();
+		
 		}
+		pUI->CreatePlayToolBar();
+		pUI->CreateStatusBar();
 		
 	} 
 	pUI->PrintMessage("congratulations you finished with score " + to_string(pControl->getGraph()->getscore()));

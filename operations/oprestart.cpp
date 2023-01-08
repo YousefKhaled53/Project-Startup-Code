@@ -3,6 +3,7 @@ oprestart::oprestart(controller* pCont) : operation(pCont) {};
 oprestart::~oprestart() {};
 void oprestart::Execute() {
 	GUI* pUI = pControl->GetUI();
+	pControl->getGraph()->deleteall();
 	pControl->getGraph()->filloriginalfromtemporary();
 	pControl->getGraph()->resetscore();
 	pControl->getGraph()->dublicate();
@@ -12,23 +13,26 @@ void oprestart::Execute() {
 	while (pControl->getGraph()->getshapeslist() == true) {
 
 		Point P1;
-		pUI->PrintMessage("the game has started and your score is : " + to_string(pControl->getGraph()->getscore()));
+		pUI->PrintMessage("the game has restarted and your score is : " + to_string(pControl->getGraph()->getscore()));
 
 		pUI->GetPointClicked(P1.x, P1.y);
 		if (pUI->isinttoolbar(&P1) == true) {
 			pControl->getGraph()->Unhide(&P1);
 			pControl->getGraph()->Match(pUI);
-			pUI->CreatePlayToolBar();
-			pUI->CreateStatusBar();
+			
 
 			pControl->UpdateInterface();
 		}
 		else
 		{
+			
+			pUI->PrintMessage("game is stopped, choose an operation ");
+			Sleep(2000);
 			break;
-			pUI->PrintMessage("the play is stopped now click on the needed operation ");
-			pControl->GetUseroperation();
 		}
+		pUI->CreatePlayToolBar();
+		pUI->CreateStatusBar();
 	}
+
 	pUI->PrintMessage("congratulations you finished with score " + to_string(pControl->getGraph()->getscore()));
 }

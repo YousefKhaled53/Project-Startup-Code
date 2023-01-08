@@ -501,7 +501,6 @@ void Graph::Unhide(Point* P1) {
 		if (shapesList[i]->is_in_fig(P1->x, P1->y)) {
 			shapesList[i]->setishidenfalse();
 		}
-
 		
 	} 
 
@@ -534,11 +533,7 @@ void Graph::filloriginalfromtemporary () {
 void Graph::resetscore() {
 	score = 0;
 }
-void Graph::addtoagroup(int n) {
-	for (int i = 0; i < n; i++) {
-		vectorofgroup.push_back(multishapesselectedforgroups[i]);
-	}
-}
+
 void Graph::clearmultiselectedvector() {
 	for (int i = 0; i < multishapesselected.size(); i++) {
 		multishapesselected.clear();
@@ -565,10 +560,7 @@ void Graph::multiselectforgrouping(int arrx[], int arry[], int size) {
 			if (shapePointer->is_in_fig(arrx[i], arry[i])) {
 				shapePointer->SetSelected(true);
 				shapePointer->setisingroup(true);
-				multishapesselectedforgroups.push_back(shapePointer);
+				vectorofgroup.push_back(shapePointer);
 			}
 		}
-}
-void Graph::deleteallforagroup() {
-
 }

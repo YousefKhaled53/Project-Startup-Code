@@ -57,10 +57,9 @@ public:
 	void filltemporary();
 	void filloriginalfromtemporary();
 	void resetscore();
-	void addtoagroup(int n );
 	void clearmultiselectedvector(); // should be used after any use for multisleected vector 
 	void makeallunselected();
 	void ungroup();
 	void multiselectforgrouping(int arrx[], int arry[], int size);
-	void deleteallforagroup();
+	
 };
