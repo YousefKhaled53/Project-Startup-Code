@@ -418,24 +418,63 @@ void Graph::scramble() {
 }
 void Graph::dublicate() {
 	const int z = shapesList.size();
-
 	for (int i = 0; i < z; i++) {
-		shapesList.push_back(shapesList[i]);
-		int currentreplicaindex = i + z;
-		shapesList[currentreplicaindex]->setid(i+1);
+		if (dynamic_cast<Circle*>(shapesList[i])) {
+
+			shapesList.push_back((dynamic_cast<Circle*>(shapesList[i])->copy()));
+			int currentreplicaindex = i + z;
+			shapesList[currentreplicaindex]->setid(i + 1);
+
+		}
+		if (dynamic_cast<line*>(shapesList[i])) {
+
+			shapesList.push_back((dynamic_cast<line*>(shapesList[i])->copy()));
+			int currentreplicaindex = i + z;
+			shapesList[currentreplicaindex]->setid(i + 1);
+
+		}
+		if (dynamic_cast<Oval*>(shapesList[i])) {
+
+			shapesList.push_back((dynamic_cast<Oval*>(shapesList[i])->copy()));
+			int currentreplicaindex = i + z;
+			shapesList[currentreplicaindex]->setid(i + 1);
+
+		}
+		if (dynamic_cast<Rect*>(shapesList[i])) {
+
+			shapesList.push_back((dynamic_cast<Rect*>(shapesList[i])->copy()));
+			int currentreplicaindex = i + z;
+			shapesList[currentreplicaindex]->setid(i + 1);
+
+		}
+		if (dynamic_cast<RegPolygon*>(shapesList[i])) {
+
+			shapesList.push_back((dynamic_cast<RegPolygon*>(shapesList[i])->copy()));
+			int currentreplicaindex = i + z;
+			shapesList[currentreplicaindex]->setid(i + 1);
+
+		}
+		if (dynamic_cast<square*>(shapesList[i])) {
+
+			shapesList.push_back((dynamic_cast<square*>(shapesList[i])->copy()));
+			int currentreplicaindex = i + z;
+			shapesList[currentreplicaindex]->setid(i + 1);
+
+		}
+		if (dynamic_cast<triangle*>(shapesList[i])) {
+
+			shapesList.push_back((dynamic_cast<triangle*>(shapesList[i])->copy()));
+			int currentreplicaindex = i + z;
+			shapesList[currentreplicaindex]->setid(i + 1);
+		}
+		if (dynamic_cast<IrrPolygon*>(shapesList[i])) {
+
+			shapesList.push_back((dynamic_cast<IrrPolygon*>(shapesList[i])->copy()));
+			int currentreplicaindex = i + z;
+			shapesList[currentreplicaindex]->setid(i + 1);
+
+		}
 	}
-	ofstream myfile;
-	myfile.open("temp.txt");
-	Save(myfile);
-	myfile.close();
-
-	deleteall();
-
-	ifstream file("temp.txt");
-	load(file);
-	myfile.close();
-	remove("temp.txt");
-
 }
 void Graph::sendtoback(shape* pShp) {
 	for (int i = 0; i < shapesList.size(); i++) {
@@ -638,11 +677,60 @@ void Graph::preparetoundo() {
 		}
 	}
 }
-void Graph::undo(GUI* pUI) {
-	//const int z = shapesList.size();
+void Graph::preparetoredo() {
+	vectorofcopiestoredo.clear();
+	for (int i = 0; i < shapesList.size(); i++) {
+		if (dynamic_cast<Circle*>(shapesList[i])) {
+
+			vectorofcopiestoredo.push_back((dynamic_cast<Circle*>(shapesList[i])->copy()));
+
+		}
+		if (dynamic_cast<line*>(shapesList[i])) {
+
+			vectorofcopiestoredo.push_back((dynamic_cast<line*>(shapesList[i])->copy()));
+
+		}
+		if (dynamic_cast<Oval*>(shapesList[i])) {
+
+			vectorofcopiestoredo.push_back((dynamic_cast<Oval*>(shapesList[i])->copy()));
+
+		}
+		if (dynamic_cast<Rect*>(shapesList[i])) {
+
+			vectorofcopiestoredo.push_back((dynamic_cast<Rect*>(shapesList[i])->copy()));
+
+		}
+		if (dynamic_cast<RegPolygon*>(shapesList[i])) {
+
+			vectorofcopiestoredo.push_back((dynamic_cast<RegPolygon*>(shapesList[i])->copy()));
+
+		}
+		if (dynamic_cast<square*>(shapesList[i])) {
+
+			vectorofcopiestoredo.push_back((dynamic_cast<square*>(shapesList[i])->copy()));
+
+		}
+		if (dynamic_cast<triangle*>(shapesList[i])) {
+
+			vectorofcopiestoredo.push_back((dynamic_cast<triangle*>(shapesList[i])->copy()));
+
+		}
+		if (dynamic_cast<IrrPolygon*>(shapesList[i])) {
+
+			vectorofcopiestoredo.push_back((dynamic_cast<IrrPolygon*>(shapesList[i])->copy()));
+
+		}
+	}
+}
+void Graph::undo() {
 	deleteall();
 	for (int i = 0; i < vectorofcopiestoundo.size(); i++) {
 		shapesList.push_back(vectorofcopiestoundo[i]);
 	}
 }
- 
+void Graph::redo() {
+	deleteall();
+	for (int i = 0; i < vectorofcopiestoredo.size(); i++) {
+		shapesList.push_back(vectorofcopiestoredo[i]);
+	}
+}

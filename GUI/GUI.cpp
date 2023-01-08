@@ -14,7 +14,7 @@ GUI::GUI()
 
 	StatusBarHeight = 50;
 	ToolBarHeight = 50;
-	MenuIconWidth = 60;
+	MenuIconWidth = 50;
 
 	DrawColor = BLUE;	//default Drawing color
 	FillColor = GREEN;	//default Filling color
@@ -126,6 +126,8 @@ operationType GUI::GetUseroperation() const
 			case ICON_ROTATE:return ROTATE;
 			case ICON_GROUP:return GROUP;
 			case ICON_UNGROUP:return UNGROUP;
+			case ICON_UNDO: return undo;
+			case ICON_REDO: return redo;
 			default: return EMPTY;	//A click on empty place in desgin toolbar
 			}
 		}
@@ -160,6 +162,7 @@ operationType GUI::GetUseroperation() const
 			case ICON_duplicate: return duplicate;
 			case ICON_START: return start;
 			case ICON_RESTART: return restart;
+			case ICON_TODRAW: return todraw;
 			
 			default: return EMPTY;	//A click on empty place in desgin toolbar
 			}
@@ -291,19 +294,20 @@ void GUI::CreateDrawToolBar2()
 	int iconWidth = ToolBarHeight;
 	int iconHeight =40;
 	string MenuIconImages[ToolBar2];
-	MenuIconImages[ICON_paste] = "images\\MenuIcons\\Menu_Rect.jpg";
-	MenuIconImages[ICON_copy] = "images\\MenuIcons\\line.jpg";
+	MenuIconImages[ICON_paste] = "images\\MenuIcons\\paste.jfif";
+	MenuIconImages[ICON_copy] = "images\\MenuIcons\\copy.jfif";
 	MenuIconImages[ICON_multidelete] = "images\\MenuIcons\\download.jfif";	
 	MenuIconImages[ICON_sendtoback] = "images\\MenuIcons\\sendtoback.jfif";
-	MenuIconImages[ICON_MOVE] = "images\\MenuIcons\\Move_icon.jpg";
-	MenuIconImages[ICON_RESIZE] = "images\\MenuIcons\\Resize_icon.jpg";
-	MenuIconImages[ICON_ROTATE] = "images\\MenuIcons\\Rotate_icon.jpg";
+	MenuIconImages[ICON_MOVE] = "images\\MenuIcons\\drag.jfif";
+	MenuIconImages[ICON_RESIZE] = "images\\MenuIcons\\resize2.jfif";
+	MenuIconImages[ICON_ROTATE] = "images\\MenuIcons\\rotate.jfif";
 	MenuIconImages[ICON_Multi_Select] = "images\\MenuIcons\\Multi_Select.jpg";
 	MenuIconImages[ICON_ZOOM_IN] = "images\\MenuIcons\\ZOOM_IN.jfif";
 	MenuIconImages[ICON_ZOOM_OUT] = "images\\MenuIcons\\ZOOM_OUT.jfif";
 	MenuIconImages[ICON_GROUP] = "images\\MenuIcons\\group.jfif";
 	MenuIconImages[ICON_UNGROUP] = "images\\MenuIcons\\ungroup.jfif";
-
+	MenuIconImages[ICON_UNDO] = "images\\MenuIcons\\undo.jfif";
+	MenuIconImages[ICON_REDO] = "images\\MenuIcons\\redo.jfif";
 
 	// Draw the vertical toolbar
 	for (int i = 0; i < ToolBar2; i++) {
@@ -329,7 +333,7 @@ void GUI::CreatePlayToolBar()
 	MenuIconImages[ICON_RESTART] = "images\\MenuIcons\\restart.jfif";
 	MenuIconImages[ICON_scramble] = "images\\MenuIcons\\scramble.jpg";
 	MenuIconImages[ICON_duplicate] = "images\\MenuIcons\\double.jfif";
-
+	MenuIconImages[ICON_TODRAW] = "images\\MenuIcons\\switch.jpg";
 	MenuIconImages[ICON_EXIT2] = "images\\MenuIcons\\Menu_Exit.jpg";
 	
 	for (int i = 0; i < PLAY_ICON_COUNT; i++)

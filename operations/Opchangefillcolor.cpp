@@ -15,4 +15,5 @@ void Opchangefillcolor::Execute() {
 	pUI->GetPointClicked(p1.x, p1.y);
 	color c2=pUI->getwind()->GetColor(p1.x, p1.y);
 	pGr->changefillcolor(pGr->GetSelected(),c2);
+	pGr->GetSelected()->SetSelected(false);
 }

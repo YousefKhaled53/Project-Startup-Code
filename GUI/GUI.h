@@ -78,6 +78,8 @@ class GUI
 		ICON_ROTATE,
 		ICON_GROUP,
 		ICON_UNGROUP,
+		ICON_UNDO,
+		ICON_REDO,
 		ToolBar2
 	};
 
@@ -93,6 +95,7 @@ class GUI
 
 		ICON_scramble,
 		ICON_duplicate,
+		ICON_TODRAW,
 		ICON_EXIT2,
 		PLAY_ICON_COUNT		//no. of menu icons ==> This should be the last line in this enum
 

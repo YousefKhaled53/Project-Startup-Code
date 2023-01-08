@@ -57,6 +57,8 @@ enum operationType //The operations supported (you can add more if needed)
 	todraw,
 	GROUP,
 	UNGROUP,
+	undo,
+	redo,
 	
 
 	///TODO: Add more operation types (if needed)

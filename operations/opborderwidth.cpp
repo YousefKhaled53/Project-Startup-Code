@@ -10,4 +10,5 @@ void opborderwidth::Execute() {
 	int pw;
 	pw = stoi(pUI->GetSrting());
 	pGr->borderwidth(pGr->GetSelected(), pw);
+	pGr->GetSelected()->SetSelected(false);
 }

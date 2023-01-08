@@ -46,6 +46,7 @@
 #include"operations/opgroup.h"
 #include"operations/opungroup.h"
 #include"operations/opundo.h"
+#include"operations/opredo.h"
 //Constructor
 controller::controller()
 {
@@ -74,10 +75,10 @@ operation* controller::createOperation(operationType OpType)
 		case DRAW_LINE:
 			//pOp = new ophide(this);
 			//pOp = new opdublicate(this);
-			pOp = new opundo(this);
+			//pOp = new opundo(this);
 
 			//pOp = new opCancelFillingGeneral(this);
-		//	pOp = new opAddline(this);
+			pOp = new opAddline(this);
 			break;
 
 		case DRAW_RECT:
@@ -103,7 +104,8 @@ operation* controller::createOperation(operationType OpType)
 			break;
 
 		case DRAW_OVAL:
-			pOp = new opCopy(this);
+			//pOp = new opCopy(this);
+			pOp = new opAddOval(this);
 			break;
 
 		case EXIT:
@@ -134,23 +136,17 @@ operation* controller::createOperation(operationType OpType)
 		case STATUS:	//a click on the status bar ==> no operation
 			break;
 		case DEL:
-			//pOp = new opCancelFillingGeneral(this);
 			pOp = new opdeleteshape(this);
-			//break;
+			break;
 		case RESIZE:
-			//pOp = new opCancelFillingGeneral(this);
-			pOp = new opdeleteshape(this);
+			pOp = new opResize(this);
 			break;
 		case ROTATE:
 			pOp = new opRotate(this);
 			break;
-	//	case TO_PLAY:
-		//	pOp = new opswitchlaymode(this);
-			//break;
 		case TO_PLAY:
 
 			pOp = new opswitchlaymode(this);
-			//pOp = new opRotate(this);
 			break;
 		case LOAD:
 			pOp = new opload(this);
@@ -179,7 +175,6 @@ operation* controller::createOperation(operationType OpType)
 
 		case hide:
 			pOp = new ophide(this);
-			//pOp = new opswitchtodrawmode(this);
 			break;
 		case scramble:
 			pOp = new opscramble(this);
@@ -189,10 +184,10 @@ operation* controller::createOperation(operationType OpType)
 			pOp = new opdublicate(this);
 			break;
 		case COPY:
-			pOp = new opAddline(this);
+			//pOp = new opAddline(this);
 			break;
 		case PASTE:
-			pOp = new opAddRect(this);
+			//pOp = new(this);
 			break;	
 		case MULTIDELTE:
 			pOp = new opmultidelete(this);
@@ -214,6 +209,12 @@ operation* controller::createOperation(operationType OpType)
 			break;
 		case UNGROUP:
 			pOp=new opungroup(this);
+			break;
+		case undo:
+			pOp = new opundo(this);
+			break;
+		case redo:
+			pOp = new opredo(this);
 			break;
 	}
 
@@ -267,10 +268,21 @@ void controller::Run()
 		//2. Create an operation coresspondingly
 		
 		operation* pOpr = createOperation(OpType);
-		if (OpType==0)
+		if (OpType==49)
 		{
 			if (pOpr)
 			{
+			
+				pOpr->Execute();//Execute
+
+				delete pOpr;	//operation is not needed any more ==> delete it
+				pOpr = nullptr;
+			}
+		}
+		if (OpType == 50) {
+			if (pOpr)
+			{
+
 				pOpr->Execute();//Execute
 
 				delete pOpr;	//operation is not needed any more ==> delete it
@@ -280,14 +292,16 @@ void controller::Run()
 		else
 		{
 			pGraph->preparetoundo(); // make a copy of the last operation done on the shapeslist vector
+			
 			if (pOpr)
 			{
 				pOpr->Execute();//Execute
-
+				pGraph->preparetoredo();
 				delete pOpr;	//operation is not needed any more ==> delete it
 				pOpr = nullptr;
 			}
 		}
+		
 		 
 		//3. Execute the created operation
 		

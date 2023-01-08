@@ -15,4 +15,5 @@ void opbordercolor::Execute() {
 	pUI->GetPointClicked(p1.x, p1.y);
 	color c2 = pUI->getwind()->GetColor(p1.x, p1.y);
 	pGr->bordercolor(pGr->GetSelected(), c2);
+	pGr->GetSelected()->SetSelected(false);
 }

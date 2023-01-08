@@ -19,6 +19,7 @@ private:
 	vector <shape*> temporaryvectorforrestarting ;
 	vector <shape*> vectorofgroup;
 	vector <shape*> vectorofcopiestoundo;
+	vector <shape*> vectorofcopiestoredo;
 	//int numberofcreatedvectors = 0;
 	shape* selectedShape;	//pointer to the currently selected shape
 	int score = 0;
@@ -64,18 +65,13 @@ public:
 	void makeallunselected();
 	void ungroup();
 	void multiselectforgrouping(int arrx[], int arry[], int size);
-
-
- 
-	
- 
 	void deleteallforagroup();
 	void copy();
- 
- 
 	void preparetoundo();
-	void undo(GUI* pUI);
- 
+	void preparetoredo();
+	void undo();
+	void redo();
+
 	void setselectedshapenull() {
 		selectedShape = nullptr;
 	}

@@ -192,6 +192,7 @@
     <ClCompile Include="operations\opMatch.cpp" />
     <ClCompile Include="operations\opMove.cpp" />
     <ClCompile Include="operations\opPest.cpp" />
+    <ClCompile Include="operations\opredo.cpp" />
     <ClCompile Include="operations\opResize.cpp" />
     <ClCompile Include="operations\oprestart.cpp" />
     <ClCompile Include="operations\opsave.cpp" />
@@ -270,6 +271,7 @@
     <ClInclude Include="operations\opMatch.h" />
     <ClInclude Include="operations\opMove.h" />
     <ClInclude Include="operations\opPest.h" />
+    <ClInclude Include="operations\opredo.h" />
     <ClInclude Include="operations\opResize.h" />
     <ClInclude Include="operations\oprestart.h" />
     <ClInclude Include="operations\opsave.h" />
