@@ -37,12 +37,8 @@ public:
 		return isingroup ;
 	}
 
-
- 
 	void ZOOM(double  s);
  
- 
-	shape* returncopy() ;
 	
  
 };

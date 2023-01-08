@@ -597,7 +597,7 @@ void Graph::preparetoundo() {
 	for (int i = 0; i < shapesList.size(); i++) {
 		if (dynamic_cast<Circle*>(shapesList[i])) {
 			//shape* copy = new Circle(dynamic_cast<Circle*>(shapesList[i]));
-			vectorofcopiestoundo.push_back((dynamic_cast<Circle*>(shapesList[i])->returncopy()));
+			vectorofcopiestoundo.push_back((dynamic_cast<Circle*>(shapesList[i])->copy()));
 			//delete[] copy;
 		}
 		

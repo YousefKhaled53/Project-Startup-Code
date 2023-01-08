@@ -155,8 +155,3 @@ void Circle::ZOOM(double s) {
 }
 
 
-shape* Circle::returncopy() {
-	shape* copy = new Circle(Center,radius,ShpGfxInfo);
-	return copy;
- 
-}
