@@ -25,7 +25,7 @@
 #include"opCancelFillingGeneral.h"
 #include"operations/Opchangefillcolor.h"
 #include"./opchangepenwidth.h"
-#include"./operations/opCopy.h"
+#include"operations/opCopy.h"
 #include"Opexit.h"
 #include "opCancelFillingGeneral.h"
 #include"operations/opdeleteshape.h"
@@ -100,7 +100,7 @@ operation* controller::createOperation(operationType OpType)
 			break;
 
 		case DRAW_OVAL:
-			pOp = new opAddOval(this);
+			pOp = new opCopy(this);
 			break;
 
 		case EXIT:

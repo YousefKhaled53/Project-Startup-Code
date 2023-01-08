@@ -19,6 +19,9 @@ public:
 	virtual void scramble();
 	virtual string printforselection();
 	void Rotate();
+
+	shape* copy();
+	
 	void Move(Point P1, Point P2);
 	virtual void hide(GUI* pUI);
 	virtual void setishidentrue();

@@ -101,7 +101,16 @@ void line::Move(Point P1, Point P2) {
 		Corner1.x += C1.x; Corner1.y += C1.y;
 		Corner2.x += C1.x; Corner2.y += C1.y;
 
-	};
+	}
+
+	shape* line::copy() 
+	{
+		line* newLine = new line(Corner1, Corner2, ShpGfxInfo);
+		return newLine;
+	}
+	
+
+	;
 	bool line::is_in_fig(int x, int y) {
 		//int LineSlope = ((Corner2.y - Corner1.y) / (Corner2.x - Corner1.x));
 		////double LineLength = sqrt(pow((Corner1.x - Corner2.x), 2) + pow((Corner1.y - Corner2.y), 2));

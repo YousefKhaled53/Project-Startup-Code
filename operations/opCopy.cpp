@@ -9,15 +9,10 @@ opCopy::opCopy(controller* pCont) : operation(pCont) {}
 
 void opCopy::Execute()
 {
-    Point P1;
     GUI* pUI = pControl->GetUI();
     Graph* pGr = pControl->getGraph();
-    pUI->PrintMessage("Please select a shape to copy");
-    pUI->GetPointClicked(P1.x, P1.y);
-    shape* sel = pGr->Getshape(P1.x, P1.y);
-    shape*
-    shapeIndex = pGr->GetSelected();
-    pGr->Addshape(shapeIndex);
-    pUI->PrintMessage("Shape copied successfully");
+    pUI->PrintMessage("Please select Before copy");
+    pGr->copy();
+    pUI->PrintMessage("Copied");
     
 }

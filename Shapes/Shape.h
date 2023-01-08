@@ -44,11 +44,15 @@ public:
 <<<<<<< Updated upstream
 	virtual void setisingroup(bool b)=0;
 	virtual bool getisingroup() = 0;
+<<<<<<< Updated upstream
 =======
 	virtual void  ZOOM(double s)=0;
 
 >>>>>>> Stashed changes
 
+=======
+	virtual shape* copy()=0;
+>>>>>>> Stashed changes
 	///The following functions should be supported by the shape class	
 	///It should be overridden by each inherited shape
 

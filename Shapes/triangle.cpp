@@ -171,6 +171,7 @@ void triangle::setid(int i) {
 int triangle::getid() {
 	return ShapeID;
 }
+<<<<<<< Updated upstream
 void triangle::ZOOM(double s) {
 	int x = 1300 / 2;
 	int y = 650 / 2;
@@ -180,4 +181,10 @@ void triangle::ZOOM(double s) {
 	Corner2.y = (Corner2.y * s) - (s * y) + y;
 	Corner3.x = (Corner3.x * s)- (s * x) + x;
 	Corner3.y = (Corner3.y * s)- (s * y) + y;
+=======
+shape* triangle:: copy() {
+	
+	triangle* newTriangle = new triangle(Corner1, Corner2, Corner3, ShpGfxInfo);
+	return newTriangle;
+>>>>>>> Stashed changes
 }

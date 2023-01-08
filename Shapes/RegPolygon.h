@@ -35,6 +35,10 @@ public:
 	void setid(int i);
 	int getid();
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+	shape* copy() ;
+>>>>>>> Stashed changes
 	virtual void setisingroup(bool b) {
 		isingroup = b;
 	}

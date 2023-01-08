@@ -167,6 +167,7 @@ void RegPolygon::setid(int i) {
 int RegPolygon::getid() {
 	return ShapeID;
 }
+<<<<<<< Updated upstream
 void RegPolygon::ZOOM(double s) {
 	int x = 1300 / 2;
 	int y = 650 / 2;
@@ -174,4 +175,10 @@ void RegPolygon::ZOOM(double s) {
 	Point1->y = (Point1->y * s)-(s*y)+y;
 	Center.x = (Center.x * s)-(s*x)+x;
 	Center.y = (Center.y * s)- (s * y) + y;
+=======
+shape* RegPolygon::copy(){
+	
+	
+	return nullptr;
+>>>>>>> Stashed changes
 }

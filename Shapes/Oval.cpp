@@ -149,12 +149,14 @@ void Oval::setishidenfalse() { ishiden = false; };
 bool Oval::getishiden() {
 	return ishiden;
 }
+
 void Oval::setid(int i) {
 	ShapeID = i;
 };
 int Oval::getid() {
 	return ShapeID;
 }
+<<<<<<< Updated upstream
 void Oval::ZOOM(double s) {
 	int x = 1300 / 2;
 	int y = 650 / 2;
@@ -166,3 +168,10 @@ void Oval::ZOOM(double s) {
 
 ;
 }
+=======
+shape* Oval::copy()  {
+	
+	Oval* newOval = new Oval(Point1, Point2, ShpGfxInfo);
+	return newOval;
+}
+>>>>>>> Stashed changes

@@ -147,6 +147,7 @@ void Rect::setid(int i) {
 int Rect::getid() {
 	return ShapeID;
 }
+<<<<<<< Updated upstream
 void Rect::ZOOM(double s) {
 	int x = 1300 / 2;
 	int y = 650 / 2;
@@ -154,4 +155,10 @@ void Rect::ZOOM(double s) {
 	Corner1.y = (Corner1.y * s) - (s * y) + y;
 	Corner2.x = (Corner2.x * s) - (s * x) + x;
 	Corner2.y = (Corner2.y * s) - (s * y) + y;
+=======
+shape* Rect::copy()  {
+	
+	Rect* newRectangle = new Rect(Corner1, Corner2, ShpGfxInfo);
+	return newRectangle;
+>>>>>>> Stashed changes
 }

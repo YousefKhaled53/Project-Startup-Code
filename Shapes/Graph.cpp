@@ -568,3 +568,18 @@ void Graph::multiselectforgrouping(int arrx[], int arry[], int size) {
 			}
 		}
 }
+<<<<<<< Updated upstream
+=======
+void Graph::deleteallforagroup() {
+
+}
+void Graph::copy() {
+	for (int i = 0; i < shapesList.size(); i++) {
+		if (shapesList[i]->IsSelected() == true) {
+			shapecopied->push_back(shapesList[i]->copy());
+			
+
+		}
+	}
+}
+>>>>>>> Stashed changes
