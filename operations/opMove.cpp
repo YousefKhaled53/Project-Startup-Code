@@ -10,13 +10,12 @@ void opMove::Execute() {
 	pUI->GetPointClicked(P1.x, P1.y);
 	//if (pGr->GetSelected()->is_in_fig(P1.x, P1.y)) {
 		shape* sel = pGr->Getshape(P1.x, P1.y);
-
 		if (sel) {
 
 			if (pGr->GetSelected()) {
 				sel->SetSelected(true);
 				pUI->ClearStatusBar();
-				pUI->PrintMessage(sel->printforselection());
+				//pUI->PrintMessage(sel->printforselection());
 				pGr->GetSelected()->SetSelected(false);
 				pGr->SetSelected(sel);
 
@@ -26,6 +25,7 @@ void opMove::Execute() {
 				sel->SetSelected(true);
 				pGr->SetSelected(sel);
 				bool flag = false;
+				pUI->ClearStatusBar();
 				pUI->PrintMessage("click again to stop moving");
 
 				while (!flag) {
@@ -40,15 +40,21 @@ void opMove::Execute() {
 
 						}
 					}
+					sel->SetSelected(false);
 
 					flag = true;
-				
+
 				}
+				//flag = false;
 
 			}
+			
 			pUI->CreateDrawToolBar();
 			sel->SetSelected(false);
+			//pUI->ClearStatusBar();
 
-	}
+	//	}
+		}
+		pControl->getGraph()->setselectedshapenull();
 
 }

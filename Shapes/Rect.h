@@ -28,6 +28,7 @@ public:
 	virtual bool getishiden();
 	void setid(int i);
 	int getid();
+<<<<<<< Updated upstream
 
 
  
@@ -35,14 +36,20 @@ public:
 
 	shape* copy();
  
+=======
+>>>>>>> Stashed changes
 	virtual void setisingroup(bool b) {
 		isingroup = b;
 	}
 	virtual bool getisingroup() {
 		return isingroup;
 	}
+<<<<<<< Updated upstream
  
 	 void ZOOM(double s);
  
+=======
+	 void ZOOM(double s);
+>>>>>>> Stashed changes
 };
 

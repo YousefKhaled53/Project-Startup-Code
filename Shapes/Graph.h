@@ -76,4 +76,7 @@ public:
 	void preparetoundo();
 	void undo(GUI* pUI);
  
+	void setselectedshapenull() {
+		selectedShape = nullptr;
+	}
 };

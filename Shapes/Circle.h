@@ -20,7 +20,7 @@ public:
 	void Resize(double r);
 	virtual string printforselection();
 	void Rotate();
-	void Move(Point P1, Point P2) {}
+	void Move(Point P1, Point P2);
 	bool is_in_fig(int x, int y);
 	virtual void scramble();
 	virtual void hide(GUI* pUI);
