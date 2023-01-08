@@ -74,6 +74,15 @@ operation* controller::createOperation(operationType OpType)
 	switch (OpType)
 	{
 		case DRAW_LINE:
+<<<<<<< Updated upstream
+=======
+			//pOp = new ophide(this);
+			//pOp = new opdublicate(this);
+			//pOp = new opundo(this);
+
+			//pOp = new opStickImage(this);
+			//pOp = new opCancelFillingGeneral(this);
+>>>>>>> Stashed changes
 			pOp = new opAddline(this);
 			break;
 		case DRAW_RECT:
@@ -196,8 +205,15 @@ operation* controller::createOperation(operationType OpType)
 		case redo:
 			pOp = new opredo(this);
 			break;
+<<<<<<< Updated upstream
 		case stick:
 			pOp = new opStickImage(this);
+=======
+
+		case cut:
+			break;
+		case stick:
+>>>>>>> Stashed changes
 			break;
 	}
 

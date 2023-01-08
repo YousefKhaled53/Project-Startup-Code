@@ -561,7 +561,7 @@ void Graph::StickImage(shape* sh) {
 }
 void Graph::hide(GUI* pUI) {
 	for (int i = 0; i < shapesList.size(); i++) {
-		shapesList[0]->setishidentrue();
+		shapesList[i]->setishidentrue();
 	}
 }
 void Graph::Unhide(Point* P1) {

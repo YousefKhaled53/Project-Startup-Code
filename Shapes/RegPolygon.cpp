@@ -182,7 +182,7 @@ void RegPolygon::scramble() {
 void RegPolygon::hide(GUI* pUI) {
 	if (ishiden == true) {
 		int diffx = sqrt(((Center.x - Point1->x) * (Center.x - Point1->x)) + ((Center.y - Point1->y) * (Center.y - Point1->y)));
-		pUI->getwind()->DrawImage("images\\MenuIcons\\Menu_Load.jpg", (Center.x - diffx), (Center.y - diffx), 2 * diffx, 2 * diffx);
+		pUI->getwind()->DrawImage("images\\MenuIcons\\unoip.jpg", (Center.x - diffx), (Center.y - diffx), 2 * diffx, 2 * diffx);
 
 	}
 }; void RegPolygon::setishidentrue() { ishiden = true; };
@@ -199,15 +199,19 @@ int RegPolygon::getid() {
 void RegPolygon::ZOOM(double s) {
 	int x = 1300 / 2;
 	int y = 650 / 2;
-	Point1->x = (Point1->x * s) - (s * x) + x;
-	Point1->y = (Point1->y * s) - (s * y) + y;
-	Center.x = (Center.x * s) - (s * x) + x;
-	Center.y = (Center.y * s) - (s * y) + y;
+	for (int i = 0; i < Vertices_num; i++) {
+		ArrX[i]= (ArrX[i]*s) - (s * x) + x;
+		ArrY[i] = (ArrY[i] * s) - (s * y) + y;
+	}
+	//Point1->x = (Point1->x * s) - (s * x) + x;
+	//Point1->y = (Point1->y * s) - (s * y) + y;
+	//Center.x = (Center.x * s) - (s * x) + x;
+	//Center.y = (Center.y * s) - (s * y) + y;
 }
 shape* RegPolygon::copy(){
 	
-	
-	return nullptr;
+	shape* p = new RegPolygon(Center, Point1, Vertices_num, ShpGfxInfo);
+	return p;
 }
 //void RegPolygon::StickImage(GUI* pUI) {
 //	if (ishiden == true) {

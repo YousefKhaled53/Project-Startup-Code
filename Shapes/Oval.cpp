@@ -142,7 +142,7 @@ void Oval::hide(GUI* pUI) {
 		//else if (min(Point1.y, Point2.y) = Point1.y) {
 		//	xx = Point1.x;
 		//}
-		pUI->getwind()->DrawImage("images\\MenuIcons\\Menu_Load.jpg", min(Point1.x, Point2.x), min(Point1.y, Point2.y), width, height);
+		pUI->getwind()->DrawImage("images\\MenuIcons\\unoip.jpg", min(Point1.x, Point2.x), min(Point1.y, Point2.y), width, height);
 	}
 }; void Oval::setishidentrue() { ishiden = true; };
 void Oval::setishidenfalse() { ishiden = false; };

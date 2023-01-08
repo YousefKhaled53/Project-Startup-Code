@@ -158,7 +158,7 @@ void triangle::hide(GUI* pUI) {
 		int width3 = sqrt(pow((Corner3.x - Corner2.x), 2) + pow((Corner3.y - Corner2.y), 2));
 		int total = width1 + width2 + width3;
 
-		pUI->getwind()->DrawImage("images\\MenuIcons\\Menu_Load.jpg", min(min(Corner1.x, Corner2.x), Corner3.x), min(min(Corner1.y, Corner2.y), Corner3.y), max(max(width1, width2), width3), max(max(width1, width2), width3));
+		pUI->getwind()->DrawImage("images\\MenuIcons\\unoip.jpg", min(min(Corner1.x, Corner2.x), Corner3.x), min(min(Corner1.y, Corner2.y), Corner3.y), max(max(width1, width2), width3), max(max(width1, width2), width3));
 	}
 }; void triangle::setishidentrue() { ishiden = true; };
 void triangle::setishidenfalse() { ishiden = false; };

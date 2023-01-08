@@ -5,7 +5,7 @@ class IrrPolygon :
 {
 	private:
 		Point* Point1;
-		int Vertices_num=0;
+		int Vertices_num;
 		int arrdiffinx[200];
 		int arrdiffiny[200];
 		int *ArrX = new int[1000];

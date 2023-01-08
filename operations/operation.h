@@ -29,7 +29,11 @@ public:
 	//virtual void Undo()=0;
 
 	//To redo this operation (code depends on operation type)
+<<<<<<< Updated upstream
 	//virtual void Redo()=0;
+=======
+//	virtual void Redo()=0;
+>>>>>>> Stashed changes
 
 };
 

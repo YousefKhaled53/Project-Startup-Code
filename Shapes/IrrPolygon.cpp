@@ -120,14 +120,18 @@ int IrrPolygon::getid() {
  
 }
 void IrrPolygon::ZOOM(double s) {
-
-
+	int x = 1300 / 2;
+	int y = 650 / 2;
+	for (int i = 0; i < Vertices_num; i++) {
+		ArrX[i] = (ArrX[i] * s) - (s * x) + x;
+		ArrY[i] = (ArrY[i] * s) - (s * y) + y;
+	}
 
 } 
 shape* IrrPolygon::copy() {
 	
 	
-	return nullptr;
-
+	shape* p = new IrrPolygon(Point1, Vertices_num, ShpGfxInfo);
+	return p;
 
 }

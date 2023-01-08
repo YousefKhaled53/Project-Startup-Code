@@ -123,7 +123,7 @@ void Circle::hide(GUI* pUI) {
 	
 	if (ishiden == true) {
 		int diffx = sqrt(((Center.x - radius.x) * (Center.x - radius.x)) + ((Center.y - radius.y) * (Center.y - radius.y)));
-		pUI->getwind()->DrawImage("images\\MenuIcons\\Menu_Load.jpg", (Center.x - diffx), (Center.y - diffx), 2 * diffx, 2 * diffx);
+		pUI->getwind()->DrawImage("images\\MenuIcons\\unoip.jpg", (Center.x - diffx), (Center.y - diffx), 2 * diffx, 2 * diffx);
 		
 	}
 	

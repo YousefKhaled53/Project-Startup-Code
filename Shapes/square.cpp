@@ -135,7 +135,7 @@ void square::hide(GUI* pUI) {
 		int width = sqrt(pow((Corner1.x - Corner2.x), 2) + pow((Corner1.y - Corner1.y), 2));
 		int height = sqrt(pow((Corner1.x - Corner1.x), 2) + pow((Corner1.y - Corner2.y), 2));
 
-		pUI->getwind()->DrawImage("images\\MenuIcons\\Menu_Load.jpg", min(Corner1.x, Corner2.x), min(Corner1.y, Corner2.y), width, height);
+		pUI->getwind()->DrawImage("images\\MenuIcons\\unoip.jpg", min(Corner1.x, Corner2.x), min(Corner1.y, Corner2.y), width, height);
 	}
 }; void square::setishidentrue() { ishiden = true; };
 void square::setishidenfalse() { ishiden = false; };

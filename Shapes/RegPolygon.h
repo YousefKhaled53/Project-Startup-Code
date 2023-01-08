@@ -7,7 +7,7 @@ private:
 	Point Center;
 	Point* Point1;
 	int distance;
-	int Vertices_num = 0;
+	int Vertices_num ;
 	int arrdiffinx[200]; 
 	int arrdiffiny[200];
 	int* ArrX = new int[2000];
