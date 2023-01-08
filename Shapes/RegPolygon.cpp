@@ -31,40 +31,69 @@ void RegPolygon::Move(Point P1, Point P2) {
 	}
 }
 void RegPolygon::Resize(double r) {
-	
-	for (int i = 0; i < Vertices_num; i++) {
-		//while (i <= Vertices_num - 1) {
-			Point npoint1;
-			npoint1.x = ArrX[i]; npoint1.y = ArrY[i];
-			Point npoint2;
-			npoint2.x = ArrX[i + 1]; npoint2.y = ArrY[i + 1];
-			double Distance = abs(ArrX[i] - ArrX[i + 1]);
-			double x = Distance * r - Distance;
-			if (npoint1.x > npoint2.x) {
-				npoint1.x += x / 2;
-				npoint2.x -= x / 2;
-			}
-			else {
-				npoint1.x -= x / 2;
-				npoint2.x += x / 2;
-			}
-			Distance = abs(ArrY[i] - ArrY[i + 1]);
-			x = Distance * r - Distance;
-			if (npoint1.y > npoint2.y) {
-				npoint1.y += x / 2;
-				npoint2.y -= x / 2;
-			}
-			else {
-				npoint1.y -= x / 2;
-				npoint2.y += x / 2;
-			}
-			ArrX[i] = npoint1.x;
-			ArrY[i] = npoint1.y;
-			ArrX[i + 1] = npoint2.x;
-			ArrX[i + 1] = npoint2.y;
-		//}break;
+	int i = 0;
+	int temp;
+		while (i < Vertices_num - 1) {
+			for (int i = 0; i < Vertices_num; i++) {
 
+				Point npoint1;
+				npoint1.x = ArrX[i]; npoint1.y = ArrY[i];
+				Point npoint2;
+				npoint2.x = ArrX[i + 1]; npoint2.y = ArrY[i + 1];
+				double Distance = abs(ArrX[i] - ArrX[i + 1]);
+				double x = Distance * r - Distance;
+				if (npoint1.x > npoint2.x) {
+					npoint1.x += x / 2;
+					npoint2.x -= x / 2;
+				}
+				else {
+					npoint1.x -= x / 2;
+					npoint2.x += x / 2;
+				}
+				Distance = abs(ArrY[i] - ArrY[i + 1]);
+				x = Distance * r - Distance;
+				if (npoint1.y > npoint2.y) {
+					npoint1.y += x / 2;
+					npoint2.y -= x / 2;
+				}
+				else {
+					npoint1.y -= x / 2;
+					npoint2.y += x / 2;
+				}
+				ArrX[i] = npoint1.x;
+				ArrY[i] = npoint1.y;
+				ArrX[i + 1] = npoint2.x;
+				ArrX[i + 1] = npoint2.y;
+				temp = i;
+			}break;
 		}
+
+		Point npoint1;
+		npoint1.x = ArrX[temp]; npoint1.y = ArrY[temp];
+		Point npoint2;
+		npoint2.x = ArrX[0]; npoint2.y = ArrY[0];
+		double Distance = abs(ArrX[temp] - ArrX[0]);
+		double x = Distance * r - Distance;
+		if (npoint1.x > npoint2.x) {
+			npoint1.x += x / 2;
+			npoint2.x -= x / 2;
+		}
+		else {
+			npoint1.x -= x / 2;
+			npoint2.x += x / 2;
+		}
+		Distance = abs(ArrY[temp] - ArrY[0]);
+		x = Distance * r - Distance;
+		if (npoint1.y > npoint2.y) {
+			npoint1.y += x / 2;
+			npoint2.y -= x / 2;
+		}
+		else {
+			npoint1.y -= x / 2;
+			npoint2.y += x / 2;
+		}
+		ArrX[temp] = npoint1.x;
+		ArrY[temp] = npoint1.y;
 	}
 void RegPolygon::Rotate() {
 	Point C1 = Center;
