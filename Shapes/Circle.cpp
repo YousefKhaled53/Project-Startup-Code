@@ -154,13 +154,9 @@ void Circle::ZOOM(double s) {
 	Center.y = (Center.y * s) - (s * y) + y;
 }
 shape* Circle::copy() {
-<<<<<<< Updated upstream
 		// Create a new Circle object with the same properties as "this" object
 		Circle* newCircle = new Circle(Center, radius, ShpGfxInfo);
 		return newCircle;
-=======
-	Circle* newCircle = new Circle(Center, radius, ShpGfxInfo);
-	return newCircle;
 }
 GfxInfo Circle::GetGfxInfo()
 {
@@ -174,7 +170,6 @@ Point Circle::getReduis() {
 }
 int Circle::getdis() {
 	return sqrt(pow(Center.x - radius.x, 2) + pow(Center.y - radius.y, 2));
->>>>>>> Stashed changes
 }
 //void Circle::StickImage(GUI* pUI) {
 //

@@ -186,7 +186,6 @@ shape* triangle:: copy() {
 	triangle* newTriangle = new triangle(Corner1, Corner2, Corner3, ShpGfxInfo);
 	return newTriangle;
 }
-<<<<<<< Updated upstream
 //void triangle::StickImage(GUI* pUI) {
 //	if (ishiden == true) {
 //
@@ -197,7 +196,6 @@ shape* triangle:: copy() {
 //
 //		pUI->getwind()->DrawImage("images\\MenuIcons\\Menu_Load.jpg", min(min(Corner1.x, Corner2.x), Corner3.x), min(min(Corner1.y, Corner2.y), Corner3.y), max(max(width1, width2), width3), max(max(width1, width2), width3));
 //	}
-=======
 Point triangle::getP1() {
 	return Corner1;
 }
@@ -211,4 +209,3 @@ GfxInfo triangle::GetGfxInfo()
 {
 	return ShpGfxInfo;
 }
->>>>>>> Stashed changes

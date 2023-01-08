@@ -212,7 +212,6 @@ shape* RegPolygon::copy(){
 	RegPolygon* newreg = new RegPolygon(Center,Point1, Vertices_num, ShpGfxInfo);
 	return newreg;
 	
-<<<<<<< Updated upstream
 	shape* p = new RegPolygon(Center, Point1, Vertices_num, ShpGfxInfo);
 	return p;
 }
@@ -221,7 +220,4 @@ shape* RegPolygon::copy(){
 //		int diffx = sqrt(((Center.x - Point1->x) * (Center.x - Point1->x)) + ((Center.y - Point1->y) * (Center.y - Point1->y)));
 //		pUI->getwind()->DrawImage("images\\MenuIcons\\Menu_Load.jpg", (Center.x - diffx), (Center.y - diffx), 2 * diffx, 2 * diffx);
 //
-//	}
-=======
-}
->>>>>>> Stashed changes
+

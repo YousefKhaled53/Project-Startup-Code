@@ -33,15 +33,12 @@ public:
 
 	shape* copy();
 
-<<<<<<< Updated upstream
-=======
 	Point getPoint1();
 
 	GfxInfo GetGfxInfo();
 
 	Point getPoint2();
  
->>>>>>> Stashed changes
 	virtual void setisingroup(bool b) {
 		isingroup = b;
 	}

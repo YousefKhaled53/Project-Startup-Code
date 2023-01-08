@@ -28,11 +28,8 @@ public:
 	virtual bool getishiden();
 	void setid(int i);
 	int getid();
-<<<<<<< Updated upstream
 	//virtual void StickImage(GUI* pUI);
-=======
 	GfxInfo GetGfxInfo();
->>>>>>> Stashed changes
 
  
 

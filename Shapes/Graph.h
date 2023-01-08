@@ -66,14 +66,11 @@ public:
 	void makeallunselected();
 	void ungroup();
 	void multiselectforgrouping(int arrx[], int arry[], int size);
-<<<<<<< Updated upstream
-=======
 
 
  
 	
 	vector <shape*> getcopy();
->>>>>>> Stashed changes
 	void deleteallforagroup();
 	void copy();
 	void preparetoundo();

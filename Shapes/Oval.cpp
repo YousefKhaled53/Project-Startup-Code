@@ -172,7 +172,6 @@ shape* Oval::copy()  {
 	Oval* newOval = new Oval(Point1, Point2, ShpGfxInfo);
 	return newOval;
 }
-<<<<<<< Updated upstream
 //void Oval::StickImage(GUI* pUI) {
 //	if (ishiden == true) {
 //
@@ -180,7 +179,6 @@ shape* Oval::copy()  {
 //		int height = sqrt(pow((Point1.x - Point1.x), 2) + pow((Point1.y - Point2.y), 2));
 //		pUI->getwind()->DrawImage("images\\MenuIcons\\Menu_Load.jpg", min(Point1.x, Point2.x), min(Point1.y, Point2.y), width, height);
 //	}
-=======
 Point Oval::getPoint1() {
 	return Point1;
 }
@@ -192,4 +190,3 @@ Point Oval::getPoint2()
 {
 	return Point2 ;
 }
->>>>>>> Stashed changes
