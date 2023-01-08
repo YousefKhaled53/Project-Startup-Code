@@ -78,7 +78,6 @@ operation* controller::createOperation(operationType OpType)
 			//pOp = new opdublicate(this);
 			//pOp = new opundo(this);
 
-			pOp = new opStickImage(this);
 			//pOp = new opCancelFillingGeneral(this);
 			pOp = new opAddline(this);
 			break;

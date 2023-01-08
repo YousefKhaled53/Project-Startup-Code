@@ -423,58 +423,75 @@ void Graph::dublicate() {
 
 			shapesList.push_back((dynamic_cast<Circle*>(shapesList[i])->copy()));
 			int currentreplicaindex = i + z;
-			shapesList[currentreplicaindex]->setid(i + 1);
+			shapesList[currentreplicaindex]->setid(shapesList[i]->getid());
 
 		}
 		if (dynamic_cast<line*>(shapesList[i])) {
 
 			shapesList.push_back((dynamic_cast<line*>(shapesList[i])->copy()));
 			int currentreplicaindex = i + z;
-			shapesList[currentreplicaindex]->setid(i + 1);
+			shapesList[currentreplicaindex]->setid(shapesList[i]->getid());
 
 		}
 		if (dynamic_cast<Oval*>(shapesList[i])) {
 
 			shapesList.push_back((dynamic_cast<Oval*>(shapesList[i])->copy()));
 			int currentreplicaindex = i + z;
-			shapesList[currentreplicaindex]->setid(i + 1);
+			shapesList[currentreplicaindex]->setid(shapesList[i]->getid());
 
 		}
 		if (dynamic_cast<Rect*>(shapesList[i])) {
 
 			shapesList.push_back((dynamic_cast<Rect*>(shapesList[i])->copy()));
 			int currentreplicaindex = i + z;
-			shapesList[currentreplicaindex]->setid(i + 1);
+			shapesList[currentreplicaindex]->setid(shapesList[i]->getid());
 
 		}
 		if (dynamic_cast<RegPolygon*>(shapesList[i])) {
 
 			shapesList.push_back((dynamic_cast<RegPolygon*>(shapesList[i])->copy()));
 			int currentreplicaindex = i + z;
-			shapesList[currentreplicaindex]->setid(i + 1);
+			shapesList[currentreplicaindex]->setid(shapesList[i]->getid());
 
 		}
 		if (dynamic_cast<square*>(shapesList[i])) {
 
 			shapesList.push_back((dynamic_cast<square*>(shapesList[i])->copy()));
 			int currentreplicaindex = i + z;
-			shapesList[currentreplicaindex]->setid(i + 1);
+			shapesList[currentreplicaindex]->setid(shapesList[i]->getid());
 
 		}
 		if (dynamic_cast<triangle*>(shapesList[i])) {
 
 			shapesList.push_back((dynamic_cast<triangle*>(shapesList[i])->copy()));
 			int currentreplicaindex = i + z;
-			shapesList[currentreplicaindex]->setid(i + 1);
+			shapesList[currentreplicaindex]->setid(shapesList[i]->getid());
 		}
 		if (dynamic_cast<IrrPolygon*>(shapesList[i])) {
 
 			shapesList.push_back((dynamic_cast<IrrPolygon*>(shapesList[i])->copy()));
 			int currentreplicaindex = i + z;
-			shapesList[currentreplicaindex]->setid(i + 1);
+			shapesList[currentreplicaindex]->setid(shapesList[i]->getid());
 
 		}
 	}
+	/*for (int i = 0; i < z; i++) {
+		shapesList.push_back(shapesList[i]);
+		int currentreplicaindex = i + z;
+		shapesList[currentreplicaindex]->setid(i+1);
+	}
+	ofstream myfile;
+	myfile.open("temp.txt");
+	Save(myfile);
+	myfile.close();
+
+	deleteall();
+
+	ifstream file("temp.txt");
+	load(file);
+	myfile.close();
+	remove("temp.txt");*/
+
 }
 void Graph::sendtoback(shape* pShp) {
 	for (int i = 0; i < shapesList.size(); i++) {

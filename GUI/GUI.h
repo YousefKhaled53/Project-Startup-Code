@@ -56,7 +56,9 @@ class GUI
 		ICON_BRUSH_GENERAL,
 		
 
-		ICON_SELECT,      //Select icon in menu to select and unselect the shapes
+		ICON_SELECT, 
+		ICON_Multi_Select,
+		ICON_STICK,
 		//TODO: Add more icons names here
 		ICON_DEL,
 
@@ -66,11 +68,11 @@ class GUI
 
 	};
 	enum ToolBar2 {
-		ICON_Multi_Select,
 		ICON_ZOOM_IN,
 		ICON_ZOOM_OUT,
-		ICON_paste,
 		ICON_copy,
+		ICON_CUT,
+		ICON_paste,
 		ICON_multidelete,
 		ICON_sendtoback,
 		ICON_MOVE,

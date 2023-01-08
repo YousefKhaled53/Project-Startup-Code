@@ -59,7 +59,8 @@ enum operationType //The operations supported (you can add more if needed)
 	UNGROUP,
 	undo,
 	redo,
-	
+	cut,
+	stick,
 
 	///TODO: Add more operation types (if needed)
 	//colors

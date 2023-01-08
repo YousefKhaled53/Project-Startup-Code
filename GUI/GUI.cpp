@@ -105,6 +105,7 @@ operationType GUI::GetUseroperation() const
 			case ICON_BORDER_SINGLE:  return BORDER_SINGLE;
 			case ICON_BORDER_COLOR_SINGLE: return BORDER_COLOR_SINGLE;
 			case ICON_BORDER_COLOR_GENERAL: return BORDER_COLOR_GENERAL;
+			case ICON_STICK: return stick;
 
 			default: return EMPTY;	//A click on empty place in desgin toolbar
 			}
@@ -128,6 +129,7 @@ operationType GUI::GetUseroperation() const
 			case ICON_UNGROUP:return UNGROUP;
 			case ICON_UNDO: return undo;
 			case ICON_REDO: return redo;
+			case ICON_CUT:return cut;
 			default: return EMPTY;	//A click on empty place in desgin toolbar
 			}
 		}
@@ -271,8 +273,8 @@ void GUI::CreateDrawToolBar()
 	MenuIconImages[ICON_BORDER_SINGLE] = "images\\MenuIcons\\Menu_Width.jpg";
 	MenuIconImages[ICON_BORDER_COLOR_GENERAL] = "images\\MenuIcons\\Border_Color_General.jpg";
 	MenuIconImages[ICON_BORDER_COLOR_SINGLE] = "images\\MenuIcons\\Border_Color_Single.jpg";
-
-
+	MenuIconImages[ICON_Multi_Select] = "images\\MenuIcons\\Multi_Select.jpg";
+	MenuIconImages[ICON_STICK] = "images\\MenuIcons\\stick.jfif";
 	//TODO: Prepare images for each menu icon and add it to the list
 
 	//Draw menu icon one image at a time
@@ -301,7 +303,7 @@ void GUI::CreateDrawToolBar2()
 	MenuIconImages[ICON_MOVE] = "images\\MenuIcons\\drag.jfif";
 	MenuIconImages[ICON_RESIZE] = "images\\MenuIcons\\resize2.jfif";
 	MenuIconImages[ICON_ROTATE] = "images\\MenuIcons\\rotate.jfif";
-	MenuIconImages[ICON_Multi_Select] = "images\\MenuIcons\\Multi_Select.jpg";
+	MenuIconImages[ICON_CUT] = "images\\MenuIcons\\cut.jfif";
 	MenuIconImages[ICON_ZOOM_IN] = "images\\MenuIcons\\ZOOM_IN.jfif";
 	MenuIconImages[ICON_ZOOM_OUT] = "images\\MenuIcons\\ZOOM_OUT.jfif";
 	MenuIconImages[ICON_GROUP] = "images\\MenuIcons\\group.jfif";
