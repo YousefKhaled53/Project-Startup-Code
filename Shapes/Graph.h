@@ -16,7 +16,6 @@ class Graph
 private:
 	vector <shape*> shapesList; //a container to hold all shapes	
 	vector <shape*> multishapesselected; // a vector used as a container for deleting
-	vector <shape*> multishapesselectedforgroups; //  a vector used as a container for deleting
 	vector <shape*> temporaryvectorforrestarting ;
 	vector <shape*> vectorofgroup;
 	//int numberofcreatedvectors = 0;
