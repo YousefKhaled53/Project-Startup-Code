@@ -203,6 +203,7 @@ operation* controller::createOperation(operationType OpType)
 		case restart:
 			pOp = new oprestart(this);
 			break;
+		case todraw:
 			pOp = new opswitchtodrawmode(this);
 			break;
 		case GROUP:

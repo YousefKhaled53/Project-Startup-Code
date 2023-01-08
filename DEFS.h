@@ -54,6 +54,7 @@ enum operationType //The operations supported (you can add more if needed)
 	start,
 	restart,
 
+	todraw,
 	GROUP,
 	UNGROUP,
 	
