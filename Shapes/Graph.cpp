@@ -46,8 +46,10 @@ void Graph::Addshape(shape* pShp)
 void Graph::Draw(GUI* pUI) const
 {	
 	pUI->ClearDrawArea();
+	
 	for (auto shapePointer : shapesList)
 		shapePointer->Draw(pUI);
+	
 	for (int i = 0; i < shapesList.size(); i++) {
 		shapesList[i]->hide(pUI);
 	}
@@ -569,6 +571,7 @@ void Graph::multiselectforgrouping(int arrx[], int arry[], int size) {
 		}
 }
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 void Graph::deleteallforagroup() {
 
@@ -580,6 +583,26 @@ void Graph::copy() {
 			
 
 		}
+	}
+}
+>>>>>>> Stashed changes
+=======
+void Graph::preparetoundo() {
+	vectorofcopiestoundo.clear();
+	for (int i = 0; i < shapesList.size(); i++) {
+		if (dynamic_cast<Circle*>(shapesList[i])) {
+			//shape* copy = new Circle(dynamic_cast<Circle*>(shapesList[i]));
+			vectorofcopiestoundo.push_back((dynamic_cast<Circle*>(shapesList[i])->returncopy()));
+			//delete[] copy;
+		}
+		
+	}
+}
+void Graph::undo(GUI* pUI) {
+	//const int z = shapesList.size();
+	deleteall();
+	for (int i = 0; i < vectorofcopiestoundo.size(); i++) {
+		shapesList.push_back(vectorofcopiestoundo[i]);
 	}
 }
 >>>>>>> Stashed changes

@@ -14,6 +14,12 @@ Circle::Circle(Point P1, Point P2, GfxInfo shapeGfxInfo) :shape(shapeGfxInfo)
 	radius = P2;
 	ShapeID = ID;
 }
+Circle::Circle(Circle* c1) :shape(c1->ShpGfxInfo) {
+	c1->Center = Center;
+	c1->radius = radius;
+	c1->ShapeID = ShapeID;
+	c1->ishiden = ishiden;
+}
 
 Circle::~Circle()
 {}
@@ -135,6 +141,7 @@ int Circle::getid() {
 	return ShapeID;
 }
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 void Circle::ZOOM(double s) {
 	int x = 1300 / 2;
 	int y = 650 / 2;
@@ -147,5 +154,10 @@ shape* Circle::copy() {
 	// Create a new Circle object with the same properties as "this" object
 	Circle* newCircle = new Circle(Center, radius, ShpGfxInfo);
 	return newCircle;
+>>>>>>> Stashed changes
+=======
+shape* Circle::returncopy() {
+	shape* copy = new Circle(Center,radius,ShpGfxInfo);
+	return copy;
 >>>>>>> Stashed changes
 }

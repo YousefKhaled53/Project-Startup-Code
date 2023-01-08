@@ -45,6 +45,7 @@
 #include"operations/opswitchtodrawmode.h"
 #include"operations/opgroup.h"
 #include"operations/opungroup.h"
+#include"operations/opundo.h"
 //Constructor
 controller::controller()
 {
@@ -71,7 +72,8 @@ operation* controller::createOperation(operationType OpType)
 	{
 		case DRAW_LINE:
 			//pOp = new ophide(this);
-			pOp = new opdublicate(this);
+			//pOp = new opdublicate(this);
+			pOp = new opundo(this);
 
 			//pOp = new opCancelFillingGeneral(this);
 		//	pOp = new opAddline(this);
@@ -254,6 +256,7 @@ controller::~controller()
 //==================================================================================//
 void controller::Run()
 {
+	
 	operationType OpType;
 	do
 	{
@@ -261,18 +264,36 @@ void controller::Run()
 		OpType = GetUseroperation();
 
 		//2. Create an operation coresspondingly
+		
 		operation* pOpr = createOperation(OpType);
+		if (OpType==0)
+		{
+			if (pOpr)
+			{
+				pOpr->Execute();//Execute
+
+				delete pOpr;	//operation is not needed any more ==> delete it
+				pOpr = nullptr;
+			}
+		}
+		else
+		{
+			pGraph->preparetoundo(); // make a copy of the last operation done on the shapeslist vector
+			if (pOpr)
+			{
+				pOpr->Execute();//Execute
+
+				delete pOpr;	//operation is not needed any more ==> delete it
+				pOpr = nullptr;
+			}
+		}
 		 
 		//3. Execute the created operation
-		if (pOpr)
-		{
-			pOpr->Execute();//Execute
- 			delete pOpr;	//operation is not needed any more ==> delete it
-			pOpr = nullptr;
-		}
+		
 
 		//Update the interface
 		UpdateInterface();
+		
 
 	} while (OpType != EXIT);
 

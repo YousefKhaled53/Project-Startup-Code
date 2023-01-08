@@ -13,6 +13,7 @@ private:
 	bool isingroup = false;
 public:
 	Circle(Point, Point, GfxInfo shapeGfxInfo);
+	Circle( Circle* c1);
 	virtual ~Circle();
 	virtual void Draw(GUI* pUI) const;
 	virtual void Save(ofstream& OutFile , int id);
@@ -39,8 +40,13 @@ public:
 	virtual bool getisingroup() {
 		return isingroup ;
 	}
+<<<<<<< Updated upstream
 =======
 	void ZOOM(double  s);
+>>>>>>> Stashed changes
+=======
+	shape* returncopy() ;
+	
 >>>>>>> Stashed changes
 };
 

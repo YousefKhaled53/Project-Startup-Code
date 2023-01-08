@@ -18,9 +18,11 @@ private:
 	vector <shape*> multishapesselected; // a vector used as a container for deleting
 	vector <shape*> temporaryvectorforrestarting ;
 	vector <shape*> vectorofgroup;
+	vector <shape*> vectorofcopiestoundo;
 	//int numberofcreatedvectors = 0;
 	shape* selectedShape;	//pointer to the currently selected shape
 	int score = 0;
+
 public:										
 	Graph();
 	~Graph();
@@ -63,9 +65,14 @@ public:
 	void ungroup();
 	void multiselectforgrouping(int arrx[], int arry[], int size);
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 	
 =======
 	void deleteallforagroup();
 	void copy();
+>>>>>>> Stashed changes
+=======
+	void preparetoundo();
+	void undo(GUI* pUI);
 >>>>>>> Stashed changes
 };
