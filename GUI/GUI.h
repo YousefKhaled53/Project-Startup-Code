@@ -159,7 +159,7 @@ public:
 	void Setpenwidth(int n);
 	void setcrntfillcolor(color newcolor);
 	void setcrntdrawcolor(color newcolor);
-	void ZOOM(double Z);
+	/*void ZOOM(double Z);*/
 	
 
 

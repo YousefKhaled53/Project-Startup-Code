@@ -118,3 +118,6 @@ void IrrPolygon::setid(int i) {
 int IrrPolygon::getid() {
 	return ShapeID;
 }
+void IrrPolygon::ZOOM(double s) {
+
+}

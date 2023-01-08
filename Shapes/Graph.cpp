@@ -489,7 +489,11 @@ void Graph::Match(GUI* pUI) {
 	}
 
 }
-
+void Graph::ZOOMING(double s) {
+	for (int J = 0; J < shapesList.size(); J++) {
+		shapesList[J]->ZOOM(s);
+	}
+}
 void Graph::hide(GUI* pUI) {
 	for (int i = 0; i < shapesList.size(); i++) {
 		shapesList[i]->setishidentrue();

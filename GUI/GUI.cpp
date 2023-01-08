@@ -190,20 +190,20 @@ operationType GUI::GetUseroperation() const
 //======================================================================================//
 //								Output Functions										//
 //======================================================================================//
-void GUI::ZOOM(double Z) {
-	if (Z > 1) {
-		Zoom += 0.25;
-	}
-	else if (Z < 1) {
-		Zoom -= 0.25;
-	}
-	if (Zoom <= 0) {
-		Zoom = 1;
-	}
-	else if (Zoom >= 4) {
-		Zoom = 1;
-	}
-}
+//void GUI::ZOOM(double Z) {
+//	if (Z > 1) {
+//		Zoom += 0.25;
+//	}
+//	else if (Z < 1) {
+//		Zoom -= 0.25;
+//	}
+//	if (Zoom <= 0) {
+//		Zoom = 1;
+//	}
+//	else if (Zoom >= 4) {
+//		Zoom = 1;
+//	}
+//}
 window* GUI::CreateWind(int w, int h, int x, int y) const
 {
 	window* pW = new window(w, h, x, y);

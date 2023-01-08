@@ -167,3 +167,11 @@ void RegPolygon::setid(int i) {
 int RegPolygon::getid() {
 	return ShapeID;
 }
+void RegPolygon::ZOOM(double s) {
+	int x = 1300 / 2;
+	int y = 650 / 2;
+	Point1->x =( Point1->x * s)-(s*x)+x;
+	Point1->y = (Point1->y * s)-(s*y)+y;
+	Center.x = (Center.x * s)-(s*x)+x;
+	Center.y = (Center.y * s)- (s * y) + y;
+}

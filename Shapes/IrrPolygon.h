@@ -36,6 +36,7 @@ class IrrPolygon :
 		virtual bool getishiden();
 		void setid(int i);
 		int getid();
+<<<<<<< Updated upstream
 		virtual void setisingroup(bool b) {
 			isingroup = b;
 		}
@@ -43,5 +44,8 @@ class IrrPolygon :
 			return isingroup;
 		}
 
+=======
+		 void ZOOM(double s);
+>>>>>>> Stashed changes
 };
 

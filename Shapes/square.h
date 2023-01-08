@@ -28,11 +28,15 @@ public:
 	//virtual void    setisselectedfalse();
 	void setid(int i);
 	int getid();
+<<<<<<< Updated upstream
 	virtual void setisingroup(bool b) {
 		isingroup = b;
 	}
 	virtual bool getisingroup() {
 		return isingroup;
 	}
+=======
+	 void ZOOM(double s);
+>>>>>>> Stashed changes
 };
 

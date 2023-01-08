@@ -147,3 +147,11 @@ void Rect::setid(int i) {
 int Rect::getid() {
 	return ShapeID;
 }
+void Rect::ZOOM(double s) {
+	int x = 1300 / 2;
+	int y = 650 / 2;
+	Corner1.x = (Corner1.x * s) - (s * x) + x;
+	Corner1.y = (Corner1.y * s) - (s * y) + y;
+	Corner2.x = (Corner2.x * s) - (s * x) + x;
+	Corner2.y = (Corner2.y * s) - (s * y) + y;
+}

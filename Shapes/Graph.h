@@ -50,6 +50,7 @@ public:
 	//void Move(shape* pFig, Point P1, Point P2);
 	void Resize(shape* pFig , double ratio);
 	//void move(shape* pFig, Point P1, Point P2);
+	void ZOOMING(double s);
 	void Rotate(shape* pFig);
 	void deleteall();
 	int getscore();

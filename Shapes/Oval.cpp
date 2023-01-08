@@ -155,3 +155,14 @@ void Oval::setid(int i) {
 int Oval::getid() {
 	return ShapeID;
 }
+void Oval::ZOOM(double s) {
+	int x = 1300 / 2;
+	int y = 650 / 2;
+	Point1.x = (Point1.x * s) - (s * x) + x;
+	Point1.y = (Point1.y * s) - (s * y) + y;
+	Point2.x =(Point2.x * s )- (s * x) + x;
+	Point2.y = (Point2.y * s) - (s * y) + y;
+
+
+;
+}
