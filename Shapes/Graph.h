@@ -2,6 +2,8 @@
 #include "Shape.h"
 #include <fstream>
 #include <vector>
+#include <dos.h>
+
 
 using namespace std;
 

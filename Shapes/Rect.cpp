@@ -136,7 +136,7 @@ void Rect::hide(GUI* pUI) {
 
 		pUI->getwind()->DrawImage("images\\MenuIcons\\Menu_Load.jpg", min(Corner1.x, Corner2.x), min(Corner1.y, Corner2.y), width, height);
 	}
-}; void Rect::setishidentrue() { ishiden = true; };
+};	void Rect::setishidentrue() { ishiden = true; };
 void Rect::setishidenfalse() { ishiden = false; };
 bool Rect::getishiden() {
 	return ishiden;

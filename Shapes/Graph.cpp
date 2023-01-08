@@ -19,6 +19,8 @@
 #include"RegPolygon.h"
 #include "../GUI/GUI.h"
 #include<algorithm>
+#include <chrono>
+#include <thread>
 
 Graph::Graph()
 {
@@ -429,12 +431,15 @@ void Graph::hide(GUI* pUI) {
 	}
 }
 void Graph::Unhide(Point* P1) {
+	
 	for (int i = 0; i < shapesList.size(); i++) {
 		if (shapesList[i]->is_in_fig(P1->x, P1->y)) {
 			shapesList[i]->setishidenfalse();
 		}
+
 		
-	}
+	} 
+
 }
 void Graph::hide2(GUI* pUI) {
 	for (int i = 0; i < shapesList.size(); i++) {

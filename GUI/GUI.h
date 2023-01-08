@@ -67,8 +67,8 @@ class GUI
 	};
 	enum ToolBar2 {
 		ICON_Multi_Select,
-		//ICON_ZOOM_IN,
-		//ICON_ZOOM_OUT,
+		ICON_ZOOM_IN,
+		ICON_ZOOM_OUT,
 		ICON_paste,
 		ICON_copy,
 		ICON_multidelete,

@@ -115,8 +115,8 @@ operationType GUI::GetUseroperation() const
 			switch (clickontoolbar2)
 			{
 			case ICON_Multi_Select: return MultiSelect;
-			//case ICON_ZOOM_IN: return ZOOM_IN;
-			//case ICON_ZOOM_OUT: return ZOOM_OUT;
+			case ICON_ZOOM_IN: return ZOOM_IN;
+			case ICON_ZOOM_OUT: return ZOOM_OUT;
 			case ICON_paste:return PASTE;
 			case ICON_copy: return COPY;
 			case ICON_multidelete: return MULTIDELTE;
@@ -298,7 +298,8 @@ void GUI::CreateDrawToolBar2()
 	MenuIconImages[ICON_RESIZE] = "images\\MenuIcons\\Resize_icon.jpg";
 	MenuIconImages[ICON_ROTATE] = "images\\MenuIcons\\Rotate_icon.jpg";
 	MenuIconImages[ICON_Multi_Select] = "images\\MenuIcons\\Multi_Select.jpg";
-
+	MenuIconImages[ICON_ZOOM_IN] = "images\\MenuIcons\\ZOOM_IN.jfif";
+	MenuIconImages[ICON_ZOOM_OUT] = "images\\MenuIcons\\ZOOM_OUT.jfif";
 
 
 

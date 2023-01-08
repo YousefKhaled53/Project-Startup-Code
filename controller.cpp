@@ -213,7 +213,7 @@ operation* controller::createOperation(operationType OpType)
 //Draw all shapes on the user interface
 void controller::UpdateInterface() const
 {	
-
+	
 	pGraph->Draw(pGUI);
 	//pGraph->hide2(pGUI);
 }
