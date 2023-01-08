@@ -21,6 +21,7 @@
 #include<algorithm>
 #include <chrono>
 #include <thread>
+#include "IrrPolygon.h "
 
 Graph::Graph()
 {
@@ -596,11 +597,45 @@ void Graph::preparetoundo() {
 	vectorofcopiestoundo.clear();
 	for (int i = 0; i < shapesList.size(); i++) {
 		if (dynamic_cast<Circle*>(shapesList[i])) {
-			//shape* copy = new Circle(dynamic_cast<Circle*>(shapesList[i]));
+			
 			vectorofcopiestoundo.push_back((dynamic_cast<Circle*>(shapesList[i])->copy()));
-			//delete[] copy;
+			
 		}
-		
+		if (dynamic_cast<line*>(shapesList[i])) {
+
+			vectorofcopiestoundo.push_back((dynamic_cast<line*>(shapesList[i])->copy()));
+
+		}
+		if (dynamic_cast<Oval*>(shapesList[i])) {
+
+			vectorofcopiestoundo.push_back((dynamic_cast<Oval*>(shapesList[i])->copy()));
+
+		}
+		if (dynamic_cast<Rect*>(shapesList[i])) {
+
+			vectorofcopiestoundo.push_back((dynamic_cast<Rect*>(shapesList[i])->copy()));
+
+		}
+		if (dynamic_cast<RegPolygon*>(shapesList[i])) {
+
+			vectorofcopiestoundo.push_back((dynamic_cast<RegPolygon*>(shapesList[i])->copy()));
+
+		}
+		if (dynamic_cast<square*>(shapesList[i])) {
+
+			vectorofcopiestoundo.push_back((dynamic_cast<square*>(shapesList[i])->copy()));
+
+		}
+		if (dynamic_cast<triangle*>(shapesList[i])) {
+
+			vectorofcopiestoundo.push_back((dynamic_cast<triangle*>(shapesList[i])->copy()));
+
+		}
+		if (dynamic_cast<IrrPolygon*>(shapesList[i])) {
+
+			vectorofcopiestoundo.push_back((dynamic_cast<IrrPolygon*>(shapesList[i])->copy()));
+
+		}
 	}
 }
 void Graph::undo(GUI* pUI) {
