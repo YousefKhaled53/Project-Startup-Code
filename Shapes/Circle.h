@@ -30,7 +30,14 @@ public:
 	void setid(int i);
 	int getid();
 	shape* copy();
+<<<<<<< Updated upstream
 	//virtual void StickImage(GUI* pUI);
+=======
+	GfxInfo GetGfxInfo();
+	Point getCenter();
+	Point getReduis();
+	int getdis();
+>>>>>>> Stashed changes
 	virtual void setisingroup(bool b) {
 		isingroup = b;
 	}

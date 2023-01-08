@@ -28,12 +28,20 @@ public:
 	virtual bool getishiden();
 	void setid(int i);
 	int getid();
+<<<<<<< Updated upstream
 	//virtual void StickImage(GUI* pUI);
+=======
+	GfxInfo GetGfxInfo();
+>>>>>>> Stashed changes
 
  
 
 
 	shape* copy();
+
+	Point getP1();
+
+	Point getP2();
  
 
 	virtual void setisingroup(bool b) {

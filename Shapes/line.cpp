@@ -171,6 +171,7 @@ void line::ZOOM(double s) {
 	Corner2.x = (Corner2.x * s)- (s * x) + x;
 	Corner2.y = (Corner2.y * s)- (s * y) + y;
 }
+<<<<<<< Updated upstream
 //void line::StickImage(GUI* pUI) {
 //	if (ishiden == true) {
 //
@@ -179,3 +180,15 @@ void line::ZOOM(double s) {
 //
 //		pUI->getwind()->DrawImage("images\\MenuIcons\\Menu_Load.jpg", min(Corner1.x, Corner2.x), min(Corner1.y, Corner2.y), width, height);
 //	}
+=======
+Point line::getP1() {
+	return Corner1;
+}
+Point line::getP2() {
+	return Corner2;
+}
+GfxInfo line::GetGfxInfo()
+{
+	return ShpGfxInfo;
+}
+>>>>>>> Stashed changes
