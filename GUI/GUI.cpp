@@ -301,7 +301,8 @@ void GUI::CreateDrawToolBar2()
 	MenuIconImages[ICON_Multi_Select] = "images\\MenuIcons\\Multi_Select.jpg";
 	MenuIconImages[ICON_ZOOM_IN] = "images\\MenuIcons\\ZOOM_IN.jfif";
 	MenuIconImages[ICON_ZOOM_OUT] = "images\\MenuIcons\\ZOOM_OUT.jfif";
-
+	MenuIconImages[ICON_GROUP] = "images\\MenuIcons\\group.jfif";
+	MenuIconImages[ICON_UNGROUP] = "images\\MenuIcons\\ungroup.jfif";
 
 
 	// Draw the vertical toolbar
