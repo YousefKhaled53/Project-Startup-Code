@@ -30,6 +30,7 @@ public:
 	void setid(int i);
 	int getid();
 	shape* copy();
+
 	virtual void setisingroup(bool b) {
 		isingroup = b;
 	}
@@ -38,8 +39,6 @@ public:
 	}
 
 	void ZOOM(double  s);
- 
-	
  
 };
 

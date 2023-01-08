@@ -129,6 +129,12 @@ void Circle::hide(GUI* pUI) {
 	
 	
 }
+void Circle::Move(Point P1 , Point P2){
+	Center.x = P2.x - P1.x + Center.x;
+	radius.x = P2.x - P1.x + radius.x;
+	Center.y = P2.y - P1.y + Center.y;
+	radius.y = P2.y - P1.y + radius.y;
+}
 void Circle::setishidentrue() { ishiden = true; };
 void Circle::setishidenfalse() { ishiden = false; };
 bool Circle::getishiden() {
@@ -148,7 +154,7 @@ void Circle::ZOOM(double s) {
 	Center.x = (Center.x * s) - (s * x) + x;
 	Center.y = (Center.y * s) - (s * y) + y;
 }
-	shape* Circle::copy() {
+shape* Circle::copy() {
 		// Create a new Circle object with the same properties as "this" object
 		Circle* newCircle = new Circle(Center, radius, ShpGfxInfo);
 		return newCircle;

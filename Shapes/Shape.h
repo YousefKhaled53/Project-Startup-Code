@@ -41,7 +41,6 @@ public:
 	virtual void setishidentrue()=0;
 	virtual void setishidenfalse()=0;
 	virtual bool getishiden() = 0;
-<<<<<<< Updated upstream
 
 
 	virtual void setisingroup(bool b)=0;
@@ -49,13 +48,6 @@ public:
  
 	virtual void  ZOOM(double s)=0;
 
- 
-=======
-	virtual void setisingroup(bool b)=0;
-	virtual bool getisingroup() = 0;
-	virtual void  ZOOM(double s)=0;
-
->>>>>>> Stashed changes
 
 	virtual shape* copy()=0;
  

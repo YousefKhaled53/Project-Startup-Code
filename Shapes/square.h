@@ -28,28 +28,22 @@ public:
 	//virtual void    setisselectedfalse();
 	void setid(int i);
 	int getid();
-<<<<<<< Updated upstream
  
  
 
 
 	shape* copy();
  
-=======
->>>>>>> Stashed changes
+
 	virtual void setisingroup(bool b) {
 		isingroup = b;
 	}
 	virtual bool getisingroup() {
 		return isingroup;
 	}
-<<<<<<< Updated upstream
  
 	 void ZOOM(double s);
 
 
-=======
-	 void ZOOM(double s);
->>>>>>> Stashed changes
 };
 
