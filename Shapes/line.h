@@ -40,5 +40,11 @@ public:
 
 
 	 void ZOOM(double s);
+
+	 Point getP1();
+
+	 Point getP2();
+
+	 GfxInfo GetGfxInfo();
  
 };

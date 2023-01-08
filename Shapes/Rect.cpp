@@ -147,6 +147,10 @@ void Rect::setid(int i) {
 int Rect::getid() {
 	return ShapeID;
 }
+GfxInfo Rect::GetGfxInfo()
+{
+	return ShpGfxInfo;
+}
 void Rect::ZOOM(double s) {
 	int x = 1300 / 2;
 	int y = 650 / 2;
@@ -160,6 +164,7 @@ shape* Rect::copy()  {
 	Rect* newRectangle = new Rect(Corner1, Corner2, ShpGfxInfo);
 	return newRectangle;
 }
+<<<<<<< Updated upstream
 //void Rect::StickImage(GUI* pUI) {
 //	if (ishiden == true) {
 //
@@ -168,3 +173,11 @@ shape* Rect::copy()  {
 //
 //		pUI->getwind()->DrawImage("images\\MenuIcons\\Menu_Load.jpg", min(Corner1.x, Corner2.x), min(Corner1.y, Corner2.y), width, height);
 //	}
+=======
+Point Rect::getP1() {
+	return Corner1;
+}
+Point Rect::getP2() {
+	return Corner2;
+}
+>>>>>>> Stashed changes

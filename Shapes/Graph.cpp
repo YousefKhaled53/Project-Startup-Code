@@ -640,13 +640,20 @@ void Graph::multiselectforgrouping(int arrx[], int arry[], int size) {
 
 
 
+vector <shape*> Graph::getcopy()
+{
+	return shapecopied ;
+}
+
 void Graph::deleteallforagroup() {
 
 }
 void Graph::copy() {
+	shapecopied.clear();
 	for (int i = 0; i < shapesList.size(); i++) {
 		if (shapesList[i]->IsSelected() == true) {
-			shapecopied->push_back(shapesList[i]->copy());
+			shapecopied.push_back(shapesList[i]->copy());
+			shapesList[i]->SetSelected(false);
 			
 
 		}

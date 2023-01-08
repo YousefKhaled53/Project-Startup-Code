@@ -162,6 +162,7 @@ shape* square::copy()  {
 	square* newSquare = new square(Corner1, Corner2, ShpGfxInfo);
 	return newSquare;
 }
+<<<<<<< Updated upstream
 //void square::StickImage(GUI* pUI) {
 //	if (ishiden == true) {
 //
@@ -170,3 +171,15 @@ shape* square::copy()  {
 //
 //		pUI->getwind()->DrawImage("images\\MenuIcons\\Menu_Load.jpg", min(Corner1.x, Corner2.x), min(Corner1.y, Corner2.y), width, height);
 //	}
+=======
+GfxInfo square::GetGfxInfo()
+{
+	return ShpGfxInfo;
+}
+Point square::getP1() {
+	return Corner1;
+}
+Point square::getP2() {
+	return Corner2;
+}
+>>>>>>> Stashed changes

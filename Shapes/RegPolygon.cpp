@@ -209,7 +209,10 @@ void RegPolygon::ZOOM(double s) {
 	//Center.y = (Center.y * s) - (s * y) + y;
 }
 shape* RegPolygon::copy(){
+	RegPolygon* newreg = new RegPolygon(Center,Point1, Vertices_num, ShpGfxInfo);
+	return newreg;
 	
+<<<<<<< Updated upstream
 	shape* p = new RegPolygon(Center, Point1, Vertices_num, ShpGfxInfo);
 	return p;
 }
@@ -219,3 +222,6 @@ shape* RegPolygon::copy(){
 //		pUI->getwind()->DrawImage("images\\MenuIcons\\Menu_Load.jpg", (Center.x - diffx), (Center.y - diffx), 2 * diffx, 2 * diffx);
 //
 //	}
+=======
+}
+>>>>>>> Stashed changes

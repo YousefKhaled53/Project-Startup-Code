@@ -38,6 +38,8 @@
 #include "operations/opZoomOut.h"
 #include "operations/opResize.h"
 #include"ophide.h"
+#include"operations/opcut.h"
+#include"operations/opPest.h"
 #include "operations/opMove.h"
 #include"operations/opStartr.h"
 #include"operations/oprestart.h"
@@ -78,7 +80,11 @@ operation* controller::createOperation(operationType OpType)
 =======
 			//pOp = new ophide(this);
 			//pOp = new opdublicate(this);
+<<<<<<< Updated upstream
 			//pOp = new opundo(this);
+=======
+			pOp = new opPest(this);
+>>>>>>> Stashed changes
 
 			//pOp = new opStickImage(this);
 			//pOp = new opCancelFillingGeneral(this);
@@ -86,7 +92,7 @@ operation* controller::createOperation(operationType OpType)
 			pOp = new opAddline(this);
 			break;
 		case DRAW_RECT:
-			pOp = new opAddRect(this);
+			pOp = new opcut(this);
 			break;
 		case DRAW_TRI:
 			pOp = new opAddtriangle(this);

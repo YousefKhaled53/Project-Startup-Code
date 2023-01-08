@@ -1,13 +1,10 @@
-#pragma once
 
 #include "../operations/operation.h"
-class opCopy :
+class opcut :
 	public operation
 {
 public:
-	opCopy(controller* pCont);
+	opcut(controller* pCont);
 
 	virtual void Execute();
 };
-
-

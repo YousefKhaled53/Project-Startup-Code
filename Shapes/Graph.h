@@ -27,7 +27,7 @@ private:
 public:										
 	Graph();
 	~Graph();
-	vector <shape*> shapecopied [1];
+	vector <shape*> shapecopied ;
 	void Addshape(shape* pFig); //Adds a new shape to the shapesList
 	void Draw(GUI* pUI) const;			//Draw the graph (draw all shapes)
 	shape* Getshape(int x, int y); //Search for a shape given a point inside the shape
@@ -66,6 +66,14 @@ public:
 	void makeallunselected();
 	void ungroup();
 	void multiselectforgrouping(int arrx[], int arry[], int size);
+<<<<<<< Updated upstream
+=======
+
+
+ 
+	
+	vector <shape*> getcopy();
+>>>>>>> Stashed changes
 	void deleteallforagroup();
 	void copy();
 	void preparetoundo();

@@ -90,8 +90,13 @@
     <ClCompile Include="operations\opswitchtodrawmode.cpp" />
     <ClCompile Include="operations\opgroup.cpp" />
     <ClCompile Include="operations\opungroup.cpp" />
+<<<<<<< Updated upstream
 	<ClCompile Include="operations\opundo.cpp" />
 	<ClCompile Include="operations\opStickImage.cpp" />
+=======
+    <ClCompile Include="operations\opundo.cpp" />
+    <ClCompile Include="operations\opcut.cpp" />
+>>>>>>> Stashed changes
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CMUgraphicsLib\auxil.h" />
@@ -169,7 +174,12 @@
     <ClInclude Include="operations\opswitchtodrawmode.h" />
     <ClInclude Include="operations\opgroup.h" />
     <ClInclude Include="operations\opungroup.h" />
+<<<<<<< Updated upstream
 	  <ClInclude Include="operations\opundo.h" />
 	  <ClInclude Include="operations\opStickImage.h" />
+=======
+    <ClInclude Include="operations\opundo.h" />
+    <ClInclude Include="operations\opcut.h" />
+>>>>>>> Stashed changes
   </ItemGroup>
 </Project>

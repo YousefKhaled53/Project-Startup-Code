@@ -185,6 +185,7 @@
     <ClCompile Include="operations\opAddsquare.cpp" />
     <ClCompile Include="operations\opAddtriangle.cpp" />
     <ClCompile Include="operations\opCopy.cpp" />
+    <ClCompile Include="operations\opcut.cpp" />
     <ClCompile Include="operations\opdeleteshape.cpp" />
     <ClCompile Include="operations\opgroup.cpp" />
     <ClCompile Include="operations\opload.cpp" />
@@ -265,6 +266,7 @@
     <ClInclude Include="operations\opAddsquare.h" />
     <ClInclude Include="operations\opAddtriangle.h" />
     <ClInclude Include="operations\opCopy.h" />
+    <ClInclude Include="operations\opcut.h" />
     <ClInclude Include="operations\opdeleteshape.h" />
     <ClInclude Include="operations\operation.h" />
     <ClInclude Include="operations\opgroup.h" />

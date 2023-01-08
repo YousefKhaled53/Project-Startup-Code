@@ -81,3 +81,4 @@ void opAddRect::Execute()
 	pGr->Addshape(R);
 
 }
+

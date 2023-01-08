@@ -33,6 +33,12 @@ public:
 
 
 	shape* copy();
+
+	GfxInfo GetGfxInfo();
+
+	Point getP1();
+
+	Point getP2();
  
 
 	virtual void setisingroup(bool b) {
