@@ -64,15 +64,16 @@ public:
 	void makeallunselected();
 	void ungroup();
 	void multiselectforgrouping(int arrx[], int arry[], int size);
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
+
+
+ 
 	
-=======
+ 
 	void deleteallforagroup();
 	void copy();
->>>>>>> Stashed changes
-=======
+ 
+ 
 	void preparetoundo();
 	void undo(GUI* pUI);
->>>>>>> Stashed changes
+ 
 };

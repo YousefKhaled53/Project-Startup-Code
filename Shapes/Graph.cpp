@@ -31,9 +31,9 @@ Graph::~Graph()
 {
 }
 
-//==================================================================================//
+//           =====//
 //						shapes Management Functions								//
-//==================================================================================//
+//    ======================================================//
 
 //Add a shape to the list of shapes
 void Graph::Addshape(shape* pShp)
@@ -570,9 +570,13 @@ void Graph::multiselectforgrouping(int arrx[], int arry[], int size) {
 			}
 		}
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
+
+
+
+ 
+
+
+
 void Graph::deleteallforagroup() {
 
 }
@@ -585,8 +589,9 @@ void Graph::copy() {
 		}
 	}
 }
->>>>>>> Stashed changes
-=======
+
+
+ 
 void Graph::preparetoundo() {
 	vectorofcopiestoundo.clear();
 	for (int i = 0; i < shapesList.size(); i++) {
@@ -605,4 +610,4 @@ void Graph::undo(GUI* pUI) {
 		shapesList.push_back(vectorofcopiestoundo[i]);
 	}
 }
->>>>>>> Stashed changes
+ 

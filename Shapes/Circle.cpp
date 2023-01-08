@@ -140,24 +140,23 @@ void Circle::setid(int i) {
 int Circle::getid() {
 	return ShapeID;
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 void Circle::ZOOM(double s) {
 	int x = 1300 / 2;
 	int y = 650 / 2;
-	radius.x = (radius.x * s)-(s*x)+x;
+	radius.x = (radius.x * s) - (s * x) + x;
 	radius.y = (radius.y * s) - (s * y) + y;
 	Center.x = (Center.x * s) - (s * x) + x;
 	Center.y = (Center.y * s) - (s * y) + y;
-=======
-shape* Circle::copy() {
-	// Create a new Circle object with the same properties as "this" object
-	Circle* newCircle = new Circle(Center, radius, ShpGfxInfo);
-	return newCircle;
->>>>>>> Stashed changes
-=======
+}
+	shape* Circle::copy() {
+		// Create a new Circle object with the same properties as "this" object
+		Circle* newCircle = new Circle(Center, radius, ShpGfxInfo);
+		return newCircle;
+}
+
+
 shape* Circle::returncopy() {
 	shape* copy = new Circle(Center,radius,ShpGfxInfo);
 	return copy;
->>>>>>> Stashed changes
+ 
 }

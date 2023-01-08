@@ -117,15 +117,17 @@ void IrrPolygon::setid(int i) {
 };
 int IrrPolygon::getid() {
 	return ShapeID;
-<<<<<<< Updated upstream
+ 
 }
 void IrrPolygon::ZOOM(double s) {
 
-=======
+
+
 } 
 shape* IrrPolygon::copy() {
 	
 	
 	return nullptr;
->>>>>>> Stashed changes
+
+
 }

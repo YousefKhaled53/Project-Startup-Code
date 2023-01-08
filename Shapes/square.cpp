@@ -149,7 +149,6 @@ void square::setid(int i) {
 int square::getid() {
 	return ShapeID;
 }
-<<<<<<< Updated upstream
 void square::ZOOM(double s) {
 	int x = 1300 / 2;
 	int y = 650 / 2;
@@ -157,10 +156,9 @@ void square::ZOOM(double s) {
 	Corner1.y = (Corner1.y * s) - (s * y) + y;
 	Corner2.x = (Corner2.x * s) - (s * x) + x;
 	Corner2.y = (Corner2.y * s) - (s * y) + y;
-=======
+}
 shape* square::copy()  {
 	
 	square* newSquare = new square(Corner1, Corner2, ShpGfxInfo);
 	return newSquare;
->>>>>>> Stashed changes
 }
