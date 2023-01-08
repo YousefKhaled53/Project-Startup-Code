@@ -13,11 +13,8 @@ class Graph
 {
 private:
 	vector <shape*> shapesList; //a container to hold all shapes	
-	vector <shape*> multishapesselected; // a vector used as a container for deleting
-	vector <shape*> multishapesselectedforgroups; //  a vector used as a container for deleting
+	vector <shape*> multishapesselected;
 	vector <shape*> temporaryvectorforrestarting ;
-	vector <shape*> vectorofgroup;
-	//int numberofcreatedvectors = 0;
 	shape* selectedShape;	//pointer to the currently selected shape
 	int score = 0;
 public:										
@@ -55,10 +52,6 @@ public:
 	void filltemporary();
 	void filloriginalfromtemporary();
 	void resetscore();
-	void addtoagroup(int n );
-	void clearmultiselectedvector(); // should be used after any use for multisleected vector 
-	void makeallunselected();
-	void ungroup();
-	void multiselectforgrouping(int arrx[], int arry[], int size);
-	void deleteallforagroup();
+	
+
 };

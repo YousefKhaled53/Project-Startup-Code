@@ -10,7 +10,7 @@ private:
 	Point radius;
 	int ShapeID;
 	bool ishiden = false;
-	bool isingroup = false;
+
 public:
 	Circle(Point, Point, GfxInfo shapeGfxInfo);
 	virtual ~Circle();
@@ -28,11 +28,6 @@ public:
 	virtual bool getishiden();
 	void setid(int i);
 	int getid();
-	virtual void setisingroup(bool b) {
-		isingroup = b;
-	}
-	virtual bool getisingroup() {
-		return isingroup ;
-	}
+
 };
 

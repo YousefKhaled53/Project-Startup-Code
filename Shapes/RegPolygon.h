@@ -16,7 +16,7 @@ private:
 	int vertixy;
 	bool ishiden = false;
 	int ShapeID;
-	bool isingroup = false;
+
 public:
 	RegPolygon(Point, Point*, int, GfxInfo shapeGfxInfo);
 	virtual ~RegPolygon();
@@ -34,11 +34,5 @@ public:
 	virtual bool getishiden();
 	void setid(int i);
 	int getid();
-	virtual void setisingroup(bool b) {
-		isingroup = b;
-	}
-	virtual bool getisingroup() {
-		return isingroup;
-	}
 };
 

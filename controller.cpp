@@ -43,8 +43,6 @@
 #include"operations/oprestart.h"
 #include"operations/opUnhide.h"
 #include"operations/opswitchtodrawmode.h"
-#include"operations/opgroup.h"
-#include"operations/opungroup.h"
 //Constructor
 controller::controller()
 {
@@ -136,7 +134,7 @@ operation* controller::createOperation(operationType OpType)
 			//break;
 		case RESIZE:
 			//pOp = new opCancelFillingGeneral(this);
-			pOp = new opdeleteshape(this);
+			pOp = new opResize(this);
 			break;
 		case ROTATE:
 			pOp = new opRotate(this);
@@ -203,18 +201,6 @@ operation* controller::createOperation(operationType OpType)
 		case restart:
 			pOp = new oprestart(this);
 			break;
-<<<<<<< Updated upstream
-=======
-		case todraw:
-			pOp = new opswitchtodrawmode(this);
-			break;
-		case GROUP:
-			pOp = new opgroup(this);
-			break;
-		case UNGROUP:
-			pOp=new opungroup(this);
-			break;
->>>>>>> Stashed changes
 	}
 
 	return pOp;
@@ -270,7 +256,7 @@ void controller::Run()
 		if (pOpr)
 		{
 			pOpr->Execute();//Execute
- 			delete pOpr;	//operation is not needed any more ==> delete it
+			delete pOpr;	//operation is not needed any more ==> delete it
 			pOpr = nullptr;
 		}
 

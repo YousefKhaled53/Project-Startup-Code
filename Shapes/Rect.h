@@ -9,7 +9,6 @@ private:
 	Point Corner2;
 	int ShapeID;
 	bool ishiden = false;
-	bool isingroup = false;
 
 public:
 	Rect(Point , Point, GfxInfo shapeGfxInfo );
@@ -28,11 +27,6 @@ public:
 	virtual bool getishiden();
 	void setid(int i);
 	int getid();
-	virtual void setisingroup(bool b) {
-		isingroup = b;
-	}
-	virtual bool getisingroup() {
-		return isingroup;
-	}
+
 };
 

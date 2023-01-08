@@ -10,7 +10,7 @@ class operation; //forward declaration
 //Main class that manages everything in the application.
 class controller
 {
-//	window* pWind;
+	//window* pWind;
 	Graph* pGraph;	//pointe to the grapg
 	GUI* pGUI;		//Pointer to UI class
 	 // number of shapes created 

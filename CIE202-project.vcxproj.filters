@@ -88,8 +88,6 @@
     <ClCompile Include="Shapes\triangle.cpp" />
     <ClCompile Include="operations\oprestart.cpp" />
     <ClCompile Include="operations\opswitchtodrawmode.cpp" />
-    <ClCompile Include="operations\opgroup.cpp" />
-    <ClCompile Include="operations\opungroup.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CMUgraphicsLib\auxil.h" />
@@ -165,7 +163,5 @@
     <ClInclude Include="Shapes\triangle.h" />
     <ClInclude Include="operations\oprestart.h" />
     <ClInclude Include="operations\opswitchtodrawmode.h" />
-    <ClInclude Include="operations\opgroup.h" />
-    <ClInclude Include="operations\opungroup.h" />
   </ItemGroup>
 </Project>

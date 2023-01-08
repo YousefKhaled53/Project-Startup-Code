@@ -8,7 +8,7 @@ private:
 	Point Point2;
 	bool ishiden = false;
 	int ShapeID;
-	bool isingroup = false;
+
 public:
 	Oval(Point, Point, GfxInfo shapeGfxInfo);
 	virtual ~Oval();
@@ -26,12 +26,7 @@ public:
 	virtual bool getishiden();
 	void setid(int i);
 	int getid();
-	virtual void setisingroup(bool b) {
-		isingroup = b;
-	}
-	virtual bool getisingroup() {
-		return isingroup;
-	}
+
 
 };
 
