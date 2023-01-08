@@ -33,7 +33,7 @@ void RegPolygon::Move(Point P1, Point P2) {
 void RegPolygon::Resize(double r) {
 	
 	for (int i = 0; i < Vertices_num; i++) {
-		while (i < Vertices_num - 1) {
+		//while (i <= Vertices_num - 1) {
 			Point npoint1;
 			npoint1.x = ArrX[i]; npoint1.y = ArrY[i];
 			Point npoint2;
@@ -62,7 +62,7 @@ void RegPolygon::Resize(double r) {
 			ArrY[i] = npoint1.y;
 			ArrX[i + 1] = npoint2.x;
 			ArrX[i + 1] = npoint2.y;
-		}break;
+		//}break;
 
 		}
 	}

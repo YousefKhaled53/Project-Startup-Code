@@ -74,41 +74,23 @@ operation* controller::createOperation(operationType OpType)
 	switch (OpType)
 	{
 		case DRAW_LINE:
-			//pOp = new ophide(this);
-			//pOp = new opdublicate(this);
-			//pOp = new opundo(this);
-
-			//pOp = new opCancelFillingGeneral(this);
 			pOp = new opAddline(this);
 			break;
-
 		case DRAW_RECT:
 			pOp = new opAddRect(this);
 			break;
-
 		case DRAW_TRI:
 			pOp = new opAddtriangle(this);
-
-			//pOp = new opmultidelete(this);
-			
-			//pOp = new opsendtoback(this);
-			//pOp = new opAddtriangle(this);
-			//pOp = new opMove(this);
 			break;
-			
 		case DRAW_SQUARE:
 			pOp = new opAddsquare(this);
 			break;
-
 		case DRAW_CIRC:
 			pOp = new opAddCircle(this);
 			break;
-
 		case DRAW_OVAL:
-			//pOp = new opCopy(this);
 			pOp = new opAddOval(this);
 			break;
-
 		case EXIT:
 			pOp = new Opexit(this);
 			break;
@@ -146,7 +128,6 @@ operation* controller::createOperation(operationType OpType)
 			pOp = new opRotate(this);
 			break;
 		case TO_PLAY:
-
 			pOp = new opswitchlaymode(this);
 			break;
 		case LOAD:
@@ -173,13 +154,11 @@ operation* controller::createOperation(operationType OpType)
 		case ZOOM_OUT:
 			pOp = new opZoomOut(this);
 			break;
-
 		case hide:
 			pOp = new ophide(this);
 			break;
 		case scramble:
 			pOp = new opscramble(this);
-			
 			break;
 		case duplicate:
 			pOp = new opdublicate(this);
@@ -217,7 +196,9 @@ operation* controller::createOperation(operationType OpType)
 		case redo:
 			pOp = new opredo(this);
 			break;
-
+		case stick:
+			pOp = new opStickImage(this);
+			break;
 	}
 
 	return pOp;
