@@ -163,5 +163,7 @@
     <ClInclude Include="Shapes\triangle.h" />
     <ClInclude Include="operations\oprestart.h" />
     <ClInclude Include="operations\opswitchtodrawmode.h" />
+    <ClInclude Include="operations\opgroup.h" />
+    <ClInclude Include="operations\opungroup.h" />
   </ItemGroup>
 </Project>

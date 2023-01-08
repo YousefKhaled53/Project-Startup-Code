@@ -41,7 +41,8 @@ public:
 	virtual void setishidentrue()=0;
 	virtual void setishidenfalse()=0;
 	virtual bool getishiden() = 0;
-
+	virtual void setisingroup(bool b)=0;
+	virtual bool getisingroup() = 0;
 
 	///The following functions should be supported by the shape class	
 	///It should be overridden by each inherited shape

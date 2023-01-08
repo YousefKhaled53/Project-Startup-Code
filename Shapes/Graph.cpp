@@ -57,7 +57,23 @@ void Graph::Draw(GUI* pUI) const
 
 
 void Graph::deleteshape(shape* pShp) {
-	shapesList.erase(find(shapesList.begin(), shapesList.end(), pShp));
+	bool ask=false;
+	for (int i = 0; i < shapesList.size(); i++) {
+		if (shapesList[i]->getisingroup() == true && shapesList[i]->IsSelected() == true) {
+			ask = true;
+			break;
+		}
+	}
+	if (ask == true) {
+		for (int i = 0; i < vectorofgroup.size(); i++) {
+			shapesList.erase(find(shapesList.begin(), shapesList.end(), vectorofgroup[i]));
+		}
+	}
+	else
+	{
+		shapesList.erase(find(shapesList.begin(), shapesList.end(), pShp));
+	}
+	
 }
 
 void Graph::Rotate(shape* pFig) {
@@ -304,15 +320,64 @@ shape* Graph::GetSelected() {
 	return selectedShape;
 }
 void Graph::changefillcolor(shape* pFig, color newcolor) {
-	pFig->ChngFillClr(newcolor);
-	pFig->setisfilled();	
+	bool ask = false;
+	for (int i = 0; i < shapesList.size(); i++) {
+		if (shapesList[i]->getisingroup() == true && shapesList[i]->IsSelected() == true) {
+			ask = true;
+			break;
+		}
+	}
+	if (ask == true) {
+		for (int i = 0; i < vectorofgroup.size(); i++) {
+			vectorofgroup[i]->ChngFillClr(newcolor);
+			vectorofgroup[i]->setisfilled();
+		}
+	}
+	else
+	{
+		pFig->ChngFillClr(newcolor);
+		pFig->setisfilled();
+	}
+	/*pFig->ChngFillClr(newcolor);
+	pFig->setisfilled();	*/
 }
 void Graph::bordercolor(shape* pFig, color newcolor) {
-	pFig->ChngDrawClr(newcolor);
+	bool ask = false;
+	for (int i = 0; i < shapesList.size(); i++) {
+		if (shapesList[i]->getisingroup() == true && shapesList[i]->IsSelected() == true) {
+			ask = true;
+			break;
+		}
+	}
+	if (ask == true) {
+		for (int i = 0; i < vectorofgroup.size(); i++) {
+			vectorofgroup[i]->ChngDrawClr(newcolor);
+		}
+	}
+	else
+	{
+		pFig->ChngDrawClr(newcolor);
 
+	}
 }
 void Graph::borderwidth(shape* pFig, int bw) {
-	pFig->changeborderwidth(bw);
+	bool ask = false;
+	for (int i = 0; i < shapesList.size(); i++) {
+		if (shapesList[i]->getisingroup() == true && shapesList[i]->IsSelected() == true) {
+			ask = true;
+			break;
+		}
+	}
+	if (ask == true) {
+		for (int i = 0; i < vectorofgroup.size(); i++) {
+			vectorofgroup[i]->changeborderwidth(bw);
+		}
+	}
+	else
+	{
+		pFig->changeborderwidth(bw);
+	}
+	
 }
 
 void Graph::SetSelected(shape* s) {
@@ -468,4 +533,42 @@ void Graph::filloriginalfromtemporary () {
 }
 void Graph::resetscore() {
 	score = 0;
+}
+void Graph::addtoagroup(int n) {
+	for (int i = 0; i < n; i++) {
+		vectorofgroup.push_back(multishapesselectedforgroups[i]);
+	}
+}
+void Graph::clearmultiselectedvector() {
+	for (int i = 0; i < multishapesselected.size(); i++) {
+		multishapesselected.clear();
+	}
+
+}
+void Graph::makeallunselected() {
+	for (int i = 0; i < shapesList.size(); i++) {
+		shapesList[i]->SetSelected(false);
+	}
+}
+void Graph::ungroup() {
+
+	for (int i = 0; i < vectorofgroup.size(); i++) {
+		vectorofgroup.clear();
+	}
+	for (int i = 0; i < shapesList.size(); i++) {
+		shapesList[i]->setisingroup(false);
+	}
+}
+void Graph::multiselectforgrouping(int arrx[], int arry[], int size) {
+	for (auto shapePointer : shapesList)
+		for (int i = 0; i < size; i++) {
+			if (shapePointer->is_in_fig(arrx[i], arry[i])) {
+				shapePointer->SetSelected(true);
+				shapePointer->setisingroup(true);
+				multishapesselectedforgroups.push_back(shapePointer);
+			}
+		}
+}
+void Graph::deleteallforagroup() {
+
 }

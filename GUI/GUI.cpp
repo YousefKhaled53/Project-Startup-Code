@@ -124,7 +124,8 @@ operationType GUI::GetUseroperation() const
 			case ICON_MOVE: return MOVE;
 			case ICON_RESIZE: return RESIZE;
 			case ICON_ROTATE:return ROTATE;
-
+			case ICON_GROUP:return GROUP;
+			case ICON_UNGROUP:return UNGROUP;
 			default: return EMPTY;	//A click on empty place in desgin toolbar
 			}
 		}
