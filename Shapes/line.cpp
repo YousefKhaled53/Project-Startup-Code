@@ -171,3 +171,11 @@ void line::ZOOM(double s) {
 	Corner2.x = (Corner2.x * s)- (s * x) + x;
 	Corner2.y = (Corner2.y * s)- (s * y) + y;
 }
+//void line::StickImage(GUI* pUI) {
+//	if (ishiden == true) {
+//
+//		int width = sqrt(pow((Corner1.x - Corner2.x), 2) + pow((Corner1.y - Corner1.y), 2));
+//		int height = sqrt(pow((Corner1.x - Corner1.x), 2) + pow((Corner1.y - Corner2.y), 2));
+//
+//		pUI->getwind()->DrawImage("images\\MenuIcons\\Menu_Load.jpg", min(Corner1.x, Corner2.x), min(Corner1.y, Corner2.y), width, height);
+//	}

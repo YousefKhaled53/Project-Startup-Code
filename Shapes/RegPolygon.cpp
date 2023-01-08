@@ -180,3 +180,9 @@ shape* RegPolygon::copy(){
 	
 	return nullptr;
 }
+//void RegPolygon::StickImage(GUI* pUI) {
+//	if (ishiden == true) {
+//		int diffx = sqrt(((Center.x - Point1->x) * (Center.x - Point1->x)) + ((Center.y - Point1->y) * (Center.y - Point1->y)));
+//		pUI->getwind()->DrawImage("images\\MenuIcons\\Menu_Load.jpg", (Center.x - diffx), (Center.y - diffx), 2 * diffx, 2 * diffx);
+//
+//	}

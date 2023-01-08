@@ -51,6 +51,7 @@ public:
 	void hide(GUI* pUI);
 	void hide2(GUI* pUI);
 	void Unhide(Point* P1);
+	//void StickImageS(GUI* pUI);
 	//void Move(shape* pFig, Point P1, Point P2);
 	void Resize(shape* pFig , double ratio);
 	//void move(shape* pFig, Point P1, Point P2);
@@ -72,6 +73,10 @@ public:
 	void undo();
 	void redo();
 
+	void undo(GUI* pUI);
+
+	void StickImage(shape* sh);
+ 
 	void setselectedshapenull() {
 		selectedShape = nullptr;
 	}

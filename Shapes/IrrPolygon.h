@@ -36,6 +36,7 @@ class IrrPolygon :
 		virtual bool getishiden();
 		void setid(int i);
 		int getid();
+		//virtual void StickImage(GUI* pUI);
  
  
 

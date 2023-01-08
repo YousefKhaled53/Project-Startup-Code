@@ -186,3 +186,13 @@ shape* triangle:: copy() {
 	triangle* newTriangle = new triangle(Corner1, Corner2, Corner3, ShpGfxInfo);
 	return newTriangle;
 }
+//void triangle::StickImage(GUI* pUI) {
+//	if (ishiden == true) {
+//
+//		int width1 = sqrt(pow((Corner1.x - Corner2.x), 2) + pow((Corner1.y - Corner2.y), 2));
+//		int width2 = sqrt(pow((Corner1.x - Corner3.x), 2) + pow((Corner1.y - Corner3.y), 2));
+//		int width3 = sqrt(pow((Corner3.x - Corner2.x), 2) + pow((Corner3.y - Corner2.y), 2));
+//		int total = width1 + width2 + width3;
+//
+//		pUI->getwind()->DrawImage("images\\MenuIcons\\Menu_Load.jpg", min(min(Corner1.x, Corner2.x), Corner3.x), min(min(Corner1.y, Corner2.y), Corner3.y), max(max(width1, width2), width3), max(max(width1, width2), width3));
+//	}

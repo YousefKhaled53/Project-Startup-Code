@@ -536,9 +536,15 @@ void Graph::ZOOMING(double s) {
 		shapesList[J]->ZOOM(s);
 	}
 }
+void Graph::StickImage(shape* sh) {
+	for (int i = 0; i < shapesList.size(); i++) {
+		if (shapesList[i]->IsSelected())
+			shapesList[i]->setishidentrue();
+	}
+}
 void Graph::hide(GUI* pUI) {
 	for (int i = 0; i < shapesList.size(); i++) {
-		shapesList[i]->setishidentrue();
+		shapesList[0]->setishidentrue();
 	}
 }
 void Graph::Unhide(Point* P1) {

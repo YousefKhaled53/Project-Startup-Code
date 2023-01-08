@@ -90,7 +90,7 @@
     <ClCompile Include="operations\opswitchtodrawmode.cpp" />
     <ClCompile Include="operations\opgroup.cpp" />
     <ClCompile Include="operations\opungroup.cpp" />
-    <ClCompile Include="operations\opundo.cpp" />
+    <ClCompile Include="operations\opStickImage.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CMUgraphicsLib\auxil.h" />
@@ -168,6 +168,6 @@
     <ClInclude Include="operations\opswitchtodrawmode.h" />
     <ClInclude Include="operations\opgroup.h" />
     <ClInclude Include="operations\opungroup.h" />
-    <ClInclude Include="operations\opundo.h" />
+    <ClInclude Include="operations\opStickImage.h" />
   </ItemGroup>
 </Project>

@@ -1,12 +1,12 @@
 #include "opStickImage.h"
 #include"../controller.h"
-#include "../operations/operation.h"
-#include "../GUI/\GUI.h"
+opStickImage::opStickImage(controller* pCont) :operation(pCont) {};
+void opStickImage::Execute() {
 
-opStickImage::opStickImage(controller* pCont):operation(pCont){}
-opStickImage::~opStickImage(){}
-void opStickImage::Execute()
-{
 	GUI* pUI = pControl->GetUI();
-	pControl->getGraph()->stickimage(pUI);
+	pUI->ClearStatusBar();
+	pUI->PrintMessage("Choose shape to stick image");
+	shape* sh = pControl->getGraph()->GetSelected();
+	pControl->getGraph()->StickImage(sh);
+
 }

@@ -127,7 +127,6 @@ void Circle::hide(GUI* pUI) {
 		
 	}
 	
-	
 }
 void Circle::Move(Point P1 , Point P2){
 	Center.x = P2.x - P1.x + Center.x;
@@ -159,5 +158,13 @@ shape* Circle::copy() {
 		Circle* newCircle = new Circle(Center, radius, ShpGfxInfo);
 		return newCircle;
 }
-
+//void Circle::StickImage(GUI* pUI) {
+//
+//	if (SetSelected() == true) {
+//		int diffx = sqrt(((Center.x - radius.x) * (Center.x - radius.x)) + ((Center.y - radius.y) * (Center.y - radius.y)));
+//		pUI->getwind()->DrawImage("images\\MenuIcons\\Menu_Load.jpg", (Center.x - diffx), (Center.y - diffx), 2 * diffx, 2 * diffx);
+//
+//	}
+//
+//}
 

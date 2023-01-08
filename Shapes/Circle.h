@@ -30,7 +30,7 @@ public:
 	void setid(int i);
 	int getid();
 	shape* copy();
-
+	//virtual void StickImage(GUI* pUI);
 	virtual void setisingroup(bool b) {
 		isingroup = b;
 	}

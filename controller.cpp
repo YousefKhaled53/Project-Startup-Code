@@ -47,6 +47,7 @@
 #include"operations/opungroup.h"
 #include"operations/opundo.h"
 #include"operations/opredo.h"
+#include"operations/opStickImage.h"
 //Constructor
 controller::controller()
 {
@@ -77,6 +78,7 @@ operation* controller::createOperation(operationType OpType)
 			//pOp = new opdublicate(this);
 			//pOp = new opundo(this);
 
+			pOp = new opStickImage(this);
 			//pOp = new opCancelFillingGeneral(this);
 			pOp = new opAddline(this);
 			break;
@@ -216,6 +218,7 @@ operation* controller::createOperation(operationType OpType)
 		case redo:
 			pOp = new opredo(this);
 			break;
+
 	}
 
 	return pOp;

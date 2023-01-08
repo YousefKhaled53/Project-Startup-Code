@@ -198,9 +198,9 @@
     <ClCompile Include="operations\opsave.cpp" />
     <ClCompile Include="operations\opSelect.cpp" />
     <ClCompile Include="operations\opStartr.cpp" />
+    <ClCompile Include="operations\opStickImage.cpp" />
     <ClCompile Include="operations\opswitchplaymode.cpp" />
     <ClCompile Include="operations\opswitchtodrawmode.cpp" />
-    <ClCompile Include="operations\opundo.cpp" />
     <ClCompile Include="operations\opungroup.cpp" />
     <ClCompile Include="operations\opZoomIn.cpp" />
     <ClCompile Include="operations\opZoomOut.cpp" />
@@ -277,9 +277,9 @@
     <ClInclude Include="operations\opsave.h" />
     <ClInclude Include="operations\opSelect.h" />
     <ClInclude Include="operations\opStartr.h" />
+    <ClInclude Include="operations\opStickImage.h" />
     <ClInclude Include="operations\opswitchplaymode.h" />
     <ClInclude Include="operations\opswitchtodrawmode.h" />
-    <ClInclude Include="operations\opundo.h" />
     <ClInclude Include="operations\opungroup.h" />
     <ClInclude Include="operations\opZoomIn.h" />
     <ClInclude Include="operations\opZoomOut.h" />

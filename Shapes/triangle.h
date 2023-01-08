@@ -40,6 +40,7 @@ public:
 	}
  
 	 void ZOOM(double s);
+	 //virtual void StickImage(GUI* pUI);
  
 };
 
